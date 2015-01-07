@@ -1,0 +1,241 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Champion Tutor</title>
+<link rel="stylesheet" href="{{ STATIC_PREFIX }}css/style.css" type="text/css" media="all">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="{{ STATIC_PREFIX }}js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_PREFIX }}js/CreateHTML5Elements.js"></script>
+
+<!--[if (gte IE 6)&(lte IE 8)]>
+
+<script type="text/javascript" src="{{ STATIC_PREFIX }}js/mootools-core-1.4.2-full-compat.js"></script>
+
+<![endif]-->
+
+<!--[if (gte IE 6)&(lte IE 8)]>
+
+<script type="text/javascript" src="{{ STATIC_PREFIX }}js/selectivizr.js"></script>
+
+<noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+
+<![endif]-->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+</head>
+
+<body>
+
+<div class="main">
+
+<header>
+    	<div class="wrapper">
+        	<a id="logo" href="#"><img src="{{ STATIC_PREFIX }}images/logo.png" width="265" height="69" alt="logo"></a>
+            <ul class="menu">
+            	<li><a href="#">How it works</a>
+                <li><a href="#">Search Tutors</a>
+                <li><a href="#">Help</a></li>
+            </ul>
+            <div class="right_menu">
+            	<div class="en_icon"><img src="images/en.png" width="16" height="14" alt="icon"> En</div>
+           	  <a href="#" class="sign_in">Sign in</a>
+            	<a href="#" class="rgster">Register</a>
+            </div>
+      </div>
+  </header>
+<div class="banner">
+	<ul class="social">
+    	<li><div class="hover"><a href="#" class="fckbk"></a>
+        	<div class="inner_hover"><img src="images/social_inner1.png" width="92" height="39" alt="img"></div>
+        </div></li>
+        <li><div class="hover"><a href="#" class="twtr"></a>
+        	<div class="inner_hover"><img src="images/social_inner2.png" width="92" height="39" alt="img"></div>
+        </div></li>
+        <li><div class="hover"><a href="#" class="gogle"></a>
+        	<div class="inner_hover"><img src="images/social_inner3.png" width="78" height="39" alt="img"></div>
+        </div></li>
+        <li><div class="hover"><a href="#" class="pinit"></a>
+        	<div class="inner_hover"><img src="images/social_inner4.png" width="48" height="39" alt="img"></div>
+        </div></li>
+    </ul>
+	
+    
+    
+    <script>
+    	$( ".hover" ).hover(
+		function() {
+		$( this ).addClass( "hover_active" );
+		}, function() {
+		$( this ).removeClass( "hover_active" );
+		}
+		);
+    </script>
+
+	<div class="wrapper">
+<div class="banner_txt">
+    		<div class="jst_clck">Finding your online tutor in just one click! <span class="bst_tutor">We connect the best tutors right at your screen</span> </div>
+<form class="outer_input_btn">
+            	<input type="text" value="What subject can we help you with? Try Algebra" onblur=" if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.value)this.value=''">
+                <!--<input type="text" value="pankaj"  onblur=" if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.value)this.value=''"/>-->
+                              
+                <input type="submit" value="View Tutors!">
+            </form>
+            
+            <script>
+						function sugtnhide()
+						{
+							alert('active');
+							$('form.outer_input_btn input[type="text"] value').hide();
+						};
+				</script> 
+            
+            <div class="intrdctn">
+            	<a href="#" class="video_icon"><img src="images/video_btn.png" width="134" height="83" alt="icon"></a>
+                <p class="video_txt">Introduction</p>
+            </div>
+        </div>
+    </div>
+      <ul class="slider" id="slide_show">
+      	<li id="pink"><img src="images/slider1.png" width="1366" height="563" alt="img"></li>
+        <li id="green"><img src="images/slider2.png" width="1366" height="563" alt="img"></li>
+        <li id="yellow"><img src="images/slider3.png" width="1366" height="563" alt="img"></li>
+        <li id="light_yellow"><img src="images/slider4.png" width="1366" height="563" alt="img"></li>
+      </ul>
+</div>
+<div class="cntnt">
+	<div class="wrapper">
+    	<h1 class="main_hdng">It's easy! Here's how it works</h1>
+      <p class="lwr_hdng">Enim ad minima veniam, quis nostrum exercitationem ullam corporis <br>nisi ut aliquid ex ea commodi</p>
+        <ul class="its_wrk">
+        	<li><img src="images/img1.png" width="263" height="193" alt="img"> <p class="wrk_txt">At vero eos et accusamus et iusto odio dignissimos ducimus qui ditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi harum quidem rerum facilis.</p> </li>
+            <li><img src="images/img2.png" width="263" height="193" alt="img"> <p class="wrk_txt">At vero eos et accusamus et iusto odio dignissimos ducimus qui ditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi harum quidem rerum facilis.</p> </li>
+            <li><img src="images/img3.png" width="263" height="193" alt="img"> <p class="wrk_txt">At vero eos et accusamus et iusto odio dignissimos ducimus qui ditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi harum quidem rerum facilis.</p> </li>
+        </ul>
+    </div>
+</div>
+<div class="lwr_cntnt">
+	<div class="wrapper">
+    	<h1 class="main_hdng">What our Students say about their tutors</h1>
+        <ul class="tstmnl">
+        	<li>
+            	<span class="tstmnl_cmnt_bx">@Perfecttutoring is awesome! Learning so much and changing old habits in coding.</span>
+                <div class="tstmnl_nme">
+                	<div class="tstmnl_img"><img src="images/tstmnl_img1.png" width="37" height="37" alt="img"></div>
+                    <span class="tstmnl_name">Harry walker</span><br>
+                    <span class="crse_nme">Course name</span>
+                </div>
+            </li>
+            <li>
+            	<span class="tstmnl_cmnt_bx">@Perfecttutoring is awesome! Learning so much and changing old habits in coding.</span>
+                <div class="tstmnl_nme">
+                	<div class="tstmnl_img"><img src="images/tstmnl_img2.png" width="37" height="37" alt="img"></div>
+                    <span class="tstmnl_name">Harry walker</span><br>
+                    <span class="crse_nme">Course name</span>
+                </div>
+            </li>
+            <li>
+            	<span class="tstmnl_cmnt_bx">@Perfecttutoring is awesome! Learning so much and changing old habits in coding.</span>
+                <div class="tstmnl_nme">
+                	<div class="tstmnl_img"><img src="images/tstmnl_img3.png" width="37" height="37" alt="img"></div>
+                    <span class="tstmnl_name">Harry walker</span><br>
+                    <span class="crse_nme">Course name</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="outer_featured">
+	<div class="wrapper">
+		<span class="featured">Featured On</span>
+		<ul class="fetured_ul">
+			<li><a href="#"><img src="images/ftred_link1.png" width="146" height="52" alt="img"></a></li>
+            <li><a href="#"><img src="images/ftred_link2.png" width="146" height="52" alt="img"></a></li>
+            <li><a href="#"><img src="images/ftred_link3.png" width="146" height="52" alt="img"></a></li>
+            <li><a href="#"><img src="images/ftred_link4.png" width="146" height="52" alt="img"></a></li>
+            <li><a href="#"><img src="images/ftred_link5.png" width="146" height="52" alt="img"></a></li>
+            <li><a href="#"><img src="images/ftred_link6.png" width="146" height="52" alt="img"></a></li>
+		</ul>
+    </div>
+</div>
+<footer>
+	<div class="wrapper">
+		<div class="ftr_logo"><img src="images/prfct_tutor_footer.png" width="201" height="40" alt="img"></div>
+		<ul class="ftr_lnk">
+        	<span class="lnk_hdng">About</span>
+        	<li><a href="#">Our Mission</a></li>
+			<li><a href="#">Our Team</a></li>
+			<li><a href="#">Our Interns</a></li>
+			<li><a href="#">Our Content Specialists</a></li>
+        </ul>
+		<ul class="ftr_lnk">
+        	<span class="lnk_hdng">Coaching</span>
+        	<li><a href="#">Coach Reports</a></li>
+			<li><a href="#">Coach Resources</a></li>
+			<li><a href="#">Case Studies</a></li>
+			<li><a href="#">Common Core</a></li>
+        </ul>
+		<ul class="ftr_lnk">
+        	<span class="lnk_hdng">Careers</span>
+        	<li><a href="#">Full Time</a></li>
+			<li><a href="#">Internships</a></li>
+        </ul>
+		<ul class="ftr_lnk">
+        	<span class="lnk_hdng">Help</span>
+        	<li><a href="#">Report a Problem</a></li>
+			<li><a href="#">FAQ</a></li>
+        </ul>
+        <div class="socl_link">
+        	<ul class="social_icon">
+        	<span class="lnk_hdng">Social</span>
+        	<li><a href="#"><img src="images/fb.png" width="9" height="17" alt="icon"></a></li>
+			<li><a href="#"><img src="images/twtr.png" width="20" height="16" alt="icon"></a></li>
+            <li><a href="#"><img src="images/gogle.png" width="17" height="17" alt="icon"></a></li>
+			<li><a href="#"><img src="images/blogster.png" width="16" height="16" alt="icon"></a></li>
+        	</ul>
+            <ul class="ftr_lnk">
+        	<span class="lnk_hdng">Countact us</span>
+        	<li><a href="#">Contact</a></li>
+			<li><a href="#">Press</a></li>
+        </ul>
+        </div>
+    </div>
+</footer>
+<div class="lwr_ftr">
+	<div class="wrapper">
+		<ul class="prvt_plcy">
+    		<li><a href="#">Terms of Use</a></li>
+        	<li><a href="#">Privacy Policy</a></li>
+    	</ul>
+        <p class="ftr_txt"> © championtutoronline <br>Except where noted, all rights reserved.</p>
+
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>
+<script src="js/jquery.bxslider.min.js"></script>
+<script language="javascript">
+
+$(function(){
+  $('#slide_show').bxSlider({
+    auto: true,
+	pager: false,
+	controls :false,
+	touchEnabled:true,
+	startSlide:3,
+	pause:7000
+	});
+});
+</script>

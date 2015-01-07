@@ -1,0 +1,440 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Champion Tutor</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<script src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/CreateHTML5Elements.js"></script>
+
+<!--[if (gte IE 6)&(lte IE 8)]>
+
+<script type="text/javascript" src="js/mootools-core-1.4.2-full-compat.js"></script>
+
+<![endif]-->
+
+<!--[if (gte IE 6)&(lte IE 8)]>
+
+<script type="text/javascript" src="js/selectivizr.js"></script>
+
+<noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+
+<![endif]-->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+</head>
+
+<body>
+
+<div class="main">
+
+<header>
+    	<div class="wrapper">
+        	<a id="logo" href="#"><img src="images/logo.png" width="265" height="69" alt="logo"></a>
+            <ul class="menu">
+            	<li><a href="#">How it works</a>
+                <li><a href="#">Search Tutors</a>
+                <li><a href="#">Help</a></li>
+            </ul>
+            <div class="right_menu">
+            	<div class="en_icon"><img src="images/en.png" width="16" height="14" alt="icon"> En</div>
+           	  <a href="#" class="sign_in">Sign in</a>
+            	<a href="#" class="rgster">Register</a>
+            </div>
+      </div>
+  </header>
+
+
+<div class="contnt">
+	<div class="online_banner">
+    	<div class="wrapper">
+        	<div class="bnr_inr">
+        		<div class="online_banner_left"> <p>Find Best online Tutors for your subjects</p></div>
+            	<div class="want_tutor">
+                    <h2>Want a Tutor?</h2>
+                    <a href="#" class="connect_btn radius3">Connect with a Tutor</a>
+                    <span>And Get Free Hours</span>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    <nav id="navigation">
+    	<div class="search_box" onClick="return false;"><img src="images/srch_dwn.png" width="22" height="22" alt="img"> <img src="images/srch_up.png" width="22" height="22" alt="img"></div>
+<div class="ready_to_teach catehide">
+    		<div class="wrapper">
+        		<div class="online">
+            	    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+                        <label class="onoffswitch-label" for="myonoffswitch">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div> 
+				 <span><a href="#" class="tooltip radius3">Available to teach now <span> Help </span></a> <img src="images/corct_icon.png" width="15" height="15" alt="img"></span>
+                 
+                 <div class="onoffswitch1">
+                        <input type="checkbox" name="onoffswitch1" class="onoffswitch1-checkbox" id="myonoffswitch1">
+                        <label class="onoffswitch1-label" for="myonoffswitch1">
+                        <span class="onoffswitch1-inner"></span>
+                        <span class="onoffswitch1-switch"></span>
+                        </label>
+                 </div> 
+                 
+                 <span><a href="#" class="tooltip radius3">Online <span> Help </span></a> <img src="images/online.png" width="12" height="12" alt="img"> </span>
+                 <div class="gender">Select Gender 
+                 <input type="radio" name="gender" checked> <img src="images/male_icon.png" width="11" height="22" alt="img">
+              	 <input type="radio" name="gender"> <img src="images/femail_icon.png" width="12" height="22" alt="img">
+                 <input type="radio" name="gender"> <img src="images/gnder_icon.png" width="30" height="22" alt="img"></div>
+              </div>
+            	<form>
+   	  <input type="text" value="Choose subject" onblur=" if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.value)this.value=''" class="radius3"> <span></span>
+                <input type="text" value="Choose country" onblur=" if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.value)this.value=''" class="radius3"> <span></span>
+                <input type="text" value="Your Budget" onblur=" if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.value)this.value=''" class="radius3"> <span></span>
+                <input type="text" value="Currency preference" onblur=" if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.value)this.value=''" class="radius3"> <span></span>
+                <div class="outer_search">
+                	<div class="search radius3">
+                	<input type="text" value="Enter keyword" onblur=" if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.value)this.value=''">
+                    <input type="submit" value="">
+                	</div>
+                    <p>Can't find anything? Search for it!</p>
+                </div>
+            </form>
+          </div>
+    </div>
+    </nav>
+
+
+    <div class="wrapper">
+    	<div class="breadcrumb">
+        	<ul>
+            	<li class="radius3_left"><a href="#"><img src="images/home.png" width="22" height="22" alt="img"></a></li>
+                <li class="radius3_left"><a href="#">Math</a></li>
+                <li class="radius3_left"><a href="#" class="breadcrumb_active">Algebra</a></li>
+            </ul>
+          <!--<p>All of our tutoring occurs online, but you can browse Algebra tutors by location here.<br>Browse tutors by gender: Female Algebra tu tors, Male Algebra tutors<br>Algebra textbooks</p>-->
+        </div>
+        
+        <ul class="showing_online_result">
+        	<span>Showing 1-10 of 4763 results (940 online) </span>
+    		<li>
+            	<div class="left_img">
+                	<span class="radius3"><img src="images/img1_online.png" width="145" height="139" alt="img"></span>
+                    <ul>
+                    	<li><img src="images/grade_active.png" width="17" height="18" alt="img"></li>
+                        <li><img src="images/grade_active.png" width="17" height="18" alt="img"></li>
+                        <li><img src="images/grade_active.png" width="17" height="18" alt="img"></li>
+                        <li><img src="images/grade_non_active.png" width="17" height="18" alt="img"></li>
+                        <li><img src="images/grade_non_active.png" width="17" height="18" alt="img"></li>
+                    </ul>
+                </div>
+<div class="img_right">
+                	<div class="img_name"><img src="images/corct_icon.png" width="15" height="15" alt="img"> Maxence D. <span>Tutors Algebra + 10 other</span> </div>
+                    <span class="british"><img width="23" height="16" alt="img" src="images/british.png"> British | £25 -30 <em>University of California, San Diego 2010 - Engineering Physics</em> </span>
+                    <p>I've been tutoring french 1-on-1 for both beginners and more advanced speakers; I truly enjoy teaching this language and sharing my love for my native culture! Also, I will start tutoring Maths courses for engineers this quarter.</p>
+              </div>
+                <div class="hover_btn">
+                	<a href="#"><img src="images/meet_icon.png" width="15" height="21" alt="img"> Meet now</a>
+                    <a href="#"><img src="images/msg_icon_blue.png" width="16" height="13" alt="img"> Message</a>
+        </div>
+            </li>
+            <li>
+            	<div class="left_img">
+                	<span class="radius3"><img src="images/img1_online.png" width="145" height="139" alt="img"></span>
+                    <ul>
+                    	<li><img src="images/grade_active.png" width="17" height="18" alt="img"></li>
+                        <li><img src="images/grade_active.png" width="17" height="18" alt="img"></li>
+                        <li><img src="images/grade_active.png" width="17" height="18" alt="img"></li>
+                        <li><img src="images/grade_non_active.png" width="17" height="18" alt="img"></li>
+                        <li><img src="images/grade_non_active.png" width="17" height="18" alt="img"></li>
+                    </ul>
+                </div>
+<div class="img_right">
+                	<div class="img_name"><img src="images/corct_icon.png" width="15" height="15" alt="img"> Maxence D. <span>Tutors Algebra + 10 other</span> </div>
+                    <span class="british"><img width="23" height="16" alt="img" src="images/british.png"> British | £25 -30 <em>University of California, San Diego 2010 - Engineering Physics</em> </span>
+                    <p>I've been tutoring french 1-on-1 for both beginners and more advanced speakers; I truly enjoy teaching this language and sharing my love for my native culture! Also, I will start tutoring Maths courses for engineers this quarter.</p>
+              </div>
+                <div class="hover_btn">
+                	<a href="#"><img src="images/meet_icon.png" width="15" height="21" alt="img"> Meet now</a>
+                    <a href="#"><img src="images/msg_icon_blue.png" width="16" height="13" alt="img"> Message</a>
+        </div>
+            </li>
+            <li>
+            	<div class="left_img">
+                	<span class="radius3"><img src="images/img1_online.png" width="145" height="139" alt="img"></span>
+                    <ul>
+                    	<li><img src="images/grade_active.png" width="17" height="18" alt="img"></li>
+                        <li><img src="images/grade_active.png" width="17" height="18" alt="img"></li>
+                        <li><img src="images/grade_active.png" width="17" height="18" alt="img"></li>
+                        <li><img src="images/grade_non_active.png" width="17" height="18" alt="img"></li>
+                        <li><img src="images/grade_non_active.png" width="17" height="18" alt="img"></li>
+                    </ul>
+                </div>
+<div class="img_right">
+                	<div class="img_name"><img src="images/corct_icon.png" width="15" height="15" alt="img"> Maxence D. <span>Tutors Algebra + 10 other</span> </div>
+                    <span class="british"><img width="23" height="16" alt="img" src="images/british.png"> British | £25 -30 <em>University of California, San Diego 2010 - Engineering Physics</em> </span>
+                    <p>I've been tutoring french 1-on-1 for both beginners and more advanced speakers; I truly enjoy teaching this language and sharing my love for my native culture! Also, I will start tutoring Maths courses for engineers this quarter.</p>
+              </div>
+                <div class="hover_btn">
+                	<a href="#"><img src="images/meet_icon.png" width="15" height="21" alt="img"> Meet now</a>
+                    <a href="#"><img src="images/msg_icon_blue.png" width="16" height="13" alt="img"> Message</a>
+        </div>
+            </li>
+            <li>
+            	<div class="left_img">
+                	<span class="radius3"><img src="images/img1_online.png" width="145" height="139" alt="img"></span>
+                    <ul>
+                    	<li><img src="images/grade_active.png" width="17" height="18" alt="img"></li>
+                        <li><img src="images/grade_active.png" width="17" height="18" alt="img"></li>
+                        <li><img src="images/grade_active.png" width="17" height="18" alt="img"></li>
+                        <li><img src="images/grade_non_active.png" width="17" height="18" alt="img"></li>
+                        <li><img src="images/grade_non_active.png" width="17" height="18" alt="img"></li>
+                    </ul>
+                </div>
+<div class="img_right">
+                	<div class="img_name"><img src="images/corct_icon.png" width="15" height="15" alt="img"> Maxence D. <span>Tutors Algebra + 10 other</span> </div>
+                    <span class="british"><img width="23" height="16" alt="img" src="images/british.png"> British | £25 -30 <em>University of California, San Diego 2010 - Engineering Physics</em> </span>
+                    <p>I've been tutoring french 1-on-1 for both beginners and more advanced speakers; I truly enjoy teaching this language and sharing my love for my native culture! Also, I will start tutoring Maths courses for engineers this quarter.</p>
+              </div>
+                <div class="hover_btn">
+                	<a href="#"><img src="images/meet_icon.png" width="15" height="21" alt="img"> Meet now</a>
+                    <a href="#"><img src="images/msg_icon_blue.png" width="16" height="13" alt="img"> Message</a>
+        </div>
+            </li>
+            <li>
+            	<div class="left_img">
+                	<span class="radius3"><img src="images/img1_online.png" width="145" height="139" alt="img"></span>
+                    <ul>
+                    	<li><img src="images/grade_active.png" width="17" height="18" alt="img"></li>
+                        <li><img src="images/grade_active.png" width="17" height="18" alt="img"></li>
+                        <li><img src="images/grade_active.png" width="17" height="18" alt="img"></li>
+                        <li><img src="images/grade_non_active.png" width="17" height="18" alt="img"></li>
+                        <li><img src="images/grade_non_active.png" width="17" height="18" alt="img"></li>
+                    </ul>
+                </div>
+<div class="img_right">
+                	<div class="img_name"><img src="images/corct_icon.png" width="15" height="15" alt="img"> Maxence D. <span>Tutors Algebra + 10 other</span> </div>
+                    <span class="british"><img width="23" height="16" alt="img" src="images/british.png"> British | £25 -30 <em>University of California, San Diego 2010 - Engineering Physics</em> </span>
+                    <p>I've been tutoring french 1-on-1 for both beginners and more advanced speakers; I truly enjoy teaching this language and sharing my love for my native culture! Also, I will start tutoring Maths courses for engineers this quarter.</p>
+              </div>
+                <div class="hover_btn">
+                	<a href="#"><img src="images/meet_icon.png" width="15" height="21" alt="img"> Meet now</a>
+                    <a href="#"><img src="images/msg_icon_blue.png" width="16" height="13" alt="img"> Message</a>
+        </div>
+            </li>
+    <li>
+            	<div class="left_img">
+                	<span class="radius3"><img src="images/img1_online.png" width="145" height="139" alt="img"></span>
+                    <ul>
+                    	<li><img src="images/grade_active.png" width="17" height="18" alt="img"></li>
+                        <li><img src="images/grade_active.png" width="17" height="18" alt="img"></li>
+                        <li><img src="images/grade_active.png" width="17" height="18" alt="img"></li>
+                        <li><img src="images/grade_non_active.png" width="17" height="18" alt="img"></li>
+                        <li><img src="images/grade_non_active.png" width="17" height="18" alt="img"></li>
+                    </ul>
+                </div>
+<div class="img_right">
+                	<div class="img_name"><img src="images/corct_icon.png" width="15" height="15" alt="img"> Maxence D. <span>Tutors Algebra + 10 other</span> </div>
+                    <span class="british"><img width="23" height="16" alt="img" src="images/british.png"> British | £25 -30 <em>University of California, San Diego 2010 - Engineering Physics</em> </span>
+                    <p>I've been tutoring french 1-on-1 for both beginners and more advanced speakers; I truly enjoy teaching this language and sharing my love for my native culture! Also, I will start tutoring Maths courses for engineers this quarter.</p>
+                </div>
+                <div class="hover_btn">
+                	<a href="#"><img src="images/meet_icon.png" width="15" height="21" alt="img"> Meet now</a>
+                    <a href="#"><img src="images/msg_icon_blue.png" width="16" height="13" alt="img"> Message</a>
+        </div>
+            </li>
+        </ul>
+        <div class="pgntn">
+        <ul>
+        	<li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">...</a></li>
+            <li><a href="#">477</a></li>
+        </ul>
+        <a href="#"><img src="images/next.png" width="23" height="23" alt="img"></a>
+        <a href="#"> <img src="images/prev.png" width="23" height="23" alt="img"> </a>
+        </div>
+        <div class="crse_rlted">
+        <h5>Courses related to Algebra</h5>
+        <a href="#">Algebra 1</a>  <a href="#">Algebra 2</a>
+        
+        <h5>Topics related to Algebra</h5>
+        
+        <ul>
+        	<li>Absolute Value Inequalities <br>Adding and Subtracting Polynomials<br>Applications of Linear Systems</li>
+
+			<li>Absolute-Values-online-tutoring<br>Adding and Subtracting Rational...<br>Applications of the Discriminant</li>
+            
+            <li>Adding and Subtracting Matrices<br>Addition of Real Numbers<br>Box-and-whisker Plots</li>
+        </ul>
+        
+        <a href="#" class="radius3 show">Show All</a>
+        
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<footer>
+	<div class="wrapper">
+		<div class="ftr_logo"><img src="images/prfct_tutor_footer.png" width="201" height="40" alt="img"></div>
+		<ul class="ftr_lnk">
+        	<span class="lnk_hdng">About</span>
+        	<li><a href="#">Our Mission</a></li>
+			<li><a href="#">Our Team</a></li>
+			<li><a href="#">Our Interns</a></li>
+			<li><a href="#">Our Content Specialists</a></li>
+        </ul>
+		<ul class="ftr_lnk">
+        	<span class="lnk_hdng">Coaching</span>
+        	<li><a href="#">Coach Reports</a></li>
+			<li><a href="#">Coach Resources</a></li>
+			<li><a href="#">Case Studies</a></li>
+			<li><a href="#">Common Core</a></li>
+        </ul>
+		<ul class="ftr_lnk">
+        	<span class="lnk_hdng">Careers</span>
+        	<li><a href="#">Full Time</a></li>
+			<li><a href="#">Internships</a></li>
+        </ul>
+		<ul class="ftr_lnk">
+        	<span class="lnk_hdng">Help</span>
+        	<li><a href="#">Report a Problem</a></li>
+			<li><a href="#">FAQ</a></li>
+        </ul>
+        <div class="socl_link">
+        	<ul class="social_icon">
+        	<span class="lnk_hdng">Social</span>
+        	<li><a href="#"><img src="images/fb.png" width="9" height="17" alt="icon"></a></li>
+			<li><a href="#"><img src="images/twtr.png" width="20" height="16" alt="icon"></a></li>
+            <li><a href="#"><img src="images/gogle.png" width="17" height="17" alt="icon"></a></li>
+			<li><a href="#"><img src="images/blogster.png" width="16" height="16" alt="icon"></a></li>
+        	</ul>
+            <ul class="ftr_lnk">
+        	<span class="lnk_hdng">Countact us</span>
+        	<li><a href="#">Contact</a></li>
+			<li><a href="#">Press</a></li>
+        </ul>
+        </div>
+    </div>
+</footer>
+<div class="lwr_ftr">
+	<div class="wrapper">
+		<ul class="prvt_plcy">
+    		<li><a href="#">Terms of Use</a></li>
+        	<li><a href="#">Privacy Policy</a></li>
+    	</ul>
+        <p class="ftr_txt"> © championtutoronline <br>Except where noted, all rights reserved.</p>
+
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>
+
+<!--<script src="js/waypoints.min.js"></script>-->
+
+<script src="js/jquery.bxslider.min.js"></script>
+<script language="javascript">
+
+$(function(){
+  $('#slide_show').bxSlider({
+    auto: true,
+	pager: false,
+	controls :false,
+	touchEnabled:true,
+	startSlide:3,
+	pause:7000
+	});
+});
+</script>
+
+
+
+<script language="javascript">
+svgeezy.init(false, 'png');
+</script>
+
+<!--<script type="text/javascript" src="js/smoothscroll.js"></script>
+<script type="text/javascript">
+var ready_to_teach = $(".ready_to_teach");
+var nav = $("nav");
+// Sticky navigation code below
+ready_to_teach.waypoint({
+		handler: function(event, direction) {
+			nav.toggleClass('sticky', direction=='down');
+			
+			if (direction == 'down') ready_to_teach.css({ 'height':nav.outerHeight() });
+			else ready_to_teach.css({ 'height':'auto' });
+		},
+		offset: 1
+	});
+</script> -->
+
+
+<script language="javascript">
+
+
+//create a stick nav
+//var menuOffset = $('.top-nav')[0].offsetTop; // replace #menu with the id or class of the target navigation
+$(document).bind('ready scroll', function() {
+    var docScroll = $(document).scrollTop();
+             if (docScroll >= 270) {
+        if (!$('nav').hasClass('sticky')) {
+        
+            $('nav').addClass('sticky').css({
+                top: '-300px'
+            }).stop().animate({
+                top: 73
+            }, 500);
+        }
+    } else {
+        $('nav').removeClass('sticky').removeAttr('style');
+    }
+
+});
+</script>
+<!--    <script>
+function show_anthr()
+{
+	document.getElementById('hd_clck').style.display="none";
+	document.getElementById('shw_clck').style.display="block";
+}
+</script>
+        <script>
+function show_first()
+{
+	document.getElementById('shw_clck').style.display="none";
+	//document.getElementById('hd_clck').style.display="block";
+}
+</script>-->
+
+<script>
+    $(".search_box").click(function () {
+		$(".search_box").toggleClass("add");
+      $(".ready_to_teach").toggleClass("catehide");
+    });
+</script>
