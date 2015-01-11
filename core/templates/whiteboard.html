@@ -1,0 +1,446 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block script_extra %}
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="{% static "js/whiteboard/script.js" %}"></script>
+
+{% endblock script_extra %}
+
+{% block body %}
+    {% block header %}
+        {{ block.super }}
+    {% endblock header %}
+    {% block bodycontent %}
+        <div class="header_bottom">
+            <div class="wrapper">
+                <div class="demo_lesson_progress radius3_top">
+                    <div class="demo_progress_img"><img src="{% static "images/wb_img1.png" %}" width="38" height="38" alt="img"></div>
+                    Demo lesson <span>in progress</span>
+                </div>
+                <a href="#" class="free_trial radius3"> Claim your free trial </a>
+            </div>
+        </div>
+
+        <div class="tabbings">
+        <div id="tabs">
+            <div id="tabs-1">
+                <div class="canvas_menu">
+                    <div class="radius3 text_editor"> <a href="#" id="text"> Text </a> </div>
+
+                    <div class="radius3 text_editor"> <a href="#" id="default"> Default </a> </div>
+
+                    <div class="radius3 text_editor"> <a href="#"><img src="{% static "images/wb_rotate_left.png" %}" width="14" height="15" alt="img"></a> <a href="#"><img src="{% static "images/wb_rotate_right.png" %}" width="14" height="14" alt="img"></a> </div>
+
+                    <div class="radius3 text_editor"> <a href="#"><img src="{% static "images/wb_small_A_icon.png" %}" width="10" height="9" alt="img"></a> <a href="#"><img src="{% static "images/wb_large_A_icon.png" %}" width="13" height="12" alt="img"> </a> </div>
+
+                    <div class="radius3 text_editor"> <a href="#"><img src="{% static "images/wb_p_icon.png" %}" width="25" height="11" alt="img"></a> </div>
+                </div>
+                <div class="document">
+                    <div>
+                        <div class="document_top">
+                            <a href="#" class="Document1 radius3">Document 1</a>
+                            <a href="#" class="new radius3"> New </a>
+                        </div>
+
+                        <textarea class="documnet_contnt radius3"></textarea>
+
+                    </div>
+                </div>
+            </div>
+            <div id="tabs-2">
+                <!-- Data for Text Editor. !-->
+            </div>
+            <div id="tabs-3">
+                <!-- Data for whiteboard. !-->
+            </div>
+            <div class="show_menu_icon">
+                <img src="{% static "images/show_menu_icon.png" %}" width="22" height="22" alt="img">
+                    Show
+            </div>
+                <ul>
+                    <div class="sharing_video radius3_top">
+                        <div class="chat_header">
+                            <span class="online"><img width="12" height="12" alt="img" src="{% static "images/online.png" %}"></span>
+                            Audio/Video Sharing
+                            <a id="hidee" href="#"> <img width="15" height="9" alt="img" src="{% static "images/hide_icon.png" %}"> </a>
+                        </div>
+                        <div class="video_section"> <img src="{% static "images/video.png" %}" width="191" height="142" alt="img"> </div>
+                    </div>
+
+                    <div class="chat radius3_top">
+                        <div class="chat_header">
+                            <span class="online"><img src="{% static "images/online.png" %}" width="12" height="12" alt="img"></span>
+                            Tutor
+                            <a href="#" id="hide"> <img src="{% static "images/hide_icon.png" %}" width="15" height="9" alt="img"> </a>
+                            <a href="#"> <img src="{% static "images/chat_icon.png" %}" width="15" height="15" alt="img"> </a>
+                        </div>
+                        <div class="chat_contnt"></div>
+                        <div class="chat_txt"> <input id="chat_input_textbox" type="text" placeholder="Enter a Message">  <a href="#"></a> </div>
+                    </div>
+                    <div class="left_detail">
+                        <div class="sharing radius3"><img src="{% static "images/wb_online.png" %}" width="14" height="14" alt="img">Sharing</div>
+                        <div class="different_detail">
+
+                            <div class="different_detail_inner">
+                                <div class="different_detail_img"> <img src="{% static "images/help_icon.png" %}" width="17" height="17" alt="img"> </div>
+                                <a href="#"> Help </a>
+                            </div>
+
+                            <div class="different_detail_inner">
+                                <div class="different_detail_img"><img src="{% static "images/wb_setting_icon.png" %}" width="19" height="19" alt="img"> </div> <a href="#"> Settings </a>
+                            </div>
+                            <div class="different_detail_inner">
+                                <div class="different_detail_img"><img src="{% static "images/wb_screensharing_icon.png" %}" width="20" height="19" alt="img"> </div> <a href="#"> Screensharings </a>
+                                <div class="onoffswitch6">
+                                    <input type="checkbox" name="onoffswitch6" class="onoffswitch6-checkbox" id="myonoffswitch6" checked>
+                                    <label class="onoffswitch6-label" for="myonoffswitch6">
+                                        <span class="onoffswitch6-inner"></span>
+                                        <span class="onoffswitch6-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="different_detail_inner">
+                                <div class="different_detail_img"> <img src="{% static "images/video_icon.png" %}" width="25" height="14" alt="img"> </div>
+                                <div class="onoffswitch3">
+                                    <input type="checkbox" name="onoffswitch3" class="onoffswitch3-checkbox" id="myonoffswitch3" checked>
+                                    <label class="onoffswitch3-label" for="myonoffswitch3">
+                                        <span class="onoffswitch3-inner"></span>
+                                        <span class="onoffswitch3-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="different_detail_inner">
+                                <div class="different_detail_img"><img src="{% static "images/wb_sound_icon.png" %}" width="21" height="19" alt="img"> </div>
+                                <div class="onoffswitch4">
+                                    <input type="checkbox" name="onoffswitch4" class="onoffswitch4-checkbox" id="myonoffswitch4" checked>
+                                    <label class="onoffswitch4-label" for="myonoffswitch4">
+                                        <span class="onoffswitch4-inner"></span>
+                                        <span class="onoffswitch4-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="hide_menu"><img src="{% static "images/hide_menu_icon.png" %}" width="22" height="22" alt="img"> Hide </div>
+
+                    <div class="tutor radius3"><img src="{% static "images/wb_online.png" %}" width="14" height="14" alt="img">Tutor</div>
+
+                    <li><a id="id_tab_code_editor" href="#tabs-1">Code Editor</a></li>
+                    <li><a id="id_tab_text_editor" href="#tabs-2">Text Editor</a></li>
+                    <li><a id="id_tab_white_board" href="#tabs-3">Whiteboard</a></li>
+
+
+                </ul>
+            </div>
+        </div>
+    {% endblock bodycontent %}
+{% endblock body %}
+{% block more_extra %}
+    <div id="loading_container" style="width:100px;height: 100px;display:none;">
+        <p style="font-weight: bold;font-size: 30px;">Loading...</p>
+    </div>
+
+    <script>
+        $(document).ready(function()
+        {
+            $(window).resize(function()
+            {
+                $('#loading_container').css({
+                            position: 'absolute'
+                        });
+
+                $('#loading_container').css({
+                            left: ($(window).width() - $('#loading_container').outerWidth()) / 2,
+                            top: ($(window).height() - $('#loading_container').outerHeight()) / 2
+                        });
+            });
+
+            // call `resize` to center elements
+            $(window).resize();
+        });
+    </script>
+
+    <script>
+        $(".show_menu_icon").click(function () {
+            $("ul.ui-tabs-nav").show();
+            $(".show_menu_icon").hide();
+        });
+        $(".hide_menu").click(function () {
+            $("ul.ui-tabs-nav").hide();
+            $(".show_menu_icon").show();
+        });
+    </script>
+    <script>
+        $(".sharing").click(function () {
+            $(".sharing_video").toggleClass("added");
+        });
+        $(".tutor").click(function () {
+            $(".chat").toggleClass("added");
+        });
+        $("a#hide").click(function () {
+            $(".chat").removeClass("added");
+        });
+        $("a#hidee").click(function () {
+            $(".sharing_video").removeClass("added");
+        });
+    </script>
+    <script>
+
+        function jsLoadFail()
+        {
+
+        }
+
+        function jsOnload() {
+            if (window.resourcesLoaded) {
+                afterLoad();
+
+
+                // Basic session workspace variables
+
+
+
+                var opentokConfig = {
+
+                    apiKey: '11038762',
+                    token: null,
+                    sessionID: '1_MX4xMTAzODc2Mn4xMjIuMTczLjE4MS4wflRodSBTZXAgMDQgMDU6NTU6MTQgUERUIDIwMTR-MC44MDY5NzN-UH4',
+                    webrtcSessionID: '2_MX4xMTAzODc2Mn4xMjIuMTczLjE4MS4wflRodSBTZXAgMDQgMDU6NTU6MTQgUERUIDIwMTR-MC4wOTMwMDE0ODV-fg',
+
+                    webrtcCapable: !!(window.mozRTCPeerConnection || window.webkitRTCPeerConnection || window.RTCPeerConnection)
+                };
+                opentokConfig.webrtc = opentokConfig.webrtcCapable;
+
+                var isDemoLesson = true,
+                        isScheduledLesson = false,
+                        isOnDemandLesson = !isDemoLesson && !isScheduledLesson,
+                        isReadOnly = false;
+
+                updateConfig({
+
+                    OMNIBAR_HIDE: true
+                });
+
+                require(['lesson/config', 'lesson/init', 'lesson/modules/workspace/utils'],
+                        function(config, lesson, lessonUtils) {
+                            _(config).extend({
+                                endpoints: {
+                                    SUBMIT_QUESTION_URL: "/s/M8EC7/submit-question/"
+                                },
+                                user: {
+                                    id: '234235',
+                                    code: '234235',
+                                    role: 1,
+                                    isCandidate: false
+                                },
+                                otherUser: {
+                                    id: ''
+                                },
+                                userPhotos: {
+                                    '234235': lessonUtils.getViewingIcon(''),
+                                    '': lessonUtils.getViewingIcon('')
+                                },
+                                code: 'M8EC7',
+                                context: 'tutor_waiting',
+                                medium: 1,
+                                started: false,
+                                isDemo: isDemoLesson,
+                                isScheduled: isScheduledLesson,
+                                isOnDemand: isOnDemandLesson,
+                                isReadOnly: isReadOnly,
+                                isLive: (!isReadOnly && !isDemoLesson),
+                                question: null
+                            });
+
+
+                            lesson.start({
+                                paperboard: {
+                                    el: $('#whiteboard'),
+                                    $pagination: $('#paperboard'),
+                                    $grid: $('.grid'),
+                                    $cursor: $('#other-cursor')
+                                },
+                                chat: {
+                                    el: $('#lesson-chat'),
+                                    $footer: $('.chat-footer'),
+                                    $template: $('#lesson-chat-template')
+                                },
+                                video: {
+                                    $myStreamContainer: $('#my-stream-container'),
+                                    $streamContainer: $('#lesson-stream'),
+                                    $indicators: $('.column.sharing'),
+                                    $otherIndicators: $('.tutor.column'),
+                                    $helpContainer: $('.setup-messaging'),
+                                    $settingsModal: $('#video-settings-modal'),
+                                    opentok: opentokConfig,
+                                    GENERATE_OPENTOK_TOKEN_URL: "/s/M8EC7/generate-token/",
+                                    conference: {
+                                        $layout: $('.setup-conference'),
+                                        $modal: $('#lesson-conference-how-it-works'),
+                                        config: {
+
+                                            code: null,
+                                            phoneNumber: null
+
+                                        }
+                                    }
+                                },
+                                ide: {
+                                    el: $('#ide'),
+                                    url: 'https://instaedu.com/ide//lesson/M8EC7'
+                                },
+                                etherpad: {
+                                    el: $('#etherpad'),
+                                    url: 'https://instaedu.com/pad//p/M8EC7?showChat=false&amp;showLineNumbers=false&amp;showUserIcon=false&amp;userName=Student'
+                                },
+                                polling: {
+                                    LESSON_STATUS_URL: "/s/M8EC7/status/",
+                                    CREATE_LESSON_EVENT_URL: "/s/M8EC7/event/"
+                                },
+                                workspace: {
+                                    el: $('#main'),
+                                    supportButton: {
+                                        el: $('.control.support')
+                                    },
+                                    messageModal: {
+                                        el: $('#message-modal'),
+                                        submitURL: '/online_tutors/message/',
+                                        successURL: '/s/M8EC7/message/success/'
+                                    },
+                                    backspaceModal: {
+                                        el: $('#backspace-modal')
+                                    }
+                                },
+                                screenshare: {
+                                    el: $('#screensharing'),
+                                    $footer: $('#screensharing-footer')
+                                }
+                            });
+                        });
+
+                PointerEventsPolyfill.initialize({
+                    selector: '#other-cursor'
+                });
+
+            } else {
+                jsLoadFail();
+            }
+        };
+
+        function loadJs() {
+            $.ajax({
+                url: '/static/js/cc4d74c818_bundle_plugins_and_core.js',
+                dataType: 'script',
+                cache: true,
+                success: jsOnload,
+                error: jsLoadFail
+            });
+        }
+
+        if (window.jQuery) {
+            $(document).ready(loadJs);
+        } else {
+            jsLoadFail();
+        }
+    </script>
+    <script src="{% static "js/jquery-ui-1.10.4.custom.js" %}"></script>
+    <script>
+        $( "#tabs" ).tabs();
+
+        function load_js_async(url)
+        {
+            $.ajax({
+                url: url,
+                dataType: 'script',
+                cache: true,
+                success: function(data)
+                {
+                    console.log("script loaded successfully.");
+                    console.log("script: "+url);
+                },
+                error: function(jqxhr, status, error)
+                {
+
+                }
+            });
+        }
+
+        var text_editor_loaded = false;
+        var drawing_board_loaded = false;
+        var js_script_loaded = false;
+        function load_whiteboard_scripts_async()
+        {
+            if(!js_script_loaded)
+            {
+                //load_js_async("https://cdn.socket.io/socket.io-1.2.0.js");
+                //var chat_js_url = "{% static "js/chat/chat.js" %}"
+                //load_js_async(chat_js_url);
+                //var whiteboard_js_url = "{% static "js/whiteboard/script.js" %}"
+                //load_js_async(whiteboard_js_url);
+                js_script_loaded = true;
+            }
+        }
+        $("#id_tab_text_editor").click(function(e)
+        {
+            if(!text_editor_loaded)
+            {
+                $("#loading_container").show();
+                $.ajax({
+                    type: "GET",
+                    url: "ajax/text_editor",
+                    data: {},
+                    success: function(data)
+                    {
+                        $("#tabs-2").html(data);
+                        text_editor_loaded = true;
+                        console.log("Text Editor loaded.");
+                        //load_whiteboard_scripts_async();
+                    },
+                    error: function(jqxhr, status, error)
+                    {
+
+                    }
+                })
+                .done(function( msg ) {
+                    $("#loading_container").hide();
+                });
+            }
+            else
+            {
+                console.log("Text Editor Already Loaded!");
+            }
+        });
+        $("#id_tab_white_board").click(function(e)
+        {
+            if(!drawing_board_loaded)
+            {
+                $("#loading_container").show();
+                $.ajax({
+                    type: "GET",
+                    url: "ajax/drawing_board",
+                    data: {},
+                    success: function(data)
+                    {
+                        $("#tabs-3").html(data);
+                        drawing_board_loaded = true;
+                        console.log("Drawing board loaded.");
+                        //load_whiteboard_scripts_async();
+                    },
+                    error: function(jqxhr, status, error)
+                    {
+
+                    }
+                })
+                .done(function( msg ) {
+                            $("#loading_container").hide();
+                });
+            }
+            else
+            {
+                console.log("Drawing Board Already Loaded!");
+            }
+        });
+    </script>
+{% endblock more_extra %}

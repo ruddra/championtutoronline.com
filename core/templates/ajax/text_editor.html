@@ -1,0 +1,13 @@
+{% load staticfiles %}
+<textarea class="aaa"></textarea>
+<div class="tab_right radius3">
+    <a href="#"><img src="{% static "images/wb_upload_download_icon.png" %}" width="16" height="13" alt="img"> Upload / Download</a>
+    <a href="#"><img src="{% static "images/wb_revisions_icon.png" %}" width="18" height="18" alt="img"> Revisions</a>
+</div>
+
+<script src="{% static "js/tinymce.min.js" %}"></script>
+<script type="text/javascript">
+    tinymce.init({
+        selector: "textarea.aaa",
+    });
+</script>

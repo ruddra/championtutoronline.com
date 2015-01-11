@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block head_extra %}
+    <div id="fb-root"></div>
+{% endblock head_extra %}
+
+{% block styles %}
+    <link href="{% static "css/signup-form.css" %}" rel="stylesheet">
+{% endblock styles %}
+
+{% block body %}
+    {% block header %}
+        {{ block.super }}
+    {% endblock header %}
+    {% block bodycontent %}
+        <form action="#" method="post">
+            {% csrf_token %}
+            <h1>Sign Up</h1>
+
+            <fieldset>
+{#                <legend><span class="number">1</span>Champion Tutor - Sign Up</legend>#}
+{#                <label for="name">Name:</label>#}
+{#                <input type="text" id="name" name="user_name">#}
+{##}
+{#                <label for="mail">Email:</label>#}
+{#                <input type="email" id="mail" name="user_email">#}
+{##}
+{#                <label for="password">Password:</label>#}
+{#                <input type="password" id="password" name="user_password">#}
+{##}
+{#                <label>Age:</label>#}
+{#                <input type="radio" id="under_13" value="under_13" name="user_age"><label for="under_13" class="light">Under 13</label><br>#}
+{#                <input type="radio" id="over_13" value="over_13" name="user_age"><label for="over_13" class="light">13 or older</label>#}
+                {{ form }}
+            </fieldset>
+            <button type="submit">Sign Up</button>
+        </form>
+    {% endblock bodycontent %}
+    {% block footer %}
+        <footer>
+            <div class="wrapper">
+                <div class="ftr_logo"><img src="{% static "images/prfct_tutor_footer.png" %}" width="201" height="40" alt="img"></div>
+                <ul class="ftr_lnk">
+                    <span class="lnk_hdng">About</span>
+                    <li><a href="#">Our Mission</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Our Interns</a></li>
+                    <li><a href="#">Our Content Specialists</a></li>
+                </ul>
+                <ul class="ftr_lnk">
+                    <span class="lnk_hdng">Coaching</span>
+                    <li><a href="#">Coach Reports</a></li>
+                    <li><a href="#">Coach Resources</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#">Common Core</a></li>
+                </ul>
+                <ul class="ftr_lnk">
+                    <span class="lnk_hdng">Careers</span>
+                    <li><a href="#">Full Time</a></li>
+                    <li><a href="#">Internships</a></li>
+                </ul>
+                <ul class="ftr_lnk">
+                    <span class="lnk_hdng">Help</span>
+                    <li><a href="#">Report a Problem</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <div class="socl_link">
+                    <ul class="social_icon">
+                        <span class="lnk_hdng">Social</span>
+                        <li><a href="#"><img src="{% static "images/fb.png" %}" width="9" height="17" alt="icon"></a></li>
+                        <li><a href="#"><img src="{% static "images/twtr.png" %}" width="20" height="16" alt="icon"></a></li>
+                        <li><a href="#"><img src="{% static "images/gogle.png" %}" width="17" height="17" alt="icon"></a></li>
+                        <li><a href="#"><img src="{% static "images/blogster.png" %}" width="16" height="16" alt="icon"></a></li>
+                    </ul>
+                    <ul class="ftr_lnk">
+                        <span class="lnk_hdng">Countact us</span>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    {% endblock footer %}
+    {% block footernote %}
+        <div class="lwr_ftr">
+            <div class="wrapper">
+                <ul class="prvt_plcy">
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+                <p class="ftr_txt"> © championtutoronline <br>Except where noted, all rights reserved.</p>
+
+            </div>
+        </div>
+    {% endblock footernote %}
+{% endblock body %}
+
+{% block more_extra %}
+    <script src="{% static "js/jquery.bxslider.min.js" %}"></script>
+    <script language="javascript">
+
+        $(function(){
+            $('#slide_show').bxSlider({
+                auto: true,
+                pager: false,
+                controls :false,
+                touchEnabled:true,
+                startSlide:3,
+                pause:7000
+            });
+        });
+    </script>
+{% endblock more_extra %}

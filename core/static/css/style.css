@@ -1315,7 +1315,7 @@ textarea.documnet_contnt { width:96%; height:auto; min-height:490px; float:left;
 @media only screen and (min-width :240px) and (max-width : 455px) {
 .wrapper,.hdng_inner { width:290px;}
 header { padding-bottom:10px; position:relative;}
-a#logo, a#logo:link, a#logo:visited { width:265px; height:auto; float:left; position:relative; left:50%; margin-left:-132.5px;} 
+a#logo, a#logo:link, a#logo:visited { width:265px; height:auto; float:left; position:relative; left:50%; margin-left:-132.5px;}
 .banner { margin-top:0px; }
 .banner_txt { margin-top:70px; width:60%; margin-left:-30%; left:50%; }
 a.video_icon, a.video_icon:link, a.video_icon:visited { margin:30px 0 0 -67px;}
@@ -1479,7 +1479,7 @@ a.free_trial, a.free_trial:link, a.free_trial:visited { margin:15px 55px 15px 0;
 @media only screen and (min-width :456px) and (max-width : 749px) {
 .wrapper,.hdng_inner { width:510px;}
 header { padding-bottom:10px; position:relative;}
-a#logo, a#logo:link, a#logo:visited { width:265px; height:auto; float:left; position:relative; left:50%; margin-left:-132.5px;} 
+a#logo, a#logo:link, a#logo:visited { width:265px; height:auto; float:left; position:relative; left:50%; margin-left:-132.5px;}
 a.rgster, a.rgster:link, a.rgster:visited, a.sign_in, a.sign_in:link, a.sign_in:visited { margin-right:5px; width:93px; }
 ul.menu { width:260px; clear:both;}
 .banner { margin-top:0px; }

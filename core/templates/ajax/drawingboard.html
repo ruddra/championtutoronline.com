@@ -1,0 +1,420 @@
+{% load staticfiles %}
+<div class="canvas_menu">
+<div class="canvas_menu_icon">
+<div class="canvas_menu_inner">
+    <a  id="id_canvas_menu_icon_undo" href="#"> <img src="{% static "images/wb_menu_icon1.png" %}" width="26" height="20" alt="img"> </a>
+</div>
+<div class="canvas_menu_inner">
+    <a id="id_canvas_menu_icon_redo" href="#"> <img src="{% static "images/wb_menu_icon2.png" %}" width="26" height="20" alt="img"> </a>
+</div>
+<div class="canvas_menu_inner">
+    <a id="id_canvas_menu_icon_select" href="#"> <img src="{% static "images/wb_menu_icon3.png" %}" width="21" height="21" alt="img"> </a>
+</div>
+<div class="canvas_menu_inner">
+    <a href="#"> <img src="{% static "images/wb_menu_icon4.png" %}" width="20" height="20" alt="img"> </a>
+    <div class="wb_submenu_icon1">
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_pen_size5" href="#"> <img src="{% static "images/white_board/wb_menu_icon4_1.png" %}" width="30" height="26" alt="img"> </a> </div>
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_pen_size10" href="#"> <img src="{% static "images/white_board/wb_menu_icon4_2.png" %}" width="30" height="26" alt="img"> </a> </div>
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_pen_size15" href="#"> <img src="{% static "images/white_board/wb_menu_icon4_3.png" %}" width="30" height="26" alt="img"> </a> </div>
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_pen_size20" href="#"> <img src="{% static "images/white_board/wb_menu_icon4_4.png" %}" width="30" height="26" alt="img"> </a> </div>
+    </div>
+</div>
+<div class="canvas_menu_inner">
+    <a href="#"> <img src="{% static "images/wb_menu_icon5.png" %}" width="22" height="20" alt="img"> </a>
+    <div class="wb_submenu_icon1">
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_eraser_size5" href="#"> <img src="{% static "images/white_board/wb_menu_icon4_1.png" %}" width="30" height="26" alt="img"> </a> </div>
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_eraser_size10" href="#"> <img src="{% static "images/white_board/wb_menu_icon4_2.png" %}" width="30" height="26" alt="img"> </a> </div>
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_eraser_size15" href="#"> <img src="{% static "images/white_board/wb_menu_icon4_3.png" %}" width="30" height="26" alt="img"> </a> </div>
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_eraser_size20" href="#"> <img src="{% static "images/white_board/wb_menu_icon4_4.png" %}" width="30" height="26" alt="img"> </a> </div>
+    </div>
+</div>
+<div class="canvas_menu_inner">
+    <a href="#"> <img src="{% static "images/wb_menu_icon6.png" %}" width="40" height="21" alt="img"> </a>
+    <div class="wb_submenu_icon1">
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_brush_size5" href="#"> <img src="{% static "images/white_board/wb_menu_icon4_1.png" %}" width="30" height="26" alt="img"> </a> </div>
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_brush_size10" href="#"> <img src="{% static "images/white_board/wb_menu_icon4_2.png" %}" width="30" height="26" alt="img"> </a> </div>
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_brush_size15" href="#"> <img src="{% static "images/white_board/wb_menu_icon4_3.png" %}" width="30" height="26" alt="img"> </a> </div>
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_brush_size20" href="#"> <img src="{% static "images/white_board/wb_menu_icon4_4.png" %}" width="30" height="26" alt="img"> </a> </div>
+    </div>
+</div>
+<div class="canvas_menu_inner">
+    <a href="#"> <img src="{% static "images/wb_menu_icon7.png" %}" width="27" height="26" alt="img"> </a>
+    <div class="wb_submenu_icon1">
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_shape_circle" href="#"> <img src="{% static "images/white_board/wb_menu_icon7_1.png" %}" alt="img"> </a> </div>
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_shape_hexa" href="#"> <img src="{% static "images/white_board/wb_menu_icon7_2.png" %}" alt="img"> </a> </div>
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_shape_penta" href="#"> <img src="{% static "images/white_board/wb_menu_icon7_3.png" %}" alt="img"> </a> </div>
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_shape_rect" href="#"> <img src="{% static "images/white_board/wb_menu_icon7_4.png" %}" alt="img"> </a> </div>
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_shape_triangle" href="#"> <img src="{% static "images/white_board/wb_menu_icon7_5.png" %}" alt="img"> </a> </div>
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_shape_righttriangle" href="#"> <img src="{% static "images/white_board/wb_menu_icon7_6.png" %}" alt="img"> </a> </div>
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_shape_line" href="#"> <img src="{% static "images/white_board/wb_menu_icon7_7.png" %}" alt="img"> </a> </div>
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_shape_arrow1" href="#"> <img src="{% static "images/white_board/wb_menu_icon7_8.png" %}" alt="img"> </a> </div>
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_shape_arrow2" href="#"> <img src="{% static "images/white_board/wb_menu_icon7_9.png" %}" alt="img"> </a> </div>
+    </div>
+</div>
+<div class="canvas_menu_inner">
+    <a id="id_canvas_menu_icon_text" href="#"> <img src="{% static "images/wb_menu_icon8.png" %}" width="22" height="23" alt="img"> </a>
+    <div class="wb_submenu_icon"></div>
+</div>
+<div class="canvas_menu_inner">
+    <a id="id_canvas_menu_icon_paintfill" href="#"> <img src="{% static "images/wb_menu_icon9.png" %}" width="24" height="20" alt="img"> </a>
+    <div class="wb_submenu_icon"></div>
+</div>
+<div class="canvas_menu_inner">
+    <a href="#"> <img src="{% static "images/wb_menu_icon10.png" %}" width="37" height="20" alt="img"> </a>
+    <div class="wb_submenu_icon1">
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_graphno" href="#"> <img src="{% static "images/white_board/wb_menu_icon10_1.png" %}" alt="img"> </a> </div>
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_graphpage" href="#"> <img src="{% static "images/white_board/wb_menu_icon10_2.png" %}" alt="img"> </a> </div>
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_graph4_1" href="#"> <img src="{% static "images/white_board/wb_menu_icon10_3.png" %}" alt="img"> </a> </div>
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_graph4_2" href="#"> <img src="{% static "images/white_board/wb_menu_icon10_4.png" %}" alt="img"> </a> </div>
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_graph2" href="#"> <img src="{% static "images/white_board/wb_menu_icon10_5.png" %}" alt="img"> </a> </div>
+    </div>
+</div>
+<div class="canvas_menu_inner">
+    <a href="#"> <img src="{% static "images/wb_fx_icon.png" %}" alt="img"> </a>
+    <div class="wb_submenu_icon whtebox_fx">
+        <div class="wb_subsubmenu">
+            <a href="#"> <img src="{% static "images/white_board/wb_menu_icon11_1.png" %}" alt="img"> </a>
+            <div class="sub_icon">
+                <a id="id_fx_wb_menu_icon11_1_inner1" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_1_inner1.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_1_inner2" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_1_inner2.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_1_inner3" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_1_inner3.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_1_inner4" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_1_inner4.png" %}" alt="img"> </a>
+            </div>
+        </div>
+        <div class="wb_subsubmenu">
+            <a href="#"> <img src="{% static "images/white_board/wb_menu_icon11_2.png" %}" alt="img"> </a>
+            <div class="sub_icon">
+                <a id="id_fx_wb_menu_icon11_2_inner1" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_2_inner1.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_2_inner2" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_2_inner2.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_2_inner3" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_2_inner3.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_2_inner4" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_2_inner4.png" %}" alt="img"> </a>
+            </div>
+        </div>
+        <div class="wb_subsubmenu">
+            <a href="#"> <img src="{% static "images/white_board/wb_menu_icon11_3.png" %}" alt="img"> </a>
+            <div class="sub_icon">
+                <a id="id_fx_wb_menu_icon11_3_inner1" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_3_inner1.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_3_inner2" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_3_inner2.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_3_inner3" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_3_inner3.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_3_inner4" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_3_inner4.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_3_inner5" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_3_inner5.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_3_inner6" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_3_inner6.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_3_inner7" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_3_inner7.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_3_inner8" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_3_inner8.png" %}" alt="img"> </a>
+            </div>
+        </div>
+        <div class="wb_subsubmenu">
+            <a href="#"> <img src="{% static "images/white_board/wb_menu_icon11_4.png" %}" alt="img"> </a>
+            <div class="sub_icon">
+                <a id="id_fx_wb_menu_icon11_4_inner1" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_4_inner1.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_4_inner2" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_4_inner2.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_4_inner3" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_4_inner3.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_4_inner4" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_4_inner4.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_4_inner5" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_4_inner5.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_4_inner6" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_4_inner6.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_4_inner7" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_4_inner7.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_4_inner8" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_4_inner8.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_4_inner9" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_4_inner9.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_4_inner10" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_4_inner10.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_4_inner11" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_4_inner11.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_4_inner12" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_4_inner12.png" %}" alt="img"> </a>
+            </div>
+        </div>
+        <div class="wb_subsubmenu">
+            <a href="#"> <img src="{% static "images/white_board/wb_menu_icon11_5.png" %}" alt="img"> </a>
+            <div class="sub_icon">
+                <a id="id_fx_wb_menu_icon11_5_inner1" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_5_inner1.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_5_inner2" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_5_inner2.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_5_inner3" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_5_inner3.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_5_inner4" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_5_inner4.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_5_inner5" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_5_inner5.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_5_inner6" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_5_inner6.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_5_inner7" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_5_inner7.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_5_inner8" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_5_inner8.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_5_inner9" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_5_inner9.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_5_inner10" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_5_inner10.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_5_inner11" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_5_inner11.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_5_inner12" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_5_inner12.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_5_inner13" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_5_inner13.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_5_inner14" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_5_inner14.png" %}" alt="img"> </a>
+            </div>
+        </div>
+        <div class="wb_subsubmenu">
+            <a href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6.png" %}" alt="img"> </a>
+            <div class="sub_icon">
+                <a id="id_fx_wb_menu_icon11_6_inner1" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner1.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner2" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner2.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner3" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner3.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner4" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner4.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner5" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner5.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner6" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner6.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner7" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner7.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner8" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner8.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner9" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner9.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner10" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner10.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner11" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner11.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner12" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner12.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner13" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner13.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner14" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner14.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner15" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner15.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner16" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner16.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner17" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner17.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner18" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner18.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner19" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner19.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner20" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner20.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner21" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner21.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner22" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner22.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner23" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner23.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner24" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner24.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner25" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner25.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner26" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner26.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner27" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner27.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner28" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner28.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner29" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner29.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_6_inner30" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_6_inner30.png" %}" alt="img"> </a>
+            </div>
+        </div>
+        <div class="wb_subsubmenu">
+            <a href="#"> <img src="{% static "images/white_board/wb_menu_icon11_7.png" %}" alt="img"> </a>
+            <div class="sub_icon" id="seven">
+            </div>
+        </div>
+        <div class="wb_subsubmenu">
+            <a href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8.png" %}" alt="img"> </a>
+            <div class="sub_icon">
+                <a id="id_fx_wb_menu_icon11_8_inner1" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner1.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_8_inner2" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner2.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_8_inner3" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner3.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_8_inner4" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner4.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_8_inner5" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner5.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_8_inner6" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner6.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_8_inner7" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner7.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_8_inner8" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner8.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_8_inner9" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner9.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_8_inner10" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner10.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_8_inner11" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner11.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_8_inner12" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner12.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_8_inner13" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner13.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_8_inner14" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner14.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_8_inner15" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner15.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_8_inner16" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner16.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_8_inner17" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner17.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_8_inner18" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner18.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_8_inner19" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner19.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_8_inner20" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner20.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_8_inner21" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner21.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_8_inner22" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner22.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_8_inner23" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner23.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_8_inner24" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner24.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_8_inner25" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner25.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_8_inner26" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner26.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_8_inner27" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner27.png" %}"alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_8_inner28" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_8_inner28.png" %}" alt="img"> </a>
+            </div>
+        </div>
+        <div class="wb_subsubmenu">
+            <a href="#"> <img src="{% static "images/white_board/wb_menu_icon11_9.png" %}" alt="img"> </a>
+            <div class="sub_icon">
+                <a id="id_fx_wb_menu_icon11_9_inner1" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_9_inner1.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_9_inner2" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_9_inner2.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_9_inner3" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_9_inner3.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_9_inner4" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_9_inner4.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_9_inner5" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_9_inner5.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_9_inner6" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_9_inner6.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_9_inner7" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_9_inner7.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_9_inner8" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_9_inner8.png" %}" alt="img"> </a>
+            </div>
+        </div>
+        <div class="wb_subsubmenu">
+            <a href="#"> <img src="{% static "images/white_board/wb_menu_icon11_10.png" %}" alt="img"> </a>
+            <div class="sub_icon">
+                <a id="id_fx_wb_menu_icon11_10_inner1" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_10_inner1.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_10_inner2" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_10_inner2.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_10_inner3" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_10_inner3.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_10_inner4" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_10_inner4.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_10_inner5" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_10_inner5.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_10_inner6" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_10_inner6.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_10_inner7" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_10_inner7.png" %}" alt="img"> </a>
+                <a id="id_fx_wb_menu_icon11_10_inner8" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_10_inner8.png" %}" alt="img"> </a>
+            </div>
+        </div>
+        <div class="wb_subsubmenu">
+            <a href="#"> <img src="{% static "images/white_board/wb_menu_icon11_11.png" %}" alt="img"> </a>
+            <div class="sub_icon" id="eleven">
+            </div>
+        </div>
+        <div class="wb_subsubmenu">
+            <a href="#"> <img src="{% static "images/white_board/wb_menu_icon11_12.png" %}" alt="img"> </a>
+            <div class="sub_icon" id="twelve">
+            </div>
+        </div>
+        <div class="wb_subsubmenu">
+            <a href="#"> <img src="{% static "images/white_board/wb_menu_icon11_13.png" %}" alt="img"> </a>
+            <div class="sub_icon" id="thirteen">
+            </div>
+        </div>
+        <div class="wb_subsubmenu">
+            <a href="#"> <img src="{% static "images/white_board/wb_menu_icon11_14.png" %}" alt="img"> </a>
+            <div class="sub_icon" id="fourteen">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="canvas_menu_inner">
+    <a href="#"> <img src="{% static "images/white_board/wb_menu_icon12.png" %}" alt="img"> </a>
+    <div class="wb_submenu_icon1">
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_axis1" href="#"> <img src="{% static "images/white_board/wb_menu_icon12_1.png" %}" alt="img"> </a> </div>
+        <div class="wb_subsubmenu"> <a id="id_canvas_menu_icon_axismarked" href="#"> <img src="{% static "images/white_board/wb_menu_icon12_2.png" %}" alt="img"> </a> </div>
+    </div>
+</div>
+</div>
+<div class="add"><img src="{% static "images/wb_upload_icon.png" %}" width="21" height="22" alt="icon">  Upload File
+    <!--<input type="file" required="required" onchange=" checkFile(this);getElementById('filevalue').value = getElementById('file_upload').value;getElementById('filevalue').style.display='block'; " id="file_upload" title="Browse File" name="file1" value="Browse File" class="file radius" style="display:block;">!-->
+    <input type="file" id="file_upload" title="Browse File" name="file1" value="Browse File" class="file radius" style="display:block;">
+</div>
+<div class="canvas_color">
+    <a href="#" id="black"></a>
+    <a href="#" id="orange"></a>
+    <a href="#" id="sky_blue"></a>
+    <a href="#" id="green"></a>
+    <a href="#" id="yellow"></a>
+    <a href="#" id="peach"></a>
+    <a href="#" id="gray"></a>
+</div>
+
+</div>
+
+<div style="width: 100%;text-align:center;"><canvas id="drawing_board" width="800" height="380" tabindex = '1' style="   margin-left: auto;
+                        margin-right: auto;
+                        display: block;
+                        width: 800px;
+                        height: 380px;
+                        -webkit-filter: drop-shadow(0 0 7px rgba(0,0,0,0.5));"></canvas> </div>
+
+<script>
+    $(document).ready(function(){
+        var i=0;
+        var c='';
+        for(i=1;i<=48;i++)
+        {
+            var path = {% static "" %} + "images/white_board/wb_menu_icon11_7_inner"+i+".png";
+            c+='<a id="id_fx_wb_menu_icon11_7_inner'+i+'" href="#"> <img src=' + path + ' alt="img"> </a>';
+        }
+        document.getElementById('seven').innerHTML=c;
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        var i=0;
+        var c='';
+        for(i=1;i<=153;i++)
+        {
+            var path = {% static "" %} + "images/white_board/wb_menu_icon11_11_inner"+i+".png";
+            c+='<a id="id_fx_wb_menu_icon11_11_inner'+i+'" href="#"> <img src=' + path + ' alt="img"> </a>';
+        }
+        document.getElementById('eleven').innerHTML=c;
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        var i=0;
+        var c='';
+        for(i=1;i<=46;i++)
+        {
+            var path = {% static "" %} + "images/white_board/wb_menu_icon11_12_inner"+i+".png";
+            c+='<a id="id_fx_wb_menu_icon11_12_inner'+i+'" href="#"> <img src='+ path +' alt="img"> </a>';
+        }
+        document.getElementById('twelve').innerHTML=c;
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        var i=0;
+        var c='';
+        for(i=1;i<=54;i++)
+        {
+            var path = {% static "" %} + "images/white_board/wb_menu_icon11_13_inner"+i+".png";
+            c+='<a id="id_fx_wb_menu_icon11_13_inner'+i+'" href="#"> <img src='+ path +' alt="img"> </a>';
+        }
+        document.getElementById('thirteen').innerHTML=c;
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        var i=0;
+        var c='';
+        for(i=1;i<=70;i++)
+        {
+            var path = {% static "" %} + "images/white_board/wb_menu_icon11_14_inner"+i+".png";
+            c+='<a id="id_fx_wb_menu_icon11_14_inner'+i+'" href="#"> <img src='+ path +' alt="img"> </a>';
+        }
+        document.getElementById('fourteen').innerHTML=c;
+    });
+</script>
+
+<script>
+
+
+
+
+
+
+
+
+
+    //$(".canvas_menu_inner > a").click(function () {
+    //   $(".canvas_menu_inner > a").removeClass("menu_active");
+    //   $(this).toggleClass("menu_active");
+    //   $(".wb_submenu_icon").removeClass("addactive");
+    //   if ($('.canvas_menu_inner > a').has("menu_active"))
+    //   {
+    //      $(this).siblings(".wb_submenu_icon").addClass("addactive");
+    //   }
+    //});
+
+
+    $(function(){
+
+        $(".canvas_menu_inner > a").click(function(e){
+            e.stopPropagation();
+
+            $(this).parent().siblings('.canvas_menu_inner').children('.canvas_menu_inner > a').removeClass("menu_active");
+            $(this).toggleClass("menu_active");
+
+            $(this).parent().siblings('.canvas_menu_inner').children('.wb_submenu_icon,.wb_submenu_icon1').removeClass("addactive");
+            $(this).siblings(".wb_submenu_icon,.wb_submenu_icon1").toggleClass("addactive");
+
+
+            $("body").click(function(e){
+                if(e.target.id != "dropdown")
+                {
+                    $(".canvas_menu_inner > a").removeClass("menu_active");
+                    $(".wb_submenu_icon,.wb_submenu_icon1").removeClass("addactive");
+                    $('.sub_icon').removeClass("addactive");
+                    $('.wb_subsubmenu > a').removeClass("hover_bg");
+                    $("body").unbind("click");
+                }
+            });
+        });
+    });
+
+    $(".wb_submenu_icon").click(function () {
+        return false;
+    });
+
+    $(".wb_subsubmenu").click(function () {
+        $(this).siblings('.wb_subsubmenu').children('.sub_icon').removeClass("addactive");
+        $('.sub_icon',this).addClass("addactive");
+        $(this).siblings('.wb_subsubmenu').children('.wb_subsubmenu > a').removeClass("hover_bg");
+
+        $('a',this).addClass("hover_bg");
+        $('.sub_icon.addactive > a').removeClass("hover_bg");
+    });
+    $(".sub_icon.addactive").click(function () {
+        return true;
+    });
+    $(".sub_icon > a").click(function () {
+        $('.canvas_menu_inner > a').removeClass("menu_active");
+        $('.sub_icon,.wb_submenu_icon').removeClass("addactive");
+    });
+</script>

@@ -23,10 +23,8 @@ function Point(a, b) {
 $(document).ready(function()
 {
     console.log("Connecting server...");
-    var server_url = location.host.toString().toLowerCase();
-    console.log("URL: "+server_url);
-    var socket = io.connect(server_url);
-
+    var socket = io("http://127.0.0.1:3000/");
+    var lastEmitTime = new Date();
     console.log("Server connected.");
 
     var Tools = function(){
@@ -105,7 +103,7 @@ $(document).ready(function()
         this.center_point = [];
         this.radius = 0;
     }
-    
+
     Tools.prototype.Circle = function(){return new this._circle();}
 
     Tools.prototype._circle_hexa = function(){
@@ -150,7 +148,7 @@ $(document).ready(function()
         this.arrow_angle = Math.PI/4;
         this.arrow_d = 10;
     }
-    
+
     Tools.prototype.Line = function(){return new this._line()}
 
     Tools.prototype._rectangle = function(){
@@ -162,7 +160,7 @@ $(document).ready(function()
         this.draw_starting_point = [];
         this.points = [];
     }
-    
+
     Tools.prototype.Rectangle = function(){return new this._rectangle()}
 
     Tools.prototype._polygon = function(){
@@ -461,13 +459,13 @@ $(document).ready(function()
         return false;
     };
 
-    $("#black").click(color_menu_click_handler);
-    $("#orange").click(color_menu_click_handler);
-    $("#sky_blue").click(color_menu_click_handler);
-    $("#green").click(color_menu_click_handler);
-    $("#yellow").click(color_menu_click_handler);
-    $("#peach").click(color_menu_click_handler);
-    $("#gray").click(color_menu_click_handler);
+    $(document).on("click","#black",color_menu_click_handler);
+    $(document).on("click","#orange",color_menu_click_handler);
+    $(document).on("click","#sky_blue",color_menu_click_handler);
+    $(document).on("click","#green",color_menu_click_handler);
+    $(document).on("click","#yellow",color_menu_click_handler);
+    $(document).on("click","#peach",color_menu_click_handler);
+    $(document).on("click","#gray",color_menu_click_handler);
 
     var deselect_tools = function()
     {
@@ -485,7 +483,7 @@ $(document).ready(function()
         $("#id_canvas_menu_icon_rectangle").removeClass('menu_active');
     };
 
-    $("#id_canvas_menu_icon_undo").click(function(e)
+    $(document).on("click","#id_canvas_menu_icon_undo",function(e)
     {
         deselect_tools();
         $("#id_canvas_menu_icon_undo").addClass('menu_active');
@@ -516,7 +514,7 @@ $(document).ready(function()
         return false;
     });
 
-    $("#id_canvas_menu_icon_redo").click(function(e)
+    $(document).on("click","#id_canvas_menu_icon_redo",function(e)
     {
         deselect_tools();
         $("#id_canvas_menu_icon_redo").addClass('menu_active');
@@ -542,14 +540,15 @@ $(document).ready(function()
     });
 
 
-    $("#id_canvas_menu_icon_select").click(function(e)
+    $(document).on("click","#id_canvas_menu_icon_select",function(e)
     {
         deselect_tools();
         $("#id_canvas_menu_icon_select").addClass('menu_active');
         whiteboard.selected_tool = whiteboard.tools.Select();
         return false;
     });
-    $("#id_canvas_menu_icon_pen_size5").click(function(e)
+
+    $(document).on("click","#id_canvas_menu_icon_pen_size5",function(e)
     {
         deselect_tools();
         //$("#id_canvas_menu_icon_pen_menu").addClass('menu_active');
@@ -559,7 +558,7 @@ $(document).ready(function()
         return false;
     });
 
-    $("#id_canvas_menu_icon_pen_size10").click(function(e)
+    $(document).on("click","#id_canvas_menu_icon_pen_size10",function(e)
     {
         deselect_tools();
         //$("#id_canvas_menu_icon_pen_menu").addClass('menu_active');
@@ -569,7 +568,7 @@ $(document).ready(function()
         return false;
     });
 
-    $("#id_canvas_menu_icon_pen_size15").click(function(e)
+    $(document).on("click","#id_canvas_menu_icon_pen_size15",function(e)
     {
         deselect_tools();
         //$("#id_canvas_menu_icon_pen_menu").addClass('menu_active');
@@ -579,7 +578,7 @@ $(document).ready(function()
         return false;
     });
 
-    $("#id_canvas_menu_icon_pen_size20").click(function(e)
+    $(document).on("click","#id_canvas_menu_icon_pen_size20",function(e)
     {
         deselect_tools();
         //$("#id_canvas_menu_icon_pen_menu").addClass('menu_active');
@@ -589,7 +588,7 @@ $(document).ready(function()
         return false;
     });
 
-    $("#id_canvas_menu_icon_eraser_size5").click(function(e)
+    $(document).on("click","#id_canvas_menu_icon_eraser_size5",function(e)
     {
         deselect_tools();
         var eraser_tool = whiteboard.tools.Eraser();
@@ -598,7 +597,7 @@ $(document).ready(function()
         return false;
     });
 
-    $("#id_canvas_menu_icon_eraser_size10").click(function(e)
+    $(document).on("click","#id_canvas_menu_icon_eraser_size10",function(e)
     {
         deselect_tools();
         var eraser_tool = whiteboard.tools.Eraser();
@@ -607,7 +606,7 @@ $(document).ready(function()
         return false;
     });
 
-    $("#id_canvas_menu_icon_eraser_size15").click(function(e)
+    $(document).on("click","#id_canvas_menu_icon_eraser_size15",function(e)
     {
         deselect_tools();
         var eraser_tool = whiteboard.tools.Eraser();
@@ -616,7 +615,7 @@ $(document).ready(function()
         return false;
     });
 
-    $("#id_canvas_menu_icon_eraser_size20").click(function(e)
+    $(document).on("click","#id_canvas_menu_icon_eraser_size20",function(e)
     {
         deselect_tools();
         var eraser_tool = whiteboard.tools.Eraser();
@@ -625,7 +624,8 @@ $(document).ready(function()
         return false;
     });
 
-    $("#id_canvas_menu_icon_brush_size5").click(function(e)
+
+    $(document).on("click","#id_canvas_menu_icon_brush_size5",function(e)
     {
         deselect_tools();
         var brush_tool = whiteboard.tools.Brush();
@@ -634,7 +634,7 @@ $(document).ready(function()
         return false;
     });
 
-    $("#id_canvas_menu_icon_brush_size10").click(function(e)
+    $(document).on("click","#id_canvas_menu_icon_brush_size10",function(e)
     {
         deselect_tools();
         var brush_tool = whiteboard.tools.Brush();
@@ -643,7 +643,7 @@ $(document).ready(function()
         return false;
     });
 
-    $("#id_canvas_menu_icon_brush_size15").click(function(e)
+    $(document).on("click","#id_canvas_menu_icon_brush_size15",function(e)
     {
         deselect_tools();
         var brush_tool = whiteboard.tools.Brush();
@@ -652,7 +652,7 @@ $(document).ready(function()
         return false;
     });
 
-    $("#id_canvas_menu_icon_brush_size20").click(function(e)
+    $(document).on("click","#id_canvas_menu_icon_brush_size20",function(e)
     {
         deselect_tools();
         var brush_tool = whiteboard.tools.Brush();
@@ -661,7 +661,7 @@ $(document).ready(function()
         return false;
     });
 
-    $("#id_canvas_menu_icon_shape_circle").click(function(e)
+    $(document).on("click","#id_canvas_menu_icon_shape_circle",function(e)
     {
         deselect_tools();
         var circle_tool = whiteboard.tools.Circle();
@@ -669,7 +669,7 @@ $(document).ready(function()
         return false;
     });
 
-    $("#id_canvas_menu_icon_shape_hexa").click(function(e)
+    $(document).on("click","#id_canvas_menu_icon_shape_hexa",function(e)
     {
         deselect_tools();
         var circle_hexa_tool = whiteboard.tools.CircleHexa();
@@ -678,7 +678,7 @@ $(document).ready(function()
         return false;
     });
 
-    $("#id_canvas_menu_icon_shape_penta").click(function(e)
+    $(document).on("click","#id_canvas_menu_icon_shape_penta",function(e)
     {
         deselect_tools();
         var circle_penta = whiteboard.tools.CirclePenta();
@@ -687,7 +687,7 @@ $(document).ready(function()
         return false;
     });
 
-    $("#id_canvas_menu_icon_shape_rect").click(function(e)
+    $(document).on("click","#id_canvas_menu_icon_shape_rect",function(e)
     {
         deselect_tools();
         var rect_tool = whiteboard.tools.Rectangle();
@@ -696,7 +696,7 @@ $(document).ready(function()
         return false;
     });
 
-    $("#id_canvas_menu_icon_shape_triangle").click(function(e)
+    $(document).on("click","#id_canvas_menu_icon_shape_triangle",function(e)
     {
         deselect_tools();
         var triangle_tool = whiteboard.tools.Triangle();
@@ -705,7 +705,7 @@ $(document).ready(function()
         return false;
     });
 
-    $("#id_canvas_menu_icon_shape_line").click(function(e)
+    $(document).on("click","#id_canvas_menu_icon_shape_line",function(e)
     {
         deselect_tools();
         var line_tool = whiteboard.tools.Line();
@@ -714,7 +714,7 @@ $(document).ready(function()
         return false;
     });
 
-    $("#id_canvas_menu_icon_shape_righttriangle").click(function(e)
+    $(document).on("click","#id_canvas_menu_icon_shape_righttriangle",function(e)
     {
         deselect_tools();
         var right_triangle = whiteboard.tools.Triangle();
@@ -724,7 +724,7 @@ $(document).ready(function()
         return false;
     });
 
-    $("#id_canvas_menu_icon_text").click(function(e)
+    $(document).on("click","#id_canvas_menu_icon_text",function(e)
     {
         deselect_tools();
         var text_tool = whiteboard.tools.Text();
@@ -733,7 +733,7 @@ $(document).ready(function()
         return false;
     });
 
-    $("#id_canvas_menu_icon_shape_arrow1").click(function(e)
+    $(document).on("click","#id_canvas_menu_icon_shape_arrow1",function(e)
     {
         deselect_tools();
         var line_tool = whiteboard.tools.Line();
@@ -744,7 +744,7 @@ $(document).ready(function()
         return false;
     });
 
-    $("#id_canvas_menu_icon_shape_arrow2").click(function(e)
+    $(document).on("click","#id_canvas_menu_icon_shape_arrow2",function(e)
     {
         deselect_tools();
         var line_tool = whiteboard.tools.Line();
@@ -755,7 +755,7 @@ $(document).ready(function()
         return false;
     });
 
-    $("#id_canvas_menu_icon_axis1").click(function(e)
+    $(document).on("click","#id_canvas_menu_icon_axis1",function(e)
     {
         deselect_tools();
         var axis_tool = whiteboard.tools.Axis();
@@ -765,7 +765,7 @@ $(document).ready(function()
         return false;
     });
 
-    $("#id_canvas_menu_icon_axismarked").click(function(e)
+    $(document).on("click","#id_canvas_menu_icon_axismarked",function(e)
     {
         deselect_tools();
         var axis_tool = whiteboard.tools.Axis();
@@ -776,7 +776,7 @@ $(document).ready(function()
         return false;
     });
 
-    $("#id_canvas_menu_icon_graph2").click(function(e)
+    $(document).on("click","#id_canvas_menu_icon_graph2",function(e)
     {
         deselect_tools();
         var axis_tool = whiteboard.tools.Axis();
@@ -796,23 +796,31 @@ $(document).ready(function()
         return degree * (Math.PI/ 180);
     };
 
-    whiteboard.canvas = $("#drawing_board")[0]; //document.getElementById('whiteboard_canvas');
-    var offX = document.getElementById("drawing_board").offsetLeft;
-    var offY = document.getElementById("drawing_board").offsetTop;
-    var canvas_offset = new Point(offX,offY);
-    //alert(canvas_offset.left+","+canvas_offset.top);
-    whiteboard.canvas_offset = canvas_offset;
-    whiteboard.draw_starting_point = canvas_offset;
-    whiteboard.previous_point = canvas_offset;
-    whiteboard.current_point = canvas_offset;
-    whiteboard.context = whiteboard.canvas.getContext('2d');
-    whiteboard.canvas_data_bfr_drawng_start = whiteboard.context.getImageData(0,0,whiteboard.canvas.width,whiteboard.canvas.height);
-    whiteboard.canvas_fresh = whiteboard.context.getImageData(0,0,whiteboard.canvas.width,whiteboard.canvas.height);
-    whiteboard.canvas_data_array = [];
-    whiteboard.canvas_data_stack = [];
-    whiteboard.canvas_data_stack_redo = [];
-    whiteboard.canvas_data_undo_array = [];
-    whiteboard.shift_key_pressed = false;
+    whiteboard.init = false;
+    whiteboard.Init = function()
+    {
+        if(!whiteboard.init)
+        {
+            whiteboard.canvas = $("#drawing_board")[0]; //document.getElementById('whiteboard_canvas');
+            var offX = document.getElementById("drawing_board").offsetLeft;
+            var offY = document.getElementById("drawing_board").offsetTop;
+            var canvas_offset = new Point(offX,offY);
+            //alert(canvas_offset.left+","+canvas_offset.top);
+            whiteboard.canvas_offset = canvas_offset;
+            whiteboard.draw_starting_point = canvas_offset;
+            whiteboard.previous_point = canvas_offset;
+            whiteboard.current_point = canvas_offset;
+            whiteboard.context = whiteboard.canvas.getContext('2d');
+            whiteboard.canvas_data_bfr_drawng_start = whiteboard.context.getImageData(0,0,whiteboard.canvas.width,whiteboard.canvas.height);
+            whiteboard.canvas_fresh = whiteboard.context.getImageData(0,0,whiteboard.canvas.width,whiteboard.canvas.height);
+            whiteboard.canvas_data_array = [];
+            whiteboard.canvas_data_stack = [];
+            whiteboard.canvas_data_stack_redo = [];
+            whiteboard.canvas_data_undo_array = [];
+            whiteboard.shift_key_pressed = false;
+            whiteboard.init = true;
+        }
+    }
 
     whiteboard.shapes = []; //Contains all shapes.
 
@@ -1594,11 +1602,9 @@ $(document).ready(function()
         return jQuery.extend({}, old_object);
     }
 
-    var server_url = document.location.toString().toLowerCase();
+    //var server_url = document.location.toString().toLowerCase();
 
-    var socket = io.connect(server_url);
-
-    var lastEmitTime = new Date();
+    //var socket = io.connect(server_url);
 
     //alert(server_url);
 
@@ -1910,6 +1916,7 @@ $(document).ready(function()
         },
         on_stream: function(data)
         {
+            whiteboard.Init();
             var _selectedTool = data.selected_tool;
             //whiteboard.context.save();
             if(data.canvas_selected)
@@ -1919,7 +1926,7 @@ $(document).ready(function()
                 console.log("Color: "+_selectedTool.color);
                 if(_selectedTool.name == "Pen")
                 {
-                    //console.log("Selected tool is pen.");
+                    console.log("Selected tool is pen.");
                     //Now draw the line.
                     whiteboard.drawing_action.draw_points(_selectedTool.points);
                 }
@@ -2055,8 +2062,9 @@ $(document).ready(function()
         }
     }
 
-    $("#drawing_board").mousedown(function(e)
+    var event_mouse_down = function(e)
     {
+        whiteboard.Init();
         if(detectLeftButton(e))
         {
             e.preventDefault();
@@ -2071,6 +2079,7 @@ $(document).ready(function()
             whiteboard.draw_starting_point = cpoint;
             whiteboard.previous_point = cpoint;
             whiteboard.current_point = cpoint;
+            whiteboard.canvas_selected = true;
             ////console.log("Mouse down at point ("+ e.pageX + "," + e.pageY +")")
             ////console.log("Canvas offset: "+whiteboard.canvas_offset.X+","+whiteboard.canvas_offset.Y);
             ////console.log("Calculated point: "+ cpoint.X+", "+cpoint.Y);
@@ -2141,12 +2150,14 @@ $(document).ready(function()
             whiteboard.streamer.send_stream(whiteboard_state);
 
         }
-    })
-    .mouseup(function(e)
+    };
+
+    var event_mouse_up = function(e)
     {
         on_mouse_out(e);
-    })
-    .mousemove(function(e)
+    };
+
+    var event_mouse_move = function(e)
     {
         if(whiteboard.canvas_selected)
         {
@@ -2438,15 +2449,16 @@ $(document).ready(function()
         };
         whiteboard.streamer.send_stream(whiteboard_state);
 
-    })
-    .mouseleave(function(e)
+    };
+    var event_mouse_leave = function(e)
     {
         if(whiteboard.canvas_selected)
         {
             on_mouse_out(e);
         }
-    })
-    .click(function(e)
+    };
+
+    var event_mouse_click = function(e)
     {
         var offX = $(this).offset().left;
         var offY = $(this).offset().top;
@@ -2516,8 +2528,9 @@ $(document).ready(function()
             }
         }
         $(e.target).focus();
-    })
-    .dblclick(function(e)
+    };
+
+    var event_mouse_dblclick = function(e)
     {
         if(detectLeftButton(e))
         {
@@ -2533,9 +2546,16 @@ $(document).ready(function()
 
         socket.emit("mousemove","Data Hello");
 
-    });
+    };
 
-    $(document).click(function(e)
+    $(document).on("mousedown", "#drawing_board", event_mouse_down);
+    $(document).on("mouseup", "#drawing_board", event_mouse_up);
+    $(document).on("mousemove", "#drawing_board", event_mouse_move);
+    $(document).on("mouseleave", "#drawing_board", event_mouse_leave);
+    $(document).on("click", "#drawing_board", event_mouse_click);
+    $(document).on("dblclick", "#drawing_board", event_mouse_dblclick);
+
+    $(document).on("click",function(e)
     {
         if(whiteboard.selected_tool.name == "Text")
         {
@@ -2556,14 +2576,15 @@ $(document).ready(function()
         }
     });
 
-    $("#drawing_board").keydown(function(e)
+    var event_keydown = function(e)
     {
         if(e.keyCode == 16) //Shift key is pressed.
         {
             whiteboard.shift_key_pressed = true;
         }
         //console.log(e.keyCode);
-    }).keyup(function(e)
+    };
+    var event_keyup = function(e)
     {
         //alert("Key Down!");
         if(e.keyCode == 16) //Shift key released.
@@ -2581,8 +2602,8 @@ $(document).ready(function()
             }
         }
         //console.log(e.keyCode);
-    })
-    .keypress(function(e)
+    };
+    var event_keypress = function(e)
     {
         if(whiteboard.canvas_selected)
         {
@@ -2610,19 +2631,23 @@ $(document).ready(function()
             }
             */
         }
-    });
+    };
 
-    $(window).resize(function()
+    $(document).on("keydown","#drawing_board",event_keydown);
+    $(document).on("keyup","#drawing_board",event_keyup);
+    $(document).on("keypress","#drawing_board",event_keypress);
+
+    $(window).on("resize",function()
     {
-        var offX = $("#drawing_board").offset().left;
-        var offY = $("#drawing_board").offset().top;
-        whiteboard.canvas_offset.X = offX;
-        whiteboard.canvas_offset.Y = offY;
+        //var offX = $("#drawing_board").offset().left;
+        //var offY = $("#drawing_board").offset().top;
+        //whiteboard.canvas_offset.X = offX;
+        //whiteboard.canvas_offset.Y = offY;
     });
 
     socket.on('whiteboard_data',whiteboard.streamer.on_stream);
 
-    $("#file_upload").change(function()
+    $(document).on("change","#file_upload",function()
     {
         whiteboard.drawing_action.draw_image("http://www.html5canvastutorials.com/demos/assets/darth-vader.jpg",0,0,150,150);
     });

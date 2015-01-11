@@ -53,7 +53,7 @@ var Chat = function()
 
 
     this.handshaking_done = false;
-    this.socketUrl = "http://127.0.0.1:3002/";
+    this.socketUrl = "http://127.0.0.1:3000/";
     this.socket = false;
     this.localPeerConnection = false;
     this.remotePeerConnections = [];
