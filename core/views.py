@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.views.generic.base import View
 from django.shortcuts import render
 from forms import SignUpForm
+import time
 
 class LoginView(View):
     def get(self,request,*args,**kwargs):

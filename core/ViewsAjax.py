@@ -3,7 +3,7 @@ __author__ = 'Codengine'
 from django.views.generic.base import View
 from django.shortcuts import render
 from django.http import HttpResponse
-from forms import SignUpForm
+from forms import SignUpForm,LoginForm
 
 class DrawingBoardAjaxView(View):
     def get(self,request,*args,**kwargs):
@@ -26,8 +26,13 @@ class CodeEditorAjaxView(View):
         else:
             return HttpResponse("Invalid Request")
 
+class LoginAjaxView(View):
+    def get(self,request,*args,**kwargs):
+        login_form = LoginForm()
+        return render(request,"login.html",{'form':login_form})
+
 class SignUpAjaxView(View):
     def get(self,request,*args,**kwargs):
-        form = SignUpForm()
-        return render(request,"ajax/signup_form.html",{"form":form})
+        signup_form = SignUpForm()
+        return render(request,"registration.html",{'form':signup_form})
 

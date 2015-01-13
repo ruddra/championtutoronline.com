@@ -7,6 +7,7 @@
     <title>{% block title %} {{ title }} {% endblock title %} - Championtutor Online</title>
     <link rel="stylesheet" href="{% static "css/style.css" %}" type="text/css" media="all">
     <link href="{% static "css/jquery-ui-1.10.4.custom.css" %}" rel="stylesheet">
+    <link href="{% static "css/jquery-ui.min.css" %}" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <script src="{%  static "js/lib/jquery-1.11.1.min.js" %}"></script>
@@ -43,9 +44,51 @@
                         <li><a href="#">Help</a></li>
                     </ul>
                     <div class="right_menu">
-                        <div class="en_icon"><img src="{% static "images/en.png" %}" width="16" height="14" alt="icon"> En</div>
-                        <a href="#" class="sign_in">Sign in</a>
-                        <a href="#" class="rgster">Register</a>
+                        {% if not request.session.is_login %}
+                            <link href="{% static "css/colorbox.css" %}" rel="stylesheet">
+                            <script src="{% static "js/jquery.colorbox-min.js" %}"></script>
+                            <style type="text/css">
+                                #colorbox #cboxClose
+                                {
+                                    top: 0;
+                                    right: 0;
+                                }
+                                #cboxLoadedContent{
+                                    margin-top:28px;
+                                    margin-bottom:0;
+                                }
+                            </style>
+                            <script type="text/javascript">
+                                $(document).ready(function(e)
+                                {
+                                    $("#id_register").colorbox(
+                                    {
+                                                iframe:true,
+                                                width:"600px",
+                                                height:"500px",
+                                                escKey: false,
+                                                overlayClose: false,
+                                                onOpen:function(){ },
+                                                onLoad:function(){ },
+                                                onComplete:function(){ },
+                                                onCleanup:function(){ },
+                                                onClosed:function(){ }
+                                    });
+
+                                    $("#id_login").colorbox({
+                                        iframe:true,
+                                        width:"600px",
+                                        height:"320px",
+                                        escKey: false,
+                                        overlayClose: false,
+                                    });
+
+                                });
+                            </script>
+                            <div class="en_icon"><img src="{% static "images/en.png" %}" width="16" height="14" alt="icon"> En</div>
+                            <a class="sign_in" href="{% url "ajax_login" %}"  id="id_login">Sign in</a>
+                            <a class="rgster" href="{% url "ajax_signup" %}" id="id_register">Register</a>
+                        {% endif %}
                     </div>
                 </div>
             </header>
