@@ -1,78 +1,364 @@
 {% load staticfiles %}
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <link rel="stylesheet" href="{% static "css/signup-form.css" %}" type="text/css" media="all">
-        <link href="{% static "css/jquery-ui.min.css" %}" rel="stylesheet">
-        <script src="{%  static "js/lib/jquery-1.11.1.min.js" %}"></script>
-        <script src="{%  static "js/jquery-ui.min.js" %}"></script>
-        <script>
-            $(document).ready(function(e)
+<head>
+<title>Icon inside Input Field - Demo Preview</title>
+<meta name="robots" content="noindex, nofollow">
+<!-- include css file here-->
+<link href="{% static "css/jquery-ui.min.css" %}" rel="stylesheet">
+<script src="{%  static "js/lib/jquery-1.11.1.min.js" %}"></script>
+<script src="{%  static "js/jquery-ui.min.js" %}"></script>
+<link rel="stylesheet" href="{% static "css/formicon.css" %}"/>
+<style type="text/css">
+    .ui-selectmenu-button {width: 100% !important;height: 50px; !important; margin-top: 10px;}
+    .ui-tooltip
+    {
+        padding:  20px;;
+    }
+    .ui-tooltip, .arrow:after {
+        background: #ff4342;
+        border: 2px solid #FF0000;
+    }
+    .ui-tooltip {
+        padding: 10px 20px;
+        color: white;
+        border-radius: 20px;
+        font: bold 14px "Helvetica Neue", Sans-Serif;
+        text-transform: uppercase;
+        box-shadow: 0 0 7px black;
+    }
+    .arrow {
+        width: 70px;
+        height: 16px;
+        overflow: hidden;
+        position: absolute;
+        left: 50%;
+        margin-left: -35px;
+        bottom: -16px;
+    }
+    .arrow.top {
+        top: -16px;
+        bottom: auto;
+    }
+    .arrow.left {
+        left: 20%;
+    }
+    .arrow:after {
+        content: "";
+        position: absolute;
+        left: 20px;
+        top: -20px;
+        width: 25px;
+        height: 25px;
+        box-shadow: 6px 5px 9px -9px black;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    .arrow.top:after {
+        bottom: -20px;
+        top: auto;
+    }
+</style>
+<script>
+$(document).ready(function(e)
+{
+
+    $(".field").tooltip(
             {
-                var highlight_error = function(id)
-                {
-                    $("#"+id).parent().addClass("ui-state-error");
-                    $("#"+id).attr("title","This field is required.");
-                    $("#"+id).focus();
-                };
+                position: {
+                    my: "center bottom-20",
+                    at: "center top",
+                    using: function( position, feedback ) {
+                        $( this ).css( position );
+                        $( "<div>" )
+                                .addClass( "arrow" )
+                                .addClass( feedback.vertical )
+                                .appendTo( this );
+                    }
+                }
+            }
+    );
 
-                var reset_field = function(id)
-                {
-                    $("#"+id).parent().removeClass("ui-state-error");
-                    $("#"+id).attr("title","");
-                };
+    $( "#id_role" ).selectmenu();
 
-                var check_empty_field = function(value,id)
+    $("#id_name").focusin(function()
+    {
+        $(this).css("border","1px solid #dfdfdf");
+        $(this).attr("title","");
+    })
+            .focusout(function()
+            {
+                var name = $(this).val();
+                if(name == "")
                 {
-                    if(value == "")
+                    $(this).css("border","1px solid red");
+                    $(this).attr("title","Required field");
+                }
+                else
+                {
+                    $(this).css("border","1px solid #dfdfdf");
+                    $(this).attr("title","");
+                }
+            });
+
+    $("#id_email").focusin(function()
+    {
+        $(this).css("border","1px solid #dfdfdf");
+        $(this).attr("title","");
+    })
+            .focusout(function()
+            {
+                var email = $(this).val();
+                if(email == "")
+                {
+                    $(this).css("border","1px solid red");
+                    $(this).attr("title","Required field");
+                }
+                else
+                {
+                    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+                    if( !emailReg.test(email) )
                     {
-                        highlight_error(id);
+                        $(this).css("border","1px solid red");
+                        $(this).attr("title","A valid email address is required.");
+                        return false;
+                    } else {
+                        $(this).css("border","1px solid #dfdfdf");
+                        $(this).attr("title","");
+                        //alert("");
+                        return true;
+                    }
+
+                }
+            });
+
+    function validatePhone(txtPhone) {
+        var filter = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
+        if (filter.test(txtPhone)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    $("#id_mobile").focusin(function()
+    {
+        $(this).css("border","1px solid #dfdfdf");
+        $(this).attr("title","");
+    })
+            .focusout(function()
+            {
+                var mobile = $(this).val();
+                if(mobile == "")
+                {
+                    $(this).css("border","1px solid red");
+                    $(this).attr("title","Required field");
+                }
+                else
+                {
+                    if(validatePhone(mobile))
+                    {
+                        $(this).css("border","1px solid #dfdfdf");
+                        $(this).attr("title","");
                     }
                     else
                     {
-                        reset_field(id);
+                        $(this).css("border","1px solid red");
+                        $(this).attr("title","A valid phone number is required.");
                     }
-                };
-
-                var validate_form = function()
-                {
-
-                };
-
-                $(document).on("click","#id_submit_button",function(e)
-                {
-                    e.preventDefault();
-                    validate_form();
-                   return false;
-                });
-
-                $( "#id_role" ).selectmenu();
-
-                $(".field").tooltip(
-                        {
-                            position:
-                            {
-                                my: "left top",
-                                at: "left top-50"
-                            }
-                        }
-                );
-
+                }
             });
-        </script>
-        <body>
-            <div style="margin:10px;">
-                <h3>Sign In</h3><hr/>
-                <div class="field">
-                    {{ form.email }}
-                </div>
-                <div class="field">
-                    {{ form.password }}
-                </div>
-                <br/>
-                <a href="#" id="id_submit_button"
-                   style="text-decoration: none;padding: 10px;
+
+    $("#id_mobile").mouseover(function(e)
+    {
+        e.preventDefault();
+    });
+
+    $("#id_mobile").click(function()
+    {
+        $(this).tooltip('open');
+    });
+
+    $(document).click(function(e)
+    {
+        $("#id_mobile").tooltip('open');
+    });
+
+    $("#id_password").focusin(function()
+    {
+        $(this).css("border","1px solid #dfdfdf");
+        $(this).attr("title","");
+    })
+            .focusout(function()
+            {
+                var password = $(this).val();
+                if(password == "")
+                {
+                    $(this).css("border","1px solid red");
+                    $(this).attr("title","Required field");
+                }
+                else
+                {
+                    $(this).css("border","1px solid #dfdfdf");
+                    $(this).attr("title","");
+                }
+            });
+
+    $("#id_password_repeat").focusin(function()
+    {
+        $(this).css("border","1px solid #dfdfdf");
+        $(this).attr("title","");
+    })
+            .focusout(function()
+            {
+                var pass_repeat = $(this).val();
+                if(pass_repeat == "")
+                {
+                    $(this).css("border","1px solid red");
+                    $(this).attr("title","Required field");
+                }
+                else
+                {
+                    var pass1 = $("#id_password").val();
+                    if(pass1 == pass_repeat)
+                    {
+                        $(this).css("border","1px solid #dfdfdf");
+                        $(this).attr("title","");
+                    }
+                    else
+                    {
+                        $(this).css("border","1px solid red");
+                        $(this).attr("title","Password mismatch.");
+                    }
+                }
+            });
+
+    $("#id_submit_button").click(function(e)
+    {
+        var name = $("#id_name").val();
+        var email = $("#id_email").val();
+        var mobile = $("#id_mobile").val();
+        var password = $("#id_password").val();
+        var pass_repeat = $("#id_password_repeat").val();
+        var role = $("#id_role").val();
+
+        if(name == "")
+        {
+            $("#id_name").css("border","1px solid red");
+            $("#id_name").attr("title","Required field");
+        }
+        else
+        {
+            $("#id_name").css("border","1px solid #dfdfdf");
+            $("#id_name").attr("title","");
+        }
+
+        if(email == "")
+        {
+            $("#id_email").css("border","1px solid red");
+            $("#id_email").attr("title","Required field");
+        }
+        else
+        {
+            var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+            if( !emailReg.test(email) )
+            {
+                $("#id_email").css("border","1px solid red");
+                $("#id_email").attr("title","A valid email address is required.");
+            } else {
+                $("#id_email").css("border","1px solid #dfdfdf");
+                $("#id_email").attr("title","");
+            }
+
+        }
+
+        if(mobile == "")
+        {
+            $("#id_mobile").css("border","1px solid red");
+            $("#id_mobile").attr("title","Required field");
+        }
+        else
+        {
+            if(validatePhone(mobile))
+            {
+                $("#id_mobile").css("border","1px solid #dfdfdf");
+                $("#id_mobile").attr("title","");
+            }
+            else
+            {
+                $("#id_mobile").css("border","1px solid red");
+                $("#id_mobile").attr("title","A valid phone number is required.");
+            }
+        }
+
+        if(password == "")
+        {
+            $("#id_password").css("border","1px solid red");
+            $("#id_password").attr("title","Required field");
+        }
+        else
+        {
+            $("#id_password").css("border","1px solid #dfdfdf");
+            $("#id_password").attr("title","");
+        }
+
+        if(pass_repeat == "")
+        {
+            $("#id_password_repeat").css("border","1px solid red");
+            $("#id_password_repeat").attr("title","Required field");
+        }
+        else
+        {
+            var pass1 = $("#id_password").val();
+            if(pass1 == pass_repeat)
+            {
+                $("#id_password_repeat").css("border","1px solid #dfdfdf");
+                $("#id_password_repeat").attr("title","");
+            }
+            else
+            {
+                $("#id_password_repeat").css("border","1px solid red");
+                $("#id_password_repeat").attr("title","Password mismatch.");
+            }
+        }
+
+        if(role == "--")
+        {
+            $("#id_role").parent().find(".ui-selectmenu-button").css("border","1px solid red");
+            $("#id_role").parent().find(".ui-selectmenu-button").attr("title","How do you want to register? Please select a role.");
+        }
+        else
+        {
+            $("#id_role").parent().find(".ui-selectmenu-button").css("border","1px solid #dfdfdf");
+            $("#id_role").parent().find(".ui-selectmenu-button").attr("title","");
+        }
+
+        return false;
+    });
+
+});
+</script>
+
+</head>
+
+
+<body>
+
+<div style="margin:10px;">
+    <h3>Sign In</h3><hr/>
+
+    <div class="field">
+        {{ form.email }}
+    </div>
+    <div class="field">
+        {{ form.password }}
+    </div>
+    <br>
+    <div style="width:100%;">
+        <a href="#" id="id_submit_button"
+           style="text-decoration: none;padding: 10px;
                     color: #FFF;
                     background-color: #4bc970;
                     font-size: 18px;
@@ -83,7 +369,9 @@
                     border: 1px solid #3ac162;
                     border-width: 1px 1px 3px;
                     box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;padding-left:40px;padding-right:40px;margin-left: 200px;;margin-right: auto;">Log In</a>
-            </div>
-        </body>
-    </head>
+    </div>
+</div>
+
+</body>
+
 </html>

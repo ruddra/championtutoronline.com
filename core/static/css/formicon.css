@@ -1,0 +1,67 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+input#id_name {
+	background-image: url('../images/icon_name.png');
+	background-repeat: no-repeat;
+	background-position: 6px;
+	border: 1px solid #DADADA;
+	margin-top: 10px;
+    padding: 4px 10px 4px 35px;
+    width: 476px;
+    height: 40px;
+	font-size: 14px;
+    border: 1px solid #dfdfdf;
+}
+
+input#id_mobile {
+    background-image: url('../images/mobile.png');
+    background-repeat: no-repeat;
+    background-position: 6px;
+    border: 1px solid #DADADA;
+    margin-top: 10px;
+    padding: 4px 10px 4px 35px;
+    width: 476px;
+    height: 40px;
+    font-size: 14px;
+    border: 1px solid #dfdfdf;
+}
+
+input#id_email {
+    background-image: url('../images/email.png');
+	background-repeat: no-repeat;
+	background-position: 6px;
+	border: 1px solid #DADADA;
+	margin-top: 10px;
+    padding: 4px 10px 4px 35px;
+    width: 476px;
+    height: 40px;
+	font-size: 14px;
+    border: 1px solid #dfdfdf;
+}
+
+input#id_password,input#id_password_repeat {
+	background-image: url('../images/varified_btn.png');
+	background-repeat: no-repeat;
+	background-position: 6px;
+	border: 1px solid #DADADA;
+	margin-top: 10px;
+    padding: 4px 10px 4px 35px;
+    width: 476px;
+    height: 40px;
+	font-size: 14px;
+    border: 1px solid #dfdfdf;
+}
+
+input#submit {
+	background-color: 	#FF9980;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    color: #FFF;
+    text-shadow: 1px 1px 1px #949494;
+	margin-left:120px;
+}
+
+input#submit:hover {
+	background-color:#80A24A;		  
+}
