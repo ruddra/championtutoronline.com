@@ -142,3 +142,12 @@ INSTALLED_APPS = (
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_URL = '/logout/'
+
+EMAIL_HOST = 'smtp.gmail.com'
+
+EMAIL_HOST_USER = 'codenginebd'
+
+EMAIL_HOST_PASSWORD = 'lapsso065CommlinkCommlink'
+EMAIL_PORT = 587
+
+EMAIL_USE_TLS = True

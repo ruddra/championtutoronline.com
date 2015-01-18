@@ -171,21 +171,6 @@
                 }
             });
 
-            $("#id_mobile").mouseover(function(e)
-            {
-                e.preventDefault();
-            });
-
-            $("#id_mobile").click(function()
-            {
-                $(this).tooltip('open');
-            });
-
-            $(document).click(function(e)
-            {
-                $("#id_mobile").tooltip('open');
-            });
-
             $("#id_password").focusin(function()
             {
                 $(this).css("border","1px solid #dfdfdf");
@@ -235,8 +220,9 @@
                 }
             });
 
-            $("#id_submit_button").click(function(e)
+            var validate_fields = function()
             {
+                var error = false;
                 var name = $("#id_name").val();
                 var email = $("#id_email").val();
                 var mobile = $("#id_mobile").val();
@@ -248,6 +234,7 @@
                 {
                     $("#id_name").css("border","1px solid red");
                     $("#id_name").attr("title","Required field");
+                    error = true;
                 }
                 else
                 {
@@ -259,6 +246,7 @@
                 {
                     $("#id_email").css("border","1px solid red");
                     $("#id_email").attr("title","Required field");
+                    error = true;
                 }
                 else
                 {
@@ -267,6 +255,7 @@
                     {
                         $("#id_email").css("border","1px solid red");
                         $("#id_email").attr("title","A valid email address is required.");
+                        error = true;
                     } else {
                         $("#id_email").css("border","1px solid #dfdfdf");
                         $("#id_email").attr("title","");
@@ -278,6 +267,7 @@
                 {
                     $("#id_mobile").css("border","1px solid red");
                     $("#id_mobile").attr("title","Required field");
+                    error = true;
                 }
                 else
                 {
@@ -290,6 +280,7 @@
                     {
                         $("#id_mobile").css("border","1px solid red");
                         $("#id_mobile").attr("title","A valid phone number is required.");
+                        error = true;
                     }
                 }
 
@@ -297,6 +288,7 @@
                 {
                     $("#id_password").css("border","1px solid red");
                     $("#id_password").attr("title","Required field");
+                    error = true;
                 }
                 else
                 {
@@ -308,6 +300,7 @@
                 {
                     $("#id_password_repeat").css("border","1px solid red");
                     $("#id_password_repeat").attr("title","Required field");
+                    error = true;
                 }
                 else
                 {
@@ -321,6 +314,7 @@
                     {
                         $("#id_password_repeat").css("border","1px solid red");
                         $("#id_password_repeat").attr("title","Password mismatch.");
+                        error = true;
                     }
                 }
 
@@ -328,13 +322,55 @@
                 {
                     $("#id_role").parent().find(".ui-selectmenu-button").css("border","1px solid red");
                     $("#id_role").parent().find(".ui-selectmenu-button").attr("title","How do you want to register? Please select a role.");
+                    error = true;
                 }
                 else
                 {
                     $("#id_role").parent().find(".ui-selectmenu-button").css("border","1px solid #dfdfdf");
                     $("#id_role").parent().find(".ui-selectmenu-button").attr("title","");
                 }
+                return !error;
+            };
 
+            $("#id_submit_button").click(function(e)
+            {
+                if(validate_fields())
+                {
+                    //$("form[name=registrationform]").submit();
+                    $.ajax({
+                        type: "POST",
+                        url: "/ajax/signup",
+                        data: $("form[name=registrationform]").serialize(),
+                        success: function(data)
+                        {
+                            console.log(data);
+                            var parsed_json = jQuery.parseJSON(data);
+                            console.log(parsed_json.status);
+                            if(parsed_json.status == "successful")
+                            {
+                                $("#status_message2").text("").hide();
+                                $("#signUpFormContainer").hide();
+                                $("#status_header").text("Successful");
+                                $("#status_message").text("Registration Successful.");
+                                $("#signUpResultContainer").show();
+                                parent.$.colorbox.resize({height:260});
+                                parent.$("#cboxClose").click(function(e) {
+                                    parent.location.reload();
+                                });
+                            }
+                            else
+                            {
+                                $("#status_message2").text(parsed_json.message).show();
+                            }
+                        }
+                    });
+                }
+                return false;
+            });
+
+            $("#status_ok").click(function(e)
+            {
+                parent.location.reload();
                 return false;
             });
 
@@ -345,10 +381,31 @@
 
 
 <body>
-
-<div style="margin:10px;">
+<div id="signUpResultContainer" style="margin:10px;display:none;">
+    <h3 id="status_header"></h3><hr/>
+    <div id="status_message"></div>
+    <br/>
+    <div id="status_ok_button_container">
+        <a href="#" id="status_ok"
+           style="text-decoration: none;padding: 10px;
+                        color: #FFF;
+                        background-color: #4bc970;
+                        font-size: 18px;
+                        text-align: center;
+                        font-style: normal;
+                        border-radius: 5px;
+                        width:200px;
+                        border: 1px solid #3ac162;
+                        border-width: 1px 1px 3px;
+                        box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;padding-left:40px;padding-right:40px;margin-left: 200px;;margin-right: auto;">Ok</a>
+    </div>
+    <br/>
+</div>
+<div id="signUpFormContainer" style="margin:10px;">
     <h3>Sign Up</h3><hr/>
-
+    <div id="status_message2" style="display: none;color: red;"></div>
+    <form name="registrationform" action="{% url "ajax_signup" %}" method="post">
+    {% csrf_token %}
     <div class="field">
         {{ form.name }}
     </div>
@@ -382,6 +439,8 @@
                     border-width: 1px 1px 3px;
                     box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;margin-left: 200px;;margin-right: auto;">Register Now</a>
     </div>
+
+    </form>
 </div>
 
 </body>

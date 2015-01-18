@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3631d41a-b150-4263-bd13-bc4453ef9d69" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/templates/login_1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/templates/registration_1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test.py" />
       <change type="DELETED" beforePath="C:\Projects\Github\NodeJS Projects\championtutoronline\node_modules\socket.io\lib\client.js" afterPath="" />
       <change type="DELETED" beforePath="C:\Projects\Github\NodeJS Projects\championtutoronline\node_modules\socket.io\lib\index.js" afterPath="" />
       <change type="DELETED" beforePath="C:\Projects\Github\NodeJS Projects\championtutoronline\node_modules\socket.io\node_modules\debug\Readme.md" afterPath="" />
@@ -764,43 +763,89 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/node_modules/socket.io/node_modules/socket.io-client/README.md" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/node_modules/socket.io/node_modules/socket.io-client/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/node_modules/socket.io/Readme.md" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/node_modules/socket.io/Readme.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/base.html" afterPath="$PROJECT_DIR$/core/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/socketioserver/node_modules/jade/node_modules/constantinople/node_modules/acorn-globals/node_modules/acorn/test/bench.html" afterPath="$PROJECT_DIR$/nodejs/socketioserver/node_modules/jade/node_modules/constantinople/node_modules/acorn-globals/node_modules/acorn/test/bench.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/socketioserver/node_modules/jade/node_modules/with/node_modules/acorn/test/bench.html" afterPath="$PROJECT_DIR$/nodejs/socketioserver/node_modules/jade/node_modules/with/node_modules/acorn/test/bench.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/.idea/championtutor.iml" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/.idea/championtutor.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/code_editor.html" afterPath="$PROJECT_DIR$/core/templates/ajax/code_editor.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/drawingboard.html" afterPath="$PROJECT_DIR$/core/templates/ajax/drawingboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forms.py" afterPath="$PROJECT_DIR$/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/socketioserver/views/home.html" afterPath="$PROJECT_DIR$/nodejs/socketioserver/views/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/index - Copy.html" afterPath="$PROJECT_DIR$/core/templates/index - Copy.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/index.html" afterPath="$PROJECT_DIR$/core/templates (copy)/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/index.html" afterPath="$PROJECT_DIR$/core/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/node_modules/socket.io/node_modules/engine.io/node_modules/engine.io-parser/node_modules/utf8/coverage/index.html" afterPath="$PROJECT_DIR$/nodejs/node_modules/socket.io/node_modules/engine.io/node_modules/engine.io-parser/node_modules/utf8/coverage/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/node_modules/socket.io/node_modules/engine.io/node_modules/engine.io-parser/node_modules/utf8/coverage/utf8.js/index.html" afterPath="$PROJECT_DIR$/nodejs/node_modules/socket.io/node_modules/engine.io/node_modules/engine.io-parser/node_modules/utf8/coverage/utf8.js/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/node_modules/socket.io/node_modules/engine.io/node_modules/engine.io-parser/node_modules/utf8/tests/index.html" afterPath="$PROJECT_DIR$/nodejs/node_modules/socket.io/node_modules/engine.io/node_modules/engine.io-parser/node_modules/utf8/tests/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/coverage/index.html" afterPath="$PROJECT_DIR$/nodejs/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/coverage/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/coverage/utf8.js/index.html" afterPath="$PROJECT_DIR$/nodejs/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/coverage/utf8.js/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/tests/index.html" afterPath="$PROJECT_DIR$/nodejs/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/tests/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/has-cors/node_modules/global/test/index.html" afterPath="$PROJECT_DIR$/nodejs/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/has-cors/node_modules/global/test/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/examples/fileapi/public/index.html" afterPath="$PROJECT_DIR$/nodejs/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/examples/fileapi/public/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/examples/serverstats-express_3/public/index.html" afterPath="$PROJECT_DIR$/nodejs/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/examples/serverstats-express_3/public/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/examples/serverstats/public/index.html" afterPath="$PROJECT_DIR$/nodejs/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/examples/serverstats/public/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/socketioserver/node_modules/jade/node_modules/constantinople/node_modules/acorn-globals/node_modules/acorn/test/index.html" afterPath="$PROJECT_DIR$/nodejs/socketioserver/node_modules/jade/node_modules/constantinople/node_modules/acorn-globals/node_modules/acorn/test/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/socketioserver/node_modules/jade/node_modules/with/node_modules/acorn/test/index.html" afterPath="$PROJECT_DIR$/nodejs/socketioserver/node_modules/jade/node_modules/with/node_modules/acorn/test/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/node_modules/node-static/test/fixtures/index.html" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/node_modules/node-static/test/fixtures/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/node_modules/node-static/test/fixtures/there/index.html" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/node_modules/node-static/test/fixtures/there/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/views/templates/index.html" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/views/templates/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/node_modules/socket.io/index.js" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/node_modules/socket.io/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/node_modules/socket.io/node_modules/socket.io-parser/node_modules/json3/coverage/lcov-report/lib/json3.js.html" afterPath="$PROJECT_DIR$/nodejs/node_modules/socket.io/node_modules/socket.io-parser/node_modules/json3/coverage/lcov-report/lib/json3.js.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/login.html" afterPath="$PROJECT_DIR$/core/templates/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/models.py" afterPath="$PROJECT_DIR$/core/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/login_1.html" afterPath="$PROJECT_DIR$/core/templates/login_1.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/.idea/modules.xml" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/node_modules/socket.io/lib/namespace.js" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/node_modules/socket.io/lib/namespace.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/new2.html" afterPath="$PROJECT_DIR$/core/templates (copy)/new2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/new2.html" afterPath="$PROJECT_DIR$/core/templates/new2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/views/templates/new2.html" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/views/templates/new2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/online_tutors.html" afterPath="$PROJECT_DIR$/core/templates (copy)/online_tutors.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/online_tutors.html" afterPath="$PROJECT_DIR$/core/templates/online_tutors.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/views/templates/online_tutors.html" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/views/templates/online_tutors.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/node_modules/socket.io/package.json" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/node_modules/socket.io/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/node_modules/socket.io/node_modules/socket.io-client/package.json" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/node_modules/socket.io/node_modules/socket.io-client/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/profile1.html" afterPath="$PROJECT_DIR$/core/templates (copy)/profile1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/profile1.html" afterPath="$PROJECT_DIR$/core/templates/profile1.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/views/templates/profile1.html" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/views/templates/profile1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/profile2.html" afterPath="$PROJECT_DIR$/core/templates (copy)/profile2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/profile2.html" afterPath="$PROJECT_DIR$/core/templates/profile2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/views/templates/profile2.html" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/views/templates/profile2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/registration.html" afterPath="$PROJECT_DIR$/core/templates/registration.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/registration_1.html" afterPath="$PROJECT_DIR$/core/templates/registration_1.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/static/js/whiteboard/script.js" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/static/js/whiteboard/script.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/static/js/whiteboard/script_version1.js" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/static/js/whiteboard/script_version1.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/server.js" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/championtutoronline/settings.py" afterPath="$PROJECT_DIR$/championtutoronline/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/signup_form.html" afterPath="$PROJECT_DIR$/core/templates/ajax/signup_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/node_modules/socket.io/lib/socket.js" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/node_modules/socket.io/lib/socket.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/node_modules/socket.io/node_modules/socket.io-client/lib/socket.js" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/node_modules/socket.io/node_modules/socket.io-client/lib/socket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/student-profile.html" afterPath="$PROJECT_DIR$/core/templates (copy)/student-profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/student-profile.html" afterPath="$PROJECT_DIR$/core/templates/student-profile.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/views/templates/student-profile.html" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/views/templates/student-profile.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/node_modules/node-uuid/test/test.html" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/node_modules/node-uuid/test/test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/text_editor.html" afterPath="$PROJECT_DIR$/core/templates/ajax/text_editor.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/championtutoronline/urls.py" afterPath="$PROJECT_DIR$/championtutoronline/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/coverage/utf8.js/utf8.js.html" afterPath="$PROJECT_DIR$/nodejs/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/coverage/utf8.js/utf8.js.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/viewsajax.py" afterPath="$PROJECT_DIR$/core/viewsajax.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/webrtctest.html" afterPath="$PROJECT_DIR$/core/templates (copy)/webrtctest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/webrtctest/webrtctest.html" afterPath="$PROJECT_DIR$/core/templates (copy)/webrtctest/webrtctest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/webrtctest.html" afterPath="$PROJECT_DIR$/core/templates/webrtctest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/webrtctest/webrtctest.html" afterPath="$PROJECT_DIR$/core/templates/webrtctest/webrtctest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/views/templates/webrtctest.html" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/views/templates/webrtctest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/views/templates/webrtctest/webrtctest.html" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/views/templates/webrtctest/webrtctest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/views/templates/white_board.ejs" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/views/templates/white_board.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/white_board.html" afterPath="$PROJECT_DIR$/core/templates (copy)/white_board.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/views/templates/white_board.html" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/views/templates/white_board.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/white_board_old.html" afterPath="$PROJECT_DIR$/core/templates (copy)/white_board_old.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/white_board_old.html" afterPath="$PROJECT_DIR$/core/templates/white_board_old.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/views/templates/white_board_old.html" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/views/templates/white_board_old.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/whiteboard - Copy.html" afterPath="$PROJECT_DIR$/core/templates/whiteboard - Copy.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/whiteboard.html" afterPath="$PROJECT_DIR$/core/templates/whiteboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/.idea/workspace.xml" />
     </list>
     <ignored path="championtutoronline.com.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="3631d41a-b150-4263-bd13-bc4453ef9d69" time="1421420724020" ignored="false" />
-    <file path="/settings.py" changelist="3631d41a-b150-4263-bd13-bc4453ef9d69" time="1420727908690" ignored="false" />
+    <file path="/Dummy.txt" changelist="3631d41a-b150-4263-bd13-bc4453ef9d69" time="1421591465216" ignored="false" />
+    <file path="/settings.py" changelist="3631d41a-b150-4263-bd13-bc4453ef9d69" time="1421603907761" ignored="false" />
     <file path="/views.py" changelist="3631d41a-b150-4263-bd13-bc4453ef9d69" time="1421169185271" ignored="false" />
     <file path="/urls.py" changelist="3631d41a-b150-4263-bd13-bc4453ef9d69" time="1421176982862" ignored="false" />
     <file path="/whiteboard.html" changelist="3631d41a-b150-4263-bd13-bc4453ef9d69" time="1420994805618" ignored="false" />
@@ -810,14 +855,15 @@
     <file path="/server.js" changelist="3631d41a-b150-4263-bd13-bc4453ef9d69" time="1420873268444" ignored="false" />
     <file path="/script.js" changelist="3631d41a-b150-4263-bd13-bc4453ef9d69" time="1420998634168" ignored="false" />
     <file path="/decorators.py" changelist="3631d41a-b150-4263-bd13-bc4453ef9d69" time="1421001351015" ignored="false" />
-    <file path="/registration.html" changelist="3631d41a-b150-4263-bd13-bc4453ef9d69" time="1421437575677" ignored="false" />
-    <file path="/forms.py" changelist="3631d41a-b150-4263-bd13-bc4453ef9d69" time="1421434297668" ignored="false" />
+    <file path="/registration.html" changelist="3631d41a-b150-4263-bd13-bc4453ef9d69" time="1421600491429" ignored="false" />
+    <file path="/forms.py" changelist="3631d41a-b150-4263-bd13-bc4453ef9d69" time="1421593146141" ignored="false" />
     <file path="/signup_form.html" changelist="3631d41a-b150-4263-bd13-bc4453ef9d69" time="1421083141141" ignored="false" />
-    <file path="/viewsajax.py" changelist="3631d41a-b150-4263-bd13-bc4453ef9d69" time="1421440867269" ignored="false" />
+    <file path="/viewsajax.py" changelist="3631d41a-b150-4263-bd13-bc4453ef9d69" time="1421595478831" ignored="false" />
     <file path="/signup-form.css" changelist="3631d41a-b150-4263-bd13-bc4453ef9d69" time="1421175551131" ignored="false" />
-    <file path="/login.html" changelist="3631d41a-b150-4263-bd13-bc4453ef9d69" time="1421438514615" ignored="false" />
+    <file path="/login.html" changelist="3631d41a-b150-4263-bd13-bc4453ef9d69" time="1421600461134" ignored="false" />
     <file path="/formicon.css" changelist="3631d41a-b150-4263-bd13-bc4453ef9d69" time="1421424057177" ignored="false" />
     <file path="/models.py" changelist="3631d41a-b150-4263-bd13-bc4453ef9d69" time="1421440400785" ignored="false" />
+    <file path="/Test.py" changelist="3631d41a-b150-4263-bd13-bc4453ef9d69" time="1421603283239" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -834,19 +880,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="53" selection-start="720" selection-end="720" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="forms.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="145" selection-start="606" selection-end="611" vertical-scroll-proportion="0.0">
+            <state line="9" column="144" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -855,18 +892,34 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/championtutoronline/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="35" selection-start="608" selection-end="621" vertical-scroll-proportion="0.0">
+            <state line="16" column="23" selection-start="677" selection-end="677" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="viewsajax.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="viewsajax.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/viewsajax.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="75" selection-start="1484" selection-end="1484" vertical-scroll-proportion="1.3333334">
+            <state line="94" column="40" selection-start="3711" selection-end="3711" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#26#68#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/templates/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="203" column="13" selection-start="6037" selection-end="6037" vertical-scroll-proportion="-4.1538463">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#2;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -875,7 +928,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="8" selection-start="791" selection-end="795" vertical-scroll-proportion="0.0">
+            <state line="2" column="6" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -884,20 +937,32 @@
       <file leaf-file-name="registration.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/templates/registration.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="179" column="13" selection-start="0" selection-end="12870" vertical-scroll-proportion="-0.30769232">
+            <state line="371" column="13" selection-start="13444" selection-end="13444" vertical-scroll-proportion="-2.8461537">
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#6;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#6;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="formicon.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/static/css/formicon.css">
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/championtutoronline/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="49" selection-start="1046" selection-end="1046" vertical-scroll-proportion="0.0">
+            <state line="149" column="48" selection-start="5033" selection-end="5033" vertical-scroll-proportion="0.7119565">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Test.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="42" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -906,7 +971,7 @@
       <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="0" selection-start="3781" selection-end="3781" vertical-scroll-proportion="-11.115385">
+            <state line="98" column="0" selection-start="4610" selection-end="4610" vertical-scroll-proportion="-5.230769">
               <folding />
             </state>
           </provider>
@@ -930,28 +995,27 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/core/templates/ajax/drawingboard.html" />
-        <option value="$PROJECT_DIR$/core/templates/whiteboard.html" />
         <option value="$PROJECT_DIR$/core/static/js/whiteboard/script.js" />
         <option value="$PROJECT_DIR$/decorators.py" />
         <option value="$PROJECT_DIR$/core/static/css/modal-dialog.css" />
         <option value="$PROJECT_DIR$/core/templates/ajax/signup_form.html" />
         <option value="$PROJECT_DIR$/core/static/css/signup-form.css" />
-        <option value="$PROJECT_DIR$/championtutoronline/urls.py" />
         <option value="$PROJECT_DIR$/core/static/css/formicon.css" />
-        <option value="$PROJECT_DIR$/forms.py" />
         <option value="$PROJECT_DIR$/core/views.py" />
-        <option value="$PROJECT_DIR$/core/templates/registration.html" />
-        <option value="$PROJECT_DIR$/core/templates/login.html" />
         <option value="$PROJECT_DIR$/core/templates/base.html" />
         <option value="$PROJECT_DIR$/core/models.py" />
+        <option value="$PROJECT_DIR$/forms.py" />
+        <option value="$PROJECT_DIR$/championtutoronline/urls.py" />
+        <option value="$PROJECT_DIR$/core/templates/login.html" />
         <option value="$PROJECT_DIR$/core/viewsajax.py" />
+        <option value="$PROJECT_DIR$/core/templates/registration.html" />
+        <option value="$PROJECT_DIR$/Test.py" />
+        <option value="$PROJECT_DIR$/championtutoronline/settings.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -981,6 +1045,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1047,7 +1112,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1055,6 +1119,14 @@
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../nodejs" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <PyConsoleSettings />
+    </option>
+    <option name="myDjangoConsoleState">
+      <PyConsoleSettings />
+    </option>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -1077,27 +1149,6 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <module name="championtutoronline.com" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -1117,6 +1168,27 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="championtutoronline.com" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -1163,6 +1235,10 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
     <list size="1">
@@ -1179,18 +1255,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="0" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28863636" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2931818" sideWeight="0.6712095" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33901194" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1254,45 +1330,31 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/core/viewsajax.py</url>
+          <line>75</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/core/viewsajax.py</url>
+          <line>87</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/core/viewsajax.py</url>
+          <line>36</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="5" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="27" selection-start="1681" selection-end="1681" vertical-scroll-proportion="0.24536082" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/ajax/signup_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="22" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/championtutoronline/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="35" selection-start="608" selection-end="621" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/css/signup-form.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="34" selection-start="697" selection-end="697" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/css/modal-dialog.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="60" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/static/js/jquery-ui.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="10406" selection-start="173185" selection-end="173185" vertical-scroll-proportion="0.22580644">
-          <folding />
-        </state>
+        <state line="10" column="10406" selection-start="173185" selection-end="173185" vertical-scroll-proportion="0.22580644" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/static/css/formicon.css">
@@ -1302,20 +1364,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="145" selection-start="606" selection-end="611" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/templates/registration_1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="65" selection-start="4092" selection-end="4734" vertical-scroll-proportion="-11.115385">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#head#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state line="119" column="65" selection-start="4092" selection-end="4734" vertical-scroll-proportion="-11.115385" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/views.py">
@@ -1327,55 +1378,99 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/templates/login_1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="157" selection-start="2346" selection-end="2964" vertical-scroll-proportion="-13.884615">
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#head#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state line="84" column="157" selection-start="2346" selection-end="2964" vertical-scroll-proportion="-13.884615" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/login.html">
+    <entry file="file://G:/Python27/Lib/site-packages/django/views/generic/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="370" column="157" selection-start="11104" selection-end="11104" vertical-scroll-proportion="0.6091954">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="0" selection-start="3781" selection-end="3781" vertical-scroll-proportion="-11.115385">
+        <state line="86" column="0" selection-start="3155" selection-end="3155" vertical-scroll-proportion="0.9571865">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/registration.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="179" column="13" selection-start="0" selection-end="12870" vertical-scroll-proportion="-0.30769232">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="8" selection-start="791" selection-end="795" vertical-scroll-proportion="0.0">
+        <state line="2" column="6" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="144" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/championtutoronline/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="23" selection-start="677" selection-end="677" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="0" selection-start="4610" selection-end="4610" vertical-scroll-proportion="-5.230769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="203" column="13" selection-start="6037" selection-end="6037" vertical-scroll-proportion="-4.1538463">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/viewsajax.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="75" selection-start="1484" selection-end="1484" vertical-scroll-proportion="1.3333334">
+        <state line="94" column="40" selection-start="3711" selection-end="3711" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#26#68#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/registration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="371" column="13" selection-start="13444" selection-end="13444" vertical-scroll-proportion="-2.8461537">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#6;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/Python27/Lib/email/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="42" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/championtutoronline/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="149" column="48" selection-start="5033" selection-end="5033" vertical-scroll-proportion="0.7119565">
+          <folding />
         </state>
       </provider>
     </entry>

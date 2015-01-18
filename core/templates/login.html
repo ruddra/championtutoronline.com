@@ -79,111 +79,35 @@ $(document).ready(function(e)
                 }
             }
     );
-
-    $( "#id_role" ).selectmenu();
-
-    $("#id_name").focusin(function()
-    {
-        $(this).css("border","1px solid #dfdfdf");
-        $(this).attr("title","");
-    })
-            .focusout(function()
-            {
-                var name = $(this).val();
-                if(name == "")
-                {
-                    $(this).css("border","1px solid red");
-                    $(this).attr("title","Required field");
-                }
-                else
-                {
-                    $(this).css("border","1px solid #dfdfdf");
-                    $(this).attr("title","");
-                }
-            });
-
     $("#id_email").focusin(function()
     {
         $(this).css("border","1px solid #dfdfdf");
         $(this).attr("title","");
     })
-            .focusout(function()
-            {
-                var email = $(this).val();
-                if(email == "")
-                {
-                    $(this).css("border","1px solid red");
-                    $(this).attr("title","Required field");
-                }
-                else
-                {
-                    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-                    if( !emailReg.test(email) )
-                    {
-                        $(this).css("border","1px solid red");
-                        $(this).attr("title","A valid email address is required.");
-                        return false;
-                    } else {
-                        $(this).css("border","1px solid #dfdfdf");
-                        $(this).attr("title","");
-                        //alert("");
-                        return true;
-                    }
-
-                }
-            });
-
-    function validatePhone(txtPhone) {
-        var filter = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
-        if (filter.test(txtPhone)) {
-            return true;
+    .focusout(function()
+    {
+        var email = $(this).val();
+        if(email == "")
+        {
+            $(this).css("border","1px solid red");
+            $(this).attr("title","Required field");
         }
-        else {
-            return false;
-        }
-    }
-
-    $("#id_mobile").focusin(function()
-    {
-        $(this).css("border","1px solid #dfdfdf");
-        $(this).attr("title","");
-    })
-            .focusout(function()
+        else
+        {
+            var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+            if( !emailReg.test(email) )
             {
-                var mobile = $(this).val();
-                if(mobile == "")
-                {
-                    $(this).css("border","1px solid red");
-                    $(this).attr("title","Required field");
-                }
-                else
-                {
-                    if(validatePhone(mobile))
-                    {
-                        $(this).css("border","1px solid #dfdfdf");
-                        $(this).attr("title","");
-                    }
-                    else
-                    {
-                        $(this).css("border","1px solid red");
-                        $(this).attr("title","A valid phone number is required.");
-                    }
-                }
-            });
+                $(this).css("border","1px solid red");
+                $(this).attr("title","A valid email address is required.");
+                return false;
+            } else {
+                $(this).css("border","1px solid #dfdfdf");
+                $(this).attr("title","");
+                //alert("");
+                return true;
+            }
 
-    $("#id_mobile").mouseover(function(e)
-    {
-        e.preventDefault();
-    });
-
-    $("#id_mobile").click(function()
-    {
-        $(this).tooltip('open');
-    });
-
-    $(document).click(function(e)
-    {
-        $("#id_mobile").tooltip('open');
+        }
     });
 
     $("#id_password").focusin(function()
@@ -191,74 +115,32 @@ $(document).ready(function(e)
         $(this).css("border","1px solid #dfdfdf");
         $(this).attr("title","");
     })
-            .focusout(function()
-            {
-                var password = $(this).val();
-                if(password == "")
-                {
-                    $(this).css("border","1px solid red");
-                    $(this).attr("title","Required field");
-                }
-                else
-                {
-                    $(this).css("border","1px solid #dfdfdf");
-                    $(this).attr("title","");
-                }
-            });
-
-    $("#id_password_repeat").focusin(function()
+    .focusout(function()
     {
-        $(this).css("border","1px solid #dfdfdf");
-        $(this).attr("title","");
-    })
-            .focusout(function()
-            {
-                var pass_repeat = $(this).val();
-                if(pass_repeat == "")
-                {
-                    $(this).css("border","1px solid red");
-                    $(this).attr("title","Required field");
-                }
-                else
-                {
-                    var pass1 = $("#id_password").val();
-                    if(pass1 == pass_repeat)
-                    {
-                        $(this).css("border","1px solid #dfdfdf");
-                        $(this).attr("title","");
-                    }
-                    else
-                    {
-                        $(this).css("border","1px solid red");
-                        $(this).attr("title","Password mismatch.");
-                    }
-                }
-            });
-
-    $("#id_submit_button").click(function(e)
-    {
-        var name = $("#id_name").val();
-        var email = $("#id_email").val();
-        var mobile = $("#id_mobile").val();
-        var password = $("#id_password").val();
-        var pass_repeat = $("#id_password_repeat").val();
-        var role = $("#id_role").val();
-
-        if(name == "")
+        var password = $(this).val();
+        if(password == "")
         {
-            $("#id_name").css("border","1px solid red");
-            $("#id_name").attr("title","Required field");
+            $(this).css("border","1px solid red");
+            $(this).attr("title","Required field");
         }
         else
         {
-            $("#id_name").css("border","1px solid #dfdfdf");
-            $("#id_name").attr("title","");
+            $(this).css("border","1px solid #dfdfdf");
+            $(this).attr("title","");
         }
+    });
+
+    var validate_login_form = function()
+    {
+        var error = false;
+        var email = $("#id_email").val();
+        var password = $("#id_password").val();
 
         if(email == "")
         {
             $("#id_email").css("border","1px solid red");
             $("#id_email").attr("title","Required field");
+            error = true;
         }
         else
         {
@@ -267,6 +149,7 @@ $(document).ready(function(e)
             {
                 $("#id_email").css("border","1px solid red");
                 $("#id_email").attr("title","A valid email address is required.");
+                error = true;
             } else {
                 $("#id_email").css("border","1px solid #dfdfdf");
                 $("#id_email").attr("title","");
@@ -274,67 +157,58 @@ $(document).ready(function(e)
 
         }
 
-        if(mobile == "")
-        {
-            $("#id_mobile").css("border","1px solid red");
-            $("#id_mobile").attr("title","Required field");
-        }
-        else
-        {
-            if(validatePhone(mobile))
-            {
-                $("#id_mobile").css("border","1px solid #dfdfdf");
-                $("#id_mobile").attr("title","");
-            }
-            else
-            {
-                $("#id_mobile").css("border","1px solid red");
-                $("#id_mobile").attr("title","A valid phone number is required.");
-            }
-        }
-
         if(password == "")
         {
             $("#id_password").css("border","1px solid red");
             $("#id_password").attr("title","Required field");
+            error = true;
         }
         else
         {
             $("#id_password").css("border","1px solid #dfdfdf");
             $("#id_password").attr("title","");
         }
+        return !error;
+    };
 
-        if(pass_repeat == "")
+    $("#id_submit_button").click(function(e)
+    {
+        if(validate_login_form())
         {
-            $("#id_password_repeat").css("border","1px solid red");
-            $("#id_password_repeat").attr("title","Required field");
-        }
-        else
-        {
-            var pass1 = $("#id_password").val();
-            if(pass1 == pass_repeat)
+            $.ajax({
+                type: "POST",
+                url: "/ajax/login",
+                data: $("form[name=loginform]").serialize(),
+                success: function(data)
+                {
+                    console.log(data);
+                    var parsed_json = jQuery.parseJSON(data);
+                    console.log(parsed_json.status);
+                    if(parsed_json.status == "successful")
+                    {
+                        $("#status_message2").text("").hide();
+                        $("#signInFormContainer").hide();
+                        $("#status_header").text("Successful");
+                        $("#status_message").text("Login Successful.");
+                        $("#signInResultContainer").show();
+                        parent.$.colorbox.resize({height:260});
+                        parent.$("#cboxClose").click(function(e) {
+                            parent.location.reload();
+                        });
+                    }
+                    else
+                    {
+                         $("#status_message2").text(parsed_json.message).show();
+                    }
+                }
+            });
+
+            $("#status_ok").click(function(e)
             {
-                $("#id_password_repeat").css("border","1px solid #dfdfdf");
-                $("#id_password_repeat").attr("title","");
-            }
-            else
-            {
-                $("#id_password_repeat").css("border","1px solid red");
-                $("#id_password_repeat").attr("title","Password mismatch.");
-            }
+                parent.location.reload();
+                return false;
+            });
         }
-
-        if(role == "--")
-        {
-            $("#id_role").parent().find(".ui-selectmenu-button").css("border","1px solid red");
-            $("#id_role").parent().find(".ui-selectmenu-button").attr("title","How do you want to register? Please select a role.");
-        }
-        else
-        {
-            $("#id_role").parent().find(".ui-selectmenu-button").css("border","1px solid #dfdfdf");
-            $("#id_role").parent().find(".ui-selectmenu-button").attr("title","");
-        }
-
         return false;
     });
 
@@ -345,31 +219,53 @@ $(document).ready(function(e)
 
 
 <body>
-
-<div style="margin:10px;">
-    <h3>Sign In</h3><hr/>
-
-    <div class="field">
-        {{ form.email }}
-    </div>
-    <div class="field">
-        {{ form.password }}
-    </div>
-    <br>
-    <div style="width:100%;">
-        <a href="#" id="id_submit_button"
+<div id="signInResultContainer" style="margin:10px;display:none;">
+    <h3 id="status_header"></h3><hr/>
+    <div id="status_message"></div>
+    <br/>
+    <div id="status_ok_button_container">
+        <a href="#" id="status_ok"
            style="text-decoration: none;padding: 10px;
-                    color: #FFF;
-                    background-color: #4bc970;
-                    font-size: 18px;
-                    text-align: center;
-                    font-style: normal;
-                    border-radius: 5px;
-                    width:200px;
-                    border: 1px solid #3ac162;
-                    border-width: 1px 1px 3px;
-                    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;padding-left:40px;padding-right:40px;margin-left: 200px;;margin-right: auto;">Log In</a>
+                        color: #FFF;
+                        background-color: #4bc970;
+                        font-size: 18px;
+                        text-align: center;
+                        font-style: normal;
+                        border-radius: 5px;
+                        width:200px;
+                        border: 1px solid #3ac162;
+                        border-width: 1px 1px 3px;
+                        box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;padding-left:40px;padding-right:40px;margin-left: 200px;;margin-right: auto;">Ok</a>
     </div>
+    <br/>
+</div>
+<div id="signInFormContainer" style="margin:10px;">
+    <h3>Sign In</h3><hr/>
+    <div id="status_message2" style="display: none;color: red;"></div>
+    <form name="loginform" action="{% url "ajax_login" %}" method="post">
+        {% csrf_token %}
+        <div class="field">
+            {{ form.email }}
+        </div>
+        <div class="field">
+            {{ form.password }}
+        </div>
+        <br>
+        <div style="width:100%;">
+            <a href="#" id="id_submit_button"
+               style="text-decoration: none;padding: 10px;
+                        color: #FFF;
+                        background-color: #4bc970;
+                        font-size: 18px;
+                        text-align: center;
+                        font-style: normal;
+                        border-radius: 5px;
+                        width:200px;
+                        border: 1px solid #3ac162;
+                        border-width: 1px 1px 3px;
+                        box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;padding-left:40px;padding-right:40px;margin-left: 200px;;margin-right: auto;">Log In</a>
+        </div>
+    </form>
 </div>
 
 </body>
