@@ -1,0 +1,63 @@
+{% load staticfiles %}
+<div class="wrapper">
+    <a id="logo" href="#"><img src="{% static "images/logo.png" %}" width="265" height="69" alt="logo"></a>
+    <ul class="after_login_menu">
+        <li><img width="16" height="14" alt="icon" src="images/en.png" %}"> En </li>
+        <li><a href="#"><img src="{% static "images/menu_icon1.png" %}" width="23" height="19" alt="img"> </a>
+
+            <span class="hvr">Getting Started</span>
+
+            <ul class="submenu1 radius3" id="first_left" >
+                <li>Link GChat <span><img src="{% static "images/corct_icon.png" %}" width="15" height="15" alt="img"></span> </li>
+                <li>Link FB Messenger <span><img src="{% static "images/corct_icon.png" %}" width="15" height="15" alt="img"></span> </li>
+                <li>Audio & Video Setup <span></span> </li>
+                <li>Payment Setup <span></span> </li>
+            </ul>
+        </li>
+        <li><a href="#"><img src="{% static "images/menu_icon2.png" %}" width="24" height="19" alt="img"></a>
+            <span class="hvr">Available For</span>
+            <ul class="submenu1 radius3" id="scnd_left">
+                <li>Online Teaching Now! <div class="chckbx"><div class="onoffswitch1">
+                    <input type="checkbox" id="myonoffswitch1" class="onoffswitch1-checkbox" name="onoffswitch1">
+                    <label for="myonoffswitch1" class="onoffswitch1-label">
+                        <span class="onoffswitch1-inner"></span>
+                        <span class="onoffswitch1-switch"></span>
+                    </label>
+                </div></div> </li>
+                <li>Written Lessons <div class="chckbx"><div class="onoffswitch">
+                    <input type="checkbox" id="myonoffswitch" class="onoffswitch-checkbox" name="onoffswitch">
+                    <label for="myonoffswitch" class="onoffswitch-label">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                    </label>
+                </div></div> </li>
+            </ul>
+        </li>
+        <li><a href="#"><img src="{% static "images/menu_icon3.png" %}" width="19" height="18" alt="img"></a> <span class="hvr">Lessons</span> </li>
+        <li><a href="#"><img src="{% static "images/menu_icon4.png" %}" width="18" height="21" alt="img"></a> <span class="hvr">Notifications</span> </li>
+        <li><a href="#"><img src="{% static "images/menu_icon5.png" %}" width="19" height="18" alt="img"></a> <span class="hvr">Messages</span> </li>
+        <li><a href="#"><img src="{% static "images/menu_icon6.png" %}" width="15" height="19" alt="img"></a> <span class="hvr">Quick Links</span>
+            <ul class="submenu1 radius3">
+                <li><a href="#">Your Tutor Guide</a></li>
+                <li><a href="#">Our 2 Minutes Intro</a></li>
+                <li><a href="#">Your Wish List</a></li>
+                <li><a href="#">Try the Tutoring Space</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="profile_detail">
+        <span class="profile_img"><img src="{% static "images/profile_img_inner.png" %}" width="28" height="28" alt="img"></span>
+        Wilson Tan
+        <span class="down_arrow"><img src="{% static "images/dwn_arw.png" %}" width="8" height="7" alt="img"></span>
+
+        <ul class="submenu1 radius3">
+            <li><a href="#">Payments</a></li>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Sign Out</a></li>
+        </ul>
+    </div>
+
+
+
+</div>

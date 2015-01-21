@@ -337,6 +337,8 @@
                 if(validate_fields())
                 {
                     //$("form[name=registrationform]").submit();
+                    $(this).prop("disabled",true);
+                    $(this).css("cursor","wait");
                     $.ajax({
                         type: "POST",
                         url: "/ajax/signup",
@@ -362,6 +364,15 @@
                             {
                                 $("#status_message2").text(parsed_json.message).show();
                             }
+                        },
+                        error: function(jqXHR, status, errorThrown)
+                        {
+                            $("#status_message2").text("An error occured while processing your request. Please try again later.").show();
+                        },
+                        complete: function(jqXHR, status)
+                        {
+                            $(this).prop("disabled",false);
+                            $(this).css("cursor","default");
                         }
                     });
                 }

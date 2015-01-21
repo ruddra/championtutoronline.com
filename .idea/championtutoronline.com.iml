@@ -11,7 +11,7 @@
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 2.7.6 virtualenv at ~/Desktop/Practices/myEnv" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="championtutor" />
     <orderEntry type="module" module-name="nodejs" />
@@ -20,4 +20,3 @@
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
   </component>
 </module>
-

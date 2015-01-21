@@ -3,8 +3,9 @@ __author__ = 'Codengine'
 from django import forms
 
 class LoginBase(forms.Form):
-    email = forms.CharField(label='',required=True,widget=forms.TextInput(attrs={'name':'email','placeholder':'Email Address','autocomplete':'off'}))
-    password = forms.CharField(label='', required=True , widget=forms.PasswordInput(attrs={'name':'password','placeholder':'Password'}))
+    email = forms.CharField(label='',required=True,widget=forms.TextInput(attrs={'name':'email','placeholder':'Email Address','autocomplete':'off','class':'form-control'}))
+    password = forms.CharField(label='', required=True , widget=forms.PasswordInput(attrs={'name':'password','placeholder':'Password','class':'form-control'}))
+    remember = forms.BooleanField(required=False)
 
 class SignUpForm(LoginBase):
     name = forms.CharField(label='', required=True ,max_length=30,widget=forms.TextInput(attrs={'name':'name','placeholder': 'Full Name','autocomplete':'off'}))

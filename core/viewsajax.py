@@ -7,6 +7,7 @@ from forms import SignUpForm,LoginForm
 from models import *
 import json
 import hashlib
+from emails import EmailClient
 
 class DrawingBoardAjaxView(View):
     def get(self,request,*args,**kwargs):
@@ -32,7 +33,7 @@ class CodeEditorAjaxView(View):
 class LoginAjaxView(View):
     def get(self,request,*args,**kwargs):
         login_form = LoginForm()
-        return render(request,"login.html",{'form':login_form})
+        return render(request,"ajax/login.html",{'form':login_form})
     def post(self,request,*args,**kwargs):
         response = {'status':'unsuccessful','message':''}
         if not request.is_ajax():
@@ -50,15 +51,16 @@ class LoginAjaxView(View):
             response = {'status':'unsuccessful','message':'Email or Password Invalid.'}
             return HttpResponse(json.dumps(response))
         ###Passed login. Now set session
-        request.session['logged_in'] = True
+        request.session['is_login'] = True
         request.session['email'] = email
+        request.session['utype'] = user_objs[0].type
         response = {'status':'successful','message':'Login Successful.'}
         return HttpResponse(json.dumps(response))
 
 class SignUpAjaxView(View):
     def get(self,request,*args,**kwargs):
         signup_form = SignUpForm()
-        return render(request,"registration.html",{'form':signup_form})
+        return render(request,"ajax/registration.html",{'form':signup_form})
 
     def post(self,request,*args,**kwargs):
         response = {'status':'unsuccessful','message':''}
@@ -94,6 +96,11 @@ class SignUpAjaxView(View):
         user_obj.save()
         response['status'] = 'successful'
         response['message'] = 'Successful.'
+
+        ###Now send email.
+        email_sender_obj = EmailClient()
+        email_sender_obj.send_email(email,"Registration Verification","Thank you for registering championtutoronline.com","Thank you for registering championtutoronline.com","codenginebd@gmail.com")
+
         return HttpResponse(json.dumps(response))
         # except Exception,msg:
         #     response['status'] = 'Unsuccessful.'

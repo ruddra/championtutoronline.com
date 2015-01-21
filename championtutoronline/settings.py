@@ -15,10 +15,10 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'champ_db',
-        'USER': 'root',
-        'PASSWORD': 'root',
+        'USER': 'postgres',
+        'PASSWORD': 'sstl2010',
         'HOST': '127.0.0.1',
         'PORT': '',
         }
@@ -143,11 +143,6 @@ LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_URL = '/logout/'
 
-EMAIL_HOST = 'smtp.gmail.com'
-
-EMAIL_HOST_USER = 'codenginebd'
-
-EMAIL_HOST_PASSWORD = 'lapsso065CommlinkCommlink'
-EMAIL_PORT = 587
-
-EMAIL_USE_TLS = True
+SENDGRID_SMTP = "smtp.sendgrid.net"
+SENDGRID_USERNAME = "codenginebd"
+SENDGRID_PASSWORD = "lapsso065CommlinkCommlink"

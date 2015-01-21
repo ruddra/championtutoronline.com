@@ -957,12 +957,15 @@ a.free_trial,a.free_trial:link,a.free_trial:visited { width: 181px; height: 35px
 .tutor,.sharing { width:120px; height:32px; float:left; color:#fff; font:14px/32px 'segoe_uibold'; background:url(../images/wb_tutor_up.png) 90% center no-repeat #2a4050; cursor:pointer; }
 .tutor > img,.sharing > img { width:auto; height:auto; float:left; margin:9px; display:inline; }
 .tutor { float:right; margin-left:10px; }
-.chat { width:225px; height:220px;  position:absolute; top:-220px; right:50px; border-top:0px; overflow:hidden; display:none; }
+#chatBoxContainer { width: 100%;position:fixed;bottom:-110px;right:0px;height: 200px; }
+.chat { width:300px; height:320px; top:-320px; right:50px; border-top:0px; overflow:hidden; float: right;
+    position: relative;
+    margin-right: 10px;}
 
 .added { display:block !important; }
-.chat_contnt { width:98.9%; height:auto; float:left; min-height:145px; background-color: #efefef; border: solid 1px #b3c0c9; position:absolute; top:38px; border-top:0px; border-bottom:0px; }
+.chat_contnt { width:100%; height:300px; padding-bottom: 20px; overflow-y: scroll; float:left; min-height:145px; background-color: #efefef; border: solid 1px #b3c0c9; position:absolute; top:38px; border-top:0px; border-bottom:0px; }
 
-.chat_header { width:100%; height:38px; position:absolute; top:0px; background:#2d3e4a; color:#ffffff; font:14px/38px 'segoe_uibold'; border:1px solid #2d3e4a; margin-left:-1px; display:inline; }
+.chat_header { width:100%; height:38px; position:absolute; top:0px; background:#2d3e4a; border: 1px solid #2d3e4a; color:#ffffff; font:14px/38px 'segoe_uibold'; border:1px solid #2d3e4a; margin-left:-1px; display:inline; }
 span.online { width:auto; height:auto; float:left; margin:0 10px; display:inline; }
 
 .chat_header > a,.chat_header > a:link,.chat_header > a:visited { width:30px; height:38px; float:right; position:relative; }
@@ -971,8 +974,8 @@ span.online { width:auto; height:auto; float:left; margin:0 10px; display:inline
 
 
 
-.chat_txt { width:98.9%; height:36px; background-color: #fff; -webkit-box-shadow: inset 0 2px rgba(0,0,0,.05); -moz-box-shadow: inset 0 2px rgba(0,0,0,.05); box-shadow: inset 0 2px rgba(0,0,0,.05); -ms-box-shadow: inset 0 2px rgba(0,0,0,.05); -o-box-shadow: inset 0 2px rgba(0,0,0,.05); border-top: solid 1px #b3c0c9; border-left:solid 1px #b3c0c9; border-right:solid 1px #b3c0c9; position:absolute; bottom:0px; overflow:hidden; }
-.chat_txt > input[type="text"] { width:178px; height:100%; float:left; border:none; outline:none; color:#aabfca; font:14px/36px 'segoe_uiregular'; padding:0 5px 0 10px; display:inline; }
+.chat_txt { width:100%; height:36px; background-color: #fff; -webkit-box-shadow: inset 0 2px rgba(0,0,0,.05); -moz-box-shadow: inset 0 2px rgba(0,0,0,.05); box-shadow: inset 0 2px rgba(0,0,0,.05); -ms-box-shadow: inset 0 2px rgba(0,0,0,.05); -o-box-shadow: inset 0 2px rgba(0,0,0,.05); border-top: solid 1px #b3c0c9; border-left:solid 1px #b3c0c9; border-right:solid 1px #b3c0c9; position:absolute; bottom:0px; overflow:hidden; }
+.chat_txt > input[type="text"] { width:260px; height:100%; float:left; border:none; outline:none; color:#202020; font:14px/36px 'segoe_uiregular'; padding:0 5px 0 10px; display:inline; }
 .chat_txt > a,.chat_txt > a:link,.chat_txt > a:visited { width:29px; height:100%; float:left; background:url(../images/wb_upload_icon.png) center center no-repeat; }
 
 
