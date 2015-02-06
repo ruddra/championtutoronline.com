@@ -11,16 +11,110 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <script src="{%  static "js/lib/jquery-1.11.1.min.js" %}"></script>
     <script type="text/javascript" src="{%  static "js/CreateHTML5Elements.js" %}"></script>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static "css/colorbox.css" %}"/>
+    <script type="text/javascript" src="{% static "js/jquery.colorbox-min.js" %}"></script>
 
-    {% block script_extra %} {% endblock script_extra %}
+    <script type="text/javascript">
+    //Now run a script in a period interval to let inform the status of this client to the socket io server.
+        window.socket = io("http://127.0.0.1:3000/");
+        //This is called upon a successful connection established.
+
+        //Global variables.
+        window.socket_connected = false;
+
+        window.socket.on("connect",function()
+        {
+            console.log("Socket connected");
+            window.socket_connected = true;
+        });
+
+        //This is called if any error occured on connecting socket.io
+        window.socket.on("error", function(data)
+        {
+            console.log("socket connection error");
+            window.socket_connected = false;
+        });
+
+        window.socket.on("disconnect",function()
+        {
+            console.log("socket disconnected");
+            window.socket_connected = false;
+        });
+
+        window.socket.on("reconnect",function(reconnection_attemp_number)
+        {
+            console.log("socket reconnect called");
+            window.socket_connected = false;
+        });
+
+        //This is called when attempt to reconnect.
+        window.socket.on("reconnect_attempt",function()
+        {
+            console.log("socket reconnect_attempt called");
+            window.socket_connected = false;
+        });
+
+        window.socket.on("reconnecting",function(reconnection_attemp_number)
+        {
+            console.log("socket reconnecting");
+            window.socket_connected = false;
+        });
+
+        window.socket.on("reconnect_error",function(data)
+        {
+            console.log("socket reconnect_error");
+            window.socket_connected = false;
+        });
+
+        window.socket.on("reconnect_failed", function()
+        {
+            console.log("socket reconnect_failed");
+            window.socket_connected = false;
+        });
+
+        var publish_online_status = function()
+        {
+            var user_status = false;
+            var user_id = -1;
+            {% if request.session.is_login %}
+                user_status = true;
+                user_id = {{ request.session.user_id }};
+            {% endif %}
+            window.socket.emit('online_status',{"uid":user_id,"status":user_status});
+        };
+
+        setInterval(publish_online_status, 1000);
+
+        window.champ_user_id = {% if champ_userid %} {{ champ_userid }} {% else %} -1 {% endif %};
+        console.log(window.champ_user_id);
+
+    </script>
+
+    {% block script_extra %}{% endblock script_extra %}
 
     <!--[if (gte IE 6)&(lte IE 8)]>
-    <script type="text/javascript" src="{% static "js/mootools-core-1.4.2-full-compat.js" %}"></script>
+
+    <script type="text/javascript" src="js/mootools-core-1.4.2-full-compat.js"></script>
+
     <![endif]-->
+
     <!--[if (gte IE 6)&(lte IE 8)]>
-    <script type="text/javascript" src="{% static "js/selectivizr.js" %}"></script>
+
+    <script type="text/javascript" src="js/selectivizr.js"></script>
+
     <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+
     <![endif]-->
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
     {% block css_extra %} {% endblock css_extra %}
 
@@ -65,7 +159,7 @@
                                         {
                                                     iframe:true,
                                                     width:"600px",
-                                                    height:"600px",
+                                                    height:"500px",
                                                     escKey: false,
                                                     overlayClose: false,
                                                     onOpen:function(){ },
@@ -78,7 +172,7 @@
                                         $("#id_login").colorbox({
                                             iframe:true,
                                             width:"600px",
-                                            height:"440px",
+                                            height:"500px",
                                             escKey: false,
                                             overlayClose: false,
                                         });
@@ -95,7 +189,7 @@
                     {% if request.session.utype == "student" %}
                         {% include "sections/student_section_header.html" %}
                     {% else %}
-                        {% include "sections/student_section_header.html" %}
+                        {% include "sections/teacher_section_header.html" %}
                     {% endif %}
                 {% endif %}
             </header>

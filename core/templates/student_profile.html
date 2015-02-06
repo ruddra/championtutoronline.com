@@ -1,301 +1,141 @@
-<!DOCTYPE HTML>
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block head_extra %}
+    <div id="fb-root"></div>
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
 
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Champion Tutor</title>
-<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<script src="js/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="js/CreateHTML5Elements.js"></script>
+{% endblock head_extra %}
 
-<!--[if (gte IE 6)&(lte IE 8)]>
+{% block script_extra %}
+    <script type="text/javascript" src="{%  static "js/bootstrap.min.js" %}"></script>
+{% endblock script_extra %}
 
-<script type="text/javascript" src="js/mootools-core-1.4.2-full-compat.js"></script>
+{% block body %}
+    {% block header %}
+        {{ block.super }}
+    {% endblock header %}
+    {% block bodycontent %}
+        <div class="contnt">
 
-<![endif]-->
-
-<!--[if (gte IE 6)&(lte IE 8)]>
-
-<script type="text/javascript" src="js/selectivizr.js"></script>
-
-<noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
-
-<![endif]-->
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-</head>
-
-<body>
-
-<div class="main">
-
-<header>
-    	<div class="hdng_inner">
-        	<a id="logo" href="#"><img src="images/logo.png" width="265" height="69" alt="logo"></a>
-            
-            <form class="search_box_top radius3">
-            	<input type="submit">
-                <input type="text" value="Type subject name (e.g Algebra)" onblur=" if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.value)this.value=''">
-            </form>
-            
-            <ul class="after_login_menu">
-				<li><a href="#"><img width="16" height="14" alt="icon" src="images/en.png"> En</a></li>
-           		<li><a href="#"><img src="images/menu_icon1.png" width="23" height="19" alt="img"> </a>
-                	
-                    <span class="hvr">Getting Started</span>
-                
-                	<ul class="submenu1 radius3" id="first_left" >
-                	<li>Link GChat <span><img src="images/corct_icon.png" width="15" height="15" alt="img"></span> </li>
-					<li>Link FB Messenger <span><img src="images/corct_icon.png" width="15" height="15" alt="img"></span> </li>
-					<li>Audio & Video Setup <span></span> </li>
-					<li>Payment Setup <span></span> </li>
-                </ul>
-                </li>
-                <li><a href="#"><img src="images/menu_icon2.png" width="24" height="19" alt="img"></a>
-                <span class="hvr">Available For</span>
-                </li>
-                <li><a href="#"><img src="images/menu_icon3.png" width="19" height="18" alt="img"></a> <span class="hvr">Lessons</span> </li>
-                <li><a href="#"><img src="images/menu_icon4.png" width="18" height="21" alt="img"></a> <span class="hvr">Notifications</span> </li>
-                <li><a href="#"><img src="images/menu_icon5.png" width="19" height="18" alt="img"></a> <span class="hvr">Messages</span>
-                	<ul class="submenu1 radius3">
-                        <li><a href="#">Your Tutor Guide</a></li>
-                        <li><a href="#">Our 2 Minutes Intro</a></li>
-                        <li><a href="#">Your Wish List</a></li>
-                        <li><a href="#">Try the Tutoring Space</a></li>
-                    </ul>
-                </li>
-                <li><a href="#"><img src="images/menu_icon6.png" width="15" height="19" alt="img"></a> <span class="hvr">Quick Links</span></li>
-            </ul>
-
-            <div class="profile_detail">
-            	<span class="profile_img"><img src="images/profile_img_inner.png" width="28" height="28" alt="img"></span>
-                Wilson Tan
-                <span class="down_arrow"><img src="images/dwn_arw.png" width="8" height="7" alt="img"></span>
-                
-                <ul class="submenu1 radius3">
-					<li><a href="#">Billing</a></li>
-					<li><a href="#">My Account</a></li>
-                    <li><a href="#">Try the lesson space</a></li>
-					<li><a href="#">Sign Out</a></li>
-                </ul>
-            </div>
-            
-            
-            
-      </div>
-  </header>
-
-<div class="contnt">
-
-	<div class="wrapper">
-  <div class="main_cntnt radius3">
-        	<div class="stdnt_detal">
-            	<div class="img_box radius3"><img width="129" height="129" alt="img" src="images/profile_img.png"></div>
-                <div class="stdnt_img_dtl">
-                	<div class="skul_nme">Harvard Business School</div>
-                    <div class="stdnt_name">Wilson Tan (Year 1995)</div>
-                    <span class="cty"> Singapore, 760123</span>
-                    <a href="mailto:Wilson7tan@gmail.com" class="mail">Wilson7tan@gmail.com</a>
-                    <a href="tel:+65 9847 8438" class="telno">+65 9847 8438</a>
-                </div>
-            </div>
-            <div class="reqrd_tutn">Require Tuition In : <a href="#">(+) New Online Tutor</a> <a href="#">(+) New Written Lesson</a> </div>
-  <div class="reqrd_tutn2">
-            	<div class="reqrd_tutn_inr">
-                	<span>Secondary 3, EMath (Online Tutor)</span>
-                    <textarea placeholder="I will require a tutor who knows Math subject very well"></textarea>
-                    <a href="#" class="btn_rght radius3">Repost Request</a>
-                    <div class="tags">
-                    	<span class="dfrnt_tag radius3"><a href="#"></a> Singapore</span>
-                        <span class="dfrnt_tag radius3"><a href="#"></a> America</span>
-                        <span class="dfrnt_tag radius3"><a href="#"></a> Male</span>
-                        <span class="dfrnt_tag radius3"><a href="#"></a> FeMale</span>
-                        <span class="dfrnt_tag radius3"><a href="#"></a> $15 - $20</span>
-                        <span class="dfrnt_tag radius3"><a href="#"></a> SGD</span>
-                        <span class="dfrnt_tag radius3"><a href="#"></a> Singapore (SGT)</span>
-                        <span class="dfrnt_tag radius3"><a href="#"></a> 6pm - 9pm</span>
+                <div class="wrapper">
+                  <div class="main_cntnt radius3">
+                    <div class="stdnt_detal">
+                        <div class="img_box radius3"><img width="129" height="129" alt="img" src="{% static "images/profile_img.png" %}"></div>
+                        <div class="stdnt_img_dtl">
+                            <div class="skul_nme">Harvard Business School</div>
+                            <div class="stdnt_name">Wilson Tan (Year 1995)</div>
+                            <span class="cty"> Singapore, 760123</span>
+                            <a href="mailto:Wilson7tan@gmail.com" class="mail">Wilson7tan@gmail.com</a>
+                            <a href="tel:+65 9847 8438" class="telno">+65 9847 8438</a>
+                        </div>
+                    </div>
+                    <div class="reqrd_tutn">Require Tuition In : <a href="#">(+) New Online Tutor</a>   <a href="#">(+) New Written Lesson</a> </div>
+          <div class="reqrd_tutn2">
+                        <div class="reqrd_tutn_inr">
+                            <span>Secondary 3, EMath (Online Tutor)</span>
+                            <textarea placeholder="I will require a tutor who knows Math subject very well"></textarea>
+                            <a href="#" class="btn_rght radius3">Repost Request</a>
+                            <div class="tags">
+                                <span class="dfrnt_tag radius3"><a href="#"></a> Singapore</span>
+                                <span class="dfrnt_tag radius3"><a href="#"></a> America</span>
+                                <span class="dfrnt_tag radius3"><a href="#"></a> Male</span>
+                                <span class="dfrnt_tag radius3"><a href="#"></a> FeMale</span>
+                                <span class="dfrnt_tag radius3"><a href="#"></a> $15 - $20</span>
+                                <span class="dfrnt_tag radius3"><a href="#"></a> SGD</span>
+                                <span class="dfrnt_tag radius3"><a href="#"></a> Singapore (SGT)</span>
+                                <span class="dfrnt_tag radius3"><a href="#"></a> 6pm - 9pm</span>
+                            </div>
+                        </div>
+                                
+                                <div class="reqrd_tutn_inr">
+                                    <span>Language, Thai (Written Lesson)</span>
+                                    <textarea placeholder="Write a brief description for the potential tutors to know your expectations."></textarea>
+                                    <a href="#" class="btn_rght radius3">Post Request</a>
+                                </div>
+                                
+                                <form class="stdnt_frm">
+                                    <input type="text" class="radius5" value="Nationality Preference" onblur=" if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.value)this.value=''">
+                                    <input type="text" class="radius5" value="Gender Preference" onblur=" if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.value)this.value=''">
+                                    <input type="text" class="radius5" value="Per hour ($) E.g. $15 - $20" onblur=" if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.value)this.value=''">
+                                    <input type="text" class="radius5" value="Currency Preference" onblur=" if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.value)this.value=''">
+                                    <input type="text" class="radius5" value="Time Zone" onblur=" if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.value)this.value=''">
+                                    <input type="text" class="radius5" value="Availability" id="avlblty" onblur=" if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.value)this.value=''">
+                                </form>
+                                
+                            </div>
+                            
+                            <div class="reqrd_tutn">Our Recommendation (Tutors) :
+                                <ul class="rcmdtn">
+                                    <li>Secondary 3, EMath </li>
+                                    <li><img src="{% static "images/arrow.png" %}" width="16" height="12" alt="img"> 5 Tutors <a href="#">( 3 online, 2 ready to teach )</a></li>
+                                    <li>Language, Thai </li>
+                                    <li><img src="{% static "images/arrow.png" %}" width="16" height="12" alt="img"> <a href="#">3 Tutors (</a> 0 online, 0 ready to teach <a href="#">)</a></li>
+                                </ul>            
+                          </div>
+                            
+                      </div>
                     </div>
                 </div>
-                
-                <div class="reqrd_tutn_inr">
-                	<span>Language, Thai (Written Lesson)</span>
-                    <textarea placeholder="Write a brief description for the potential tutors to know your expectations."></textarea>
-                    <a href="#" class="btn_rght radius3">Post Request</a>
+    {% endblock bodycontent %}
+    {% block footer %}
+        <footer>
+            <div class="wrapper">
+                <div class="ftr_logo"><img src="{% static "images/prfct_tutor_footer.png" %}" width="201" height="40" alt="img"></div>
+                <ul class="ftr_lnk">
+                    <span class="lnk_hdng">About</span>
+                    <li><a href="#">Our Mission</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Our Interns</a></li>
+                    <li><a href="#">Our Content Specialists</a></li>
+                </ul>
+                <ul class="ftr_lnk">
+                    <span class="lnk_hdng">Coaching</span>
+                    <li><a href="#">Coach Reports</a></li>
+                    <li><a href="#">Coach Resources</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#">Common Core</a></li>
+                </ul>
+                <ul class="ftr_lnk">
+                    <span class="lnk_hdng">Careers</span>
+                    <li><a href="#">Full Time</a></li>
+                    <li><a href="#">Internships</a></li>
+                </ul>
+                <ul class="ftr_lnk">
+                    <span class="lnk_hdng">Help</span>
+                    <li><a href="#">Report a Problem</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <div class="socl_link">
+                    <ul class="social_icon">
+                        <span class="lnk_hdng">Social</span>
+                        <li><a href="#"><img src="{% static "images/fb.png" %}" width="9" height="17" alt="icon"></a></li>
+                        <li><a href="#"><img src="{% static "images/twtr.png" %}" width="20" height="16" alt="icon"></a></li>
+                        <li><a href="#"><img src="{% static "images/gogle.png" %}" width="17" height="17" alt="icon"></a></li>
+                        <li><a href="#"><img src="{% static "images/blogster.png" %}" width="16" height="16" alt="icon"></a></li>
+                    </ul>
+                    <ul class="ftr_lnk">
+                        <span class="lnk_hdng">Countact us</span>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
                 </div>
-                
-                <form class="stdnt_frm">
-                	<input type="text" class="radius5" value="Nationality Preference" onblur=" if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.value)this.value=''">
-                    <input type="text" class="radius5" value="Gender Preference" onblur=" if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.value)this.value=''">
-                    <input type="text" class="radius5" value="Per hour ($) E.g. $15 - $20" onblur=" if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.value)this.value=''">
-                    <input type="text" class="radius5" value="Currency Preference" onblur=" if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.value)this.value=''">
-                    <input type="text" class="radius5" value="Time Zone" onblur=" if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.value)this.value=''">
-                    <input type="text" class="radius5" value="Availability" id="avlblty" onblur=" if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.value)this.value=''">
-                </form>
-                
             </div>
-            
-            <div class="reqrd_tutn">Our Recommendation (Tutors) :
-            	<ul class="rcmdtn">
-                	<li>Secondary 3, EMath </li>
-                    <li><img src="images/arrow.png" width="16" height="12" alt="img"> 5 Tutors <a href="#">( 3 online, 2 ready to teach )</a></li>
-                    <li>Language, Thai </li>
-                    <li><img src="images/arrow.png" width="16" height="12" alt="img"> <a href="#">3 Tutors (</a> 0 online, 0 ready to teach <a href="#">)</a></li>
-                </ul>            
-          </div>
-            
-      </div>
-    </div>
-</div>
+        </footer>
+    {% endblock footer %}
+    {% block footernote %}
+        <div class="lwr_ftr">
+            <div class="wrapper">
+                <ul class="prvt_plcy">
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+                <p class="ftr_txt"> © championtutoronline <br>Except where noted, all rights reserved.</p>
 
-<script>
-				$("ul.after_login_menu li,.profile_detail").click(function () {
-
-				  $("ul.after_login_menu li").removeClass('hidespan');					
-  					$(this).addClass("hidespan");
-				  $("ul.submenu1",this).toggleClass("addactive");
-				   if($("ul.submenu1",this).hasClass("off"))
-					  {
-				//       alert("start");
-					   $("ul.submenu1",this).removeClass("off");
-					 $("ul.submenu1",this).addClass("addactive");
-					 
-				 //    alert("end");
-					 
-					  }
-					  if(!$("ul.submenu1",this).hasClass("addactive"))
-					  {
-						  				  $("ul.after_login_menu li").removeClass('hidespan');			
-					  }
-				  $("ul.submenu1").addClass("off");
-				  $("ul.submenu1",this).removeClass("off");
-
-				});
-				
-				$("ul.submenu1").click(function () {
-						 $("ul.submenu1").toggleClass("addactive");
-						 
-					});
-					$(".contnt").click(function () {
-						 $("ul.submenu1").removeClass("addactive");
-					});
-					
-					$("ul.after_login_menu li.hidespan").mouseOver(function(){
-						alert("nbdl");
-						$("span.hvr").hide();
-					});
-					
-		   </script>
-           
-           <script>
-		   $(document).ready( function () {
-		   if($("ul.submenu1").hasClass("addactive"))
-					  {
-						  $(this).parent().("span").hide();
-						  alert('active');
-					  }
-		   });
-		   </script>
-
-<footer>
-	<div class="wrapper">
-		<div class="ftr_logo"><img src="images/prfct_tutor_footer.png" width="201" height="40" alt="img"></div>
-		<ul class="ftr_lnk">
-        	<span class="lnk_hdng">About</span>
-        	<li><a href="#">Our Mission</a></li>
-			<li><a href="#">Our Team</a></li>
-			<li><a href="#">Our Interns</a></li>
-			<li><a href="#">Our Content Specialists</a></li>
-        </ul>
-		<ul class="ftr_lnk">
-        	<span class="lnk_hdng">Coaching</span>
-        	<li><a href="#">Coach Reports</a></li>
-			<li><a href="#">Coach Resources</a></li>
-			<li><a href="#">Case Studies</a></li>
-			<li><a href="#">Common Core</a></li>
-        </ul>
-		<ul class="ftr_lnk">
-        	<span class="lnk_hdng">Careers</span>
-        	<li><a href="#">Full Time</a></li>
-			<li><a href="#">Internships</a></li>
-        </ul>
-		<ul class="ftr_lnk">
-        	<span class="lnk_hdng">Help</span>
-        	<li><a href="#">Report a Problem</a></li>
-			<li><a href="#">FAQ</a></li>
-        </ul>
-        <div class="socl_link">
-        	<ul class="social_icon">
-        	<span class="lnk_hdng">Social</span>
-        	<li><a href="#"><img src="images/fb.png" width="9" height="17" alt="icon"></a></li>
-			<li><a href="#"><img src="images/twtr.png" width="20" height="16" alt="icon"></a></li>
-            <li><a href="#"><img src="images/gogle.png" width="17" height="17" alt="icon"></a></li>
-			<li><a href="#"><img src="images/blogster.png" width="16" height="16" alt="icon"></a></li>
-        	</ul>
-            <ul class="ftr_lnk">
-        	<span class="lnk_hdng">Countact us</span>
-        	<li><a href="#">Contact</a></li>
-			<li><a href="#">Press</a></li>
-        </ul>
+            </div>
         </div>
-    </div>
-</footer>
-<div class="lwr_ftr">
-	<div class="wrapper">
-		<ul class="prvt_plcy">
-    		<li><a href="#">Terms of Use</a></li>
-        	<li><a href="#">Privacy Policy</a></li>
-    	</ul>
-        <p class="ftr_txt"> © championtutoronline <br>Except where noted, all rights reserved.</p>
+    {% endblock footernote %}
+{% endblock body %}
 
-    </div>
-</div>
+{% block more_extra %}
 
-</div>
-<script type="text/javascript">
-$(function(){
-  $('#sidemenu a').on('click', function(e){
-    e.preventDefault();
-
-    if($(this).hasClass('open')) {
-      // do nothing because the link is already open
-    } else {
-      var oldcontent = $('#sidemenu a.open').attr('href');
-      var newcontent = $(this).attr('href');
-      
-      $(oldcontent).fadeOut('fast', function(){
-        $(newcontent).fadeIn().removeClass('hidden');
-        $(oldcontent).addClass('hidden');
-      });
-      
-     
-      $('#sidemenu a').removeClass('open');
-      $(this).addClass('open');
-    }
-  });
-});
-</script>
-</body>
-</html>
-<script src="js/jquery.bxslider.min.js"></script>
-<script language="javascript">
-
-$(function(){
-  $('#slide_show').bxSlider({
-    auto: true,
-	pager: false,
-	controls :false,
-	touchEnabled:true,
-	startSlide:3,
-	pause:7000
-	});
-});
-</script>
+{% endblock more_extra %}

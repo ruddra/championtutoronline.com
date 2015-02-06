@@ -15,10 +15,10 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'champ_db',
-        'USER': 'postgres',
-        'PASSWORD': 'sstl2010',
+        'USER': 'root',
+        'PASSWORD': '123456',
         'HOST': '127.0.0.1',
         'PORT': '',
         }
@@ -112,10 +112,24 @@ MIDDLEWARE_CLASSES = (
     #'django.middleware.cache.FetchFromCacheMiddleware',
 )
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.contrib.auth.context_processors.auth",
+    "django.core.context_processors.debug",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.media",
+    "django.core.context_processors.static",
+    "django.core.context_processors.tz",
+    'django.core.context_processors.request',
+    "django.contrib.messages.context_processors.messages"
+    )
+
 ROOT_URLCONF = 'championtutoronline.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'championtutoronline.wsgi.application'
+
+SESSIONENGINE = 'django.contrib.sessions.backends.db'
+SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -137,12 +151,23 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'django.contrib.humanize',
     'core',
+    'authentication',
+    'common'
 )
 
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_URL = '/logout/'
 
+SOCKETIO_URL = 'http://127.0.0.1:3000/'
+
 SENDGRID_SMTP = "smtp.sendgrid.net"
 SENDGRID_USERNAME = "codenginebd"
 SENDGRID_PASSWORD = "lapsso065CommlinkCommlink"
+
+OT_API_KEY = 45126362
+OT_API_SECRET = '48913c444e4c5d9b2e5df98d65e022420d380183'
+
+COMMON_DATA_CONTEXT = {
+    "socketio_url": SOCKETIO_URL
+}

@@ -38,7 +38,131 @@
             border-top-right-radius: 0;
         }
 
+        .form-signin
+        {
+            -moz-box-shadow: 0 0 2px #bfbfbf;
+            -webkit-box-shadow: 0 0 2px #bfbfbf;
+            box-shadow: 0 0 2px #bfbfbf;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        #status_ok
+        {
+            width: 80px;
+    }
+
     </style>
+
+    <script>
+    $(document).ready(function(e)
+    {
+
+        $(".form-control").tooltip();
+        $("#id_email").focusin(function()
+        {
+            $(this).css("border","1px solid #dfdfdf");
+            $(this).attr("data-original-title","");
+        })
+        .focusout(function()
+        {
+            var email = $(this).val();
+            if(email == "")
+            {
+                $(this).css("border","1px solid red");
+                $(this).attr("data-original-title","Required field");
+            }
+            else
+            {
+                var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+                if( !emailReg.test(email) )
+                {
+                    $(this).css("border","1px solid red");
+                    $(this).attr("data-original-title","A valid email address is required.");
+                    return false;
+                } else {
+                    $(this).css("border","1px solid #dfdfdf");
+                    $(this).attr("data-original-title","");
+                    //alert("");
+                    return true;
+                }
+
+            }
+        });
+
+        $("#id_password").focusin(function()
+        {
+            $(this).css("border","1px solid #dfdfdf");
+            $(this).attr("data-original-title","");
+        })
+        .focusout(function()
+        {
+            var password = $(this).val();
+            if(password == "")
+            {
+                $(this).css("border","1px solid red");
+                $(this).attr("data-original-title","Required field");
+            }
+            else
+            {
+                $(this).css("border","1px solid #dfdfdf");
+                $(this).attr("data-original-title","");
+            }
+        });
+
+        var validate_login_form = function()
+        {
+            var error = false;
+            var email = $("#id_email").val();
+            var password = $("#id_password").val();
+
+            if(email == "")
+            {
+                $("#id_email").css("border","1px solid red");
+                $("#id_email").attr("data-original-title","Required field");
+                error = true;
+            }
+            else
+            {
+                var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+                if( !emailReg.test(email) )
+                {
+                    $("#id_email").css("border","1px solid red");
+                    $("#id_email").attr("data-original-title","A valid email address is required.");
+                    error = true;
+                } else {
+                    $("#id_email").css("border","1px solid #dfdfdf");
+                    $("#id_email").attr("data-original-title","");
+                }
+
+            }
+
+            if(password == "")
+            {
+                $("#id_password").css("border","1px solid red");
+                $("#id_password").attr("data-original-title","Required field");
+                error = true;
+            }
+            else
+            {
+                $("#id_password").css("border","1px solid #dfdfdf");
+                $("#id_password").attr("data-original-title","");
+            }
+            return !error;
+        };
+
+        $("#id_submit_button").click(function(e)
+        {
+            if(validate_login_form())
+            {
+                $("form[name=signin-form]").submit();
+            }
+            return false;
+        });
+
+    });
+    </script>
+
 {% endblock head_extra %}
 
 {% block script_extra %}
@@ -54,20 +178,54 @@
 
             <form class="form-signin" action="{% url "user_login" %}" name="signin-form" method="post">
                 {% csrf_token %}
-                <h3 class="form-signin-heading">Login - Champion Tutor Online</h3><hr/>
-                <label>Enter Email</label>
-                {{ form.email }}
-                <br/>
-                <label>Enter Password</label>
-                {{ form.password }}
-                <div class="checkbox">
-                    <label>
-                        {{ form.remember }} Remember me
-                    </label>
+                <h3 class="form-signin-heading">Login</h3><hr/>
+                <div id="status_message2_container" style="{% if error %}visibility:visible; {% else %}visibility:hidden; {% endif %}color: red; padding-bottom:7px;"><span class="glyphicon glyphicon-warning-sign"></span><span style="margin-left:7px; margin-bottom: 7px;" id="status_message2">
+                {% if error_msg %}
+                    {{ error_msg }}
+                {% endif %}
+                </span></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label>Enter Email</label>
+                    </div>
                 </div>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                <div class="row">
+                    <div class="col-md-12">{{ form.email }}</div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label>Enter Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        {{ form.password }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="checkbox">
+                          <label><input type="checkbox" name="rememberme"> Remember me</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                    {% if next %}
+                        <input type="hidden" name="next" value="{{ next }}"/>
+                    {% else %}
+                        <input type="hidden" name="next" value=""/>
+                    {% endif %}
+                        <button id="id_submit_button" class="btn btn-lg btn-primary">Sign In</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                </div>
             </form>
-
         </div>
     {% endblock bodycontent %}
     {% block footer %}

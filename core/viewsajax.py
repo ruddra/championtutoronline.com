@@ -8,6 +8,9 @@ from models import *
 import json
 import hashlib
 from emails import EmailClient
+import otlib
+import json
+from django.conf import settings
 
 class DrawingBoardAjaxView(View):
     def get(self,request,*args,**kwargs):
@@ -52,8 +55,12 @@ class LoginAjaxView(View):
             return HttpResponse(json.dumps(response))
         ###Passed login. Now set session
         request.session['is_login'] = True
+        request.session['user_id'] = user_objs[0].id
         request.session['email'] = email
         request.session['utype'] = user_objs[0].type
+        if request.POST.get("rememberme"):
+            seven_days = 24*60*60*7
+            request.session.set_expiry(seven_days)
         response = {'status':'successful','message':'Login Successful.'}
         return HttpResponse(json.dumps(response))
 
@@ -77,7 +84,6 @@ class SignUpAjaxView(View):
 
         name = request.POST.get("name")
         email = request.POST.get("email")
-        mobile = request.POST.get("mobile")
         password = request.POST.get("password")
         pass_repeat = request.POST.get("password_repeat")
         role = request.POST.get("role")
@@ -85,21 +91,20 @@ class SignUpAjaxView(View):
         ###Check if email is already registered.
         user_objs = User.objects.filter(email=email)
         if user_objs:
-            response['message'] = 'Email already registered.'
+            response['message'] = 'EMAIL_REGISTERED'
             return HttpResponse(json.dumps(response))
         user_obj = User()
         user_obj.fullname = name
         user_obj.email = email
         user_obj.password = hashlib.md5(password).hexdigest()
-        user_obj.phone = mobile
         user_obj.type = role
         user_obj.save()
         response['status'] = 'successful'
         response['message'] = 'Successful.'
 
         ###Now send email.
-        email_sender_obj = EmailClient()
-        email_sender_obj.send_email(email,"Registration Verification","Thank you for registering championtutoronline.com","Thank you for registering championtutoronline.com","codenginebd@gmail.com")
+        #email_sender_obj = EmailClient()
+        #email_sender_obj.send_email(email,"Registration Verification","Thank you for registering championtutoronline.com","Thank you for registering championtutoronline.com","codenginebd@gmail.com")
 
         return HttpResponse(json.dumps(response))
         # except Exception,msg:
@@ -107,9 +112,24 @@ class SignUpAjaxView(View):
         #     response['message'] = 'Exception occured. Message: %s' % str(msg)
         #     return HttpResponse(json.dumps(response))
 
+class VideoSessionTokens(View):
+    def get(self,request,*args,**kwargs):
+        ###Now read the ot session from ot_session table and then request a token id.
+        #print request.GET.get("uids[]")
+        uids = request.GET.get("uids")
+        uids = uids.split(",")
+        uids = [uid for uid in uids if uid]
+        tokens = otlib.generate_ot_tokens(uids)
+        return HttpResponse(json.dumps(tokens), content_type="application/json")
 
-
-
-
-
-
+class VideoSessionStart(View):
+    def get(self,request,*args,**kwargs):
+        api_key = settings.OT_API_KEY
+        otsession = request.GET.get("_ots")
+        token = request.GET.get("_token")
+        data = {
+            "OT_API_KEY": api_key,
+            "OT_SESSION": otsession,
+            "OT_TOKEN": token
+        }
+        return render(request,"ajax/videoframe.html",data)

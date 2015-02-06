@@ -7,14 +7,21 @@ import hashlib
 from models import User
 import json
 from django.http import HttpResponseRedirect
+from django.template import RequestContext
 from django.core.urlresolvers import reverse
 from django.utils.decorators import method_decorator
-from core.decorators import user_login_required
+from common.decorators import user_login_required
+from django.contrib.sessions.models import Session
+from common.methods import check_login
 
 class LoginView(View):
     def get(self,request,*args,**kwargs):
+        if check_login(request):
+            return HttpResponseRedirect(reverse("home_page"))
         login_form = LoginForm()
-        return render(request, 'login.html', {'title':'Login - Championtutor Online','form':login_form})
+        error_msg = 'Status Error Message'
+        next_page = request.GET.get("next")
+        return render(request, 'login.html', {'title':'Login - Championtutor Online','form':login_form, 'error_msg':error_msg,'error':False,'next':next_page})
     def post(self,request,*args,**kwargs):
         login_form = LoginForm(request.POST)
         if not login_form.is_valid():
@@ -24,18 +31,28 @@ class LoginView(View):
         password_hash = hashlib.md5(password).hexdigest()
         user_objs = User.objects.filter(email=email,password=password_hash)
         if not user_objs:
-            response = {'status':'unsuccessful','message':'Email or Password Invalid.'}
-            return HttpResponse(json.dumps(response))
+            login_form = LoginForm(request.POST)
+            error_msg = 'Email or Password Invalid'
+            return render(request, 'login.html', {'title':'Login - Championtutor Online','form':login_form,'error_msg':error_msg,'error':True})
             ###Passed login. Now set session
         request.session['is_login'] = True
+        request.session['user_id'] = user_objs[0].id
         request.session['email'] = email
         request.session['utype'] = user_objs[0].type
-        return HttpResponseRedirect(reverse("user_profile"))
+        if request.POST.get("rememberme"):
+            seven_days = 24*60*60*7
+            request.session.set_expiry(seven_days)
+        redirect_url = reverse("user_profile")
+        if request.POST.get("next"):
+            redirect_url = request.POST["next"]
+        return HttpResponseRedirect(redirect_url)
 
 class LogoutView(View):
     def get(self,request,*args,**kwargs):
-        request.session = {}
-        del request.session
+        #Get the user session object.
+        session_objs = Session.objects.filter(session_key=request.session.session_key)
+        if session_objs:
+            session_objs[0].delete()
         return HttpResponseRedirect(reverse("home_page"))
 
 class SignUpView(View):
@@ -56,13 +73,15 @@ class WhiteboardView(View):
        return super(self.__class__, self).dispatch(request, *args, **kwargs)
 
     def get(self,request,*args,**kwargs):
-        return render(request, 'whiteboard.html', {})
+        #c = RequestContext(request)
+        teachers = User.objects.raw("select * from champ_user where type='teacher' and id != '%s'" % request.session.get("user_id"))
+        return render(request, 'whiteboard.html', {"champ_userid":request.session.get("user_id"),'teachers':teachers})
 
 class ProfileView(View):
     def get(self,request,*args,**kwargs):
-        template_name = "tutor_profile1_1.html"
+        template_name = "tutor_profile.html"
+        
         if request.session.get('utype') == 'student':
             template_name = 'student_profile.html'
-            template_name = "tutor_profile1_1.html"
         return render(request,template_name,{})
 

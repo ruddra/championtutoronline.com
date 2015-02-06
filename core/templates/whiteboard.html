@@ -17,7 +17,6 @@
     <![endif]-->
     <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
     <script type="text/javascript" src="{%  static "js/bootstrap.min.js" %}"></script>
-    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <script src="{% static "js/chat/chat.js" %}"></script>
     <script src="{% static "js/whiteboard/script.js" %}"></script>
     <style type="text/css">
@@ -147,57 +146,7 @@
             <div id="tabs-3">
                 <!-- Data for whiteboard. !-->
             </div>
-            <div id="chatBoxContainer">
-                <div class="chat radius3_top">
-                    <div class="chat_header">
-                        <span class="online"><img src="{% static "images/online.png" %}" width="12" height="12" alt="img"></span>
-                        Shuvankar Saha
-                        <a href="#" id="hide"> <img src="{% static "images/hide_icon.png" %}" width="15" height="9" alt="img"> </a>
-                        <a href="#"> <img src="{% static "images/chat_icon.png" %}" width="15" height="15" alt="img"> </a>
-                    </div>
-                    <div class="chat_contnt">
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <img src="{% static "images/msg_img2.png" %}" style="width:30px;height:30px; float:left; margin-right: 10px; margin-top: 5px;">
-                                    </td>
-                                    <td>
-                                        <div style="width:200px;margin-left:20px;" class="pull-left other-person">
-                                            <p>Hi, how are you? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</p>
-                                            <label class="time">Tuesday, 23rd december</label>
-                                        <div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <div style="width:200px;" class="pull-right me">
-                                            <p>Hi, how are you? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</p>
-                                            <label class="time">Tuesday, 23rd december</label>
-                                        <div>
-                                    </td>
-                                    <td>
-                                        <img src="{% static "images/msg_img1.png" %}" style="width:30px;height:30px; float:right; margin-left: 10px; margin-top: 5px;">
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="chat_txt"> <input class="chat_input_textbox" type="text" placeholder="Enter a Message">  <a href="#"></a> </div>
-                </div>
-                <div class="chat radius3_top" style="height:40px;top:-40px;">
-                    <div class="chat_header">
-                        <span class="online"><img src="{% static "images/online.png" %}" width="12" height="12" alt="img"></span>
-                        Tutor
-                        <a href="#" id="hide"> <img src="{% static "images/hide_icon.png" %}" width="15" height="9" alt="img"> </a>
-                        <a href="#"> <img src="{% static "images/chat_icon.png" %}" width="15" height="15" alt="img"> </a>
-                    </div>
-                </div>
-            </div>
+            
             <div class="show_menu_icon">
                 <img src="{% static "images/show_menu_icon.png" %}" width="22" height="22" alt="img">
                     Show
@@ -259,7 +208,7 @@
                     </div>
                     <div class="hide_menu"><img src="{% static "images/hide_menu_icon.png" %}" width="22" height="22" alt="img"> Hide </div>
 
-                    <div class="tutor radius3"><img src="{% static "images/wb_online.png" %}" width="14" height="14" alt="img">Tutor</div>
+                    <!-- <div class="tutor radius3"><img src="{% static "images/wb_online.png" %}" width="14" height="14" alt="img">Tutor</div> -->
 
                     <li><a id="id_tab_code_editor" href="#tabs-1">Code Editor</a></li>
                     <li><a id="id_tab_text_editor" href="#tabs-2">Text Editor</a></li>
@@ -269,6 +218,224 @@
                 </ul>
             </div>
         </div>
+        <div id="id_chat_sidebar_floating" class="center-right">
+            <button class="btn btn-primary" id="id_button_tut_online_toggle">Tutors Online</button>
+            <div class="chat_sidebar radius3_top" id="id_chat_tutor_list">
+<!--                     <div class="chat_sidebar_header">
+                        <a href="#"><h4 style="color:white;">Tutors Online</h4></a>
+                    </div> -->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th colspan="2">
+                                <input style="width:283px;float:left;padding-right:12px;" type="text" class="form-control"  placeholder="Search tutors online"></input>
+                                <!-- <button style="width: 0px;float:left;margin-left:-10px;" type="text" class="form-control"  placeholder="Search tutors online"><span class="glyphicon glyphicon-search"></span></button> -->
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for teacher in teachers %}
+                                <tr>
+                                    <td>
+                                        <input type="hidden" class="tutor_uid" value="{{ teacher.id }}"/>
+                                        <input type="hidden" class="online_status" value="offline"/>
+                                        <img src="{% static "images/msg_img1.png" %}" class="pimg_url" width="40" height="40"/>
+                                        <br/>
+                                        <br/>
+                                        <span class="badge">6/10</span>
+                                        </td>
+                                    <td style="width: 220px;">
+                                        <div><a href="#"><label class="tut_name">{{ teacher.fullname }}</label><span class="pull-right ic_online" style="display:none;"><img src="{% static "images/online.png" %}" width="12" height="12"/></span></a></div>
+                                        <div style="color:gray;">Expert in Computer Science</div>
+                                        <div>Category: Computer Science</div>
+                                        <div><span class="glyphicon glyphicon-comment champ_text_chat"></span>
+                                        &nbsp;<span class="glyphicon glyphicon-earphone champ_video_chat" disabled></span></div>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            <!-- <tr>
+                                <td>
+                                    <input type="hidden" class="tutor_uid" value="4"/>
+                                    <img src="" class="pimg_url" width="20" height="20"/></td>
+                                <td>
+                                    <div><a href="#"><label class="tut_name">Md Shariful Islam</label><span class="pull-right badge">6/10</span></a></div>
+                                    <div style="color:gray;">Expert in Computer Science</div>
+                                    <div>Also teach in Math, Geology</div>
+                                    <div><span class="glyphicon glyphicon-comment champ_text_chat"></span>
+                                    &nbsp;<span class="glyphicon glyphicon-earphone champ_video_chat"></span>
+                                    &nbsp;<span class="glyphicon glyphicon-earphone"></span></div>
+                                </td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                    <!-- <div class="chat_sidebar_footer"></div> -->         
+                </div>
+        </div>
+        <div id="chatBoxContainer">
+
+                <!-- <div class="chat_sidebar1 radius3_top">
+                    <div class="chat_sidebar_header">
+                        <a href="#"><h4 style="color:white;">Tutors Online</h4></a>
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th colspan="2">
+                                <input style="width:200px;float:left;padding-right:12px;" type="text" class="form-control"  placeholder="Search tutors online"></input>
+                                <button style="width: 40px;float:left;margin-left:-10px;" type="text" class="form-control"  placeholder="Search tutors online"><span class="glyphicon glyphicon-search"></span></button>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for teacher in teachers %}
+                                <tr>
+                                    <td>
+                                        <input type="hidden" class="tutor_uid" value="{{ teacher.id }}"/>
+                                        <img src="" class="pimg_url" width="20" height="20"/></td>
+                                    <td>
+                                        <div><a href="#"><label class="tut_name">{{ teacher.fullname }}</label><span class="pull-right badge">6/10</span></a></div>
+                                        <div style="color:gray;">Expert in Computer Science</div>
+                                        <div>Also teach in Math, Geology</div>
+                                        <div><span class="glyphicon glyphicon-comment champ_text_chat"></span>
+                                        &nbsp;<span class="glyphicon glyphicon-earphone champ_video_chat"></span>
+                                        &nbsp;<span class="glyphicon glyphicon-earphone"></span></div>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            <!-- <tr>
+                                <td>
+                                    <input type="hidden" class="tutor_uid" value="4"/>
+                                    <img src="" class="pimg_url" width="20" height="20"/></td>
+                                <td>
+                                    <div><a href="#"><label class="tut_name">Md Shariful Islam</label><span class="pull-right badge">6/10</span></a></div>
+                                    <div style="color:gray;">Expert in Computer Science</div>
+                                    <div>Also teach in Math, Geology</div>
+                                    <div><span class="glyphicon glyphicon-comment champ_text_chat"></span>
+                                    &nbsp;<span class="glyphicon glyphicon-earphone champ_video_chat"></span>
+                                    &nbsp;<span class="glyphicon glyphicon-earphone"></span></div>
+                                </td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                    <div class="chat_sidebar_footer"></div>
+                </div>
+                <div id="id_chat_window_container">
+                    <div class="over-chat-list">
+                        
+                    </div>
+                    <!-- <div class="chat radius3_top">
+                        <div class="chat_header">
+                            <input class="expanded" type="hidden" value="true"/>
+                            <input type="hidden" class="chat_widget_name" value=""/>
+                            <span class="online"><img src="{% static "images/online.png" %}" width="12" height="12" alt="img"></span>
+                            Shuvankar Saha
+                            <a href="#" class="chat_min"> <img src="{% static "images/hide_icon.png" %}" width="15" height="9" alt="img"> </a>
+                            <a href="#"> <img src="{% static "images/chat_icon.png" %}" width="15" height="15" alt="img"> </a>
+                        </div>
+                        <div class="chat_contnt">
+                            <ul>
+                                <li class="me">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td class="img">
+                                                    <img src="" width="30" height="30"/>
+                                                </td>
+                                                <td class="data">
+                                                    Hi, how are you? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table> 
+                                </li>
+                                <li class="other">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td class="data other-person">
+                                                    Hi, how are you? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                                </td>
+                                                <td class="img">
+                                                    <img src="" width="30" height="30"/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table> 
+                                </li>
+                                <li class="me">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td class="img">
+                                                    <img src="" width="30" height="30"/>
+                                                </td>
+                                                <td class="data">
+                                                    H
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table> 
+                                </li>
+                                <li class="other">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td class="data">
+                                                    H
+                                                </td>
+                                                <td class="img">
+                                                    <img src="" width="30" height="30"/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table> 
+                                </li>
+                            </ul>
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img src="{% static "images/msg_img2.png" %}" style="width:30px;height:30px; float:left; margin-right: 10px; margin-top: 5px;">
+                                        </td>
+                                        <td>
+                                            <div style="width:200px;margin-left:20px;" class="pull-left other-person">
+                                                <p>Hi, how are you? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</p>
+                                                <label class="time">Tuesday, 23rd december</label>
+                                            <div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div style="width:200px;" class="pull-right me">
+                                                <p>Hi, how are you? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</p>
+                                                <label class="time">Tuesday, 23rd december</label>
+                                            <div>
+                                        </td>
+                                        <td>
+                                            <img src="{% static "images/msg_img1.png" %}" style="width:30px;height:30px; float:right; margin-left: 10px; margin-top: 5px;">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="chat_txt"> <input class="chat_input_textbox" type="text" placeholder="Enter a Message">  <a href="#"></a> </div>
+                    </div> -->
+                    
+                </div>
+                <!-- <div style="width: 20px;position:relative;float:right;right:800px;bottom:10px;">
+                        <span class="glyphicon glyphicon-list" style="width:20px;height:20px;">
+                        </span>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div> -->
+            </div>
     {% endblock bodycontent %}
 {% endblock body %}
 {% block more_extra %}
@@ -279,6 +446,38 @@
     <script>
         $(document).ready(function()
         {
+            
+            //alert($(window).height());
+            $("#id_chat_sidebar_floating").find(".chat_sidebar").css("height",($(window).height() - 63) + "px");
+
+            $(".chat_sidebar").find("tbody").css("height",($(window).height() - 63 - 63) + "px");
+
+            $("#id_button_tut_online_toggle").click(function(e){
+                $(this).parent().find(".chat_sidebar").toggle();
+            });
+
+            $(document).click(function(e)
+            {
+                // alert(e.target.className);
+                // if(e.target.id != "id_chat_sidebar_floating" && e.target.id != "id_button_tut_online_toggle")
+                // {
+                //     $("#id_chat_sidebar_floating").find(".chat_sidebar").hide();
+                // }
+            });
+
+            $(document).mouseup(function (e)
+            {
+                var container = $("#id_chat_tutor_list");
+                var chatbox = $(".chat");
+                var board_taskbar = $(".ui-tabs-nav");
+
+                if ((!container.is(e.target) // if the target of the click isn't the container...
+                    && container.has(e.target).length === 0) && (!chatbox.is(e.target) && chatbox.has(e.target).length == 0 ) && e.target.className != "show_menu_icon"  && (!board_taskbar.is(e.target) && board_taskbar.has(e.target).length == 0 ) ) // ... nor a descendant of the container
+                {
+                    container.hide();
+                }
+            });
+
             $(window).resize(function()
             {
                 $('#loading_container').css({
@@ -297,6 +496,7 @@
     </script>
 
     <script>
+
         $(".show_menu_icon").click(function () {
             $("ul.ui-tabs-nav").show();
             $(".show_menu_icon").hide();

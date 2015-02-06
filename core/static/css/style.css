@@ -1,5 +1,57 @@
 @charset "utf-8";
 /* CSS Document */
+
+/*RESET everything*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* END RESET */
+
 body,td,th{font:14px/22px Arial, Helvetica, sans-serif;color:#3b3b3b;text-decoration:none;}
 
 body{margin:0; line-height:1; overflow-x:hidden; }
@@ -957,15 +1009,40 @@ a.free_trial,a.free_trial:link,a.free_trial:visited { width: 181px; height: 35px
 .tutor,.sharing { width:120px; height:32px; float:left; color:#fff; font:14px/32px 'segoe_uibold'; background:url(../images/wb_tutor_up.png) 90% center no-repeat #2a4050; cursor:pointer; }
 .tutor > img,.sharing > img { width:auto; height:auto; float:left; margin:9px; display:inline; }
 .tutor { float:right; margin-left:10px; }
-#chatBoxContainer { width: 100%;position:fixed;bottom:-110px;right:0px;height: 200px; }
-.chat { width:300px; height:320px; top:-320px; right:50px; border-top:0px; overflow:hidden; float: right;
-    position: relative;
+#chatBoxContainer { width: 100%;position:fixed;bottom:62px;right:0px;height: auto; }
+.chat { width:300px; height:320px; bottom: 0px; right:50px; border-top:0px; overflow:hidden; float: right;
+    position: absolute;
     margin-right: 10px;}
-
+.center-right{
+  position: fixed; /* or absolute */
+  top: 50%;
+  right: 0px;
+  width: 20px;
+  height: 200px;
+  z-index: 100000;
+}
+#id_chat_sidebar_floating button{-webkit-transform: rotate(90deg); 
+     -moz-transform: rotate(90deg); 
+      -ms-transform: rotate(90deg); 
+       -o-transform: rotate(90deg); 
+          transform: rotate(90deg);
+            color: #000;
+            font-size: 22px; 
+            position: fixed;
+            right: -60px;
+            top: 50%;
+            color: white;
+        }
+.chat_sidebar { display:none; width:300px; height: 600px; margin-top: 10px; margin-bottom: 10px; z-index: 1000; border:1px solid gray; background-color: #ffffff; position: fixed; bottom:52px; right: 0px;}
+.chat_sidebar_content{width: 100%; min-height: 400px; background-color: red; max-height: 800px; position: absolute;top: -320px; right: 0px;}
+#id_chat_window_container{position:fixed;margin-right:220px; bottom: 63px; right: 43px;}
+ul#chat_container_list li{list-style-type: none; display: inline; position: relative;}
 .added { display:block !important; }
-.chat_contnt { width:100%; height:300px; padding-bottom: 20px; overflow-y: scroll; float:left; min-height:145px; background-color: #efefef; border: solid 1px #b3c0c9; position:absolute; top:38px; border-top:0px; border-bottom:0px; }
-
-.chat_header { width:100%; height:38px; position:absolute; top:0px; background:#2d3e4a; border: 1px solid #2d3e4a; color:#ffffff; font:14px/38px 'segoe_uibold'; border:1px solid #2d3e4a; margin-left:-1px; display:inline; }
+.chat_contnt { width:100%; height:264px; padding-bottom: 4px; overflow-y: auto; min-height:145px; background-color: #efefef; border: solid 1px #b3c0c9; position:absolute; top:38px; bottom: 36px; border-top:0px; border-bottom:0px; }
+.chat_contnt > ul li{list-style-type:none;padding: 3px;}
+.chat_contnt > ul li.me table tbody tr td.img{width:40px;}
+.chat_contnt > ul li.other table tbody tr td.img{width:40px;}
+.chat_header { width:100%; height:38px; cursor: pointer; position:absolute; top:0px; background:#2d3e4a; border: 1px solid #2d3e4a; color:#ffffff; font:14px/38px 'segoe_uibold'; border:1px solid #2d3e4a; margin-left:-1px; display:inline; }
 span.online { width:auto; height:auto; float:left; margin:0 10px; display:inline; }
 
 .chat_header > a,.chat_header > a:link,.chat_header > a:visited { width:30px; height:38px; float:right; position:relative; }
@@ -978,9 +1055,47 @@ span.online { width:auto; height:auto; float:left; margin:0 10px; display:inline
 .chat_txt > input[type="text"] { width:260px; height:100%; float:left; border:none; outline:none; color:#202020; font:14px/36px 'segoe_uiregular'; padding:0 5px 0 10px; display:inline; }
 .chat_txt > a,.chat_txt > a:link,.chat_txt > a:visited { width:29px; height:100%; float:left; background:url(../images/wb_upload_icon.png) center center no-repeat; }
 
+.chat_sidebar_header{background-color: #006600;padding: 13px;}
+.chat_sidebar_header > h4{color: white; width: 100%;margin-top: 4px;}
+.chat_sidebar_footer{background-color: #202020;}
+
+.chat_online{background:url(../images/online.png) center center no-repeat; padding: 3px 6px 3px 3px; width: 12px; height: 12px; margin: 3px;}
 
 
+/* Added by Sohel */
+.chat_sidebar table {
+        width: 100%;
+    }
 
+.chat_sidebar tbody, .chat_sidebar tr { display: block; }
+.chat_sidebar tbody{margin-top: 0px;}
+
+.chat_sidebar tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.chat_sidebar thead th {
+    height: 60px;
+    padding: 4px;
+    /*text-align: left;*/
+}
+
+.chat_sidebar tbody {
+    height: 520px;
+    overflow-y: auto;
+}
+
+.chat_sidebar thead {
+    /* fallback */
+}
+
+
+.chat_sidebar tbody td {
+    float: left;
+}
 
 
 .different_detail { width:615px; height:auto; float:left; margin:0 15px; display:inline; }

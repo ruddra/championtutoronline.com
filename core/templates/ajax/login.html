@@ -8,7 +8,7 @@
 <link href="{% static "css/jquery-ui.min.css" %}" rel="stylesheet">
 <script src="{%  static "js/lib/jquery-1.11.1.min.js" %}"></script>
 <script src="{%  static "js/jquery-ui.min.js" %}"></script>
-<link rel="stylesheet" href="{% static "css/formicon.css" %}"/>
+
 <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
 <script type="text/javascript" src="{%  static "js/bootstrap.min.js" %}"></script>
 <style type="text/css">
@@ -61,30 +61,30 @@
         bottom: -20px;
         top: auto;
     }
+    input.form-control
+    {
+        margin-bottom: 9px;
+        width: 500px;
+    }
+    #id_submit_button
+    {
+        margin-top: 16px;
+        width: 140px;
+    }
+    #status_ok
+    {
+        width: 80px;
+    }
 </style>
 <script>
 $(document).ready(function(e)
 {
 
-    $(".field").tooltip(
-            {
-                position: {
-                    my: "center bottom-20",
-                    at: "center top",
-                    using: function( position, feedback ) {
-                        $( this ).css( position );
-                        $( "<div>" )
-                                .addClass( "arrow" )
-                                .addClass( feedback.vertical )
-                                .appendTo( this );
-                    }
-                }
-            }
-    );
+    $(".form-control").tooltip();
     $("#id_email").focusin(function()
     {
         $(this).css("border","1px solid #dfdfdf");
-        $(this).attr("title","");
+        $(this).attr("data-original-title","");
     })
     .focusout(function()
     {
@@ -92,7 +92,7 @@ $(document).ready(function(e)
         if(email == "")
         {
             $(this).css("border","1px solid red");
-            $(this).attr("title","Required field");
+            $(this).attr("data-original-title","Required field");
         }
         else
         {
@@ -100,11 +100,11 @@ $(document).ready(function(e)
             if( !emailReg.test(email) )
             {
                 $(this).css("border","1px solid red");
-                $(this).attr("title","A valid email address is required.");
+                $(this).attr("data-original-title","A valid email address is required.");
                 return false;
             } else {
                 $(this).css("border","1px solid #dfdfdf");
-                $(this).attr("title","");
+                $(this).attr("data-original-title","");
                 //alert("");
                 return true;
             }
@@ -115,7 +115,7 @@ $(document).ready(function(e)
     $("#id_password").focusin(function()
     {
         $(this).css("border","1px solid #dfdfdf");
-        $(this).attr("title","");
+        $(this).attr("data-original-title","");
     })
     .focusout(function()
     {
@@ -123,12 +123,12 @@ $(document).ready(function(e)
         if(password == "")
         {
             $(this).css("border","1px solid red");
-            $(this).attr("title","Required field");
+            $(this).attr("data-original-title","Required field");
         }
         else
         {
             $(this).css("border","1px solid #dfdfdf");
-            $(this).attr("title","");
+            $(this).attr("data-original-title","");
         }
     });
 
@@ -141,7 +141,7 @@ $(document).ready(function(e)
         if(email == "")
         {
             $("#id_email").css("border","1px solid red");
-            $("#id_email").attr("title","Required field");
+            $("#id_email").attr("data-original-title","Required field");
             error = true;
         }
         else
@@ -150,11 +150,11 @@ $(document).ready(function(e)
             if( !emailReg.test(email) )
             {
                 $("#id_email").css("border","1px solid red");
-                $("#id_email").attr("title","A valid email address is required.");
+                $("#id_email").attr("data-original-title","A valid email address is required.");
                 error = true;
             } else {
                 $("#id_email").css("border","1px solid #dfdfdf");
-                $("#id_email").attr("title","");
+                $("#id_email").attr("data-original-title","");
             }
 
         }
@@ -162,13 +162,13 @@ $(document).ready(function(e)
         if(password == "")
         {
             $("#id_password").css("border","1px solid red");
-            $("#id_password").attr("title","Required field");
+            $("#id_password").attr("data-original-title","Required field");
             error = true;
         }
         else
         {
             $("#id_password").css("border","1px solid #dfdfdf");
-            $("#id_password").attr("title","");
+            $("#id_password").attr("data-original-title","");
         }
         return !error;
     };
@@ -188,24 +188,27 @@ $(document).ready(function(e)
                     console.log(parsed_json.status);
                     if(parsed_json.status == "successful")
                     {
-                        $("#status_message2").text("").hide();
+                        $("#status_message2").text("");
+                        $("#status_message2_container").css("visibility","hidden");
                         $("#signInFormContainer").hide();
                         $("#status_header").text("Successful");
                         $("#status_message").text("Login Successful.");
                         $("#signInResultContainer").show();
-                        parent.$.colorbox.resize({height:260});
+                        parent.$.colorbox.resize({height:280});
                         parent.$("#cboxClose").click(function(e) {
                             parent.location.reload();
                         });
                     }
                     else
                     {
-                         $("#status_message2").text(parsed_json.message).show();
+                         $("#status_message2").text(parsed_json.message);
+                         $("#status_message2_container").css("visibility","visible");
                     }
                 },
                 error: function(jqXHR, status, errorThrown)
                 {
-                    $("#status_message2").text("An error occured while processing your request. Please try again later.").show();
+                    $("#status_message2").text("An error occured while processing your request. Please try again later.");
+                    $("#status_message2_container").css("visibility","visible");
                 },
                 complete: function(jqXHR, status)
                 {
@@ -234,38 +237,55 @@ $(document).ready(function(e)
     <h3 id="status_header"></h3><hr/>
     <div id="status_message"></div>
     <br/>
-    <div id="status_ok_button_container">
-        <a href="#" id="status_ok"
-           style="text-decoration: none;padding: 10px;
-                        color: #FFF;
-                        background-color: #4bc970;
-                        font-size: 18px;
-                        text-align: center;
-                        font-style: normal;
-                        border-radius: 5px;
-                        width:200px;
-                        border: 1px solid #3ac162;
-                        border-width: 1px 1px 3px;
-                        box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;padding-left:40px;padding-right:40px;margin-left: 200px;;margin-right: auto;">Ok</a>
+    <div id="status_ok_button_container text-center" class="container">
+       <div class="row">
+            <div class="col-md-12 text-center">
+                <button id="status_ok" class="btn btn-lg btn-primary">Ok</button>                
+            </div>
+        </div>
     </div>
     <br/>
 </div>
-<div id="signInFormContainer" style="margin:10px;">
+<div id="signInFormContainer" class="container" style="margin:10px;">
     <h3>Sign In</h3><hr/>
-    <div id="status_message2" style="display: none;color: red;"></div>
+    <div id="status_message2_container" style="visibility:hidden;color: red; padding-bottom:7px;"><span class="glyphicon glyphicon-warning-sign"></span><span style="margin-left:7px; margin-bottom: 7px;" id="status_message2">Status Text</span></div>
     <form name="loginform" action="{% url "ajax_login" %}" method="post">
         {% csrf_token %}
-        <label>Enter Email</label>
-        <div class="field">
-            {{ form.email }}
+        <div class="row">
+            <div class="col-md-12">
+                <label>Enter Email</label>
+            </div>
         </div>
-        <br/>
-        <label>Enter Password</label>
-        <div class="field">
-            {{ form.password }}
+        <div class="row">
+            <div class="col-md-12">{{ form.email }}</div>
         </div>
-        <br><br>
-        <button class="btn btn-lg btn-primary btn-block" id="id_submit_button" type="submit">Sign in</button>
+        <div class="row">
+            <div class="col-md-12">
+                <label>Enter Password</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                {{ form.password }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="checkbox">
+                  <label><input type="checkbox" name="rememberme"> Remember me</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <button id="id_submit_button" class="btn btn-lg btn-primary">Sign In</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <a href="#">Forgot Password?</a>
+            </div>
+        </div>
     </form>
 </div>
 
