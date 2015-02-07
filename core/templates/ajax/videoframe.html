@@ -50,24 +50,25 @@
     #controlbar
     {
         width: 960px;
-        height: 30px;
+        height: 40px;
         position: absolute;
         right: 0px;
         bottom: 0px;
         z-index: 1;
-        background-color: black;
-        opacity: 0.5;
+        background-color: white;
+        opacity: 0.9;
     }
 
     #id_vid_chat_bar{
         position: fixed;
         left: 0px;
-        bottom: 30px;
+        bottom: 40px;
         width: 300px;
         height: 100%;
         background-color: white;
         opacity: 0.5;
         padding-right: 10px;
+        display: none;
     }
 
 </style>
@@ -87,7 +88,7 @@ $(document).ready(function(e)
     // var otSessionId = {{ OT_SESSION }};
     // var otUserToken = {{ OT_TOKEN }};
 
-    $("#id_vid_chat_bar").css("height",($(window).height() - 30) + "px");
+    $("#id_vid_chat_bar").css("height",($(window).height() - 40) + "px");
 
     var ot_api_key = $("#id_ot_api_key").val();
     var ot_session = $("#id_ot_session").val();
@@ -138,6 +139,16 @@ $(document).ready(function(e)
             myVideoToggleStatus = !myVideoToggleStatus;
         });
 
+        $("#id_video_chat_close").click(function(e)
+        {
+            $("#id_vid_chat_bar").hide("slide", { direction: "left" }, 200);
+        });
+
+        $(".open_text_chat").click(function(e)
+        {
+            $("#id_vid_chat_bar").show("slide", { direction: "left" }, 200);
+        });
+
 });
 </script>
 
@@ -161,7 +172,10 @@ $(document).ready(function(e)
             </tr>
         </tbody>
     </table>
-    <div id="controlbar"></div>
+    <div id="controlbar" class="text-center">
+        <span class="glyphicon glyphicon-comment open_text_chat"></span>
+        <button class='btn btn-mini btn-primary btn-end-call' style='background:red;color:white;'>End Call</button>
+    </div>
     <div id="id_vid_chat_bar">
         <span style="position:absolute;top:3px; left: 280px; cursor:pointer;" id="id_video_chat_close"><img src="{% static "images/cross.png" %}" width="12" height="12"/></span>
         <div class="chat_contnt">

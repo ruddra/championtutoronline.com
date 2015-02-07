@@ -17,78 +17,77 @@
 
     <script type="text/javascript">
     //Now run a script in a period interval to let inform the status of this client to the socket io server.
-        window.socket = io("http://127.0.0.1:3000/");
-        //This is called upon a successful connection established.
+        {% if request.session.is_login %}
+            window.socket = io("http://127.0.0.1:3000/");
+            //This is called upon a successful connection established.
 
-        //Global variables.
-        window.socket_connected = false;
-
-        window.socket.on("connect",function()
-        {
-            console.log("Socket connected");
-            window.socket_connected = true;
-        });
-
-        //This is called if any error occured on connecting socket.io
-        window.socket.on("error", function(data)
-        {
-            console.log("socket connection error");
+            //Global variables.
             window.socket_connected = false;
-        });
 
-        window.socket.on("disconnect",function()
-        {
-            console.log("socket disconnected");
-            window.socket_connected = false;
-        });
+            window.socket.on("connect",function()
+            {
+                console.log("Socket connected");
+                window.socket_connected = true;
+            });
 
-        window.socket.on("reconnect",function(reconnection_attemp_number)
-        {
-            console.log("socket reconnect called");
-            window.socket_connected = false;
-        });
+            //This is called if any error occured on connecting socket.io
+            window.socket.on("error", function(data)
+            {
+                console.log("socket connection error");
+                window.socket_connected = false;
+            });
 
-        //This is called when attempt to reconnect.
-        window.socket.on("reconnect_attempt",function()
-        {
-            console.log("socket reconnect_attempt called");
-            window.socket_connected = false;
-        });
+            window.socket.on("disconnect",function()
+            {
+                console.log("socket disconnected");
+                window.socket_connected = false;
+            });
 
-        window.socket.on("reconnecting",function(reconnection_attemp_number)
-        {
-            console.log("socket reconnecting");
-            window.socket_connected = false;
-        });
+            window.socket.on("reconnect",function(reconnection_attemp_number)
+            {
+                console.log("socket reconnect called");
+                window.socket_connected = false;
+            });
 
-        window.socket.on("reconnect_error",function(data)
-        {
-            console.log("socket reconnect_error");
-            window.socket_connected = false;
-        });
+            //This is called when attempt to reconnect.
+            window.socket.on("reconnect_attempt",function()
+            {
+                console.log("socket reconnect_attempt called");
+                window.socket_connected = false;
+            });
 
-        window.socket.on("reconnect_failed", function()
-        {
-            console.log("socket reconnect_failed");
-            window.socket_connected = false;
-        });
+            window.socket.on("reconnecting",function(reconnection_attemp_number)
+            {
+                console.log("socket reconnecting");
+                window.socket_connected = false;
+            });
 
-        var publish_online_status = function()
-        {
-            var user_status = false;
-            var user_id = -1;
-            {% if request.session.is_login %}
+            window.socket.on("reconnect_error",function(data)
+            {
+                console.log("socket reconnect_error");
+                window.socket_connected = false;
+            });
+
+            window.socket.on("reconnect_failed", function()
+            {
+                console.log("socket reconnect_failed");
+                window.socket_connected = false;
+            });
+
+            var publish_online_status = function()
+            {
+                var user_status = false;
+                var user_id = -1;
                 user_status = true;
                 user_id = {{ request.session.user_id }};
-            {% endif %}
-            window.socket.emit('online_status',{"uid":user_id,"status":user_status});
-        };
+                window.socket.emit('online_status',{"uid":user_id,"status":user_status});
+            };
 
-        setInterval(publish_online_status, 1000);
+            setInterval(publish_online_status, 1000);
 
-        window.champ_user_id = {% if champ_userid %} {{ champ_userid }} {% else %} -1 {% endif %};
-        console.log(window.champ_user_id);
-
+            window.champ_user_id = {% if champ_userid %} {{ champ_userid }} {% else %} -1 {% endif %};
+            console.log(window.champ_user_id);
+        {% endif %}
     </script>
 
     {% block script_extra %}{% endblock script_extra %}

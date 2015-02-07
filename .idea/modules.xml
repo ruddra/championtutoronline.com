@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/.idea/championtutor.iml" filepath="$PROJECT_DIR$/../../NodeJS Projects/championtutoronline/.idea/championtutor.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/championtutoronline.com.iml" filepath="$PROJECT_DIR$/.idea/championtutoronline.com.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../nodejs/.idea/nodejs.iml" filepath="$PROJECT_DIR$/../nodejs/.idea/nodejs.iml" />
     </modules>
   </component>
 </project>

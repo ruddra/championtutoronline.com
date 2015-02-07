@@ -350,7 +350,13 @@
                 //Cancel call clicked.
                 //alert(_call_obj.callee_id);
                 _call_obj.stop_notif();
+                this.incoming_popup_shown = false;
             }
+        });
+
+        $(document).on("click", ".btn-end-call", function(e)
+        {
+            //alert("End Call clicked!");
         });
         
         $(document).on("click","#"+this.incoming_screen_id,function(e)
@@ -469,20 +475,20 @@
 
      Call.prototype.show_incoming_call_popup = function(uid,img_url,name)
      {
-            if(!this.incoming_popup_shown)
+            //if(!this.incoming_popup_shown)
             {
-                var _call_obj = this;
+              var _call_obj = this;
 
-                var html = this.generate_html_incoming_call_screen(uid,img_url,name);
+              var html = this.generate_html_incoming_call_screen(uid,img_url,name);
 
-                $.colorbox({html:html, fixed:true, initialWidth: '400px', initialHeight: '170px', width:'400px', height:'170px', escKey: false, overlayClose: false,fixed:true});
-                //$("#cboxOverlay").hide();
-                $("#cboxClose").click(function(e) 
-                {
-                    
-                });
+              $.colorbox({html:html, fixed:true, initialWidth: '400px', initialHeight: '170px', width:'400px', height:'170px', escKey: false, overlayClose: false,fixed:true});
+              //$("#cboxOverlay").hide();
+              $("#cboxClose").click(function(e) 
+              {
+                  
+              });
 
-                this.incoming_popup_shown = true;
+              this.incoming_popup_shown = true;
             }
      }
 

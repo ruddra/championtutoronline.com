@@ -52,7 +52,7 @@
                             <li><img src="{% static "images/grade_non_active.png" %}" width="17" height="18" alt="img"></li>
                             <li><img src="{% static "images/grade_non_active.png" %}" width="17" height="18" alt="img"></li>
                         </ul>
-                        <a href="#" class="verified radius3" onClick="return false"><img src="images/varified_btn.png" width="16" height="14" alt="img"> NRIC Verified <span>Tutor's national registration identity card has been verified</span> </a>
+                        <a href="#" class="verified radius3" onClick="return false"><img src="{% static "images/varified_btn.png" %}" width="16" height="14" alt="img"> NRIC Verified <span>Tutor's national registration identity card has been verified</span> </a>
                     </div>
                 </div>
                   <p class="txt"><span>Major :</span>  Statistics, Literature, Biochemistry, Pre-Calculus, Physics, French, Calculus, 
@@ -345,51 +345,4 @@
         </div>
     </div>
 
-    <script>
-            $("ul.after_login_menu li,.profile_detail").click(function () {
-
-              $("ul.after_login_menu li").removeClass('hidespan');          
-                $(this).addClass("hidespan");
-              $("ul.submenu1",this).toggleClass("addactive");
-               if($("ul.submenu1",this).hasClass("off"))
-                {
-            //       alert("start");
-                 $("ul.submenu1",this).removeClass("off");
-               $("ul.submenu1",this).addClass("addactive");
-               
-             //    alert("end");
-               
-                }
-                if(!$("ul.submenu1",this).hasClass("addactive"))
-                {
-                            $("ul.after_login_menu li").removeClass('hidespan');      
-                }
-              $("ul.submenu1").addClass("off");
-              $("ul.submenu1",this).removeClass("off");
-
-            });
-            
-            $("ul.submenu1").click(function () {
-                 $("ul.submenu1").toggleClass("addactive");
-                 
-              });
-              $(".contnt").click(function () {
-                 $("ul.submenu1").removeClass("addactive");
-              });
-              
-              $("ul.after_login_menu li.hidespan").mouseOver(function(){
-                alert("nbdl");
-                $("span.hvr").hide();
-              });
-              
-           </script>
-               
-               <script>
-           $(document).ready( function () {
-           if($("ul.submenu1").hasClass("addactive"))
-                {
-                  $(this).parent().("span").hide();
-                  alert('active');
-                }
-           });
-           </script>
+    

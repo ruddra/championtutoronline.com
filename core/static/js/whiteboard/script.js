@@ -23,7 +23,7 @@ function Point(a, b) {
 $(document).ready(function()
 {
     console.log("Connecting server...");
-    var socket = io("http://127.0.0.1:3000/");
+    //var socket = io("http://127.0.0.1:3000/");
     var lastEmitTime = new Date();
     console.log("Server connected.");
 
@@ -1910,7 +1910,7 @@ $(document).ready(function()
             if(diff > 0)
             {
                 ////console.log("Selected points: "+selected_tool.points);
-                socket.emit('mousemove',whiteboard_state);
+                window.socket.emit('mousemove',whiteboard_state);
                 lastEmitTime = new Date();
             }
         },
@@ -2544,7 +2544,7 @@ $(document).ready(function()
             }
         }
 
-        socket.emit("mousemove","Data Hello");
+        window.socket.emit("mousemove","Data Hello");
 
     };
 
@@ -2645,7 +2645,7 @@ $(document).ready(function()
         //whiteboard.canvas_offset.Y = offY;
     });
 
-    socket.on('whiteboard_data',whiteboard.streamer.on_stream);
+    window.socket.on('whiteboard_data',whiteboard.streamer.on_stream);
 
     $(document).on("change","#file_upload",function()
     {
