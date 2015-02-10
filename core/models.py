@@ -17,6 +17,14 @@ class User(models.Model):
     class Meta:
         db_table = 'champ_user'
 
+class UserTimezoneSettings(models.Model):
+    user_id = models.BigIntegerField(null=False,blank=False)
+    timezone = models.CharField(max_length=6) ##This field will contain timezone information in +=360 format. Say timezone is UTC+6 then it will store -360
+    last_updated = models.DateField(auto_now_add=True)
+
+    class Meta:
+        db_table = 'user_timezone_settings'
+
 class Role(models.Model):
     roles=(('Student','Student'),('Teacher','Teacher'))
     id=models.AutoField(primary_key=True)
@@ -33,18 +41,24 @@ class OnlineStatus(models.Model):
         db_table='online_status'
 
 class Messages(models.Model):
-    pass
-
-class ChatMessages(models.Model):
     id = models.AutoField(primary_key=True)
-    sender_id = models.BigIntegerField(null=False,blank=False)
-    receiver_id = models.BigIntegerField(null=False,blank=False)
     msg_date = models.DateField(null=False,blank=False,auto_now_add=True)
-    last_updated = models.DateField(null=False,blank=False,auto_now=True)
     msg = models.TextField()
+    is_read = models.IntegerField(default=0)  ###0 for unread and 1 for read. Default is unread.
+    chat_type = models.IntegerField(default=0) ###0 for p2p chat and 1 for group chat. Default is p2p chat.
 
     class Meta:
         db_table='champ_chat_messages'
+
+class UserMessage(models.Model):
+    sender_id = models.BigIntegerField(null=False,blank=False)
+    receiver_id = models.BigIntegerField(null=False,blank=False)
+    message_id = models.BigIntegerField(null=False,blank=False)
+    last_seen = models.DateField(auto_now_add=False)
+
+    class Meta:
+        db_table = 'user_message'
+
 
 class OTSessionTable(models.Model):
     sessionid = models.CharField(blank=False,null=False,max_length=40)

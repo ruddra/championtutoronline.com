@@ -63,36 +63,80 @@
         return uuid;
     };
 
+    var UTCDate = function(){
+        var now = new Date(); 
+        var now_utc = new Date(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(),  now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds());
+        return now_utc;
+    };
+
+    var UTCDateMillis = function(){
+        return UTCDate().getTime();
+    };
+
+    var generateChatUUID = function(){
+        var uuid = generateUUID();
+        var utcTimeMillis = UTCDateMillis();
+        return uuid+utcTimeMillis;
+    };
+
      var Chat = function()
      {
-        this.id = generateUUID();
+        this.id = generateChatUUID();
         this.chat_contnt = false;
         this.chat_cntnt_height = 100;
         this.window_minimized = false;
-        this.remote_peer = false;
+        this.remote_peers = [];
+        this.chat_type = 0; //0 for p2p and 1 for group chat.
         this.active = true;
         this.order = 1;
         this.margin_right = 30;
+        this.last_chat_entry = false;
      };
 
      
-     Chat.prototype.send_message = function(user_id,name,pimg_url,msg)
+     Chat.prototype.prepare_message = function(remote_peers,msg,chat_time,tz,chat_type){
+          packet = {
+              "publisher": {
+                  "uid": window.champ_user_id
+              },
+              "subscribers": {
+                  "uids": remote_peers
+              },
+              "message": msg,
+              "chat_time": chat_time,
+              "tz": tz,
+              "chat_type": chat_type
+          };
+          return packet
+     };
+
+     Chat.prototype.send_message = function(remote_peers,msg,chat_type)
      {
+            //Get the users timezone.
+            var date = new Date()
+            var date_offset = date.getTimezoneOffset();
+
+            var utc_date = UTCDate();
+            var msg_time_utc = utc_date.getTime();
+
+            var msg_packet = this.prepare_message(remote_peers,msg,msg_time_utc,date_offset,chat_type);
+
             if(window.socket_connected)
             {
-                window.socket.emit('sendchatmessage',{
-                    'local_peer': {
-                        'uid': window.champ_user_id,
-                        'name': 'Anonymous',
-                        'pimg_url': ''
-                    },
-                    'remote_peer': {
-                        'uid': user_id,
-                        'name': name,
-                        'pimg_url': pimg_url,
-                    },
-                    'msg': msg
-                  });
+                // window.socket.emit('sendchatmessage',{
+                //     'local_peer': {
+                //         'uid': window.champ_user_id,
+                //         'name': 'Anonymous',
+                //         'pimg_url': ''
+                //     },
+                //     'remote_peer': {
+                //         'uid': user_id,
+                //         'name': name,
+                //         'pimg_url': pimg_url,
+                //     },
+                //     'msg': msg
+                //   });
+                window.socket.emit("sendchatmessage",msg_packet);
             }
      };
 
@@ -114,9 +158,10 @@
              chat_html +=   "<input type=\"hidden\" class=\"chat_widget_name\" value=\"\"/>"
              chat_html +=       "<span class=\"online\"><img src=\"/static/images/online.png\" width=\"12\" height=\"12\" alt=\"img\"></span>";
              chat_html +=       user_obj.name;
-             chat_html +=       "<a href=\"#\" class=\"chat_close\"> <img src=\"/static/images/cross.png\" width=\"15\" height=\"9\" alt=\"img\"> </a>";
+             chat_html +=       "<span class='add_chat_buddy_icon'><img src='/static/images/blue_pls.png' width='12' height='12' style='cursor:pointer;position:absolute;float:right;right:35px;top:13px;'/></span><a href=\"#\" class=\"chat_close\"> <img src=\"/static/images/cross.png\" width=\"15\" height=\"9\" alt=\"img\"> </a>";
              chat_html +=       "<a href=\"#\"> <!--<img src=\"#\" width=\"15\" height=\"15\" alt=\"img\"> !--> </a>";
              chat_html +=   "</div>";
+             chat_html +=   "<div class='add_chat_buddy_area' style='z-index:100;position:absolute;top:40px;left:0px;width:100%; padding: 3px;'><input type='text' placeholder='Type name here' class='form-control' style='width:260px;float:left; padding-right:18px;'/><button style='float:left;margin-left: -18px;' class='btn btn-mini'>Add</button></div>";
              chat_html +=   "<div class=\"chat_contnt\">";
              chat_html +=   "</div>";
              chat_html +=   "<div class=\"chat_txt\">";
@@ -136,15 +181,16 @@
             //var chat_object = {user_id:1233,name: "Sohel",img_url: ""};
             if(event.keyCode == 13)
             {
-                var user_id = _this_obj.remote_peer;
-                var name = _this_obj.chat_contnt.parent().find(".chat_widget_name").text();
-                var pimg_url = "";
+                var remote_peers = _this_obj.remote_peers;
+                //var name = _this_obj.chat_contnt.parent().find(".chat_widget_name").text();
+                //var pimg_url = "";
                 var msg = $(this).val();
+                var chat_type = 0; //p2p chat.
                 //alert(msg);
                 if(msg != "")
                 {
-                    _this_obj.send_message(user_id,name,pimg_url,msg);
-                    _this_obj.addNewOutgoingChat(user_id,name,pimg_url,msg);
+                    _this_obj.send_message(remote_peers,msg,chat_type);
+                    //_this_obj.addNewOutgoingChat(user_id,name,pimg_url,msg);
                     $(this).val("");
                     $(this).focus();
                 }
@@ -153,6 +199,7 @@
         this.chat_contnt.click(function(e)
         {
             $(this).parent().find(".chat_input_textbox").focus();
+            $(this).parent().find(".add_chat_buddy_area").hide();
         });
 
         this.chat_contnt.parent().find(".chat_header").click(function(e)
@@ -168,12 +215,17 @@
             this.window_minimized = !this.window_minimized;
         });
 
+        // this.chat_contnt.parent().find(".add_chat_buddy_icon").click(function(e){
+        //   //alert("Clicked!");
+        //     $(this).parent().parent().find(".add_chat_buddy_area").show();
+        // });
+
         this.chat_contnt.parent().find(".chat_close").click(function(e)
         {
             $(this).parent().parent().remove();
-            if(_this_obj.remote_peer && window.chat_boxes[_this_obj.remote_peer])
+            if(_this_obj.remote_peers && window.chat_boxes[_this_obj.remote_peers[0]])
             {
-                delete window.chat_boxes[_this_obj.remote_peer];
+                delete window.chat_boxes[_this_obj.remote_peers[0]];
             }
             redraw_chat_boxes();
         });
@@ -602,28 +654,83 @@
 
             window.socket.on("onchatmessage", function(data)
             {
+                    // console.log("Chat received: ");
+                    // console.log(data);
+                    /*
+                      packet = {
+                            "publisher": {
+                                "uid": 1
+                            },
+                            "subscribers": {
+                                "uids": [2,3,4]]
+                            },
+                            receiver: 2,
+                            "message": "Hi",
+                            "chat_time": 112054215879,
+                            "chat_type": chat_type
+                        };
+                    */
                     console.log(data);
-                    var remote_peer_uid = parseInt(data.local_peer.uid);
-                    if(!window.chat_boxes[remote_peer_uid])
+                    var remote_peer_uid = parseInt(data.publisher.uid);
+                    var chat_type = data.chat_type;
+                    var chat_time = data.chat_time;
+                    if(chat_type == 0) //p2p chat.
                     {
-                        var chat_object = {
-                            user_id:data.local_peer.uid,
-                            name: data.local_peer.name,
-                            img_url: data.local_peer.pimg_url
-                        };
-                        var chat = new Chat();
-                        chat.remote_peer = data.local_peer.uid;
-                        chat.addNewChat(chat_object);
-                        window.chat_boxes[data.local_peer.uid] = chat; 
+                        
+                        if(remote_peer_uid == window.champ_user_id){
+                            var remote_peer_id = data.subscribers.uids[0];
+                            var last_chat_entry = window.chat_boxes[remote_peer_id].last_chat_entry;
+                            if(!window.chat_boxes.hasOwnProperty(remote_peer_id))
+                            {
+                                var chat_object = {
+                                    user_id:remote_peer_id,
+                                    name: "Sohel",//data.local_peer.name,
+                                    img_url: "" //data.local_peer.pimg_url
+                                };
+                                var chat = new Chat();
+                                chat.remote_peers =  [remote_peer_id]; //data.local_peer.uid;
+                                chat.addNewChat(chat_object);
+                                window.chat_boxes[remote_peer_id] = chat; 
+                            }
+                            if(data.chat_time != last_chat_entry){
+                                var obj = {
+                                        "user_id": remote_peer_id,
+                                        "pimg_url": "",
+                                        "message": data.message
+                                    };
+                                window.chat_boxes[remote_peer_id].show();
+                                window.chat_boxes[remote_peer_id].focusInput();
+                                window.chat_boxes[remote_peer_id].addNewOutgoingChat(remote_peer_id,"Sohel","",data.message);
+                                window.chat_boxes[remote_peer_id].last_chat_entry = data.chat_time;
+                            }
+                        }
+                        else{
+                            if(!window.chat_boxes.hasOwnProperty(remote_peer_uid))
+                            {
+                                var chat_object = {
+                                    user_id:remote_peer_uid,
+                                    name: "Sohel",//data.local_peer.name,
+                                    img_url: "" //data.local_peer.pimg_url
+                                };
+                                var chat = new Chat();
+                                chat.remote_peers =  [remote_peer_uid]; //data.local_peer.uid;
+                                chat.addNewChat(chat_object);
+                                window.chat_boxes[remote_peer_uid] = chat; 
+                            }
+                            var obj = {
+                                    "user_id": remote_peer_uid,
+                                    "pimg_url": "",
+                                    "message": data.message
+                                };
+                            window.chat_boxes[remote_peer_uid].show();
+                            window.chat_boxes[remote_peer_uid].focusInput();
+                            window.chat_boxes[remote_peer_uid].addNewIncomingChat(obj);
+                            window.chat_boxes[remote_peer_uid].last_chat_entry = data.chat_time;
+                            }
+                        }
+                    else{
+
                     }
-                    var obj = {
-                            "user_id": data.local_peer.uid,
-                            "pimg_url": data.local_peer.pimg_url,
-                            "message": data.msg
-                        };
-                    window.chat_boxes[remote_peer_uid].show();
-                    window.chat_boxes[remote_peer_uid].focusInput();
-                    window.chat_boxes[remote_peer_uid].addNewIncomingChat(obj);
             });
 
             var get_online_status = function(data,uid){
@@ -692,6 +799,7 @@
         {
             //get the tutor's user_id value.
             var uid = $(this).parent().parent().parent().find(".tutor_uid").val();
+            uid = parseInt(uid);
 
             console.log(window.chat_boxes);
 
@@ -702,7 +810,8 @@
                 var chat_object = {user_id:uid,name: tutor_name,img_url: img_src};
                 //console.log(chat_object);
                 var chat = new Chat();
-                chat.remote_peer = uid;
+                var uids = [uid];
+                chat.remote_peers = uids;
                 chat.addNewChat(chat_object);
                 window.chat_boxes[uid] = chat;
             }

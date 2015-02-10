@@ -2,7 +2,6 @@ var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
-var mysql = require('mysql');
 
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -15,108 +14,112 @@ var app = module.exports = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
+var session_model = require("./models/Session");
+var parser = require("./lib/Parser");
+var message_model = require("./models/Message");
+
 var events = require('events');
 var eventEmitter = new events.EventEmitter();
 
-var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : '123456'
-});
-
-function isEmptyObject(obj) {
-  for (var key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      return false;
-    }
-  }
-  return true;
-}
-
 var DEBUG = true;
 
-connection.query('USE champ_db');
 
-var parse_cookies = function(sock_session_data)
-{
-    //io=nysPzQUQlbMeru1MAAAB; csrftoken=wWMRl0FbINVGYkV6xrGV9MCdiECg0OQP; 
-    //sessionid=iuh022l85bsmqki9w4hxib6ag2pgvvar; 
-    //session_cookie_name=s%3AdfRIosLwijblDwIxnx413MwA8pbPhX9j.7MALT8RIp33sciOU0ShZqK%2BhrpgFT2%2BoJXh7YTcurXo
-    var parsed_data = {};
-    var data_array = sock_session_data.split(";");
-    for(var i = 0; i < data_array.length; i++)
-    {
-        var key_val = data_array[i].split("=");
-        parsed_data[key_val[0].trim()] = key_val[1].trim();
-    }
-    return parsed_data;
-};
 
-var read_session_DB = function(session_id,callback,errback)
-{
-    connection.query('SELECT * FROM django_session where session_key="'+ session_id +'"', function(err, rows){
-
-        var s = rows[0].session_data;
-        var buf = new Buffer(s, 'base64');
-        var session_data = buf.toString();
-        var data_part = session_data.replace(session_data.split(":")[0]+":","");
-        var session_data_json = JSON.parse(session_data.replace(session_data.split(":")[0]+":",""));
-        if(!err)
-        {
-            if(DEBUG)
-            {
-                console.log("Session data read successfully.");
-            }
-            if(callback != undefined && typeof callback == "function")
-            {
-                callback(session_data_json);
-            }
-        }
-        else
-        {
-            if(DEBUG)
-            {
-                console.log("Session data read error");
-            }
-            if(errback != undefined && typeof errback == "function")
-            {
-                if(DEBUG)
-                {
-                    console.log("Calling errback.");
-                }
-                errback(err);
-            }
-        }
-        //console.log("User joined a room.");
-    });
-};
-
-var insert_chat_message_session_DB = function(data_obj,callback,errback)
-{
-    connection.query("insert into champ_chat_messages(sender_id,receiver_id,msg) values("+ data_obj.publisher_id +","+ data_obj.subsciber_id + ", '" + data_obj.msg +"')", function(err){
-        if(err)
-        {
-            if(DEBUG)
-            {
-                console.log("MySQL Error!");
-                console.log(err);    
-            }
+// var insert_chat_message_session_DB = function(data_obj,callback,errback)
+// {
+//     connection.query("insert into champ_chat_messages(sender_id,receiver_id,msg) values("+ data_obj.publisher_id +","+ data_obj.subsciber_id + ", '" + data_obj.msg +"')", function(err){
+//         if(err)
+//         {
+//             if(DEBUG)
+//             {
+//                 console.log("MySQL Error!");
+//                 console.log(err);    
+//             }
             
-            if(errback != undefined && typeof errback == "function")
-            {
-                errback();
-            }
-        }
-        else
-        {
-            //io.to(subsciber_id).emit("onchatmessage",data);
-            if(callback != undefined && typeof callback == "function")
-            {
-                callback();
-            }
-        }
-    });
-};
+//             if(errback != undefined && typeof errback == "function")
+//             {
+//                 errback();
+//             }
+//         }
+//         else
+//         {
+//             //io.to(subsciber_id).emit("onchatmessage",data);
+//             if(callback != undefined && typeof callback == "function")
+//             {
+//                 callback();
+//             }
+//         }
+//     });
+// };
+
+// var check_user_timezone = function(user_id,callback,errback){
+//     connection.query("SELECT count(*) as user_timezone FROM user_timezone_settings where user_id=" + user_id, function(err, rows){
+
+//         var user_tz = parseInt(rows[0].user_timezone,10);
+//         if(!err)
+//         {
+//             if(DEBUG)
+//             {
+//                 console.log("Session data read successfully.");
+//             }
+//             if(callback != undefined && typeof callback == "function")
+//             {
+//                 var user_tz_exist = false;
+//                 if(user_tz > 0)
+//                 {
+//                     user_tz_exist = true;
+//                 }
+//                 if(DEBUG)
+//                 {
+//                     console.log("User timezone exist: "+user_tz_exist);
+//                 }
+//                 callback(user_tz_exist);
+//             }
+//         }
+//         else
+//         {
+//             if(DEBUG)
+//             {
+//                 console.log("Session data read error");
+//             }
+//             if(errback != undefined && typeof errback == "function")
+//             {
+//                 if(DEBUG)
+//                 {
+//                     console.log("Calling errback.");
+//                 }
+//                 errback(err);
+//             }
+//         }
+//         //console.log("User joined a room.");
+//     });
+// };
+
+// var update_tz = function(user_id,tz_offset,callback,errback){
+//     connection.query("insert into user_timezone_settings(user_id,timezone) values("+ user_id + ", '" + tz_offset +"')", function(err){
+//         if(err)
+//         {
+//             if(DEBUG)
+//             {
+//                 console.log("MySQL Error!");
+//                 console.log(err);    
+//             }
+            
+//             if(errback != undefined && typeof errback == "function")
+//             {
+//                 errback();
+//             }
+//         }
+//         else
+//         {
+//             //io.to(subsciber_id).emit("onchatmessage",data);
+//             if(callback != undefined && typeof callback == "function")
+//             {
+//                 callback();
+//             }
+//         }
+//     });
+// };
 
 //var sessionStore = new SessionStore(options)
 
@@ -132,14 +135,15 @@ var on_socket_connection = function(socket)
         console.log("A client connected.");
     }
     
-    var client_session = parse_cookies(socket.request.headers.cookie);
+    var client_session = parser.parse_cookies(socket.request.headers.cookie);
     var session_id = client_session.sessionid;
 
-    read_session_DB(session_id,function(session_data_json)
+    session_model.read_session_DB(session_id,function(session_data_json)
     {
         if(DEBUG)
         {
             console.log("Inside client connection success callback.");
+            console.log(session_data_json);
         }
 
         user_session_data = session_data_json;
@@ -151,9 +155,14 @@ var on_socket_connection = function(socket)
 
     });
 
+
+    socket.on("update_tz", function(data){
+        
+        
+    });
+
     socket.on("online_status", function(data)
     {
-        //console.log("Subscribing online status");
         if(data.status == true && data.uid != -1 && !connected_clients.hasOwnProperty(data.uid))
         {
             connected_clients[data.uid] = data.status;
@@ -185,51 +194,68 @@ var on_socket_connection = function(socket)
             console.log(data);
         }
 
-        var publisher_id = parseInt(data.local_peer.uid,10);
-        var subsciber_id = parseInt(data.remote_peer.uid,10);
-        var msg = data.msg;
-        
-        insert_chat_message_session_DB(
-            {
-                "publisher_id":publisher_id,
-                "subsciber_id":subsciber_id,
-                "msg":msg
-            },
-            function()
-            {
-                console.log("Inside success callback.");
-                io.to(subsciber_id).emit("onchatmessage",data);
-            },
-            function(err_obj)
-            {
-
+        //Get all publisher and subscribers and broadcast the message to them.
+        var uids = [];
+        var user_messges = [];
+        var pub_id = data.publisher.uid;
+        var subscribers = data.subscribers.uids;
+        uids.push(pub_id);
+        for(var i = 0 ; i < subscribers.length ; i++){
+            uids.push(subscribers[i]);
+            user_messges.push({
+                "sender_id": pub_id,
+                "receiver_id": subscribers[i]
             });
-        
-    });
-
-
-
-    socket.on('message',function(data)
-    {
-        if(DEBUG)
-        {
-            console.log(data);
-            console.log("Generating unique room id for this user.");
-            //var uuid_unique = uuid.v1();
-            console.log("Unique identifie generated for this user.");
-            //console.log(uuid_unique);
-            console.log("Sending response back to the sender.");
-            socket.send("Hi!");
-            console.log("Done.");    
         }
+
+        message_model.save_chat(
+            {
+                "msg": data.message,
+                "read": 0,
+                "chat_type": data.chat_type,
+                "msg_users": user_messges
+            },
+            function(){
+                if(DEBUG){
+                    console.log("Message Saved Successfully.");
+                }
+                //Now prepare the message packet and broadcast to all.
+                var packet = data;
+
+                for(var j = 0 ; j < uids.length ; j++){
+                    io.to(uids[j]).emit("onchatmessage",packet);
+                }
+            },
+            function(){
+                if(DEBUG){
+                    console.log("Message Saving Failed.");
+                }
+            });
+
+        // var publisher_id = parseInt(data.local_peer.uid,10);
+        // var subsciber_id = parseInt(data.remote_peer.uid,10);
+        // var msg = data.msg;
         
-        io.emit('message_back', data);
+        // insert_chat_message_session_DB(
+        //     {
+        //         "publisher_id":publisher_id,
+        //         "subsciber_id":subsciber_id,
+        //         "msg":msg
+        //     },
+        //     function()
+        //     {
+        //         console.log("Inside success callback.");
+        //         io.to(subsciber_id).emit("onchatmessage",data);
+        //     },
+        //     function(err_obj)
+        //     {
+
+        //     });
+        
     });
 
     socket.on('pub_notif',function(data)
     {
-        
-
         var publish_to = data.subscriber.uid;
         if(DEBUG)
         {
@@ -299,7 +325,10 @@ io.set('authorization', function (handshakeData, accept) {
 
     //handshakeData.cookie = cookieParser.parse(handshakeData.headers.cookie);
 
-    console.log(handshakeData.headers.cookie.sessionid);
+    if(DEBUG){
+        console.log(handshakeData.headers.cookie.sessionid);
+    }
+
     }
   accept(null, true);
 });
@@ -307,19 +336,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', function(req,res,next)
     {
-        connection.query('SELECT * FROM django_session where session_key="'+ req.cookies.sessionid +'"', function(err, rows){
-
-            console.log(rows[0]);
-            var s = rows[0].session_data;
-            var buf = new Buffer(s, 'base64');
-            var session_data = buf.toString();
-            var data_part = session_data.replace(session_data.split(":")[0]+":","");
-            var session_data_json = JSON.parse(session_data.replace(session_data.split(":")[0]+":",""));
-            console.log(session_data_json.user_id);
-            res.sendFile(__dirname+'/views/home.html');
-        });
+        
     });
-app.use('/users', users);
+//app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -74,12 +74,20 @@
                 window.socket_connected = false;
             });
 
-            var publish_online_status = function()
-            {
-                var user_status = false;
-                var user_id = -1;
-                user_status = true;
-                user_id = {{ request.session.user_id }};
+            var notify_user_timezone = function(){
+                var date = new Date()
+                var dateOffset = date.getTimezoneOffset();
+                window.socket.emit("update_tz",{
+                    "uid": {% if request.session.user_id %}{{ request.session.user_id }} {% else %} -1 {% endif %},
+                    "tz_offset" : dateOffset
+                });
+            };
+
+            notify_user_timezone();
+
+            var publish_online_status = function(){
+                var user_status = true;
+                var user_id = {{ request.session.user_id }};
                 window.socket.emit('online_status',{"uid":user_id,"status":user_status});
             };
 
