@@ -1,4 +1,11 @@
 {% load staticfiles %}
+
+<script type='text/javascript'>
+org = { mathdox:{formulaeditor:{options:{dragPalette:false, paletteShow: "none", useBar:false}}}};
+</script>
+<script type='text/javascript' src="{% static "js/mathdox/org/mathdox/formulaeditor/main.js" %}">
+</script>
+
 <div class="canvas_menu">
 <div class="canvas_menu_icon">
 <div class="canvas_menu_inner">
@@ -70,7 +77,7 @@
     </div>
 </div>
 <div class="canvas_menu_inner">
-    <a href="#"> <img src="{% static "images/wb_fx_icon.png" %}" alt="img"> </a>
+    <a href="#" id="id_menu_ic_fx"> <img src="{% static "images/wb_fx_icon.png" %}" alt="img"> </a>
     <div class="wb_submenu_icon whtebox_fx">
         <div class="wb_subsubmenu">
             <a href="#"> <img src="{% static "images/white_board/wb_menu_icon11_1.png" %}" alt="img"> </a>
@@ -86,7 +93,7 @@
             <div class="sub_icon">
                 <a id="id_fx_wb_menu_icon11_2_inner1" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_2_inner1.png" %}" alt="img"> </a>
                 <a id="id_fx_wb_menu_icon11_2_inner2" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_2_inner2.png" %}" alt="img"> </a>
-                <a id="id_fx_wb_menu_icon11_2_inner3" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_2_inner3.png" %}" alt="img"> </a>
+                <!-- <a id="id_fx_wb_menu_icon11_2_inner3" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_2_inner3.png" %}" alt="img"> </a> -->
                 <a id="id_fx_wb_menu_icon11_2_inner4" href="#"> <img src="{% static "images/white_board/wb_menu_icon11_2_inner4.png" %}" alt="img"> </a>
             </div>
         </div>
@@ -284,7 +291,31 @@
 
 </div>
 
-<div style="width: 100%;text-align:center;height:400px;margin-top:1px;margin-left:auto;margin-right:auto;" class="text-center"><canvas id="drawing_board" width="100%" height="430" tabindex = '1' style="-webkit-filter: drop-shadow(0 0 7px rgba(0,0,0,0.5));position:relative;top:0px;radius:7px;"></canvas></div>
+<style type='text/css'>
+
+      .code {
+        padding-left:2em;
+        font-family:monospace;
+      }
+
+      .formulaeditorinput {
+        margin-right: 2em;
+      }
+      canvas.mathdoxformula{
+         margin-top:140px;
+         max-width: 800px;
+      }
+    </style>
+
+<div style="z-index:90;width: 100%;text-align:center;height:800px;margin-top:1px;margin-left:auto;margin-right:auto;" class="text-center"><canvas id="drawing_board" width="100%" height="430" tabindex = '1' style="-webkit-filter: drop-shadow(0 0 7px rgba(0,0,0,0.5));position:relative;top:0px;radius:7px;"></canvas>
+<div style="display:none;position:relative;top:70px;width: 800px;height:400px;margin-left:auto;margin-right:auto; margin-top: 0px;border: 2px solid #dedede; border-radius: 10px;background:#fdfdfd;padding-bottom: 70px;">
+    <button class="btn btn-success" id="id_button_fx_ok" style="position:absolute;top:3px;right:106px;width: 100px;">Ok</button>
+    <button class="btn btn-danger" id="id_button_fx_cancel" style="position:absolute;top:3px;right:3px;width: 100px;">Cancel</button>
+    <textarea id='formula1' class='mathdoxformula' rows='10' cols='80'>       
+    </textarea>
+</div>
+</div>
+
 
 <script>
     $(document).ready(function(){
@@ -297,6 +328,10 @@
            by getting the widow width and height and setting it to canvas*/
             drawingCanvas.width  = window.innerWidth;
             drawingCanvas.height = "430";
+
+        // var mathdoxformula = document.getElementsByClassName("mathdoxformula");
+        // mathdoxformula[0].width  ="15px";
+        // mathdoxformula[0].height = "25px";
 
         var i=0;
         var c='';
@@ -378,10 +413,31 @@
     //});
 
 
+    var whiteboard_fx = {
+        show_whiteboard: function(bool){
+            if(bool === true){
+                $("#drawing_board").parent().css("background","white");
+                $("#drawing_board").show();
+                $("#formula1").parent().hide();
+            }
+            else{
+                $("#drawing_board").parent().css("background","#dedede");
+                $("#drawing_board").hide();
+                $("#formula1").parent().show();
+            }
+        }
+    }
+
     $(function(){
 
         $(".canvas_menu_inner > a").click(function(e){
             e.stopPropagation();
+            if($(e.target).parent().attr("id") == "id_menu_ic_fx"){
+                whiteboard_fx.show_whiteboard(false);
+            }
+            else{
+                whiteboard_fx.show_whiteboard(true);
+            }
 
             $(this).parent().siblings('.canvas_menu_inner').children('.canvas_menu_inner > a').removeClass("menu_active");
             $(this).toggleClass("menu_active");
@@ -400,6 +456,9 @@
                     $("body").unbind("click");
                 }
             });
+            if($(e.target).parent().attr("id") == "id_menu_ic_fx"){
+                return false;
+            }
         });
     });
 
@@ -407,7 +466,29 @@
         return false;
     });
 
-    $(".wb_subsubmenu").click(function () {
+    $("#id_menu_ic_fx").mouseover(function(){
+
+        whiteboard_fx.show_whiteboard(false);
+
+        $(this).parent().siblings('.canvas_menu_inner').children('.canvas_menu_inner > a').removeClass("menu_active");
+            $(this).toggleClass("menu_active");
+
+            $(this).parent().siblings('.canvas_menu_inner').children('.wb_submenu_icon,.wb_submenu_icon1').removeClass("addactive");
+            $(this).siblings(".wb_submenu_icon,.wb_submenu_icon1").toggleClass("addactive");
+
+            $("body").click(function(e){
+                if(e.target.id != "dropdown")
+                {
+                    $(".canvas_menu_inner > a").removeClass("menu_active");
+                    $(".wb_submenu_icon,.wb_submenu_icon1").removeClass("addactive");
+                    $('.sub_icon').removeClass("addactive");
+                    $('.wb_subsubmenu > a').removeClass("hover_bg");
+                    $("body").unbind("click");
+                }
+            });
+    });
+
+    $(".wb_subsubmenu").hover(function () {
         $(this).siblings('.wb_subsubmenu').children('.sub_icon').removeClass("addactive");
         $('.sub_icon',this).addClass("addactive");
         $(this).siblings('.wb_subsubmenu').children('.wb_subsubmenu > a').removeClass("hover_bg");
@@ -418,8 +499,413 @@
     $(".sub_icon.addactive").click(function () {
         return true;
     });
-    $(".sub_icon > a").click(function () {
+
+    var hide_menu = function(){
         $('.canvas_menu_inner > a').removeClass("menu_active");
         $('.sub_icon,.wb_submenu_icon').removeClass("addactive");
+    };
+
+    var fxboard = {
+        show_alert: function(title,msg){
+            $.colorbox({
+                html: msg,
+                initialWidth: '400px', 
+                initialHeight: '100px',
+                width: '400px',
+                height: '100px',
+                fixed:true,
+                escKey: false,
+                overlayClose: false,
+            });
+
+            // $.colorbox({html:html, fixed:true, initialWidth: '400px', initialHeight: '170px', width:'400px', height:'170px', escKey: false, overlayClose: false,fixed:true});
+            $("#cboxOverlay").hide();
+
+        },
+        palette_layout: ""+
+            "<OMOBJ version='2.0' xmlns='http://www.openmath.org/OpenMath'>\n"+
+            "  <OMA>\n"+
+            "    <OMS cd='editor1' name='palette'/>\n"+
+            "    <OMA>\n"+
+            "      <OMS cd='editor1' name='palette_tab'/>\n"+
+            //Palette Row 0
+            "      <OMA>\n"+
+            "        <OMS cd='editor1' name='palette_row'/>\n"+
+            "        <OMS cd='arith1' name='plus'/>\n"+
+            "        <OMS cd='arith1' name='minus'/>\n"+
+            "        <OMS cd='arith1' name='times'/>\n"+
+            "        <OMS cd='logic1' name='and'/>\n"+
+            "        <OMS cd='logic1' name='or'/>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd='transc1' name='cos'/>\n"+
+            "          <OMS cd='editor1' name='input_box'/>\n"+
+            "        </OMA>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd='arith1' name='root'/>\n"+
+            "          <OMS cd='editor1' name='input_box'/>\n"+
+            "          <OMI>2</OMI>\n"+
+            "        </OMA>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd=\"calculus1\" name=\"int\"/>\n"+
+            "          <OMBIND>\n"+
+            "            <OMS cd=\"fns1\" name=\"lambda\"/>\n"+
+            "            <OMBVAR>\n"+
+            "              <OMV name=\"x\"/>\n"+
+            "            </OMBVAR>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "          </OMBIND>\n"+
+            "        </OMA>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd=\"calculus1\" name=\"defint\"/>\n"+
+            "          <OMA>\n"+
+            "            <OMS cd=\"interval1\" name=\"interval\"/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "          </OMA>\n"+
+            "          <OMBIND>\n"+
+            "            <OMS cd=\"fns1\" name=\"lambda\"/>\n"+
+            "            <OMBVAR>\n"+
+            "              <OMV name=\"x\"/>\n"+
+            "            </OMBVAR>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "          </OMBIND>\n"+
+            "        </OMA>\n"+
+            "        <OMS cd='editor1' name='palette_whitespace'/>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd='interval1' name='interval_cc'/>\n"+
+            "     <OMS cd='editor1' name='input_box'/>\n"+
+            "     <OMS cd='editor1' name='input_box'/>\n"+
+            "        </OMA>\n"+
+            "      </OMA>\n"+
+            //Palette Row 1
+            "      <OMA>\n"+
+            "        <OMS cd='editor1' name='palette_row'/>\n"+
+            "        <OMS cd='relation1' name='lt'/>\n"+
+            "        <OMS cd='relation1' name='leq'/>\n"+
+            "        <OMS cd='relation1' name='eq'/>\n"+
+            "        <OMS cd='relation1' name='geq'/>\n"+
+            "        <OMS cd='relation1' name='gt'/>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd='transc1' name='sin'/>\n"+
+            "          <OMS cd='editor1' name='input_box'/>\n"+
+            "        </OMA>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd='arith1' name='root'/>\n"+
+            "          <OMS cd='editor1' name='input_box'/>\n"+
+            "          <OMS cd='editor1' name='input_box'/>\n"+
+            "        </OMA>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd=\"arith1\" name=\"product\"/>\n"+
+            "          <OMA>\n"+
+            "            <OMS cd=\"interval1\" name=\"integer_interval\"/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "          </OMA>\n"+
+            "          <OMBIND>\n"+
+            "            <OMS cd=\"fns1\" name=\"lambda\"/>\n"+
+            "            <OMBVAR>\n"+
+            "              <OMV name=\"n\"/>\n"+
+            "            </OMBVAR>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "          </OMBIND>\n"+
+            "        </OMA>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd=\"arith1\" name=\"sum\"/>\n"+
+            "            <OMA>\n"+
+            "              <OMS cd=\"interval1\" name=\"integer_interval\"/>\n"+
+            "              <OMS cd='editor1' name='input_box'/>\n"+
+            "              <OMS cd='editor1' name='input_box'/>\n"+
+            "            </OMA>\n"+
+            "          <OMBIND>\n"+
+            "            <OMS cd=\"fns1\" name=\"lambda\"/>\n"+
+            "            <OMBVAR>\n"+
+            "              <OMV name=\"n\"/>\n"+
+            "            </OMBVAR>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "          </OMBIND>\n"+
+            "        </OMA>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd='linalg1' name='determinant'/>\n"+
+            "     <OMS cd='editor1' name='input_box'/>\n"+
+            "        </OMA>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd='interval1' name='interval_co'/>\n"+
+            "     <OMS cd='editor1' name='input_box'/>\n"+
+            "     <OMS cd='editor1' name='input_box'/>\n"+
+            "        </OMA>\n"+
+            "      </OMA>\n"+
+            //Palette Row 2
+            "      <OMA>\n"+
+            "        <OMS cd='editor1' name='palette_row'/>\n"+
+            "        <OMS cd='nums1' name='pi'/>\n"+
+            "        <OMS cd='nums1' name='e'/>\n"+
+            "        <OMS cd='nums1' name='i'/>\n"+
+            "        <OMS cd='nums1' name='infinity'/>\n"+
+            "        <OMS cd='editor1' name='palette_whitespace'/>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd='transc1' name='tan'/>\n"+
+            "          <OMS cd='editor1' name='input_box'/>\n"+
+            "        </OMA>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd='list1' name='list'/>\n"+
+            "          <OMS cd='editor1' name='input_box'/>\n"+
+            "        </OMA>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd='linalg2' name='vector'/>\n"+
+            "          <OMS cd='editor1' name='input_box'/>\n"+
+            "          <OMS cd='editor1' name='input_box'/>\n"+
+            "        </OMA>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd='linalg2' name='matrix'/>\n"+
+            "          <OMA>\n"+
+            "            <OMS cd='linalg2' name='matrixrow'/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "          </OMA>\n"+
+            "          <OMA>\n"+
+            "            <OMS cd='linalg2' name='matrixrow'/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "          </OMA>\n"+
+            "        </OMA>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd='linalg2' name='matrix'/>\n"+
+            "          <OMA>\n"+
+            "            <OMS cd='linalg2' name='matrixrow'/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "          </OMA>\n"+
+            "          <OMA>\n"+
+            "            <OMS cd='linalg2' name='matrixrow'/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "          </OMA>\n"+
+            "        </OMA>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd='interval1' name='interval_oc'/>\n"+
+            "     <OMS cd='editor1' name='input_box'/>\n"+
+            "     <OMS cd='editor1' name='input_box'/>\n"+
+            "        </OMA>\n"+
+            "      </OMA>\n"+
+            //Palette Row 3
+            "      <OMA>\n"+
+            "        <OMS cd='editor1' name='palette_row'/>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd='arith1' name='divide'/>\n"+
+            "          <OMS cd='editor1' name='input_box'/>\n"+
+            "          <OMS cd='editor1' name='input_box'/>\n"+
+            "        </OMA>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd='arith1' name='power'/>\n"+
+            "          <OMS cd='editor1' name='input_box'/>\n"+
+            "          <OMS cd='editor1' name='input_box'/>\n"+
+            "        </OMA>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd='arith1' name='abs'/>\n"+
+            "          <OMS cd='editor1' name='input_box'/>\n"+
+            "        </OMA>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd='integer1' name='factorial'/>\n"+
+            "          <OMS cd='editor1' name='input_box'/>\n"+
+            "        </OMA>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd='arith1' name='power'/>\n"+
+            "          <OMS cd='nums1' name='e'/>\n"+
+            "          <OMS cd='editor1' name='input_box'/>\n"+
+            "        </OMA>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd='transc1' name='ln'/>\n"+
+            "          <OMS cd='editor1' name='input_box'/>\n"+
+            "        </OMA>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd='transc1' name='log'/>\n"+
+            "          <OMI>10</OMI>\n"+
+            "          <OMS cd='editor1' name='input_box'/>\n"+
+            "        </OMA>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd='linalg2' name='vector'/>\n"+
+            "          <OMS cd='editor1' name='input_box'/>\n"+
+            "          <OMS cd='editor1' name='input_box'/>\n"+
+            "          <OMS cd='editor1' name='input_box'/>\n"+
+            "        </OMA>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd='linalg2' name='matrix'/>\n"+
+            "          <OMA>\n"+
+            "            <OMS cd='linalg2' name='matrixrow'/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "          </OMA>\n"+
+            "          <OMA>\n"+
+            "            <OMS cd='linalg2' name='matrixrow'/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "          </OMA>\n"+
+            "          <OMA>\n"+
+            "            <OMS cd='linalg2' name='matrixrow'/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "          </OMA>\n"+
+            "        </OMA>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd='linalg2' name='matrix'/>\n"+
+            "          <OMA>\n"+
+            "            <OMS cd='linalg2' name='matrixrow'/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "          </OMA>\n"+
+            "          <OMA>\n"+
+            "            <OMS cd='linalg2' name='matrixrow'/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "          </OMA>\n"+
+            "          <OMA>\n"+
+            "            <OMS cd='linalg2' name='matrixrow'/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "          </OMA>\n"+
+            "        </OMA>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd='interval1' name='interval_oo'/>\n"+
+            "     <OMS cd='editor1' name='input_box'/>\n"+
+            "     <OMS cd='editor1' name='input_box'/>\n"+
+            "        </OMA>\n"+
+            "      </OMA>\n"+
+            //Palette 4
+            "      <OMA>\n"+
+            "        <OMS cd='editor1' name='palette_row'/>\n"+
+            "        <OMA>\n"+
+            "          <OMS cd='arith1' name='root'/>\n"+
+            "          <OMS cd='editor1' name='input_box'/>\n"+
+            "          <OMI>3</OMI>\n"+
+            "        </OMA>\n"+
+            "        <OMA>\n"+
+            "           <OMS cd='arith1' name='lcm'/>\n"+
+            "           <OMV name='a'/>"+
+            "           <OMV name='b'/>"+
+            "        </OMA>"+
+            "        <OMA>\n"+
+            "          <OMS cd=\"calculus1\" name=\"int\"/>\n"+
+            "          <OMBIND>\n"+
+            "            <OMS cd=\"fns1\" name=\"lambda\"/>\n"+
+            "            <OMBVAR>\n"+
+            "              <OMV name=\"x\"/>\n"+
+            "            </OMBVAR>\n"+
+            "            <OMS cd='editor1' name='input_box'/>\n"+
+            "          </OMBIND>\n"+
+            "        </OMA>\n"+
+            "      </OMA>\n"+
+
+            "    </OMA>\n"+
+            "  </OMA>\n"+
+            "</OMOBJ>\n"+
+              "",
+        draw_formula: function(row,col){
+            var editor = org.mathdox.formulaeditor.FormulaEditor.getFocusedEditor();
+            if(editor == null || editor == "undefined"){
+                this.show_alert("","Please select the canvas to draw formula on it.");
+                return false;
+            }
+            var palette = new org.mathdox.formulaeditor.Palette();
+            var presentation = palette.parseXMLPalette(this.palette_layout);
+            var pTabContainer = palette.presentation.children[0];
+
+            var redrawFunction = function() {
+                  palette.redraw();
+            };
+            
+            var row = palette.semantics.operands[0].operands[row].operands[col];
+            var presentation = org.mathdox.formulaeditor.presentation;
+            var rowPresentation = new presentation.Row(row.getPresentation(palette.getPresentationContext()));
+            console.log(row.getPresentation(palette.getPresentationContext()));
+            rowPresentation.flatten();
+            var position = editor.cursor.position;
+            var moveright;
+            if (rowPresentation.children) {
+            for (var i=0;i<rowPresentation.children.length;i++) {
+
+                moveright = position.row.insert(position.index, 
+                  rowPresentation.children[i], (i === 0));
+                if (moveright) {
+                  position.index++;
+                }
+              }
+            } else {
+              moveright = position.row.insert(
+              position.index, rowPresentation, true);
+
+              if (moveright) {
+                position.index++;
+              }
+            }
+            editor.redraw();
+            editor.save();
+            editor.focus();
+            
+            window.focus();
+          return false;
+        }
+    };
+
+    $(".sub_icon > a").mousedown(function (e) {
+       var anchor_elem = $(e.target).parent();
+       var anchor_id = anchor_elem.attr("id");
+       if(anchor_id == "id_fx_wb_menu_icon11_1_inner1"){
+            fxboard.draw_formula(3,0);
+       }
+       else if(anchor_id == "id_fx_wb_menu_icon11_2_inner1"){
+            fxboard.draw_formula(0,6);    
+       }
+       else if(anchor_id == "id_fx_wb_menu_icon11_2_inner2"){
+            fxboard.draw_formula(1,6);
+       }
+       else if(anchor_id == "id_fx_wb_menu_icon11_2_inner4"){
+            fxboard.draw_formula(4,1);
+       }
+       else if(anchor_id == "id_fx_wb_menu_icon11_3_inner1"){
+            fxboard.draw_formula(3,1);
+       }
+       else if(anchor_id == "id_fx_wb_menu_icon11_4_inner1"){
+            fxboard.draw_formula(0,7);
+       }
+       else if(anchor_id == "id_fx_wb_menu_icon11_4_inner2"){
+            fxboard.draw_formula(0,8);
+       }
+       else if(anchor_id == "id_fx_wb_menu_icon11_4_inner3"){
+            fxboard.draw_formula(4,3);
+       }
+       else if(anchor_id == "id_fx_wb_menu_icon11_7_inner8"){
+            fxboard.draw_formula(0,5);
+       }
+       else if(anchor_id == "id_fx_wb_menu_icon11_11_inner1"){
+            fxboard.draw_formula(0,0);
+       }
+       else if(anchor_id == "id_fx_wb_menu_icon11_11_inner2"){
+            fxboard.draw_formula(0,1);
+       }
+       else if(anchor_id == "id_fx_wb_menu_icon11_11_inner10"){
+            fxboard.draw_formula(0,2);
+       }
+       else if(anchor_id == "id_fx_wb_menu_icon11_11_inner17"){
+            fxboard.draw_formula(0,3);
+       }
+       else if(anchor_id == "id_fx_wb_menu_icon11_11_inner18"){
+            fxboard.draw_formula(0,4);
+       }
+       hide_menu();
+       return false;
     });
+
+    $("#id_button_fx_ok").click(function(e){
+        whiteboard_fx.show_whiteboard(false);
+    });
+
+    $("#id_button_fx_cancel").click(function(e){
+        whiteboard_fx.show_whiteboard(false);
+    });
+
 </script>

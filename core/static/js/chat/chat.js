@@ -158,10 +158,10 @@
              chat_html +=   "<input type=\"hidden\" class=\"chat_widget_name\" value=\"\"/>"
              chat_html +=       "<span class=\"online\"><img src=\"/static/images/online.png\" width=\"12\" height=\"12\" alt=\"img\"></span>";
              chat_html +=       user_obj.name;
-             chat_html +=       "<span class='add_chat_buddy_icon'><img src='/static/images/blue_pls.png' width='12' height='12' style='cursor:pointer;position:absolute;float:right;right:35px;top:13px;'/></span><a href=\"#\" class=\"chat_close\"> <img src=\"/static/images/cross.png\" width=\"15\" height=\"9\" alt=\"img\"> </a>";
-             chat_html +=       "<a href=\"#\"> <!--<img src=\"#\" width=\"15\" height=\"15\" alt=\"img\"> !--> </a>";
+             chat_html +=       "<a href=\"#\" class=\"chat_close\"> <img src=\"/static/images/cross.png\" width=\"15\" height=\"9\" alt=\"img\"> </a>";
+             chat_html +=       "<a href=\"#\" class=\"chat_add_buddy\"> <img src=\"/static/images/blue_pls.png\" width=\"12\" height=\"12\" alt=\"img\"> </a>";
              chat_html +=   "</div>";
-             chat_html +=   "<div class='add_chat_buddy_area' style='z-index:100;position:absolute;top:40px;left:0px;width:100%; padding: 3px;'><input type='text' placeholder='Type name here' class='form-control' style='width:260px;float:left; padding-right:18px;'/><button style='float:left;margin-left: -18px;' class='btn btn-mini'>Add</button></div>";
+             chat_html +=   "<div class='add_chat_buddy_area' style='display:none;background:#dedede;z-index:100;position:absolute;top:40px;left:0px;width:100%; padding: 3px;'><input type='hidden' class='hidden-selected-val'/><input type='text' placeholder='Type name here' class='add_grp_buddy_txt form-control' autocomplete='on' style='width:200px;float:left;'/><button style='float:right;margin_right:3px;margin-top:-10px;' id='id_button_add_chat_buddy' class='btn btn-primary add_grp_buddy_btn'>Add</button></div>";
              chat_html +=   "<div class=\"chat_contnt\">";
              chat_html +=   "</div>";
              chat_html +=   "<div class=\"chat_txt\">";
@@ -202,6 +202,78 @@
             $(this).parent().find(".add_chat_buddy_area").hide();
         });
 
+        _this_obj.chat_contnt.parent().find(".add_grp_buddy_txt").tagit({
+            autocomplete: {
+                autoSelectFirst: true,
+                delay: 0, 
+                minLength: 2,
+                source: "ajax/search_user",
+                fieldName : "user_id",
+                focus: function (event, ui) {
+                    _this_obj.chat_contnt.parent().find(".hidden-selected-val").val(ui.item.value);
+                    console.log(_this_obj.chat_contnt.parent().find(".hidden-selected-val").val());
+                    ui.item.value = ui.item.label;
+                },
+                select: function( event, ui ) {
+                    
+                  },
+                create: function() {
+                    $(this).data('ui-autocomplete')._renderItem = function (ul, item) {
+                              return $("<li></li>")
+                                 .data("item.autocomplete", item)
+                                 .append("<a><div class='ui-menu-item-div' style='background:white;margin-top:1px;padding:4px;'><img src='"+ item.pimage +"' width='20' height='20' style='margin-right:10px;'/>" + item.label + "</div></a>")
+                                 .appendTo(ul);
+                               };                    
+                }
+              },
+              showAutocompleteOnFocus : true,
+              allowDuplicates : true,
+              animate: true,
+              allowSpaces: true,
+              tagLimit : 10,
+              placeholderText : "Type Name Here",
+              // Event callbacks.
+              beforeTagAdded : function(event,ui){
+                  console.log("Before Tag Added");
+                  console.log(ui);
+                  console.log("Before Tag Added done.");
+              },
+              afterTagAdded   : function(event,ui){
+                _this_obj.chat_contnt.parent().find(".hidden-selected-val").val("");
+              },
+              afterTagRemoved : function(event,ui){
+                
+              },
+              onTagClicked: function(event,ui){
+                //alert("Clicked!");
+              }
+        });
+
+        this.chat_contnt.parent().find(".add_grp_buddy_btn").click(function(e){
+              var buddy_ids = [];
+              $(".tagit-hidden-ids").each(function(i){
+                  buddy_ids.push(parseInt($(this).val()));
+              });
+              if(buddy_ids.length == 0){
+                  _this_obj.chat_contnt.parent().find(".add_chat_buddy_area").slideUp(200);
+              }
+              else{
+                    if(_this_obj.chat_type == 0){
+                        var chat = new Chat();
+                        chat.remote_peers = buddy_ids;
+                        chat.chat_type = 1;
+                        var chat_object = {user_id:-1,name: "Group Chat",img_url: ""};
+                        chat.addNewChat(chat_object);
+                        window.chat_boxes[chat.id] = chat;
+                        _this_obj.chat_contnt.parent().find(".add_chat_buddy_area").slideUp(200);
+                        _this_obj.chat_contnt.parent().find(".add_grp_buddy_txt").tagit("removeAll");
+                    }
+                    else{
+                      //alert("This is group chat.");
+                    }
+              }
+        });
+
         this.chat_contnt.parent().find(".chat_header").click(function(e)
         {
             if(!this.window_minimized)
@@ -228,6 +300,11 @@
                 delete window.chat_boxes[_this_obj.remote_peers[0]];
             }
             redraw_chat_boxes();
+        });
+
+        this.chat_contnt.parent().find(".chat_add_buddy").click(function(e){
+            _this_obj.chat_contnt.parent().find(".add_chat_buddy_area").slideDown(200);
+            return false;
         });
 
         window.chat_boxes[_this_obj.remote_peer] = this;

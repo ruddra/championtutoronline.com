@@ -1021,6 +1021,29 @@ a.free_trial,a.free_trial:link,a.free_trial:visited { width: 181px; height: 35px
   height: 200px;
   z-index: 100000;
 }
+
+/*.ui-autocomplete{
+	z-index:10000;
+}*/
+.tagit-label{
+	color: black;
+}
+
+.text-icon{
+	color: black;
+}
+
+/* To change position of close button to Top Right Corner */
+#colorbox #cboxClose
+{
+top: 0;
+right: 0;
+}
+#cboxLoadedContent{
+/*margin-top:28px;
+margin-bottom:0;*/
+}
+
 #id_chat_sidebar_floating button{-webkit-transform: rotate(90deg); 
      -moz-transform: rotate(90deg); 
       -ms-transform: rotate(90deg); 
@@ -1363,7 +1386,7 @@ span.online { width:auto; height:auto; float:left; margin:0 10px; display:inline
 .hidden,.atchfile{border:none;outline:none;width:auto;height:40px;font:16px/40px "segoe_uiregular";float:left;overflow:hidden;color:#d0d0d0;text-align:center;border-radius:4px;border:2px solid #ff4342}
 .hidden{background:#eee;margin:5px 0 0 -330px;width:306px;height:40px;background:#fff;border:2px solid #ff4342}
 
-canvas { width:100%; height:auto; min-height:280px; float:left; background:#ffffff; margin-bottom:15px; display:inline; }
+/*canvas { width:100%; height:auto; min-height:280px; float:left; background:#ffffff; margin-bottom:15px; display:inline; }*/
 
 .text_editor { width:auto; height:auto; float:left; background:#242a2e; margin-right:10px; padding:5px 0; display:inline; }
 .text_editor > a,.text_editor > a:link,.text_editor > a:visited { width:auto; height:auto; float:left; line-height:21px; color:#8d9ca7; font:13px/21px "segoe_uiregular"; border-right:2px solid #32393d; padding:0 10px; display:inline; }

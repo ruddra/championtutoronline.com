@@ -2,6 +2,7 @@ from django.conf.urls import patterns, include, url
 #from django.contrib import admin
 from core.views import *
 from core.viewsajax import *
+from core.viewssearch import *
 from core.decorators import user_login_required
 
 urlpatterns = patterns('',
@@ -23,4 +24,5 @@ urlpatterns = patterns('',
     url(r'^ajax/drawing_board$', DrawingBoardAjaxView.as_view(), name='ajax_drawing_board'),
     url(r'^ajax/text_editor$', TextEditorAjaxView.as_view(), name='ajax_text_editor'),
     url(r'^ajax/code_editor$', CodeEditorAjaxView.as_view(), name='ajax_code_editor'),
+    url(r'^ajax/search_user$', SearchUserByKeyword.as_view(), name='ajax_user_search'),
 )

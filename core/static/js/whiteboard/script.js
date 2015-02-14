@@ -25,7 +25,7 @@ $(document).ready(function()
     console.log("Connecting server...");
     //var socket = io("http://127.0.0.1:3000/");
     var lastEmitTime = new Date();
-    console.log("Server connected.");
+    //console.log("Server connected.");
 
     var Tools = function(){
 
@@ -2647,9 +2647,9 @@ $(document).ready(function()
 
     window.socket.on('whiteboard_data',whiteboard.streamer.on_stream);
 
-    $(document).on("change","#file_upload",function()
-    {
-        whiteboard.drawing_action.draw_image("http://www.html5canvastutorials.com/demos/assets/darth-vader.jpg",0,0,150,150);
-    });
+    // $(document).on("change","#file_upload",function()
+    // {
+    //     whiteboard.drawing_action.draw_image("http://www.html5canvastutorials.com/demos/assets/darth-vader.jpg",0,0,150,150);
+    // });
 
 });
