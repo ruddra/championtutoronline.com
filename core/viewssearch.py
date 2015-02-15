@@ -8,8 +8,10 @@ import json
 class SearchUserByKeyword(View):
 	def get(self,request,*args,**kwargs):
 		keyword = request.GET.get("term")
-		print keyword
-		users = User.objects.filter(fullname__icontains=keyword.strip())[:6]
+		excludes = request.GET.get("exclude")
+		excludes = excludes.split(",")
+		excludes = [int(i) for i in excludes]
+		users = User.objects.filter(fullname__icontains=keyword.strip()).exclude(id__in=excludes)[:7]
 		json_response = []
 		for user in users:
 			json_response += [

@@ -208,6 +208,10 @@ var on_socket_connection = function(socket)
             });
         }
 
+        if(DEBUG){
+            console.log(user_messges);
+        }
+
         message_model.save_chat(
             {
                 "msg": data.message,
