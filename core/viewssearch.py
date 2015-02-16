@@ -11,6 +11,8 @@ class SearchUserByKeyword(View):
 		excludes = request.GET.get("exclude")
 		excludes = excludes.split(",")
 		excludes = [int(i) for i in excludes]
+		this_uid = request.session["user_id"]
+		excludes += [this_uid]
 		users = User.objects.filter(fullname__icontains=keyword.strip()).exclude(id__in=excludes)[:7]
 		json_response = []
 		for user in users:

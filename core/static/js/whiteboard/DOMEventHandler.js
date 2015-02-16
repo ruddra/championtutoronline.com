@@ -374,32 +374,27 @@ $(document).on("click","#id_canvas_menu_icon_axismarked",function(e)
     return false;
 });
 
-$(document).on("click","#id_canvas_menu_icon_graph2",function(e)
-{
-    deselect_tools();
-    var axis_tool = whiteboard.tools.Axis();
-    axis_tool.arrow_dir = 1; //Top Left.
-    whiteboard.selected_tool = axis_tool;
-    whiteboard.canvas_data_bfr_drawng_start = whiteboard.context.getImageData(0,0,whiteboard.canvas.width,whiteboard.canvas.height);
+$(document).on("click","#id_canvas_menu_icon_graphno",function(e){
+    whiteboard.drawing_action.draw_nograph();
     return false;
 });
 
 $(document).on("click","#id_canvas_menu_icon_graphpage",function(e){
-    
-});
-
-$(document).on("click","#id_canvas_menu_icon_graphpage",function(e){
-    
+    whiteboard.drawing_action.draw_graph1();
+    return false;
 });
 
 $(document).on("click","#id_canvas_menu_icon_graph4_1",function(e){
-    
+    whiteboard.drawing_action.draw_graph3();
+    return false;
 });
 
 $(document).on("click","#id_canvas_menu_icon_graph4_2",function(e){
-    
+    whiteboard.drawing_action.draw_graph2();
+    return false;
 });
 
 $(document).on("click","#id_canvas_menu_icon_graph2",function(e){
-    
+    whiteboard.drawing_action.draw_cartesian_space();
+    return false;
 });

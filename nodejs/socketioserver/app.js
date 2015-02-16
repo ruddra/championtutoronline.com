@@ -2,28 +2,37 @@ var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
+var path = require("path");
 
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./routes/index');
+var import_path = function(relative_path){
+    return path.join(__dirname, relative_path);
+}
+
+var routes = require(path.join(__dirname, "/routes/index"));
 var users = require('./routes/users');
 
-var app = module.exports = express();
+var DEBUG = true;
 
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
-var session_model = require("./models/Session");
-var parser = require("./lib/Parser");
-var message_model = require("./models/Message");
+var app = module.exports = express();
+
+app["DEBUG"] = DEBUG;
+
+var mysql = require("./database/MySQL")
 
 var events = require('events');
 var eventEmitter = new events.EventEmitter();
 
-var DEBUG = true;
+var session_model = require("./models/Session")(app,mysql.connection);
+var parser = require("./lib/Parser");
 
 
+var message_model = require("./models/Message")(app,mysql.connection);
 
 // var insert_chat_message_session_DB = function(data_obj,callback,errback)
 // {

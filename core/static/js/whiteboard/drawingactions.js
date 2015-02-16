@@ -766,6 +766,101 @@ whiteboard.drawing_action.redraw = function(){
         whiteboard.selected_tool = selected_tool_tmp;
 };
 
-whiteboard.drawing_action.draw_graph1 = function(){
+whiteboard.drawing_action.draw_nograph = function(){
+    whiteboard.Init();
+    whiteboard.context.putImageData(whiteboard.canvas_fresh,0,0);
+};
+
+whiteboard.drawing_action.draw_graph = function(line_stroke,color,box_size,gap){
+    whiteboard.Init();
+    whiteboard.context.putImageData(whiteboard.canvas_fresh,0,0);
+    var canvas_obj = $("#drawing_board")[0];
+    var width = canvas_obj.width;
+    var height = canvas_obj.height;
     
+    whiteboard.context.save()
+
+    whiteboard.context.lineWidth = line_stroke;
+    whiteboard.context.strokeStyle = color;
+
+    var slotSize = box_size;
+
+    for(var i = 0 ; i < width ; i+= slotSize){
+        // whiteboard.drawing_action.drawLine(i,0,i,height);
+        // if(gap != undefined){
+        //     for(var j = i ;j < i + slotSize ; j++){
+        //         whiteboard.drawing_action.drawLine(j,i,j,height);
+        //     }
+        // }
+        if(gap != undefined){
+            var gap_order = 1;
+            while(gap_order*gap < height){
+                whiteboard.drawing_action.drawLine(i,gap_order * gap,i,(gap_order+1)*gap);
+                gap_order += 2;
+            }
+        }
+        else{
+            whiteboard.drawing_action.drawLine(i,0,i,height);
+        }
+    }
+
+    for(var i = 0 ;  i < height ; i+=slotSize){
+        if(gap != undefined){
+            var gap_order = 1;
+            while(gap_order*gap < width){
+                whiteboard.drawing_action.drawLine(gap_order*gap,i,(gap_order+1)*gap,i);
+                gap_order += 2;
+            }
+        }
+        else{
+            whiteboard.drawing_action.drawLine(0,i,width,i);
+        }
+    }
+    whiteboard.context.restore();
+};
+
+whiteboard.drawing_action.draw_graph1 = function(){
+    whiteboard.drawing_action.draw_graph(0.4,"#C8C8C8",15);
+};
+
+whiteboard.drawing_action.draw_graph2 = function(){
+    whiteboard.drawing_action.draw_graph(0.4,"#C8C8C8",20);
+};
+
+whiteboard.drawing_action.draw_graph3 = function(){
+    whiteboard.drawing_action.draw_graph(0.4,"#909090",35,4);
+};
+
+whiteboard.drawing_action.draw_cartesian_space = function(){
+    whiteboard.Init();
+    whiteboard.context.putImageData(whiteboard.canvas_fresh,0,0);
+    var canvas_obj = $("#drawing_board")[0];
+    var width = canvas_obj.width;
+    var height = canvas_obj.height;
+    whiteboard.context.save()
+
+    whiteboard.context.lineWidth = 0.4;
+    whiteboard.context.strokeStyle = "#202020";
+
+    var margin = 30;
+
+    var arrow_width = 20;
+    var arrow_height = 10;
+
+    whiteboard.drawing_action.drawLine(margin,height/2,width-margin,height/2);
+    whiteboard.drawing_action.drawLine(width/2,margin,width/2,height-margin);
+
+    whiteboard.drawing_action.drawLine(margin,height/2,margin+arrow_width,(height/2)-arrow_height);
+    whiteboard.drawing_action.drawLine(margin,height/2,margin+arrow_width,(height/2)+arrow_height);
+
+    whiteboard.drawing_action.drawLine(width-margin,height/2,width-margin-arrow_width,(height/2)-arrow_height);
+    whiteboard.drawing_action.drawLine(width-margin,height/2,width-margin-arrow_width,(height/2)+arrow_height);        
+
+    whiteboard.drawing_action.drawLine(width/2,margin,(width/2)-arrow_height,margin+arrow_width);
+    whiteboard.drawing_action.drawLine(width/2,margin,(width/2)+arrow_height,margin+arrow_width);
+
+    whiteboard.drawing_action.drawLine(width/2,height-margin,(width/2)-arrow_height,height-margin-arrow_width);
+    whiteboard.drawing_action.drawLine(width/2,height-margin,(width/2)+arrow_height,height-margin-arrow_width);
+
+    whiteboard.context.restore();
 };
