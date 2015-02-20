@@ -186,15 +186,15 @@ Font_Weight = {
 
 Tools.prototype._text = function(){
     this.name = "Text";
-    this.size = 14;
-    this.font = "12px Arial";
+    this.size = 20;
+    this.font = "20pt Arial";
     this.font_weight = Font_Weight.Normal;
-    this.rect_width = 100;
-    this.rect_height = 60;
+    this.rect_width = 200;
+    this.rect_height = 100;
     this.rect_pad = 3;
     this.stroke_color = "#1c1f21";
     this.rect_border = 1;
-    this.line_height = 20;
+    this.line_height = 30;
     this.text = "";
     this.handle_size = 5;
     this.handle_stroke_size = 2;
@@ -244,11 +244,21 @@ Tools.prototype._text = function(){
     this.place_textarea = function(e)
     {
         //this.draw_rectangle();
-        $("<textarea type='text' id='id_text_inputbox' style='position:absolute; resize:none; border: 1px solid gray; background: white; font:" + whiteboard.selected_tool.font + "width:"+this.rect_width+"px;height: "+ this.rect_height +"px; z-index: 999; left:"+ e.pageX +"px; top:"+ e.pageY +"px;'></textarea>")
+        var _this_obj = this;
+        $("<textarea type='text' id='id_text_inputbox' style='position:absolute;line-height: 30px; resize: both; overflow: hidden; border: 2px dashed #343434; background: #F5F6CE; font:" + whiteboard.selected_tool.font + "width:"+this.rect_width+"px;min-height: "+ this.rect_height +"px; z-index: 999; left:"+ e.pageX +"px; top:"+ e.pageY +"px;'></textarea>")
             .focusout(function()
             {
                 $(this).remove();
-            }).appendTo('body');
+                //alert(_this_obj.rect_width+" "+_this_obj.rect_height);
+            })
+            .keyup(function(){
+                $(this).css("height","auto");
+                $(this).css("height",$(this).prop('scrollHeight')+"px");
+            })
+            .css("z-index",0)
+            .css("font-size", "20pt")
+            .css("font-family","Arial")
+            .appendTo('body');
         setTimeout(function() {
             $(document).find('#id_text_inputbox').focus();
         }, 0);
@@ -262,41 +272,61 @@ Tools.prototype._text = function(){
     {
         return $(document).find('#id_text_inputbox').val();
     };
+    this.get_textarea_width = function(){
+        return parseInt($("#id_text_inputbox").css("width").replace("px",""));
+    };
+    this.get_textarea_height = function(){
+        return parseInt($("#id_text_inputbox").css("height").replace("px",""));
+    };
+
     this.draw_text = function() {
 
-        var words = this.text.split(' ');
-        var line = '';
+        var textarea_width = parseInt($("#id_text_inputbox").css("width").replace("px",""));
+        var textarea_height = parseInt($("#id_text_inputbox").css("height").replace("px",""));
 
         //this.y = 0;
-        var ypos = this.y + 14;
+        var ypos = this.y + 26;;
+        var xPos = this.x + 2;
 
-        whiteboard.context.beginPath()
-        whiteboard.context.font = this.font;
-        whiteboard.context.fillStyle = this.stroke_color;
+        var lines = this.text.split('\n');
+        for(var i = 0 ; i < lines.length ; i++){
+            var words = lines[i].split(' ');
 
-        for(var n = 0; n < words.length; n++) {
-            var testLine = line + words[n] + ' ';
-            var metrics = whiteboard.context.measureText(testLine);
-            var testWidth = metrics.width;
-            if (testWidth > this.rect_width && n > 0) {
-                whiteboard.context.fillText(line, this.x + this.rect_pad, ypos);
-                line = words[n] + ' ';
-                ypos += this.line_height;
+            whiteboard.context.beginPath()
+            whiteboard.context.font = this.font;
+            whiteboard.context.fillStyle = this.stroke_color;
+
+            var line = '';
+
+            for(var n = 0; n < words.length; n++) {
+                var testLine = line + words[n] + ' ';
+                var metrics = whiteboard.context.measureText(testLine);
+                var testWidth = metrics.width;
+                //alert(testWidth+" "+textarea_width);
+                if (testWidth > textarea_width && n > 0) {
+                    whiteboard.context.fillText(line, xPos + this.rect_pad, ypos);
+                    line = words[n] + ' ';
+                    ypos += this.line_height;
+                }
+                else {
+                    line = testLine;
+                }
             }
-            else {
-                line = testLine;
-            }
+            whiteboard.context.fillText(line, xPos, ypos);
+            ypos += this.line_height;
         }
-        whiteboard.context.fillText(line, this.x, ypos);
-        //whiteboard.context.stroke();
-
-        //this.draw_text_cursor()
         whiteboard.context.closePath();
 
     }
 }
 
-Tools.prototype.Text = function(){return new this._text()}
+Tools.prototype.Text = function(){return new this._text()};
+
+Tools.prototype._fx_tool = function(){
+    this.name = "FX";
+};
+
+Tools.prototype.FX_TOOL = function(){return new this._fx_tool()};
 
 Tools.prototype.Name = function(obj)
 {

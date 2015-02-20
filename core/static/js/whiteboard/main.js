@@ -1,6 +1,5 @@
 $(document).ready(function()
 {
-    console.log("Connecting server...");
     //var socket = io("http://127.0.0.1:3000/");
     //console.log("Server connected.");
 
@@ -20,6 +19,7 @@ $(document).ready(function()
             whiteboard.current_point = canvas_offset;
             whiteboard.context = whiteboard.canvas.getContext('2d');
             whiteboard.canvas_data_bfr_drawng_start = whiteboard.context.getImageData(0,0,whiteboard.canvas.width,whiteboard.canvas.height);
+            whiteboard.canvas_background = whiteboard.context.getImageData(0,0,whiteboard.canvas.width,whiteboard.canvas.height);
             whiteboard.canvas_fresh = whiteboard.context.getImageData(0,0,whiteboard.canvas.width,whiteboard.canvas.height);
             whiteboard.canvas_data_array = [];
             whiteboard.canvas_data_stack = [];

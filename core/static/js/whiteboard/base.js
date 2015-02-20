@@ -80,3 +80,5 @@ $(window).on("resize",function()
 });
 
 var lastEmitTime = new Date();
+var lastDrawnTime = new Date();
+var drawing_time_interval = 30;

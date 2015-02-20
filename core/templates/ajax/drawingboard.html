@@ -307,7 +307,7 @@ org = { mathdox:{formulaeditor:{options:{dragPalette:false, paletteShow: "none",
       }
     </style>
 
-<div style="z-index:90;width: 100%;text-align:center;height:800px;margin-top:1px;margin-left:auto;margin-right:auto;" class="text-center"><canvas id="drawing_board" width="100%" height="430" tabindex = '1' style="-webkit-filter: drop-shadow(0 0 7px rgba(0,0,0,0.5));position:relative;top:0px;radius:7px;"></canvas>
+<div style="z-index:90;width: 100%;text-align:center;height:800px;margin-top:1px;margin-left:auto;margin-right:auto;" class="text-center"><canvas id="drawing_board" width="100%" height="600" tabindex = '1' style="-webkit-filter: drop-shadow(0 0 7px rgba(0,0,0,0.5));position:relative;top:0px;radius:7px;"></canvas>
 <div style="display:none;position:relative;top:70px;width: 800px;height:400px;margin-left:auto;margin-right:auto; margin-top: 0px;border: 2px solid #dedede; border-radius: 10px;background:#fdfdfd;padding-bottom: 70px;">
     <button class="btn btn-success" id="id_button_fx_ok" style="position:absolute;top:3px;right:106px;width: 100px;">Ok</button>
     <button class="btn btn-danger" id="id_button_fx_cancel" style="position:absolute;top:3px;right:3px;width: 100px;">Cancel</button>
@@ -327,7 +327,7 @@ org = { mathdox:{formulaeditor:{options:{dragPalette:false, paletteShow: "none",
         /* Rresize the canvas to occupy the full page, 
            by getting the widow width and height and setting it to canvas*/
             drawingCanvas.width  = window.innerWidth;
-            drawingCanvas.height = "430";
+            drawingCanvas.height = "600";
 
         // var mathdoxformula = document.getElementsByClassName("mathdoxformula");
         // mathdoxformula[0].width  ="15px";
@@ -393,15 +393,6 @@ org = { mathdox:{formulaeditor:{options:{dragPalette:false, paletteShow: "none",
 </script>
 
 <script>
-
-
-
-
-
-
-
-
-
     //$(".canvas_menu_inner > a").click(function () {
     //   $(".canvas_menu_inner > a").removeClass("menu_active");
     //   $(this).toggleClass("menu_active");
@@ -415,6 +406,8 @@ org = { mathdox:{formulaeditor:{options:{dragPalette:false, paletteShow: "none",
 
     var whiteboard_fx = {
         show_whiteboard: function(bool){
+            // this.fx_img_init();
+            // this.fx_canvas.putImageData(this.reset_fx_img_val,0,0);
             if(bool === true){
                 $("#drawing_board").parent().css("background","white");
                 $("#drawing_board").show();
@@ -425,7 +418,11 @@ org = { mathdox:{formulaeditor:{options:{dragPalette:false, paletteShow: "none",
                 $("#drawing_board").hide();
                 $("#formula1").parent().show();
             }
-        }
+        },
+        get_fx_image: function(){
+            var this_canvas = $(".mathdoxformula")[0];
+            return this_canvas.getContext('2d').getImageData(0,0,this_canvas.width,this_canvas.height);
+         }
     }
 
     $(function(){
@@ -433,6 +430,8 @@ org = { mathdox:{formulaeditor:{options:{dragPalette:false, paletteShow: "none",
         $(".canvas_menu_inner > a").click(function(e){
             e.stopPropagation();
             if($(e.target).parent().attr("id") == "id_menu_ic_fx"){
+                deselect_tools();
+                whiteboard.selected_tool = whiteboard.tools.FX_TOOL();
                 whiteboard_fx.show_whiteboard(false);
             }
             else{
@@ -456,9 +455,27 @@ org = { mathdox:{formulaeditor:{options:{dragPalette:false, paletteShow: "none",
                     $("body").unbind("click");
                 }
             });
-            if($(e.target).parent().attr("id") == "id_menu_ic_fx"){
+            
+            if($(e.target).parent().attr("id") == "id_canvas_menu_icon_text"){
+                deselect_tools();
+                var text_tool = whiteboard.tools.Text();
+                whiteboard.selected_tool = text_tool;
+                whiteboard.canvas_data_bfr_drawng_start = whiteboard.context.getImageData(0,0,whiteboard.canvas.width,whiteboard.canvas.height);
                 return false;
             }
+            else if($(e.target).parent().attr("id") == "id_canvas_menu_icon_select"){
+                deselect_tools();
+                $("#id_canvas_menu_icon_select").addClass('menu_active');
+                whiteboard.selected_tool = whiteboard.tools.Select();
+                return false;
+            }
+            else if($(e.target).parent().attr("id") == "id_canvas_menu_icon_redo"){
+                
+            }
+            else if($(e.target).parent().attr("id") == "id_canvas_menu_icon_undo"){
+                
+            }
+            return false;
         });
     });
 
@@ -466,26 +483,30 @@ org = { mathdox:{formulaeditor:{options:{dragPalette:false, paletteShow: "none",
         return false;
     });
 
-    $("#id_menu_ic_fx").mouseover(function(){
+    $(".canvas_menu_inner > a").mouseover(function(e){
 
-        whiteboard_fx.show_whiteboard(false);
+            e.stopPropagation();
+            if(whiteboard.selected_tool.name == "FX"){
+                $(this).parent().siblings('.canvas_menu_inner').children('.canvas_menu_inner > a').removeClass("menu_active");
+                    $(this).toggleClass("menu_active");
 
-        $(this).parent().siblings('.canvas_menu_inner').children('.canvas_menu_inner > a').removeClass("menu_active");
-            $(this).toggleClass("menu_active");
+                    $(this).parent().siblings('.canvas_menu_inner').children('.wb_submenu_icon,.wb_submenu_icon1').removeClass("addactive");
+                    $(this).siblings(".wb_submenu_icon,.wb_submenu_icon1").toggleClass("addactive");
 
-            $(this).parent().siblings('.canvas_menu_inner').children('.wb_submenu_icon,.wb_submenu_icon1').removeClass("addactive");
-            $(this).siblings(".wb_submenu_icon,.wb_submenu_icon1").toggleClass("addactive");
-
-            $("body").click(function(e){
-                if(e.target.id != "dropdown")
-                {
-                    $(".canvas_menu_inner > a").removeClass("menu_active");
-                    $(".wb_submenu_icon,.wb_submenu_icon1").removeClass("addactive");
-                    $('.sub_icon').removeClass("addactive");
-                    $('.wb_subsubmenu > a').removeClass("hover_bg");
-                    $("body").unbind("click");
-                }
-            });
+                    $("body").click(function(e){
+                        if(e.target.id != "dropdown")
+                        {
+                            $(".canvas_menu_inner > a").removeClass("menu_active");
+                            $(".wb_submenu_icon,.wb_submenu_icon1").removeClass("addactive");
+                            $('.sub_icon').removeClass("addactive");
+                            $('.wb_subsubmenu > a').removeClass("hover_bg");
+                            $("body").unbind("click");
+                        }
+                    });
+            }
+            else{
+                whiteboard_fx.show_whiteboard(true);
+            }
     });
 
     $(".wb_subsubmenu").hover(function () {
@@ -505,21 +526,14 @@ org = { mathdox:{formulaeditor:{options:{dragPalette:false, paletteShow: "none",
         $('.sub_icon,.wb_submenu_icon').removeClass("addactive");
     };
 
+    
+
     var fxboard = {
         show_alert: function(title,msg){
-            $.colorbox({
-                html: msg,
-                initialWidth: '400px', 
-                initialHeight: '100px',
-                width: '400px',
-                height: '100px',
-                fixed:true,
-                escKey: false,
-                overlayClose: false,
-            });
-
+                      
             // $.colorbox({html:html, fixed:true, initialWidth: '400px', initialHeight: '170px', width:'400px', height:'170px', escKey: false, overlayClose: false,fixed:true});
-            $("#cboxOverlay").hide();
+            // $("#cboxOverlay").hide();
+            notification_dialog(title,msg);
 
         },
         palette_layout: ""+
@@ -807,7 +821,7 @@ org = { mathdox:{formulaeditor:{options:{dragPalette:false, paletteShow: "none",
         draw_formula: function(row,col){
             var editor = org.mathdox.formulaeditor.FormulaEditor.getFocusedEditor();
             if(editor == null || editor == "undefined"){
-                this.show_alert("","Please select the canvas to draw formula on it.");
+                this.show_alert("Select canvas first","<p style='text-align:left;'>Please select the canvas to draw formula on it.</p>");
                 return false;
             }
             var palette = new org.mathdox.formulaeditor.Palette();
@@ -901,11 +915,14 @@ org = { mathdox:{formulaeditor:{options:{dragPalette:false, paletteShow: "none",
     });
 
     $("#id_button_fx_ok").click(function(e){
-        whiteboard_fx.show_whiteboard(false);
+        var drawn_fx = whiteboard_fx.get_fx_image();
+        whiteboard.Init();
+        whiteboard.drawing_action.draw_fx_formula(drawn_fx);
+        whiteboard_fx.show_whiteboard(true);
     });
 
     $("#id_button_fx_cancel").click(function(e){
-        whiteboard_fx.show_whiteboard(false);
+        whiteboard_fx.show_whiteboard(true);
     });
 
 </script>

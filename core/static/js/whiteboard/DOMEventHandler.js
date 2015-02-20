@@ -81,70 +81,61 @@ var deselect_tools = function()
     $("#id_canvas_menu_icon_rectangle").removeClass('menu_active');
 };
 
-$(document).on("click","#id_canvas_menu_icon_undo",function(e)
-{
-    deselect_tools();
-    $("#id_canvas_menu_icon_undo").addClass('menu_active');
-    whiteboard.selected_tool = whiteboard.tools.Undo();
+// $(document).on("click","#id_canvas_menu_icon_undo",function(e)
+// {
+//     deselect_tools();
+//     $("#id_canvas_menu_icon_undo").addClass('menu_active');
+//     whiteboard.selected_tool = whiteboard.tools.Undo();
 
-    //console.log(whiteboard.canvas_data_array.length);
+//     //console.log(whiteboard.canvas_data_array.length);
 
-    /*whiteboard.canvas_data_stack is the main stack which holds all drawing objects. And when a drawing has been undoed
-    * it is placing into the whiteboard.canvas_data_stack_redo */
+//     /*whiteboard.canvas_data_stack is the main stack which holds all drawing objects. And when a drawing has been undoed
+//     * it is placing into the whiteboard.canvas_data_stack_redo */
 
-    //console.log("Stack status now: ");
-    //console.log("Stack Size: "+ whiteboard.canvas_data_stack.length);
-    for(var i =0; i  < whiteboard.canvas_data_stack.length ; i++)
-    {
-        //console.log("Object: "+ i);
-        //console.log(whiteboard.canvas_data_stack[i].points);
-    }
+//     //console.log("Stack status now: ");
+//     //console.log("Stack Size: "+ whiteboard.canvas_data_stack.length);
+//     for(var i =0; i  < whiteboard.canvas_data_stack.length ; i++)
+//     {
+//         //console.log("Object: "+ i);
+//         //console.log(whiteboard.canvas_data_stack[i].points);
+//     }
 
-    //console.log("Before undo... objects count: "+whiteboard.canvas_data_stack.length);
-    if(whiteboard.canvas_data_stack.length >= 1)
-    {
-        var last_drawn_object = whiteboard.canvas_data_stack[whiteboard.canvas_data_stack.length - 1];
-        whiteboard.canvas_data_stack = whiteboard.canvas_data_stack.slice(0,whiteboard.canvas_data_stack.length - 1);
-        whiteboard.canvas_data_stack_redo.push(last_drawn_object);
-        //console.log("After undo... objects count: "+whiteboard.canvas_data_stack.length);
-        whiteboard.drawing_action.redraw();
-    }
-    return false;
-});
+//     //console.log("Before undo... objects count: "+whiteboard.canvas_data_stack.length);
+//     if(whiteboard.canvas_data_stack.length >= 1)
+//     {
+//         var last_drawn_object = whiteboard.canvas_data_stack[whiteboard.canvas_data_stack.length - 1];
+//         whiteboard.canvas_data_stack = whiteboard.canvas_data_stack.slice(0,whiteboard.canvas_data_stack.length - 1);
+//         whiteboard.canvas_data_stack_redo.push(last_drawn_object);
+//         //console.log("After undo... objects count: "+whiteboard.canvas_data_stack.length);
+//         whiteboard.drawing_action.redraw();
+//     }
+//     return false;
+// });
 
-$(document).on("click","#id_canvas_menu_icon_redo",function(e)
-{
-    deselect_tools();
-    $("#id_canvas_menu_icon_redo").addClass('menu_active');
-    whiteboard.selected_tool = whiteboard.tools.Redo();
+// $(document).on("click","#id_canvas_menu_icon_redo",function(e)
+// {
+//     deselect_tools();
+//     $("#id_canvas_menu_icon_redo").addClass('menu_active');
+//     whiteboard.selected_tool = whiteboard.tools.Redo();
 
-    /*var last_drawn_canvas_data = whiteboard.canvas_data_undo_array.pop();
-    if(last_drawn_canvas_data != undefined)
-    {
-        whiteboard.canvas_data_array.push(last_drawn_canvas_data);
-        whiteboard.context.putImageData(last_drawn_canvas_data,0,0);
-    }*/
+//     /*var last_drawn_canvas_data = whiteboard.canvas_data_undo_array.pop();
+//     if(last_drawn_canvas_data != undefined)
+//     {
+//         whiteboard.canvas_data_array.push(last_drawn_canvas_data);
+//         whiteboard.context.putImageData(last_drawn_canvas_data,0,0);
+//     }*/
 
-    //console.log("Before redo... objects count: "+whiteboard.canvas_data_stack.length);
-    if(whiteboard.canvas_data_stack_redo.length >= 1)
-    {
-        var last_undo_object = whiteboard.canvas_data_stack_redo[whiteboard.canvas_data_stack_redo.length - 1];
-        whiteboard.canvas_data_stack_redo = whiteboard.canvas_data_stack_redo.slice(0, whiteboard.canvas_data_stack_redo.length - 1);
-        whiteboard.canvas_data_stack.push(last_undo_object);
-        //console.log("After redo... objects count: "+whiteboard.canvas_data_stack.length);
-        whiteboard.drawing_action.redraw();
-    }
-    return false;
-});
-
-
-$(document).on("click","#id_canvas_menu_icon_select",function(e)
-{
-    deselect_tools();
-    $("#id_canvas_menu_icon_select").addClass('menu_active');
-    whiteboard.selected_tool = whiteboard.tools.Select();
-    return false;
-});
+//     //console.log("Before redo... objects count: "+whiteboard.canvas_data_stack.length);
+//     if(whiteboard.canvas_data_stack_redo.length >= 1)
+//     {
+//         var last_undo_object = whiteboard.canvas_data_stack_redo[whiteboard.canvas_data_stack_redo.length - 1];
+//         whiteboard.canvas_data_stack_redo = whiteboard.canvas_data_stack_redo.slice(0, whiteboard.canvas_data_stack_redo.length - 1);
+//         whiteboard.canvas_data_stack.push(last_undo_object);
+//         //console.log("After redo... objects count: "+whiteboard.canvas_data_stack.length);
+//         whiteboard.drawing_action.redraw();
+//     }
+//     return false;
+// });
 
 $(document).on("click","#id_canvas_menu_icon_pen_size5",function(e)
 {
@@ -305,6 +296,7 @@ $(document).on("click","#id_canvas_menu_icon_shape_triangle",function(e)
 
 $(document).on("click","#id_canvas_menu_icon_shape_line",function(e)
 {
+    whiteboard.Init();
     deselect_tools();
     var line_tool = whiteboard.tools.Line();
     whiteboard.selected_tool = line_tool;
@@ -324,10 +316,11 @@ $(document).on("click","#id_canvas_menu_icon_shape_righttriangle",function(e)
 
 $(document).on("click","#id_canvas_menu_icon_text",function(e)
 {
-    deselect_tools();
-    var text_tool = whiteboard.tools.Text();
-    whiteboard.selected_tool = text_tool;
-    whiteboard.canvas_data_bfr_drawng_start = whiteboard.context.getImageData(0,0,whiteboard.canvas.width,whiteboard.canvas.height);
+    // deselect_tools();
+    // var text_tool = whiteboard.tools.Text();
+    // whiteboard.selected_tool = text_tool;
+    // whiteboard.canvas_data_bfr_drawng_start = whiteboard.context.getImageData(0,0,whiteboard.canvas.width,whiteboard.canvas.height);
+    console.log("text!");
     return false;
 });
 
