@@ -27,6 +27,7 @@ var event_mouse_click = function(e)
         else
         {
             whiteboard.selected_tool.text = text_val;
+            whiteboard.selected_tool.update_textarea_size();
             whiteboard.selected_tool.draw_text();
             var cloned_obj = deep_copy(whiteboard.selected_tool);
             whiteboard.canvas_data_stack.push(cloned_obj);

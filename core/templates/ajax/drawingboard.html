@@ -307,7 +307,7 @@ org = { mathdox:{formulaeditor:{options:{dragPalette:false, paletteShow: "none",
       }
     </style>
 
-<div style="z-index:90;width: 100%;text-align:center;height:800px;margin-top:1px;margin-left:auto;margin-right:auto;" class="text-center"><canvas id="drawing_board" width="100%" height="600" tabindex = '1' style="-webkit-filter: drop-shadow(0 0 7px rgba(0,0,0,0.5));position:relative;top:0px;radius:7px;"></canvas>
+<div style="z-index:90;width: 100%;text-align:center;height:800px;margin-top:1px;" class="text-center"><canvas id="drawing_board" width="100%" height="600" tabindex = '1' style="-webkit-filter: drop-shadow(0 0 7px rgba(0,0,0,0.5));position:relative;top:0px;radius:7px;"></canvas>
 <div style="display:none;position:relative;top:70px;width: 800px;height:400px;margin-left:auto;margin-right:auto; margin-top: 0px;border: 2px solid #dedede; border-radius: 10px;background:#fdfdfd;padding-bottom: 70px;">
     <button class="btn btn-success" id="id_button_fx_ok" style="position:absolute;top:3px;right:106px;width: 100px;">Ok</button>
     <button class="btn btn-danger" id="id_button_fx_cancel" style="position:absolute;top:3px;right:3px;width: 100px;">Cancel</button>
@@ -332,6 +332,9 @@ org = { mathdox:{formulaeditor:{options:{dragPalette:false, paletteShow: "none",
         // var mathdoxformula = document.getElementsByClassName("mathdoxformula");
         // mathdoxformula[0].width  ="15px";
         // mathdoxformula[0].height = "25px";
+
+        //ui-tabs-panel ui-widget-content ui-corner-bottom
+        $(".ui-tabs-panel").css("padding","0px");
 
         var i=0;
         var c='';
@@ -457,6 +460,7 @@ org = { mathdox:{formulaeditor:{options:{dragPalette:false, paletteShow: "none",
             });
             
             if($(e.target).parent().attr("id") == "id_canvas_menu_icon_text"){
+                whiteboard.Init();
                 deselect_tools();
                 var text_tool = whiteboard.tools.Text();
                 whiteboard.selected_tool = text_tool;
@@ -464,16 +468,65 @@ org = { mathdox:{formulaeditor:{options:{dragPalette:false, paletteShow: "none",
                 return false;
             }
             else if($(e.target).parent().attr("id") == "id_canvas_menu_icon_select"){
+                whiteboard.Init();
                 deselect_tools();
                 $("#id_canvas_menu_icon_select").addClass('menu_active');
                 whiteboard.selected_tool = whiteboard.tools.Select();
                 return false;
             }
             else if($(e.target).parent().attr("id") == "id_canvas_menu_icon_redo"){
-                
+                whiteboard.Init();
+                deselect_tools();
+                $("#id_canvas_menu_icon_redo").addClass('menu_active');
+                whiteboard.selected_tool = whiteboard.tools.Redo();
+
+                /*var last_drawn_canvas_data = whiteboard.canvas_data_undo_array.pop();
+                if(last_drawn_canvas_data != undefined)
+                {
+                    whiteboard.canvas_data_array.push(last_drawn_canvas_data);
+                    whiteboard.context.putImageData(last_drawn_canvas_data,0,0);
+                }*/
+
+                //console.log("Before redo... objects count: "+whiteboard.canvas_data_stack.length);
+                if(whiteboard.canvas_data_stack_redo.length >= 1)
+                {
+                    var last_undo_object = whiteboard.canvas_data_stack_redo[whiteboard.canvas_data_stack_redo.length - 1];
+                    whiteboard.canvas_data_stack_redo = whiteboard.canvas_data_stack_redo.slice(0, whiteboard.canvas_data_stack_redo.length - 1);
+                    whiteboard.canvas_data_stack.push(last_undo_object);
+                    //console.log("After redo... objects count: "+whiteboard.canvas_data_stack.length);
+                    whiteboard.drawing_action.redraw();
+                }
+                return false;
             }
             else if($(e.target).parent().attr("id") == "id_canvas_menu_icon_undo"){
-                
+                    whiteboard.Init();
+                    deselect_tools();
+                    $("#id_canvas_menu_icon_undo").addClass('menu_active');
+                    whiteboard.selected_tool = whiteboard.tools.Undo();
+
+                    //console.log(whiteboard.canvas_data_array.length);
+
+                    /*whiteboard.canvas_data_stack is the main stack which holds all drawing objects. And when a drawing has been undoed
+                    * it is placing into the whiteboard.canvas_data_stack_redo */
+
+                    //console.log("Stack status now: ");
+                    //console.log("Stack Size: "+ whiteboard.canvas_data_stack.length);
+                    for(var i =0; i  < whiteboard.canvas_data_stack.length ; i++)
+                    {
+                        //console.log("Object: "+ i);
+                        //console.log(whiteboard.canvas_data_stack[i].points);
+                    }
+
+                    //console.log("Before undo... objects count: "+whiteboard.canvas_data_stack.length);
+                    if(whiteboard.canvas_data_stack.length >= 1)
+                    {
+                        var last_drawn_object = whiteboard.canvas_data_stack[whiteboard.canvas_data_stack.length - 1];
+                        whiteboard.canvas_data_stack = whiteboard.canvas_data_stack.slice(0,whiteboard.canvas_data_stack.length - 1);
+                        whiteboard.canvas_data_stack_redo.push(last_drawn_object);
+                        //console.log("After undo... objects count: "+whiteboard.canvas_data_stack.length);
+                        whiteboard.drawing_action.redraw();
+                    }
+                    return false;
             }
             return false;
         });

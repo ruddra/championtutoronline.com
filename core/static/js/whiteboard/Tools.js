@@ -204,6 +204,8 @@ Tools.prototype._text = function(){
     this.x = 0;
     this.y = 0;
     this.selected = true;
+    this.textarea_width = 0;
+    this.textarea_height = 0;
     this.clean_tool = function()
     {
         this.text = "";
@@ -263,6 +265,9 @@ Tools.prototype._text = function(){
             $(document).find('#id_text_inputbox').focus();
         }, 0);
 
+        this.textarea_width = parseInt($("#id_text_inputbox").css("width").replace("px",""));
+        this.textarea_height = parseInt($("#id_text_inputbox").css("height").replace("px",""));
+
     };
     this.remove_textarea = function()
     {
@@ -279,10 +284,15 @@ Tools.prototype._text = function(){
         return parseInt($("#id_text_inputbox").css("height").replace("px",""));
     };
 
+    this.update_textarea_size = function(){
+        this.textarea_width = parseInt($("#id_text_inputbox").css("width").replace("px",""));
+        this.textarea_height = parseInt($("#id_text_inputbox").css("height").replace("px",""));
+    };
+
     this.draw_text = function() {
 
-        var textarea_width = parseInt($("#id_text_inputbox").css("width").replace("px",""));
-        var textarea_height = parseInt($("#id_text_inputbox").css("height").replace("px",""));
+        var textarea_width = this.textarea_width; //parseInt($("#id_text_inputbox").css("width").replace("px",""));
+        var textarea_height = this.textarea_height; //parseInt($("#id_text_inputbox").css("height").replace("px",""));
 
         //this.y = 0;
         var ypos = this.y + 26;;
@@ -324,6 +334,9 @@ Tools.prototype.Text = function(){return new this._text()};
 
 Tools.prototype._fx_tool = function(){
     this.name = "FX";
+    this.x = 0;
+    this.y = 0;
+    this.img_data = null;
 };
 
 Tools.prototype.FX_TOOL = function(){return new this._fx_tool()};

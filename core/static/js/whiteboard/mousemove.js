@@ -29,7 +29,8 @@ var event_mouse_move = function(e)
           {
               //Put image data before the line has been started drawing.
               if(diff > drawing_time_interval){
-                  whiteboard.context.putImageData(whiteboard.canvas_data_bfr_drawng_start,0,0);
+                  //whiteboard.context.putImageData(whiteboard.canvas_data_bfr_drawng_start,0,0);
+                  whiteboard.drawing_action.redraw();
 
                   whiteboard.context.save();
                   whiteboard.context.lineWidth = whiteboard.selected_tool.size;
@@ -61,23 +62,16 @@ var event_mouse_move = function(e)
         else if(whiteboard.selected_tool.name == "Arrow")
         {
             //Put image data before the line has been started drawing.
-            whiteboard.context.putImageData(whiteboard.canvas_data_bfr_drawng_start,0,0);
+            //whiteboard.context.putImageData(whiteboard.canvas_data_bfr_drawng_start,0,0);
+            whiteboard.drawing_action.redraw();
 
-            //whiteboard.context.lineWidth = whiteboard.selected_tool.size;
-            //whiteboard.context.strokeStyle = whiteboard.selected_tool.color;
-
-            //console.log("line width: "+whiteboard.context.lineWidth);
-            //console.log("Stroke color: "+whiteboard.context.strokeStyle);
-            //console.log("Starting point: X="+whiteboard.draw_starting_point.X+" Y="+whiteboard.draw_starting_point.Y+" and Current point: X="+whiteboard.current_point.X+" Y="+whiteboard.current_point.Y);
             whiteboard.drawing_action.drawLine(whiteboard.draw_starting_point.X, whiteboard.draw_starting_point.Y,whiteboard.current_point.X, whiteboard.current_point.Y);
           }
           else if(whiteboard.selected_tool.name == "Circle")
           {
               if(diff > drawing_time_interval){
-                whiteboard.context.putImageData(whiteboard.canvas_data_bfr_drawng_start,0,0);
-                //console.log("line width: "+whiteboard.context.lineWidth);
-                //console.log("Stroke color: "+whiteboard.context.strokeStyle);
-                //console.log("Starting point: X="+whiteboard.draw_starting_point.X+" Y="+whiteboard.draw_starting_point.Y+" and Current point: X="+whiteboard.current_point.X+" Y="+whiteboard.current_point.Y);
+                //whiteboard.context.putImageData(whiteboard.canvas_data_bfr_drawng_start,0,0);
+                whiteboard.drawing_action.redraw();
 
                 whiteboard.context.save();
                 whiteboard.context.lineWidth = whiteboard.selected_tool.size;
@@ -112,7 +106,8 @@ var event_mouse_move = function(e)
                 whiteboard.selected_tool.points.push(start_point.Y);
                 whiteboard.selected_tool.points.push(current_point.X);
                 whiteboard.selected_tool.points.push(current_point.Y);
-                whiteboard.context.putImageData(whiteboard.canvas_data_bfr_drawng_start,0,0);
+                //whiteboard.context.putImageData(whiteboard.canvas_data_bfr_drawng_start,0,0);
+                whiteboard.drawing_action.redraw();
                 whiteboard.context.lineWidth = whiteboard.selected_tool.size;
                 whiteboard.context.strokeStyle = whiteboard.selected_tool.color;
                 whiteboard.drawing_action.drawCirclePolygon(whiteboard.selected_tool.center_point[0],whiteboard.selected_tool.center_point[1],whiteboard.current_point.X,whiteboard.current_point.Y,6);
@@ -136,7 +131,8 @@ var event_mouse_move = function(e)
                 whiteboard.selected_tool.points.push(start_point.Y);
                 whiteboard.selected_tool.points.push(current_point.X);
                 whiteboard.selected_tool.points.push(current_point.Y);
-                whiteboard.context.putImageData(whiteboard.canvas_data_bfr_drawng_start,0,0);
+                //whiteboard.context.putImageData(whiteboard.canvas_data_bfr_drawng_start,0,0);
+                whiteboard.drawing_action.redraw();
                 whiteboard.context.lineWidth = whiteboard.selected_tool.size;
                 whiteboard.context.strokeStyle = whiteboard.selected_tool.color;
                 whiteboard.drawing_action.drawCirclePolygon(whiteboard.selected_tool.center_point[0],whiteboard.selected_tool.center_point[1],whiteboard.current_point.X,whiteboard.current_point.Y,5);
@@ -160,7 +156,8 @@ var event_mouse_move = function(e)
                 whiteboard.selected_tool.points.push(start_point.Y);
                 whiteboard.selected_tool.points.push(current_point.X);
                 whiteboard.selected_tool.points.push(current_point.Y);
-                whiteboard.context.putImageData(whiteboard.canvas_data_bfr_drawng_start,0,0);
+                //whiteboard.context.putImageData(whiteboard.canvas_data_bfr_drawng_start,0,0);
+                whiteboard.drawing_action.redraw();
                 whiteboard.context.lineWidth = whiteboard.selected_tool.size;
                 whiteboard.context.strokeStyle = whiteboard.selected_tool.color;
                 whiteboard.drawing_action.drawCirclePolygon(whiteboard.selected_tool.center_point[0],whiteboard.selected_tool.center_point[1],whiteboard.current_point.X,whiteboard.current_point.Y,3);
@@ -191,7 +188,8 @@ var event_mouse_move = function(e)
           {
               if(diff > drawing_time_interval){
                 whiteboard.context.save();
-                whiteboard.context.putImageData(whiteboard.canvas_data_bfr_drawng_start,0,0);
+                //whiteboard.context.putImageData(whiteboard.canvas_data_bfr_drawng_start,0,0);
+                whiteboard.drawing_action.redraw();
 
                 whiteboard.selected_tool.points = [];
                 whiteboard.selected_tool.points.push(whiteboard.draw_starting_point.X);
@@ -278,7 +276,8 @@ var event_mouse_move = function(e)
               }
 
               //Put image data before the line has been started drawing.
-              whiteboard.context.putImageData(whiteboard.canvas_data_bfr_drawng_start,0,0);
+              //whiteboard.context.putImageData(whiteboard.canvas_data_bfr_drawng_start,0,0);
+              whiteboard.drawing_action.redraw();
 
               var draw_unit = false;
               if(whiteboard.selected_tool.show_unit)
@@ -300,6 +299,15 @@ var event_mouse_move = function(e)
               lastDrawnTime = new Date();
             }
         }
+    }
+    else{
+      var px = e.pageX;
+      var py = e.pageY;
+      //console.log(px+" "+py);
+      if(whiteboard.selected_tool.name == "Rectangle")
+      {
+
+      }
     }
 
     var offX = $("#drawing_board").offset().left;

@@ -670,7 +670,7 @@ whiteboard.drawing_action.redraw = function(){
         //Draw the whole stack.
         //First clean up the board.
         //console.log("Refresh the whiteboard...");
-        whiteboard.context.putImageData(whiteboard.canvas_fresh,0,0);
+        whiteboard.context.putImageData(whiteboard.canvas_background,0,0);
 
         //console.log("Draw objects...");
 
@@ -759,6 +759,7 @@ whiteboard.drawing_action.redraw = function(){
             else if(dobj_name == "Rectangle")
             {
                 //The object to be drawn is rectangle.
+                console.log(drawn_object);
                 if(drawn_object.points.length == 8)
                 {
                     whiteboard.context.strokeStyle = whiteboard.canvas_data_stack[i].color;
@@ -768,15 +769,39 @@ whiteboard.drawing_action.redraw = function(){
             }
             else if(dobj_name == "Text")
             {
-                //drawn_object.draw_text();
+                //console.log(drawn_object);
+                drawn_object.draw_text();
             }
             else if(dobj_name == "Axis")
             {
-                if(drawn_object.points.length == 8)
+                console.log(drawn_object);
+                if(drawn_object.points.length == 16)
                 {
-                    whiteboard.context.strokeStyle = whiteboard.canvas_data_stack[i].color;
-                    whiteboard.drawing_action.draw_axis(drawn_object.points,drawn_object.show_unit);
+                    whiteboard.context.strokeStyle = drawn_object.color;
+                    //whiteboard.drawing_action.draw_axis(drawn_object.points,drawn_object.show_unit);
+                    var draw_unit = false;
+                    if(drawn_object.show_unit)
+                    {
+                        draw_unit = true;
+                    }
+                    if(drawn_object.arrow_dir == 1)
+                    {
+                        whiteboard.drawing_action.draw_axis_1(drawn_object.points, draw_unit);
+                    }
+                    else if(drawn_object.arrow_dir == 2)
+                    {
+                        whiteboard.drawing_action.draw_axis_2(drawn_object.points, draw_unit);
+                    }
+                    else
+                    {
+                        whiteboard.drawing_action.draw_axis(drawn_object.points, draw_unit);
+                    }
+
                 }
+            }
+            else if(dobj_name == "FX")
+            {
+                whiteboard.context.putImageData(drawn_object.img_data,drawn_object.x,drawn_object.y);
             }
             whiteboard.context.restore();
         }
@@ -786,7 +811,8 @@ whiteboard.drawing_action.redraw = function(){
 whiteboard.drawing_action.draw_nograph = function(){
     whiteboard.Init();
     whiteboard.canvas_background = whiteboard.canvas_fresh;
-    whiteboard.context.putImageData(whiteboard.canvas_fresh,0,0);
+    //whiteboard.context.putImageData(whiteboard.canvas_fresh,0,0);
+    whiteboard.drawing_action.redraw();
 };
 
 whiteboard.drawing_action.draw_graph = function(line_stroke,color,box_size,gap){
@@ -804,13 +830,8 @@ whiteboard.drawing_action.draw_graph = function(line_stroke,color,box_size,gap){
     var slotSize = box_size;
 
     for(var i = 0 ; i < width ; i+= slotSize){
-        // whiteboard.drawing_action.drawLine(i,0,i,height);
-        // if(gap != undefined){
-        //     for(var j = i ;j < i + slotSize ; j++){
-        //         whiteboard.drawing_action.drawLine(j,i,j,height);
-        //     }
-        // }
-        if(gap != undefined){
+       
+       if(gap != undefined){
             var gap_order = 1;
             while(gap_order*gap < height){
                 whiteboard.drawing_action.drawLine(i,gap_order * gap,i,(gap_order+1)*gap);
@@ -916,7 +937,8 @@ whiteboard.drawing_action.draw_graph1 = function(){
     whiteboard.canvas_background = graph_img;
 
     //whiteboard.drawing_action.draw_graph(0.4,"#C8C8C8",15);
-    whiteboard.context.putImageData(graph_img,0,0);
+    //whiteboard.context.putImageData(graph_img,0,0);
+    whiteboard.drawing_action.redraw();
 };
 
 whiteboard.drawing_action.draw_graph2 = function(){
@@ -927,7 +949,8 @@ whiteboard.drawing_action.draw_graph2 = function(){
     whiteboard.canvas_background = graph_img;
 
     //whiteboard.drawing_action.draw_graph(0.4,"#C8C8C8",20);
-    whiteboard.context.putImageData(graph_img,0,0);
+    //whiteboard.context.putImageData(graph_img,0,0);
+    whiteboard.drawing_action.redraw();
 };
 
 whiteboard.drawing_action.draw_graph3 = function(){
@@ -938,7 +961,8 @@ whiteboard.drawing_action.draw_graph3 = function(){
     whiteboard.canvas_background = graph_img;
 
     //whiteboard.drawing_action.draw_graph(0.4,"#909090",35,4);
-    whiteboard.context.putImageData(graph_img,0,0);
+    //whiteboard.context.putImageData(graph_img,0,0);
+    whiteboard.drawing_action.redraw();
 };
 
 whiteboard.drawing_action.cartesian_space_img = function(width,height){
@@ -1000,44 +1024,14 @@ whiteboard.drawing_action.cartesian_space_img = function(width,height){
 };
 
 whiteboard.drawing_action.draw_cartesian_space = function(){
-    // whiteboard.Init();
-    // whiteboard.context.putImageData(whiteboard.canvas_fresh,0,0);
-    // var canvas_obj = $("#drawing_board")[0];
-    // var width = canvas_obj.width;
-    // var height = canvas_obj.height;
-    // whiteboard.context.save()
-
-    // whiteboard.context.lineWidth = 0.4;
-    // whiteboard.context.strokeStyle = "#202020";
-
-    // var margin = 30;
-
-    // var arrow_width = 20;
-    // var arrow_height = 10;
-
-    // whiteboard.drawing_action.drawLine(margin,height/2,width-margin,height/2);
-    // whiteboard.drawing_action.drawLine(width/2,margin,width/2,height-margin);
-
-    // whiteboard.drawing_action.drawLine(margin,height/2,margin+arrow_width,(height/2)-arrow_height);
-    // whiteboard.drawing_action.drawLine(margin,height/2,margin+arrow_width,(height/2)+arrow_height);
-
-    // whiteboard.drawing_action.drawLine(width-margin,height/2,width-margin-arrow_width,(height/2)-arrow_height);
-    // whiteboard.drawing_action.drawLine(width-margin,height/2,width-margin-arrow_width,(height/2)+arrow_height);        
-
-    // whiteboard.drawing_action.drawLine(width/2,margin,(width/2)-arrow_height,margin+arrow_width);
-    // whiteboard.drawing_action.drawLine(width/2,margin,(width/2)+arrow_height,margin+arrow_width);
-
-    // whiteboard.drawing_action.drawLine(width/2,height-margin,(width/2)-arrow_height,height-margin-arrow_width);
-    // whiteboard.drawing_action.drawLine(width/2,height-margin,(width/2)+arrow_height,height-margin-arrow_width);
-
-    // whiteboard.context.restore();
     whiteboard.Init();
     var cartesian_img_data = whiteboard.drawing_action.cartesian_space_img(whiteboard.canvas.width,whiteboard.canvas.height);
     console.log(cartesian_img_data);
     whiteboard.canvas_background = cartesian_img_data;
 
     //whiteboard.drawing_action.draw_graph(0.4,"#909090",35,4);
-    whiteboard.context.putImageData(cartesian_img_data,0,0);
+    //whiteboard.context.putImageData(cartesian_img_data,0,0);
+    whiteboard.drawing_action.redraw();
 
 };
 
@@ -1048,12 +1042,16 @@ whiteboard.drawing_action.draw_fx_formula = function(fx_img){
         var whtbrd_height = whiteboard.canvas.height;
         whiteboard.context.putImageData(fx_img,whtbrd_width/3,whtbrd_height/3);
 
-        var fx_obj = {
-            "name": "fx",
-            "data": fx_img,
-            "x": whtbrd_width/3,
-            "y": whtbrd_height/3
-        }
-        whiteboard.canvas_data_stack.push(fx_obj);        
+        var fx_tool = whiteboard.tools.FX_TOOL();
+        fx_tool.x = whtbrd_width/3;
+        fx_tool.y = whtbrd_height/3;
+        fx_tool.img_data = fx_img;
+        // var fx_obj = {
+        //     "name": "fx",
+        //     "data": fx_img,
+        //     "x": whtbrd_width/3,
+        //     "y": whtbrd_height/3
+        // }
+        whiteboard.canvas_data_stack.push(fx_tool);        
     }
 };

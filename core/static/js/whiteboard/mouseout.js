@@ -163,6 +163,7 @@ var on_mouse_out = function(e)
 
             if(p1.length > 0 && p2.length > 0 && p3.length > 0 && p4.length > 0)
             {
+                whiteboard.selected_tool.points = [];
                 whiteboard.selected_tool.points.push(p1[0]);
                 whiteboard.selected_tool.points.push(p1[1]);
                 whiteboard.selected_tool.points.push(p2[0]);

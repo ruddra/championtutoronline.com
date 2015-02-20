@@ -81,64 +81,12 @@ var deselect_tools = function()
     $("#id_canvas_menu_icon_rectangle").removeClass('menu_active');
 };
 
-// $(document).on("click","#id_canvas_menu_icon_undo",function(e)
-// {
-//     deselect_tools();
-//     $("#id_canvas_menu_icon_undo").addClass('menu_active');
-//     whiteboard.selected_tool = whiteboard.tools.Undo();
-
-//     //console.log(whiteboard.canvas_data_array.length);
-
-//     /*whiteboard.canvas_data_stack is the main stack which holds all drawing objects. And when a drawing has been undoed
-//     * it is placing into the whiteboard.canvas_data_stack_redo */
-
-//     //console.log("Stack status now: ");
-//     //console.log("Stack Size: "+ whiteboard.canvas_data_stack.length);
-//     for(var i =0; i  < whiteboard.canvas_data_stack.length ; i++)
-//     {
-//         //console.log("Object: "+ i);
-//         //console.log(whiteboard.canvas_data_stack[i].points);
-//     }
-
-//     //console.log("Before undo... objects count: "+whiteboard.canvas_data_stack.length);
-//     if(whiteboard.canvas_data_stack.length >= 1)
-//     {
-//         var last_drawn_object = whiteboard.canvas_data_stack[whiteboard.canvas_data_stack.length - 1];
-//         whiteboard.canvas_data_stack = whiteboard.canvas_data_stack.slice(0,whiteboard.canvas_data_stack.length - 1);
-//         whiteboard.canvas_data_stack_redo.push(last_drawn_object);
-//         //console.log("After undo... objects count: "+whiteboard.canvas_data_stack.length);
-//         whiteboard.drawing_action.redraw();
-//     }
-//     return false;
-// });
-
-// $(document).on("click","#id_canvas_menu_icon_redo",function(e)
-// {
-//     deselect_tools();
-//     $("#id_canvas_menu_icon_redo").addClass('menu_active');
-//     whiteboard.selected_tool = whiteboard.tools.Redo();
-
-//     /*var last_drawn_canvas_data = whiteboard.canvas_data_undo_array.pop();
-//     if(last_drawn_canvas_data != undefined)
-//     {
-//         whiteboard.canvas_data_array.push(last_drawn_canvas_data);
-//         whiteboard.context.putImageData(last_drawn_canvas_data,0,0);
-//     }*/
-
-//     //console.log("Before redo... objects count: "+whiteboard.canvas_data_stack.length);
-//     if(whiteboard.canvas_data_stack_redo.length >= 1)
-//     {
-//         var last_undo_object = whiteboard.canvas_data_stack_redo[whiteboard.canvas_data_stack_redo.length - 1];
-//         whiteboard.canvas_data_stack_redo = whiteboard.canvas_data_stack_redo.slice(0, whiteboard.canvas_data_stack_redo.length - 1);
-//         whiteboard.canvas_data_stack.push(last_undo_object);
-//         //console.log("After redo... objects count: "+whiteboard.canvas_data_stack.length);
-//         whiteboard.drawing_action.redraw();
-//     }
-//     return false;
-// });
-
 $(document).on("click","#id_canvas_menu_icon_pen_size5",function(e)
 {
+    whiteboard.Init();
+
+    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon4.png),auto');
+
     deselect_tools();
     //$("#id_canvas_menu_icon_pen_menu").addClass('menu_active');
     var pen_tool = whiteboard.tools.Pen();
@@ -149,6 +97,10 @@ $(document).on("click","#id_canvas_menu_icon_pen_size5",function(e)
 
 $(document).on("click","#id_canvas_menu_icon_pen_size10",function(e)
 {
+    whiteboard.Init();
+
+    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon4.png),auto');
+
     deselect_tools();
     //$("#id_canvas_menu_icon_pen_menu").addClass('menu_active');
     var pen_tool = whiteboard.tools.Pen();
@@ -159,6 +111,10 @@ $(document).on("click","#id_canvas_menu_icon_pen_size10",function(e)
 
 $(document).on("click","#id_canvas_menu_icon_pen_size15",function(e)
 {
+    whiteboard.Init();
+
+    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon4.png),auto');
+
     deselect_tools();
     //$("#id_canvas_menu_icon_pen_menu").addClass('menu_active');
     var pen_tool = whiteboard.tools.Pen();
@@ -169,6 +125,10 @@ $(document).on("click","#id_canvas_menu_icon_pen_size15",function(e)
 
 $(document).on("click","#id_canvas_menu_icon_pen_size20",function(e)
 {
+    whiteboard.Init();
+
+    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon4.png),auto');
+
     deselect_tools();
     //$("#id_canvas_menu_icon_pen_menu").addClass('menu_active');
     var pen_tool = whiteboard.tools.Pen();
@@ -179,6 +139,10 @@ $(document).on("click","#id_canvas_menu_icon_pen_size20",function(e)
 
 $(document).on("click","#id_canvas_menu_icon_eraser_size5",function(e)
 {
+    whiteboard.Init();
+
+    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon5.png),auto');
+
     deselect_tools();
     var eraser_tool = whiteboard.tools.Eraser();
     eraser_tool.size = eraser_tool.Size.NORMAL;
@@ -188,6 +152,10 @@ $(document).on("click","#id_canvas_menu_icon_eraser_size5",function(e)
 
 $(document).on("click","#id_canvas_menu_icon_eraser_size10",function(e)
 {
+    whiteboard.Init();
+
+    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon5.png),auto');
+
     deselect_tools();
     var eraser_tool = whiteboard.tools.Eraser();
     eraser_tool.size = eraser_tool.Size.MEDIUM;
@@ -197,6 +165,10 @@ $(document).on("click","#id_canvas_menu_icon_eraser_size10",function(e)
 
 $(document).on("click","#id_canvas_menu_icon_eraser_size15",function(e)
 {
+    whiteboard.Init();
+
+    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon5.png),auto');
+
     deselect_tools();
     var eraser_tool = whiteboard.tools.Eraser();
     eraser_tool.size = eraser_tool.Size.LARGE;
@@ -206,6 +178,10 @@ $(document).on("click","#id_canvas_menu_icon_eraser_size15",function(e)
 
 $(document).on("click","#id_canvas_menu_icon_eraser_size20",function(e)
 {
+    whiteboard.Init();
+
+    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon5.png),auto');
+
     deselect_tools();
     var eraser_tool = whiteboard.tools.Eraser();
     eraser_tool.size = eraser_tool.Size.EXTRA_LARGE;
@@ -216,6 +192,10 @@ $(document).on("click","#id_canvas_menu_icon_eraser_size20",function(e)
 
 $(document).on("click","#id_canvas_menu_icon_brush_size5",function(e)
 {
+    whiteboard.Init();
+
+    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon6.png),auto');
+
     deselect_tools();
     var brush_tool = whiteboard.tools.Brush();
     brush_tool.size = brush_tool.Size.NORMAL;
@@ -225,6 +205,8 @@ $(document).on("click","#id_canvas_menu_icon_brush_size5",function(e)
 
 $(document).on("click","#id_canvas_menu_icon_brush_size10",function(e)
 {
+    whiteboard.Init();
+    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon6.png),auto');
     deselect_tools();
     var brush_tool = whiteboard.tools.Brush();
     brush_tool.size = brush_tool.Size.MEDIUM;
@@ -234,6 +216,8 @@ $(document).on("click","#id_canvas_menu_icon_brush_size10",function(e)
 
 $(document).on("click","#id_canvas_menu_icon_brush_size15",function(e)
 {
+    whiteboard.Init();
+    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon6.png),auto');
     deselect_tools();
     var brush_tool = whiteboard.tools.Brush();
     brush_tool.size = brush_tool.Size.LARGE;
@@ -243,6 +227,8 @@ $(document).on("click","#id_canvas_menu_icon_brush_size15",function(e)
 
 $(document).on("click","#id_canvas_menu_icon_brush_size20",function(e)
 {
+    whiteboard.Init();
+    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon6.png),auto');
     deselect_tools();
     var brush_tool = whiteboard.tools.Brush();
     brush_tool.size = brush_tool.Size.EXTRA_LARGE;
@@ -252,6 +238,8 @@ $(document).on("click","#id_canvas_menu_icon_brush_size20",function(e)
 
 $(document).on("click","#id_canvas_menu_icon_shape_circle",function(e)
 {
+    whiteboard.Init();
+    $("#drawing_board").css('cursor','crosshair');
     deselect_tools();
     var circle_tool = whiteboard.tools.Circle();
     whiteboard.selected_tool = circle_tool;
@@ -260,6 +248,8 @@ $(document).on("click","#id_canvas_menu_icon_shape_circle",function(e)
 
 $(document).on("click","#id_canvas_menu_icon_shape_hexa",function(e)
 {
+    whiteboard.Init();
+    $("#drawing_board").css('cursor','crosshair');
     deselect_tools();
     var circle_hexa_tool = whiteboard.tools.CircleHexa();
     whiteboard.selected_tool = circle_hexa_tool;
@@ -269,6 +259,8 @@ $(document).on("click","#id_canvas_menu_icon_shape_hexa",function(e)
 
 $(document).on("click","#id_canvas_menu_icon_shape_penta",function(e)
 {
+    whiteboard.Init();
+    $("#drawing_board").css('cursor','crosshair');
     deselect_tools();
     var circle_penta = whiteboard.tools.CirclePenta();
     whiteboard.selected_tool = circle_penta;
@@ -278,6 +270,8 @@ $(document).on("click","#id_canvas_menu_icon_shape_penta",function(e)
 
 $(document).on("click","#id_canvas_menu_icon_shape_rect",function(e)
 {
+    whiteboard.Init();
+    $("#drawing_board").css('cursor','crosshair');
     deselect_tools();
     var rect_tool = whiteboard.tools.Rectangle();
     whiteboard.selected_tool = rect_tool;
@@ -287,6 +281,8 @@ $(document).on("click","#id_canvas_menu_icon_shape_rect",function(e)
 
 $(document).on("click","#id_canvas_menu_icon_shape_triangle",function(e)
 {
+    whiteboard.Init();
+    $("#drawing_board").css('cursor','crosshair');
     deselect_tools();
     var triangle_tool = whiteboard.tools.Triangle();
     whiteboard.selected_tool = triangle_tool;
@@ -297,6 +293,7 @@ $(document).on("click","#id_canvas_menu_icon_shape_triangle",function(e)
 $(document).on("click","#id_canvas_menu_icon_shape_line",function(e)
 {
     whiteboard.Init();
+    $("#drawing_board").css('cursor','crosshair');
     deselect_tools();
     var line_tool = whiteboard.tools.Line();
     whiteboard.selected_tool = line_tool;
@@ -306,6 +303,8 @@ $(document).on("click","#id_canvas_menu_icon_shape_line",function(e)
 
 $(document).on("click","#id_canvas_menu_icon_shape_righttriangle",function(e)
 {
+    whiteboard.Init();
+    $("#drawing_board").css('cursor','crosshair');
     deselect_tools();
     var right_triangle = whiteboard.tools.Triangle();
     right_triangle.right_triangle = true;
@@ -314,18 +313,10 @@ $(document).on("click","#id_canvas_menu_icon_shape_righttriangle",function(e)
     return false;
 });
 
-$(document).on("click","#id_canvas_menu_icon_text",function(e)
-{
-    // deselect_tools();
-    // var text_tool = whiteboard.tools.Text();
-    // whiteboard.selected_tool = text_tool;
-    // whiteboard.canvas_data_bfr_drawng_start = whiteboard.context.getImageData(0,0,whiteboard.canvas.width,whiteboard.canvas.height);
-    console.log("text!");
-    return false;
-});
 
 $(document).on("click","#id_canvas_menu_icon_shape_arrow1",function(e)
 {
+    whiteboard.Init();
     deselect_tools();
     var line_tool = whiteboard.tools.Line();
     line_tool.draw_arrow = true;
@@ -337,6 +328,7 @@ $(document).on("click","#id_canvas_menu_icon_shape_arrow1",function(e)
 
 $(document).on("click","#id_canvas_menu_icon_shape_arrow2",function(e)
 {
+    whiteboard.Init();
     deselect_tools();
     var line_tool = whiteboard.tools.Line();
     line_tool.draw_arrow = true;
@@ -348,6 +340,8 @@ $(document).on("click","#id_canvas_menu_icon_shape_arrow2",function(e)
 
 $(document).on("click","#id_canvas_menu_icon_axis1",function(e)
 {
+    whiteboard.Init();
+    $("#drawing_board").css('cursor','crosshair');
     deselect_tools();
     var axis_tool = whiteboard.tools.Axis();
     axis_tool.arrow_dir = 2; //Top right.
@@ -358,6 +352,8 @@ $(document).on("click","#id_canvas_menu_icon_axis1",function(e)
 
 $(document).on("click","#id_canvas_menu_icon_axismarked",function(e)
 {
+    whiteboard.Init();
+    $("#drawing_board").css('cursor','crosshair');
     deselect_tools();
     var axis_tool = whiteboard.tools.Axis();
     axis_tool.arrow_dir = 2; //Top right.
