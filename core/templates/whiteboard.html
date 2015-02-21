@@ -18,6 +18,8 @@
     <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
     <script type="text/javascript" src="{%  static "js/bootstrap.min.js" %}"></script>
     <script src="{% static "js/chat/chat.js" %}"></script>
+    <script src="{% static "js/chat/videochat.js" %}"></script>
+    <script src="{% static "js/chat/buddy_click_handlers.js" %}"></script>
     <script src="{% static "js/CanvasInput.js" %}"></script>
     <script src="{% static "js/whiteboard/base.js" %}"></script>
     <script src="{% static "js/whiteboard/Tools.js" %}"></script>
@@ -109,7 +111,70 @@
         color: #cccccc;
         margin-bottom: -10px;
     }
+
+    .sharing_video
+    {
+        width: 300px;
+        height: 250px;
+    }
+
+    .video_section
+    {
+        width: 300px;
+        height: 250px;
+        background: white;
+        border: 1px solid gray;
+    }
+
+    .video-box
+    {
+        float: left;
+        width: 290px;
+        height: 200px;
+        margin: 3px;
+        background: gray;
+        z-index: 90;
+        /*background-image: url({% static "images/profile_img.png" %});*/
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .myVideo-box
+    {
+        position: absolute;
+        bottom: 43px;
+        right: 9px;
+        width: 150px;
+        height: 150px;
+        z-index: 91;
+        background: gray;
+    }
+
+    .calling
+    {
+        position: relative;
+        bottom: 0px;
+        right: 0px;
+    }
+
     </style>
+    <script>
+        // $(document).ready(function() {
+        //     var dots = 0;
+
+        //     function type() {
+        //         if(dots < 3) {
+        //             $('.calling').append('.');
+        //             dots++;
+        //         }
+        //         else{
+        //             dots = 0;
+        //         }
+        //     }​
+
+        //     setInterval (type, 600);
+        // });
+    </script>
 {% endblock script_extra %}
 
 {% block body %}
@@ -165,13 +230,17 @@
                     Show
             </div>
                 <ul>
-                    <div class="sharing_video radius3_top">
+                    <div id="id_video_sharing_container" class="sharing_video radius3_top">
                         <div class="chat_header">
                             <span class="online"><img width="12" height="12" alt="img" src="{% static "images/online.png" %}"></span>
                             Audio/Video Sharing
                             <a id="hidee" href="#"> <img width="15" height="9" alt="img" src="{% static "images/hide_icon.png" %}"> </a>
                         </div>
-                        <div class="video_section"> <img src="{% static "images/video.png" %}" width="191" height="142" alt="img"> </div>
+                        <div id="id_video_section" class="video_section">
+                            <div class="video-box text-center">
+                                <div class="calling">Calling</div>​
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="left_detail">
