@@ -205,19 +205,50 @@ whiteboard.drawing_action.drawCircle = function(startx,starty,currentx,currenty)
         whiteboard.context.closePath();
 };
 
-whiteboard.drawing_action.drawCircle2 = function(cx,cy,radius)
+whiteboard.drawing_action.drawCircle2 = function(cx,cy,radius,fill,fill_color,active,anchors,anchor_radius,anchor_fill,anchor_fill_color)
 {
         whiteboard.context.beginPath();
         whiteboard.context.arc(cx, cy, parseFloat(radius), 0, 2 * Math.PI, false);
-        if(whiteboard.selected_tool.fill)
+        if(fill != undefined && fill == true && fill_color != undefined)
         {
-            whiteboard.context.fillStyle = whiteboard.selected_tool.color;
+            whiteboard.context.fillStyle = fill_color;
             whiteboard.context.fill();
         }
         else
         {
             whiteboard.context.stroke();
         }
+        whiteboard.context.closePath();
+
+        if(active != undefined && active && anchors != undefined && anchors.length == 8 && anchor_radius != undefined && anchor_radius > 0 && anchor_radius < 1000)
+        {
+            for(var i = 0 ; i < anchors.length ; i++)
+            {
+                whiteboard.drawing_action.drawAnchor(anchors[i].points[0],anchors[i].points[1],anchor_radius,anchor_fill,anchor_fill_color);
+            }
+        }
+
+};
+
+whiteboard.drawing_action.drawAnchor = function(cx,cy,radius,fill,fill_color)
+{
+        whiteboard.context.beginPath();
+        var p1 = [cx - radius,cy - radius];
+        var p2 = [cx + radius, cy - radius];
+        var p3 = [cx + radius, cy + radius];
+        var p4 = [cx - radius, cy + radius];
+        var x = p1[0];
+        var y = p1[1];
+        var w = Math.abs(p2[0] - p1[0]);
+        var h = Math.abs(p4[1] - p1[1]);
+        whiteboard.context.beginPath();
+        whiteboard.context.fillStyle = fill_color;
+        whiteboard.context.fillRect(x, y, w, h);
+
+        whiteboard.context.strokeStyle = "#ffffff";
+        whiteboard.context.lineWidth   = 2;
+        whiteboard.context.strokeRect(x, y, w, h);
+
         whiteboard.context.closePath();
 };
 
@@ -480,7 +511,7 @@ whiteboard.drawing_action.draw_rectangle2 = function(p1x,p1y,p2x,p2y,p3x,p3y,p4x
     whiteboard.drawing_action.draw_points(points);
 };
 
-whiteboard.drawing_action.draw_axis2 = function(points,show_unit)
+whiteboard.drawing_action.draw_axis2 = function(points,show_unit,active,anchors,anchor_radius,fill,fill_color)
 {
     //points are p1,p2,p3,p4
     /*
@@ -550,10 +581,17 @@ whiteboard.drawing_action.draw_axis2 = function(points,show_unit)
         }
 
     }
+    if(active != undefined && active && anchors != undefined && anchors.length == 8 && anchor_radius != undefined && anchor_radius > 0 && anchor_radius < 1000)
+    {
+        for(var i = 0 ; i < anchors.length ; i++)
+        {
+            whiteboard.drawing_action.drawAnchor(anchors[i].points[0],anchors[i].points[1],anchor_radius,fill,fill_color);
+        }
+    }
 
  };
 
-whiteboard.drawing_action.draw_axis_1 = function(points,show_unit)
+whiteboard.drawing_action.draw_axis_1 = function(points,show_unit,active,anchors,anchor_radius,fill,fill_color)
 {
     //points are p1,p2,p3,p4
     /*
@@ -599,9 +637,17 @@ whiteboard.drawing_action.draw_axis_1 = function(points,show_unit)
     whiteboard.drawing_action.drawLine(p14_4.X,p14_4.Y,arrow_left_top.X,arrow_left_top.Y);
     whiteboard.drawing_action.drawLine(p14_4.X,p14_4.Y,arrow_left_bottom.X,arrow_left_bottom.Y);
 
+    if(active != undefined && active && anchors != undefined && anchors.length == 8 && anchor_radius != undefined && anchor_radius > 0 && anchor_radius < 1000)
+    {
+        for(var i = 0 ; i < anchors.length ; i++)
+        {
+            whiteboard.drawing_action.drawAnchor(anchors[i].points[0],anchors[i].points[1],anchor_radius,fill,fill_color);
+        }
+    }
+
 };
 
-whiteboard.drawing_action.draw_axis_2 = function(points,show_unit)
+whiteboard.drawing_action.draw_axis_2 = function(points,show_unit,active,anchors,anchor_radius,fill,fill_color)
 {
     //points are p1,p2,p3,p4
     /*
@@ -664,12 +710,21 @@ whiteboard.drawing_action.draw_axis_2 = function(points,show_unit)
 
     }
 
+    if(active != undefined && active && anchors != undefined && anchors.length == 8 && anchor_radius != undefined && anchor_radius > 0 && anchor_radius < 1000)
+    {
+        for(var i = 0 ; i < anchors.length ; i++)
+        {
+            whiteboard.drawing_action.drawAnchor(anchors[i].points[0],anchors[i].points[1],anchor_radius,fill,fill_color);
+        }
+    }
+
 };
 
 whiteboard.drawing_action.redraw = function(e){
-        //Draw the whole stack.
-        //First clean up the board.
-        //console.log("Refresh the whiteboard...");
+        
+        var offX = $("#drawing_board").offset().left;
+        var offY = $("#drawing_board").offset().top;
+
         whiteboard.context.putImageData(whiteboard.canvas_background,0,0);
 
         //console.log("Draw objects...");
@@ -726,9 +781,50 @@ whiteboard.drawing_action.redraw = function(e){
                 {
                     whiteboard.context.strokeStyle = whiteboard.canvas_data_stack[i].color;
                     whiteboard.context.save();
-                    whiteboard.context.lineWidth = drawn_object.size;
-                    whiteboard.context.strokeStyle = drawn_object.color;
-                    whiteboard.drawing_action.drawCircle2(drawn_object.center_point[0],drawn_object.center_point[1],drawn_object.radius);
+                    
+                    var active = false;
+                    if(e != undefined)
+                    {
+                        var p1 = [drawn_object.center_point[0] - drawn_object.radius,drawn_object.center_point[1] - drawn_object.radius];
+                        var p2 = [drawn_object.center_point[0] + drawn_object.radius,drawn_object.center_point[1] - drawn_object.radius];
+                        var p3 = [drawn_object.center_point[0] + drawn_object.radius,drawn_object.center_point[1] + drawn_object.radius];
+                        var p4 = [drawn_object.center_point[0] - drawn_object.radius,drawn_object.center_point[1] + drawn_object.radius];
+
+                        drawn_object.area_points.push(p1[0]);
+                        drawn_object.area_points.push(p1[1]);
+                        drawn_object.area_points.push(p2[0]);
+                        drawn_object.area_points.push(p2[1]);
+                        drawn_object.area_points.push(p3[0]);
+                        drawn_object.area_points.push(p3[1]);
+                        drawn_object.area_points.push(p4[0]);
+                        drawn_object.area_points.push(p4[1]);
+
+
+                        active = drawn_object.check_if_clicked(e.pageX - offX,e.pageY - offY);
+                    }
+                    
+
+                    if(active)
+                    {
+                        drawn_object.calculate_anchors();
+                        var anchors = drawn_object.anchors;
+
+                        var anchor_radius = drawn_object.anchor_circle_size;
+
+                        whiteboard.context.lineWidth = drawn_object.size;
+                        whiteboard.context.strokeStyle = drawn_object.color;
+                        //whiteboard.drawing_action.drawCircle2(drawn_object.center_point[0],drawn_object.center_point[1],drawn_object.radius);
+                        whiteboard.drawing_action.drawCircle2(drawn_object.center_point[0],drawn_object.center_point[1],drawn_object.radius,false,"",active,anchors,anchor_radius,true,drawn_object.anchor_fill_color);
+
+                    }
+                    else
+                    {
+                        whiteboard.context.lineWidth = drawn_object.size;
+                        whiteboard.context.strokeStyle = drawn_object.color;
+                        whiteboard.drawing_action.drawCircle2(drawn_object.center_point[0],drawn_object.center_point[1],drawn_object.radius);
+                    }
+
+
                     whiteboard.context.restore();
                 }
             }
@@ -774,33 +870,66 @@ whiteboard.drawing_action.redraw = function(e){
             }
             else if(dobj_name == "Axis")
             {
-                console.log(drawn_object);
+                //console.log(drawn_object);
                 if(drawn_object.points.length == 8)
                 {
                     whiteboard.context.strokeStyle = drawn_object.color;
-                    //whiteboard.drawing_action.draw_axis(drawn_object.points,drawn_object.show_unit);
-                    var draw_unit = false;
-                    if(drawn_object.show_unit)
+
+                    var active = false;
+
+                    if(e != undefined)
                     {
-                        draw_unit = true;
+                        drawn_object.area_points = drawn_object.points;
+                        active = drawn_object.check_if_clicked(e.pageX - offX,e.pageY - offY);
                     }
-                    if(drawn_object.arrow_dir == 1)
+                    
+                    if(active)
                     {
-                        whiteboard.drawing_action.draw_axis_1(drawn_object.points, draw_unit);
-                    }
-                    else if(drawn_object.arrow_dir == 2)
-                    {
-                        whiteboard.drawing_action.draw_axis_2(drawn_object.points, draw_unit);
+                        drawn_object.calculate_anchors();
+                        var anchors = drawn_object.anchors;
+
+                        console.log(anchors);
+
+                        var anchor_radius = drawn_object.anchor_circle_size;
+
+                        var draw_unit = false;
+                        if(drawn_object.show_unit)
+                        {
+                            draw_unit = true;
+                        }
+                        if(drawn_object.arrow_dir == 1)
+                        {
+                            whiteboard.drawing_action.draw_axis_1(drawn_object.points, draw_unit,active,anchors,anchor_radius,true,drawn_object.anchor_fill_color);
+                        }
+                        else if(drawn_object.arrow_dir == 2)
+                        {
+                            whiteboard.drawing_action.draw_axis_2(drawn_object.points, draw_unit,active,anchors,anchor_radius,true,drawn_object.anchor_fill_color);
+                        }
+
                     }
                     else
                     {
-                        whiteboard.drawing_action.draw_axis(drawn_object.points, draw_unit);
+                        var draw_unit = false;
+                        if(drawn_object.show_unit)
+                        {
+                            draw_unit = true;
+                        }
+                        if(drawn_object.arrow_dir == 1)
+                        {
+                            whiteboard.drawing_action.draw_axis_1(drawn_object.points, draw_unit);
+                        }
+                        else if(drawn_object.arrow_dir == 2)
+                        {
+                            whiteboard.drawing_action.draw_axis_2(drawn_object.points, draw_unit);
+                        }
+                        // else
+                        // {
+                        //     whiteboard.drawing_action.draw_axis(drawn_object.points, draw_unit);
+                        // }
                     }
+                    
 
                 }
-
-                //console.log("Check If Clicked!");
-                //console.log(drawn_object.check_if_clicked(e.pageX,e.pageY));
 
             }
             else if(dobj_name == "FX")

@@ -65,115 +65,29 @@ Tools.prototype._brush = function(){
 
 Tools.prototype.Brush = function(){return new this._brush();}
 
-Tools.prototype._circle = function(){
-    this.name = "Circle";
-    this.color = "#1c1f21";
-    this.size = 1;
-    this.fill = false;
-    this.selected = false;
-    this.center_point = [];
-    this.radius = 0;
-}
 
-Tools.prototype.Circle = function(){return new this._circle();}
-
-Tools.prototype._circle_hexa = function(){
-    this.name = "CircleHexa";
-    this.color = "#1c1f21";
-    this.selected = false;
-    this.center_point = [];
-    this.points = [];
-    this.radius = 0;
-}
-
-Tools.prototype.CircleHexa = function(){return new this._circle_hexa();}
-
-Tools.prototype.CirclePenta = function()
+var Anchor = function()
 {
-    var circle_penta = new this._circle_hexa();
-    circle_penta.name = "CirclePenta";
-    return circle_penta;
-}
-
-Tools.prototype._triangle = function()
-{
-    this.name = "Triangle";
-    this.color = "#1c1f21";
-    this.selected = false;
-    this.center_point = [];
-    this.points = [];
-    this.radius = 0;
-    this.right_triangle = false;
-}
-
-Tools.prototype.Triangle = function(){return new this._triangle();}
-
-Tools.prototype._line = function(){
-    this.name = "Line" ;
-    this.color = "#1c1f21" ;
-    this.size = 1 ;
-    this.selected = false ;
-    this.points = [];
-    this.draw_arrow = false;
-    this.arrow_end = 1; //1 means near end, 2 means far end, 3 means both end.
-    this.arrow_angle = Math.PI/4;
-    this.arrow_d = 10;
-}
-
-Tools.prototype.Line = function(){return new this._line()}
-
-Tools.prototype._rectangle = function(){
-    this.name = "Rectangle";
-    this.color = "#1c1f21";
-    this.size = 1;
-    this.fill = false;
-    this.selected = false;
-    this.draw_starting_point = [];
-    this.points = [];
-}
-
-Tools.prototype.Rectangle = function(){return new this._rectangle()}
-
-Tools.prototype._polygon = function(){
-    this.name = "Polygon";
-    this.color = "#1c1f21";
-    this.size = 1;
-    this.fill = false;
-    this.selected = false;
-    this.drawing_ended = false;
-    this.last_drawing_point = [];
-    this.points = []
-}
-
-Tools.prototype.Polygon = function(){return new this._polygon()}
-
-Tools.prototype._axis = function(){
-    this.name = "Axis";
-    this.color = "#1c1f21";
-    this.size = 1;
-    this.show_unit = false;
-    this.arrow_dir = 1; //1 for top left, 2 for top right, 3 for top, left, bottom, right.
-    this.start_point = [];
-    this.end_point = [];
-    this.points = [];
+    this.area_points = [];
     this.anchors = [];
-    this.x = 0;
-    this.y = 0;
     this.active = false;
-    this.anchor_circle_size = 10;
-    this.calculate_resize_options = function(){
-        if(this.points.length == 8){
+    this.anchor_circle_size = 5;
+    this.anchor_fill_color = "#0B3B39";
+    this.calculate_anchors = function(){
+        if(this.area_points.length == 8){
             //this.points will contain p1,p2,p3,p4
-            var p1 = [this.points[0],this.points[1]];
-            var p2 = [this.points[2],this.points[3]];
-            var p3 = [this.points[4],this.points[5]];
-            var p4 = [this.points[6],this.points[7]];
+            var p1 = [this.area_points[0],this.area_points[1]];
+            var p2 = [this.area_points[2],this.area_points[3]];
+            var p3 = [this.area_points[4],this.area_points[5]];
+            var p4 = [this.area_points[6],this.area_points[7]];
 
-            var p12 = [p1[0]+((p1[0]+p2[0])/2),p1[1]];
-            var p24 = [p2[0],p2[1]+((p2[1]+p4[1])/2)];
-            var p34 = [p3[0]+((p3[0]+p4[0])/2),p3[1]];
-            var p13 = [p1[0],p1[1]+((p1[1]+p3[1])/2)];
+            var p12 = [((p1[0]+p2[0])/2),p1[1]];
+            var p23 = [p2[0],((p2[1]+p3[1])/2)];
+            var p34 = [((p4[0]+p3[0])/2),p4[1]];
+            var p14 = [p1[0],((p1[1]+p4[1])/2)];
 
+            this.anchors = [];
+            
             var anchor = {
                 "name": "TopLeft",
                 "points": p1
@@ -199,7 +113,7 @@ Tools.prototype._axis = function(){
             
             var anchor = {
                 "name": "RightMiddle",
-                "points": p24
+                "points": p23
             };
 
             this.anchors.push(anchor);
@@ -207,7 +121,7 @@ Tools.prototype._axis = function(){
             
             var anchor = {
                 "name": "BottomRight",
-                "points": p4
+                "points": p3
             };
 
             this.anchors.push(anchor);
@@ -223,14 +137,14 @@ Tools.prototype._axis = function(){
             
             var anchor = {
                 "name": "BottomLeft",
-                "points": p3
+                "points": p4
             };
 
             this.anchors.push(anchor);
 
             var anchor = {
                 "name": "LeftMiddle",
-                "points": p13
+                "points": p14
             };
 
             this.anchors.push(anchor);
@@ -251,17 +165,120 @@ Tools.prototype._axis = function(){
     };
 
     this.check_if_clicked = function(ex,ey){
-        var p1 = [this.points[0],this.points[1]];
-        var p2 = [this.points[2],this.points[3]];
-        var p3 = [this.points[4],this.points[5]];
-        var p4 = [this.points[6],this.points[7]];
+        var p1 = [this.area_points[0],this.area_points[1]];
+        var p2 = [this.area_points[2],this.area_points[3]];
+        var p3 = [this.area_points[4],this.area_points[5]];
+        var p4 = [this.area_points[6],this.area_points[7]];
         return ex >= p1[0] && ex <= p2[0] && ey >= p1[1] && ey <= p3[1];
     };
+    return this;
+};
 
-    this.update_position = function(x,y){
-        this.x = x;
-        this.y = y;
-    };
+
+Tools.prototype._circle = function(){
+    this.name = "Circle";
+    this.color = "#1c1f21";
+    this.size = 1;
+    this.fill = false;
+    this.selected = false;
+    this.center_point = [];
+    this.radius = 0;
+};
+
+Tools.prototype._circle.prototype = new Anchor();
+
+Tools.prototype.Circle = function(){return new this._circle();}
+
+Tools.prototype._circle_hexa = function(){
+    this.name = "CircleHexa";
+    this.color = "#1c1f21";
+    this.selected = false;
+    this.center_point = [];
+    this.points = [];
+    this.radius = 0;
+};
+
+Tools.prototype._circle_hexa.prototype = new Anchor();
+
+Tools.prototype.CircleHexa = function(){return new this._circle_hexa();}
+
+Tools.prototype.CirclePenta = function()
+{
+    var circle_penta = new this._circle_hexa();
+    circle_penta.name = "CirclePenta";
+    return circle_penta;
+};
+
+Tools.prototype._triangle = function()
+{
+    this.name = "Triangle";
+    this.color = "#1c1f21";
+    this.selected = false;
+    this.center_point = [];
+    this.points = [];
+    this.radius = 0;
+    this.right_triangle = false;
+};
+
+Tools.prototype._triangle.prototype = new Anchor();
+
+Tools.prototype.Triangle = function(){return new this._triangle();}
+
+Tools.prototype._line = function(){
+    this.name = "Line" ;
+    this.color = "#1c1f21" ;
+    this.size = 1 ;
+    this.selected = false ;
+    this.points = [];
+    this.draw_arrow = false;
+    this.arrow_end = 1; //1 means near end, 2 means far end, 3 means both end.
+    this.arrow_angle = Math.PI/4;
+    this.arrow_d = 10;
+};
+
+Tools.prototype._line.prototype = new Anchor();
+
+Tools.prototype.Line = function(){return new this._line()}
+
+Tools.prototype._rectangle = function(){
+    this.name = "Rectangle";
+    this.color = "#1c1f21";
+    this.size = 1;
+    this.fill = false;
+    this.selected = false;
+    this.draw_starting_point = [];
+    this.points = [];
+};
+
+Tools.prototype._rectangle.prototype = new Anchor();
+
+Tools.prototype.Rectangle = function(){return new this._rectangle()}
+
+Tools.prototype._polygon = function(){
+    this.name = "Polygon";
+    this.color = "#1c1f21";
+    this.size = 1;
+    this.fill = false;
+    this.selected = false;
+    this.drawing_ended = false;
+    this.last_drawing_point = [];
+    this.points = []
+}
+
+Tools.prototype._polygon.prototype = new Anchor();
+
+Tools.prototype.Polygon = function(){return new this._polygon()};
+
+Tools.prototype._axis = function(){
+    this.name = "Axis";
+    this.color = "#1c1f21";
+    this.size = 1;
+    this.show_unit = false;
+    this.arrow_dir = 1; //1 for top left, 2 for top right, 3 for top, left, bottom, right.
+    this.start_point = [];
+    this.end_point = [];
+    this.points = [];
+    
     this.reset_tool = function(){
         //this.color = "#1c1f21";
         //this.size = 1;
@@ -271,7 +288,10 @@ Tools.prototype._axis = function(){
         this.points = [];
         this.anchors = [];
     }
+    return this;
 }
+
+Tools.prototype._axis.prototype = new Anchor();
 
 Tools.prototype.Axis = function(){return new this._axis()}
 

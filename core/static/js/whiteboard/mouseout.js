@@ -234,6 +234,10 @@ var on_mouse_out = function(e)
                 whiteboard.selected_tool.points.push(p4[0]);
                 whiteboard.selected_tool.points.push(p4[1]);
 
+                // console.log(p1);
+                // console.log(p2);
+                // console.log(whiteboard.selected_tool.points);
+
                 //whiteboard.selected_tool.calculate_resize_options();
 
             }
