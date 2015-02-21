@@ -156,6 +156,112 @@ Tools.prototype._axis = function(){
     this.start_point = [];
     this.end_point = [];
     this.points = [];
+    this.anchors = [];
+    this.x = 0;
+    this.y = 0;
+    this.active = false;
+    this.anchor_circle_size = 10;
+    this.calculate_resize_options = function(){
+        if(this.points.length == 8){
+            //this.points will contain p1,p2,p3,p4
+            var p1 = [this.points[0],this.points[1]];
+            var p2 = [this.points[2],this.points[3]];
+            var p3 = [this.points[4],this.points[5]];
+            var p4 = [this.points[6],this.points[7]];
+
+            var p12 = [p1[0]+((p1[0]+p2[0])/2),p1[1]];
+            var p24 = [p2[0],p2[1]+((p2[1]+p4[1])/2)];
+            var p34 = [p3[0]+((p3[0]+p4[0])/2),p3[1]];
+            var p13 = [p1[0],p1[1]+((p1[1]+p3[1])/2)];
+
+            var anchor = {
+                "name": "TopLeft",
+                "points": p1
+            };
+
+            this.anchors.push(anchor);
+
+            var anchor = {
+                "name": "TopMiddle",
+                "points": p12
+            };
+
+            this.anchors.push(anchor);
+
+            
+            var anchor = {
+                "name": "TopRight",
+                "points": p2
+            };
+
+            this.anchors.push(anchor);
+
+            
+            var anchor = {
+                "name": "RightMiddle",
+                "points": p24
+            };
+
+            this.anchors.push(anchor);
+
+            
+            var anchor = {
+                "name": "BottomRight",
+                "points": p4
+            };
+
+            this.anchors.push(anchor);
+
+            
+            var anchor = {
+                "name": "BottomMiddle",
+                "points": p34
+            };
+
+            this.anchors.push(anchor);
+
+            
+            var anchor = {
+                "name": "BottomLeft",
+                "points": p3
+            };
+
+            this.anchors.push(anchor);
+
+            var anchor = {
+                "name": "LeftMiddle",
+                "points": p13
+            };
+
+            this.anchors.push(anchor);
+
+        }
+    };
+    this.which_anchors_clicked = function(ex,ey){
+        for(var i = 0 ; i < this.anchors.length ; i++){
+            var left = this.anchors[i].points[0] - this.anchor_circle_size;
+            var right = this.anchors[i].points[0] + this.anchor_circle_size;
+            var top = this.anchors[i].points[1] - this.anchor_circle_size;
+            var bottom = this.anchors[i].points[1] + this.anchor_circle_size;
+
+            if(ex >= left && ex <= right && ey <= top && ey >= bottom){
+                return this.anchors;
+            }
+        }
+    };
+
+    this.check_if_clicked = function(ex,ey){
+        var p1 = [this.points[0],this.points[1]];
+        var p2 = [this.points[2],this.points[3]];
+        var p3 = [this.points[4],this.points[5]];
+        var p4 = [this.points[6],this.points[7]];
+        return ex >= p1[0] && ex <= p2[0] && ey >= p1[1] && ey <= p3[1];
+    };
+
+    this.update_position = function(x,y){
+        this.x = x;
+        this.y = y;
+    };
     this.reset_tool = function(){
         //this.color = "#1c1f21";
         //this.size = 1;
@@ -163,6 +269,7 @@ Tools.prototype._axis = function(){
         this.start_point = [];
         this.end_point = [];
         this.points = [];
+        this.anchors = [];
     }
 }
 

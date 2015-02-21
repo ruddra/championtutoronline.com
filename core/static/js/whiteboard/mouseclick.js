@@ -38,7 +38,7 @@ var event_mouse_click = function(e)
     }
     else if(whiteboard.selected_tool.name == "Select")
     {
-        whiteboard.drawing_action.redraw();
+        whiteboard.drawing_action.redraw(e);
     }
     else if(whiteboard.selected_tool.name == "Polygon")
     {
@@ -69,6 +69,7 @@ var event_mouse_click = function(e)
             whiteboard.drawing_action.draw_points(whiteboard.selected_tool.points);
         }
     }
+
     $(e.target).focus();
     return false;
 };

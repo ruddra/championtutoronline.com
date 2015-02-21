@@ -221,6 +221,10 @@ var on_mouse_out = function(e)
 
             if(p1.length > 0 && p2.length > 0 && p3.length > 0 && p4.length > 0)
             {
+
+                //whiteboard.selected_tool.update_position(p1[0],p1[1]);
+
+                whiteboard.selected_tool.points = [];
                 whiteboard.selected_tool.points.push(p1[0]);
                 whiteboard.selected_tool.points.push(p1[1]);
                 whiteboard.selected_tool.points.push(p2[0]);
@@ -229,7 +233,13 @@ var on_mouse_out = function(e)
                 whiteboard.selected_tool.points.push(p3[1]);
                 whiteboard.selected_tool.points.push(p4[0]);
                 whiteboard.selected_tool.points.push(p4[1]);
+
+                //whiteboard.selected_tool.calculate_resize_options();
+
             }
+
+            //console.log("Here is the updated object.");
+            //console.log(whiteboard.selected_tool.anchors);
 
             var cloned_obj = deep_copy(whiteboard.selected_tool);
             whiteboard.canvas_data_stack.push(cloned_obj);

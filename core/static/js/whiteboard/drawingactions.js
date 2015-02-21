@@ -666,7 +666,7 @@ whiteboard.drawing_action.draw_axis_2 = function(points,show_unit)
 
 };
 
-whiteboard.drawing_action.redraw = function(){
+whiteboard.drawing_action.redraw = function(e){
         //Draw the whole stack.
         //First clean up the board.
         //console.log("Refresh the whiteboard...");
@@ -775,7 +775,7 @@ whiteboard.drawing_action.redraw = function(){
             else if(dobj_name == "Axis")
             {
                 console.log(drawn_object);
-                if(drawn_object.points.length == 16)
+                if(drawn_object.points.length == 8)
                 {
                     whiteboard.context.strokeStyle = drawn_object.color;
                     //whiteboard.drawing_action.draw_axis(drawn_object.points,drawn_object.show_unit);
@@ -798,6 +798,10 @@ whiteboard.drawing_action.redraw = function(){
                     }
 
                 }
+
+                //console.log("Check If Clicked!");
+                //console.log(drawn_object.check_if_clicked(e.pageX,e.pageY));
+
             }
             else if(dobj_name == "FX")
             {
