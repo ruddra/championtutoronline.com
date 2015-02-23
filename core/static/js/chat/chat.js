@@ -443,333 +443,333 @@ var generateChatUUID = function(){
 
      /* This class is responsible for handling audio/video related stuffs. */
 
-     var call_timer = false;
-     var sub_notif_timer = false;
-
-     var Call = function()
-     {
-        this._id = generateUUID();
-        this.calling_screen_id = this._id+"_1";
-        this.incoming_screen_id = this._id+"_2";
-        this.timer = false;
-        this.ring_time = 60; //60 seconds.
-        this.ring_started_since = 0; //This will keep track of the time since it has started ringing.
-        //var diff = currentTime.getTime() - lastEmitTime.getTime();
-        this.last_sub_received_since = new Date();
-        this.sub_notif_timer = false;
-        this.incoming_popup_shown = false;
-        this.callee_id = -1;
-        this.cleimg_url = "";
-        this.callee_name = "";
-        this.register_events();
-        this.register_event_handlers();
-    };
-
-    Call.prototype.add_callee = function(callee)
-    {
-        this.callee_id = callee.id;
-        this.cleimg_url = callee.img_url;
-        this.callee_name = callee.name;
-    };
-
-    Call.prototype.register_events = function()
-    {
-        var _call_obj = this;
-        
-    };
-
-    Call.prototype.publish_event = function(action,data) //action=calling, call_ended, call_rejected, cancelled, answer_audio, answer_video, start_session
-    {                                                    //data = {"otsession":"","token":""}
-        var _call_obj = this;
-        var data_param = {};
-        if(data != undefined)
-        {
-            data_param = data;
-        }
-        window.socket.emit('pub_notif',{
-              'publisher':{
-                'uid':window.champ_user_id,
-                'name':'Anonymous',
-                'img': ''
-              },
-              'subscriber':{
-                'uid':_call_obj.callee_id,
-                'name': _call_obj.callee_name,
-                'img': _call_obj.cleimg_url
-              },
-              'msg': action,
-              'data':data_param
-          });
-    };
-
-    Call.prototype.register_event_handlers = function()
-    {
-        var _call_obj = this;
-        $(document).on("click","#"+this.calling_screen_id,function(e)
-        {
-            var element_classname = e.target.className;
-            if(element_classname.indexOf("btn-cancel-call") > -1)
-            {
-                //Cancel call clicked.
-                //alert(_call_obj.callee_id);
-                _call_obj.stop_notif();
-                this.incoming_popup_shown = false;
-            }
-        });
-
-        $(document).on("click", ".btn-end-call", function(e)
-        {
-            //alert("End Call clicked!");
-        });
-        
-        $(document).on("click","#"+this.incoming_screen_id,function(e)
-        {
-            //alert($(this).find(".uid").val());
-            var element_classname = e.target.className;
-            var callee_id = $(this).find(".uid").val();
-            _call_obj.callee_id = callee_id;
-            //alert(_call_obj.callee_id);
-            if(element_classname.indexOf("btn-answer-audio") > -1)
-            {
-                //Audio answer mode clicked.
-            }
-            else if(element_classname.indexOf("btn-answer-video") > -1)
-            {
-                //Video answer mode clicked.
-                //alert(_call_obj.callee_id);
-                _call_obj.publish_event("answer_video");
-                //_call_obj.stop_notif();
-                //_call_obj.start_video_session();
-            }
-            else if(element_classname.indexOf("btn-call-reject") > -1)
-            {
-                //Call rejected.
-                console.log("Call rejected.");
-                if(window.socket_connected)
-                {
-                    _call_obj.publish_event("call_rejected");
-                }
-                _call_obj.end_incoming_call_popup();
-            }
-        });
-
-    };
-
-     Call.prototype.generate_html_for_calling_screen = function(user_id, img_url, name)
-        {
-            if(img_url == "")
-            {
-                img_url = "../../static/images/img1_online.png";
-            }
-            var html="<div id='"+ this.calling_screen_id +"' class='call-screen'><input type='hidden' class='uid' value='"+ user_id +"'/><img style='padding: 3px; margin-right: 3px;' src='"+ img_url +"' width='40' height='40'/>Call to "+ name;
-            html += "<div class='text-center'><br/><button class='btn btn-mini btn-primary btn-cancel-call' style='background:red;color:white;'>Cancel</button></div></div>";
-            return html;
-        };
-
-     Call.prototype.generate_html_incoming_call_screen = function(user_id,img_url,name)
-        {
-            if(img_url == "")
-            {
-                img_url = "../../static/images/img1_online.png";
-            }
-
-            var html="<div id='"+ this.incoming_screen_id +"' class='call-screen'><input type='hidden' class='uid' value='"+ user_id +"'/><img style='padding: 3px; margin-right: 3px;' src='"+ img_url +"' width='40' height='40'/>Incoming Call from "+ name;
-            html += "<audio style='display:none;' preload=\"auto\" autoplay><source src='../../static/sounds/incomingcall.mp3' type='audio/mp3'>";
-            html += "<embed src='../../static/sounds/incoming_call.mp3' width='180' height='90' hidden='true' /></audio>";
-            html += "<div class='text-center'><br/><button class='btn btn-mini btn-primary btn-answer-audio' style='color:white;'>Answer Audio</button>";
-            html += " <button class='btn btn-mini btn-primary btn-answer-video' style='color:white;'>Answer Video</button>";
-            html += " <button class='btn btn-mini btn-primary btn-call-reject' style='background:red;color:white;'>Reject Call</button></div></div>";
-            return html;
-        };
-
-     Call.prototype.start_notif = function()
-     {
-            var _call_obj = this;
-
-            var html = _call_obj.generate_html_for_calling_screen(_call_obj.callee_id,_call_obj.cleimg_url,_call_obj.callee_name);
-
-            $.colorbox({html:html, fixed:true, initialWidth: '400px', initialHeight: '170px', width:'400px', height:'170px', escKey: false, overlayClose: false,fixed:true});
-            //$("#cboxOverlay").hide();
-            $("#cboxClose").click(function(e) 
-            {
-                _call_obj.stop_notif();
-            });
-            this.timer = setInterval(function()
-            {
-                //console.log("Calling...");
-                _call_obj.ring_started_since += 1;
-                console.log(_call_obj.ring_started_since);
-                //console.log(_call_obj.ring_time);
-                if(_call_obj.ring_started_since >= _call_obj.ring_time)
-                {
-                    _call_obj.stop_notif();
-                }
-
-                if(window.socket_connected)
-                {
-                    _call_obj.publish_event("calling");
-                }
-
-            },1000);
-            call_timer = this.timer;
-     };
-
-     Call.prototype.clear_timer = function()
-     {
-            if(call_timer)
-            {
-                clearInterval(call_timer);
-            }
-            if(sub_notif_timer)
-            {
-                clearInterval(sub_notif_timer);
-            }
-     };
-
-     Call.prototype.stop_notif = function()
-     {
-            this.publish_event("call_ended");      
-            if($.colorbox)
-            {
-                $.colorbox.close();
-            }
-            this.clear_timer();
-     };
-
-     Call.prototype.show_incoming_call_popup = function(uid,img_url,name)
-     {
-            //if(!this.incoming_popup_shown)
-            {
-              var _call_obj = this;
-
-              var html = this.generate_html_incoming_call_screen(uid,img_url,name);
-
-              $.colorbox({html:html, fixed:true, initialWidth: '400px', initialHeight: '170px', width:'400px', height:'170px', escKey: false, overlayClose: false,fixed:true});
-              //$("#cboxOverlay").hide();
-              $("#cboxClose").click(function(e) 
-              {
-                  
-              });
-
-              this.incoming_popup_shown = true;
-            }
-     }
-
-     Call.prototype.start_video_session = function(session,token)
-     {
-            // $.colorbox({iframe:true, href:'ajax/startsession?_ots='+session+"&_token="+token, fixed:true, width:'1000px', height:'600px', escKey: false, overlayClose: false,fixed:true, scrolling: false});
-            // $("#cboxClose").click(function(e) 
-            // {
-                
-            // });
-            $.colorbox.close();
-            var dialog_options = {
-                  autoOpen: true,
-                  width: 1000,
-                  height:600
-            };
-            //$("#id_video_screen_dialog").load('ajax/startsession?_ots='+session+'&_token='+token).dialog(dialog_options);
-            $("#id_video_screen_dialog").append($("<iframe />").css("width","1000px").css("height","600px").css("overflow","hidden").attr("src", 'ajax/startsession?_ots='+session+'&_token='+token)).dialog(dialog_options);
-
-     };
-
-     Call.prototype.end_incoming_call_popup = function()
-     {
-            if(this.incoming_popup_shown)
-            {
-                if($.colorbox)
-                {
-                    $.colorbox.close();
-                }
-                this.clear_timer();
-                this.incoming_popup_shown = false;
-            }
-     };
+//     var call_timer = false;
+//     var sub_notif_timer = false;
+//
+//     var Call = function()
+//     {
+//        this._id = generateUUID();
+//        this.calling_screen_id = this._id+"_1";
+//        this.incoming_screen_id = this._id+"_2";
+//        this.timer = false;
+//        this.ring_time = 60; //60 seconds.
+//        this.ring_started_since = 0; //This will keep track of the time since it has started ringing.
+//        //var diff = currentTime.getTime() - lastEmitTime.getTime();
+//        this.last_sub_received_since = new Date();
+//        this.sub_notif_timer = false;
+//        this.incoming_popup_shown = false;
+//        this.callee_id = -1;
+//        this.cleimg_url = "";
+//        this.callee_name = "";
+//        this.register_events();
+//        this.register_event_handlers();
+//    };
+//
+//    Call.prototype.add_callee = function(callee)
+//    {
+//        this.callee_id = callee.id;
+//        this.cleimg_url = callee.img_url;
+//        this.callee_name = callee.name;
+//    };
+//
+//    Call.prototype.register_events = function()
+//    {
+//        var _call_obj = this;
+//
+//    };
+//
+//    Call.prototype.publish_event = function(action,data) //action=calling, call_ended, call_rejected, cancelled, answer_audio, answer_video, start_session
+//    {                                                    //data = {"otsession":"","token":""}
+//        var _call_obj = this;
+//        var data_param = {};
+//        if(data != undefined)
+//        {
+//            data_param = data;
+//        }
+//        window.socket.emit('pub_notif',{
+//              'publisher':{
+//                'uid':window.champ_user_id,
+//                'name':'Anonymous',
+//                'img': ''
+//              },
+//              'subscriber':{
+//                'uid':_call_obj.callee_id,
+//                'name': _call_obj.callee_name,
+//                'img': _call_obj.cleimg_url
+//              },
+//              'msg': action,
+//              'data':data_param
+//          });
+//    };
+//
+//    Call.prototype.register_event_handlers = function()
+//    {
+//        var _call_obj = this;
+//        $(document).on("click","#"+this.calling_screen_id,function(e)
+//        {
+//            var element_classname = e.target.className;
+//            if(element_classname.indexOf("btn-cancel-call") > -1)
+//            {
+//                //Cancel call clicked.
+//                //alert(_call_obj.callee_id);
+//                _call_obj.stop_notif();
+//                this.incoming_popup_shown = false;
+//            }
+//        });
+//
+//        $(document).on("click", ".btn-end-call", function(e)
+//        {
+//            //alert("End Call clicked!");
+//        });
+//
+//        $(document).on("click","#"+this.incoming_screen_id,function(e)
+//        {
+//            //alert($(this).find(".uid").val());
+//            var element_classname = e.target.className;
+//            var callee_id = $(this).find(".uid").val();
+//            _call_obj.callee_id = callee_id;
+//            //alert(_call_obj.callee_id);
+//            if(element_classname.indexOf("btn-answer-audio") > -1)
+//            {
+//                //Audio answer mode clicked.
+//            }
+//            else if(element_classname.indexOf("btn-answer-video") > -1)
+//            {
+//                //Video answer mode clicked.
+//                //alert(_call_obj.callee_id);
+//                _call_obj.publish_event("answer_video");
+//                //_call_obj.stop_notif();
+//                //_call_obj.start_video_session();
+//            }
+//            else if(element_classname.indexOf("btn-call-reject") > -1)
+//            {
+//                //Call rejected.
+//                console.log("Call rejected.");
+//                if(window.socket_connected)
+//                {
+//                    _call_obj.publish_event("call_rejected");
+//                }
+//                _call_obj.end_incoming_call_popup();
+//            }
+//        });
+//
+//    };
+//
+//     Call.prototype.generate_html_for_calling_screen = function(user_id, img_url, name)
+//        {
+//            if(img_url == "")
+//            {
+//                img_url = "../../static/images/img1_online.png";
+//            }
+//            var html="<div id='"+ this.calling_screen_id +"' class='call-screen'><input type='hidden' class='uid' value='"+ user_id +"'/><img style='padding: 3px; margin-right: 3px;' src='"+ img_url +"' width='40' height='40'/>Call to "+ name;
+//            html += "<div class='text-center'><br/><button class='btn btn-mini btn-primary btn-cancel-call' style='background:red;color:white;'>Cancel</button></div></div>";
+//            return html;
+//        };
+//
+//     Call.prototype.generate_html_incoming_call_screen = function(user_id,img_url,name)
+//        {
+//            if(img_url == "")
+//            {
+//                img_url = "../../static/images/img1_online.png";
+//            }
+//
+//            var html="<div id='"+ this.incoming_screen_id +"' class='call-screen'><input type='hidden' class='uid' value='"+ user_id +"'/><img style='padding: 3px; margin-right: 3px;' src='"+ img_url +"' width='40' height='40'/>Incoming Call from "+ name;
+//            html += "<audio style='display:none;' preload=\"auto\" autoplay><source src='../../static/sounds/incomingcall.mp3' type='audio/mp3'>";
+//            html += "<embed src='../../static/sounds/incoming_call.mp3' width='180' height='90' hidden='true' /></audio>";
+//            html += "<div class='text-center'><br/><button class='btn btn-mini btn-primary btn-answer-audio' style='color:white;'>Answer Audio</button>";
+//            html += " <button class='btn btn-mini btn-primary btn-answer-video' style='color:white;'>Answer Video</button>";
+//            html += " <button class='btn btn-mini btn-primary btn-call-reject' style='background:red;color:white;'>Reject Call</button></div></div>";
+//            return html;
+//        };
+//
+//     Call.prototype.start_notif = function()
+//     {
+//            var _call_obj = this;
+//
+//            var html = _call_obj.generate_html_for_calling_screen(_call_obj.callee_id,_call_obj.cleimg_url,_call_obj.callee_name);
+//
+//            $.colorbox({html:html, fixed:true, initialWidth: '400px', initialHeight: '170px', width:'400px', height:'170px', escKey: false, overlayClose: false,fixed:true});
+//            //$("#cboxOverlay").hide();
+//            $("#cboxClose").click(function(e)
+//            {
+//                _call_obj.stop_notif();
+//            });
+//            this.timer = setInterval(function()
+//            {
+//                //console.log("Calling...");
+//                _call_obj.ring_started_since += 1;
+//                console.log(_call_obj.ring_started_since);
+//                //console.log(_call_obj.ring_time);
+//                if(_call_obj.ring_started_since >= _call_obj.ring_time)
+//                {
+//                    _call_obj.stop_notif();
+//                }
+//
+//                if(window.socket_connected)
+//                {
+//                    _call_obj.publish_event("calling");
+//                }
+//
+//            },1000);
+//            call_timer = this.timer;
+//     };
+//
+//     Call.prototype.clear_timer = function()
+//     {
+//            if(call_timer)
+//            {
+//                clearInterval(call_timer);
+//            }
+//            if(sub_notif_timer)
+//            {
+//                clearInterval(sub_notif_timer);
+//            }
+//     };
+//
+//     Call.prototype.stop_notif = function()
+//     {
+//            this.publish_event("call_ended");
+//            if($.colorbox)
+//            {
+//                $.colorbox.close();
+//            }
+//            this.clear_timer();
+//     };
+//
+//     Call.prototype.show_incoming_call_popup = function(uid,img_url,name)
+//     {
+//            //if(!this.incoming_popup_shown)
+//            {
+//              var _call_obj = this;
+//
+//              var html = this.generate_html_incoming_call_screen(uid,img_url,name);
+//
+//              $.colorbox({html:html, fixed:true, initialWidth: '400px', initialHeight: '170px', width:'400px', height:'170px', escKey: false, overlayClose: false,fixed:true});
+//              //$("#cboxOverlay").hide();
+//              $("#cboxClose").click(function(e)
+//              {
+//
+//              });
+//
+//              this.incoming_popup_shown = true;
+//            }
+//     }
+//
+//     Call.prototype.start_video_session = function(session,token)
+//     {
+//            // $.colorbox({iframe:true, href:'ajax/startsession?_ots='+session+"&_token="+token, fixed:true, width:'1000px', height:'600px', escKey: false, overlayClose: false,fixed:true, scrolling: false});
+//            // $("#cboxClose").click(function(e)
+//            // {
+//
+//            // });
+//            $.colorbox.close();
+//            var dialog_options = {
+//                  autoOpen: true,
+//                  width: 1000,
+//                  height:600
+//            };
+//            //$("#id_video_screen_dialog").load('ajax/startsession?_ots='+session+'&_token='+token).dialog(dialog_options);
+//            $("#id_video_screen_dialog").append($("<iframe />").css("width","1000px").css("height","600px").css("overflow","hidden").attr("src", 'ajax/startsession?_ots='+session+'&_token='+token)).dialog(dialog_options);
+//
+//     };
+//
+//     Call.prototype.end_incoming_call_popup = function()
+//     {
+//            if(this.incoming_popup_shown)
+//            {
+//                if($.colorbox)
+//                {
+//                    $.colorbox.close();
+//                }
+//                this.clear_timer();
+//                this.incoming_popup_shown = false;
+//            }
+//     };
 
      var register_global_socket_events = function()
      {
-            var call_obj = new Call();
-            window.socket.on("on_sub_notif",function(response_data)
-            {
-                console.log("Incoming message received.");
-                console.log(response_data);
-                //console.log(data.callee.uid);
-                //var champ_user_id = {% if request.session.user_id %} {{ request.session.user_id }} {% endif %} -1 {% endif %};
-                if(parseInt(response_data.subscriber.uid)==window.champ_user_id)
-                {
-                    if(response_data.msg == "calling")
-                    {
-                        // call_obj.show_incoming_call_popup(response_data.publisher.uid,response_data.publisher.img,response_data.publisher.name);
-                        // if(!sub_notif_timer)
-                        // {
-                        //     var last_sub_received_since = new Date();
-                        //     sub_notif_timer = setInterval(function()
-                        //     {
-                        //         var currentTime = new Date();
-                        //         var diff = currentTime.getTime() - last_sub_received_since.getTime();
-                        //         console.log("Time difference: "+diff/1000);
-                        //         if(diff/1000 > 3)
-                        //         {
-                        //             call_obj.end_incoming_call_popup();
-                        //         }
-                        //     }, 1000);
-                        // }
-                    }
-                    else if(response_data.msg == "call_rejected")
-                    {
-                        call_obj.stop_notif();
-                    }
-                    else if(response_data.msg == "call_ended")
-                    {
-                        call_obj.stop_notif();   
-                    }
-                    else if(response_data.msg == "answer_video")
-                    {
-                        //Now make an ajax call to create session and generate tokens for bothe the user.
-                        // var uids = "";
-                        // uids.push(parseInt(data.subscriber.uid));
-                        // uids.push(parseInt(data.publisher.uid));
-                        //[parseInt(data.subscriber.uid, parseInt(data.publisher.uid];
-                        $.ajax({
-                          type: "GET",
-                          url: "/ajax/initsession",
-                          data: { "uids": response_data.subscriber.uid+","+response_data.publisher.uid },
-                          success: function(data)
-                          {
-                                call_obj.clear_timer();
-                                //Now tokens are generated. Send the other guy to init video session.
-                                var peer_token = data[response_data.publisher.uid];
-                                var my_token = data[response_data.subscriber.uid];
-                                var otsession = data.otsession;
-                                //alert(peer_token);
-                                call_obj.callee_id = response_data.publisher.uid;
-                                call_obj.publish_event("start_session",{"otsession":otsession,"token":peer_token});
-                                call_obj.start_video_session(otsession, my_token);
-                                console.log(data);
-                          },
-                          error: function(jqxhr,status,errorthrown)
-                          {
-
-                          },
-                          complete: function(jqxhr,status)
-                          {
-
-                          }
-                        })
-                        .done(function( msg ) {
-                            //alert( "Data Saved: " + msg );
-                          });
-                        
-                    }
-                    else if(response_data.msg == "start_session")
-                    {
-                        var otsession = response_data.data.otsession;
-                        var token = response_data.data.token;
-                        call_obj.clear_timer();
-                        call_obj.start_video_session(otsession, token);
-                    }
-                }
-            });
+//            var call_obj = new Call();
+//            window.socket.on("on_sub_notif",function(response_data)
+//            {
+//                console.log("Incoming message received.");
+//                console.log(response_data);
+//                //console.log(data.callee.uid);
+//                //var champ_user_id = {% if request.session.user_id %} {{ request.session.user_id }} {% endif %} -1 {% endif %};
+//                if(parseInt(response_data.subscriber.uid)==window.champ_user_id)
+//                {
+//                    if(response_data.msg == "calling")
+//                    {
+//                        // call_obj.show_incoming_call_popup(response_data.publisher.uid,response_data.publisher.img,response_data.publisher.name);
+//                        // if(!sub_notif_timer)
+//                        // {
+//                        //     var last_sub_received_since = new Date();
+//                        //     sub_notif_timer = setInterval(function()
+//                        //     {
+//                        //         var currentTime = new Date();
+//                        //         var diff = currentTime.getTime() - last_sub_received_since.getTime();
+//                        //         console.log("Time difference: "+diff/1000);
+//                        //         if(diff/1000 > 3)
+//                        //         {
+//                        //             call_obj.end_incoming_call_popup();
+//                        //         }
+//                        //     }, 1000);
+//                        // }
+//                    }
+//                    else if(response_data.msg == "call_rejected")
+//                    {
+//                        call_obj.stop_notif();
+//                    }
+//                    else if(response_data.msg == "call_ended")
+//                    {
+//                        call_obj.stop_notif();
+//                    }
+//                    else if(response_data.msg == "answer_video")
+//                    {
+//                        //Now make an ajax call to create session and generate tokens for bothe the user.
+//                        // var uids = "";
+//                        // uids.push(parseInt(data.subscriber.uid));
+//                        // uids.push(parseInt(data.publisher.uid));
+//                        //[parseInt(data.subscriber.uid, parseInt(data.publisher.uid];
+//                        $.ajax({
+//                          type: "GET",
+//                          url: "/ajax/initsession",
+//                          data: { "uids": response_data.subscriber.uid+","+response_data.publisher.uid },
+//                          success: function(data)
+//                          {
+//                                call_obj.clear_timer();
+//                                //Now tokens are generated. Send the other guy to init video session.
+//                                var peer_token = data[response_data.publisher.uid];
+//                                var my_token = data[response_data.subscriber.uid];
+//                                var otsession = data.otsession;
+//                                //alert(peer_token);
+//                                call_obj.callee_id = response_data.publisher.uid;
+//                                call_obj.publish_event("start_session",{"otsession":otsession,"token":peer_token});
+//                                call_obj.start_video_session(otsession, my_token);
+//                                console.log(data);
+//                          },
+//                          error: function(jqxhr,status,errorthrown)
+//                          {
+//
+//                          },
+//                          complete: function(jqxhr,status)
+//                          {
+//
+//                          }
+//                        })
+//                        .done(function( msg ) {
+//                            //alert( "Data Saved: " + msg );
+//                          });
+//
+//                    }
+//                    else if(response_data.msg == "start_session")
+//                    {
+//                        var otsession = response_data.data.otsession;
+//                        var token = response_data.data.token;
+//                        call_obj.clear_timer();
+//                        call_obj.start_video_session(otsession, token);
+//                    }
+//                }
+//            });
 
             window.socket.on("onchatmessage", function(data)
             {

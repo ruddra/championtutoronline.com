@@ -64,31 +64,31 @@ $(document).ready(function()
 
 		var container_width = video_container_max_width;
 		var container_height = video_conatiner_max_height;
-		if(call_queue.length == 1)
-		{
-			video_box_width = 400;
-			video_box_height = 400;
-
-			container_width = 407;
-			container_height = 410;
-
-		}
-		else if(call_queue.length == 2)
-		{
-			video_box_width = 300;
-			video_box_height = 300;
-
-			container_width = 620;
-			container_height = 320;
-		}
-		else if(call_queue.length == 3)
-		{
-			video_box_width = 200;
-			video_box_height = 200;
-
-			container_width = 416;
-			container_height = 420;
-		}
+//		if(call_queue.length == 1)
+//		{
+//			video_box_width = 400;
+//			video_box_height = 400;
+//
+//			container_width = 407;
+//			container_height = 410;
+//
+//		}
+//		else if(call_queue.length == 2)
+//		{
+//			video_box_width = 300;
+//			video_box_height = 300;
+//
+//			container_width = 620;
+//			container_height = 320;
+//		}
+//		else if(call_queue.length == 3)
+//		{
+//			video_box_width = 200;
+//			video_box_height = 200;
+//
+//			container_width = 416;
+//			container_height = 420;
+//		}
 		video_sharing_container.css("width",container_width+"px");
 		video_sharing_container.css("height",container_height+"px");
 
