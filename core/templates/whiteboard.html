@@ -19,6 +19,8 @@
     <script type="text/javascript" src="{%  static "js/bootstrap.min.js" %}"></script>
     <!-- <script src="{% static "js/chat/chat.js" %}"></script>!-->
     <script src="https://static.opentok.com/v2/js/opentok.min.js"></script>
+    <script src="http://static.opentok.com/webrtc/v2.2/js/TB.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static "js/opentok-layout.min.js" %}" type="text/javascript" charset="utf-8"></script>
     <script src="{% static "js/chat/videochat.js" %}"></script>
     <script src="{% static "js/chat/buddy_click_handlers.js" %}"></script>
     <script src="{% static "js/CanvasInput.js" %}"></script>
@@ -124,7 +126,7 @@
     {
         width: 300px;
         height: 250px;
-        background: white;
+        background: black;
         border: 1px solid gray;
     }
 
@@ -277,11 +279,7 @@
                             <a id="hidee" href="#"> <img width="15" height="9" alt="img" src="{% static "images/hide_icon.png" %}"> </a>
                         </div>
                         <div id="id_video_section" class="video_section">
-                            <div>
-                                <h4>
-                                    Setup Audio/Video Call to talk to your tutor.
-                                </h4>
-                            </div>
+
                         </div>
                     </div>
                     <div class="left_detail">

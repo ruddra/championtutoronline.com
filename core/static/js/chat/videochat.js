@@ -17,6 +17,9 @@ $(document).ready(function()
     var ot_api_key;
     var ot_session;
 
+    var layoutContainer = document.getElementById("id_video_section");
+    var layout = TB.initLayoutContainer(layoutContainer).layout;
+
 	function generateUUID(){
 	    var d = new Date().getTime();
 	    var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
@@ -142,7 +145,7 @@ $(document).ready(function()
 					video_box_element.css("background-image","url("+ img +")");
 				}
 
-				video_section.html(video_box_element);
+				//video_section.html(video_box_element);
 			}
 			else
 			{
@@ -157,7 +160,7 @@ $(document).ready(function()
 				{
 					video_box_element.css("background-image","url("+ img +")");
 				}
-				video_section.append(video_box_element);
+				//video_section.append(video_box_element);
 			}
 
 			resize_video_window();
@@ -229,18 +232,10 @@ $(document).ready(function()
             console.log("Inside add_subscriber method.");
             ot_session.on('streamCreated', function(event) {
                 //var subscriberProperties = {insertMode: 'append'};
-                var subscriber = ot_session.subscribe(event.stream,
-                    id_vid_ui_element,
-                    //subscriberProperties,
-                    function (error) {
-                        console.log("Inside subscriber callback.");
-                        if (error) {
-                            console.log(error);
-                        } else {
-                            console.log('Subscriber added.');
-                        }
-                    });
-                ot_session.subscribe(subscriber);
+                ot_session.subscribe(event.stream, "id_video_section", {
+                    insertMode: "append"
+                });
+                layout();
             });
         }
     };
@@ -257,7 +252,7 @@ $(document).ready(function()
                 ot_session.publish(publisher);
             });
         }
-        resize_video_window();
+        //resize_video_window();
     };
 
     var request_ot_session_info = function(uids,completeback,callback,errback) //uids are comma separated. like 1,2,3
