@@ -1,6 +1,5 @@
 $(document).ready(function()
 {
-	
 	var call_queue = [];
 	var max_participant = 6;
 	var video_sharing_container = $("#id_video_sharing_container");
@@ -13,7 +12,10 @@ $(document).ready(function()
 
 	var calling_timer;
 
-	var calls = {};
+	var calls = {};  //{2: {type: outgoing, status: calling, subscriber: subscriber_obj}}
+
+    var ot_api_key;
+    var ot_session;
 
 	function generateUUID(){
 	    var d = new Date().getTime();
@@ -93,6 +95,9 @@ $(document).ready(function()
 		video_section.find(".video-box").css("width",video_box_width+"px");
 		video_section.find(".video-box").css("height",video_box_height+"px");
 
+        video_section.find( "[id^='id_video_pane']").css("width",video_box_width+"px");
+        video_section.find( "[id^='id_video_pane']").css("height",video_box_height+"px");
+
         $("#myVideo").remove();
 
         $("<div id='myVideo' class='myVideo-box'>").appendTo(video_sharing_container);
@@ -100,6 +105,12 @@ $(document).ready(function()
 		$("#myVideo").css("position","absolute");
 		$("#myVideo").css("right","2px");
 		$("#myVideo").css("bottom","2px");
+
+        video_section.find("video").css("width",container_width+"px");
+        video_section.find("video").css("height",container_height+"px");
+
+        $("#myVideo").css("width",$("#myVideo").css("width"));
+        $("#myVideo").css("height",$("#myVideo").css("height"));
 
 	}
 
@@ -120,9 +131,11 @@ $(document).ready(function()
 			if(call_queue.length == 1)
 			{
 				var video_box_element = $("<div class='video-box text-center'>");
-				video_box_element.append("<input type='hidden' class='hidden_uid' value='"+ uid +"'/>");
-				video_box_element.append("<h4 style='margin-left:10px; margin-top: 10px;'>" + name + "</h4>");
+				video_box_element.append("<input type='hidden' id='id_video_box_"+ uid +"' class='hidden_uid' value='"+ uid +"'/>");
+                video_box_element.append("<div id='id_video_pane"+ uid +">");
+                video_box_element.append("<h4 style='margin-left:10px; margin-top: 10px;'>" + name + "</h4>");
 				video_box_element.append("<h4 style='margin-left:10px; margin-top: 10px;'>Calling...</h4>");
+                video_box_element.append("</div>");
 
 				if(img != "" || img != "#")
 				{
@@ -133,10 +146,12 @@ $(document).ready(function()
 			}
 			else
 			{
-				var video_box_element = $("<div class='video-box text-center'>");
-				video_box_element.append("<input type='hidden' class='hidden_uid' value='"+ uid +"'/>");
-				video_box_element.append("<h4 style='margin-left:10px; margin-top: 10px;'>" + name + "</h4>");
-				video_box_element.append("<h4 style='margin-left:10px; margin-top: 10px;'>Calling...</h4>");
+                var video_box_element = $("<div class='video-box text-center'>");
+                video_box_element.append("<input type='hidden' id='id_video_box_"+ uid +"' class='hidden_uid' value='"+ uid +"'/>");
+                video_box_element.append("<div id='id_video_pane"+ uid +">");
+                video_box_element.append("<h4 style='margin-left:10px; margin-top: 10px;'>" + name + "</h4>");
+                video_box_element.append("<h4 style='margin-left:10px; margin-top: 10px;'>Calling...</h4>");
+                video_box_element.append("</div>");
 
 				if(img != "" || img != "#")
 				{
@@ -199,6 +214,81 @@ $(document).ready(function()
         $("#incoming_call_notification_area").append(html).show();
 	};
 
+    var initOTSession = function(OT_api_key,OT_session)
+    {
+        if(OT_api_key != undefined && OT_session != undefined && ot_session == undefined)
+        {
+            ot_session = OT.initSession(OT_api_key, OT_session);
+        }
+    };
+
+    var add_subscriber = function(id_vid_ui_element)
+    {
+        if(ot_session)
+        {
+            console.log("Inside add_subscriber method.");
+            ot_session.on('streamCreated', function(event) {
+                //var subscriberProperties = {insertMode: 'append'};
+                var subscriber = ot_session.subscribe(event.stream,
+                    id_vid_ui_element,
+                    //subscriberProperties,
+                    function (error) {
+                        console.log("Inside subscriber callback.");
+                        if (error) {
+                            console.log(error);
+                        } else {
+                            console.log('Subscriber added.');
+                        }
+                    });
+                ot_session.subscribe(subscriber);
+            });
+        }
+    };
+
+    var connect_session = function(token)
+    {
+        if(ot_session)
+        {
+            console.log("OT TOKEN: "+token);
+            ot_session.connect(token, function(error) {
+                console.log(error);
+                var publisher = OT.initPublisher("myVideo",{width:$("#myVideo").width(), height:$("#myVideo").height()});
+                //console.log(publisher);
+                ot_session.publish(publisher);
+            });
+        }
+        resize_video_window();
+    };
+
+    var request_ot_session_info = function(uids,completeback,callback,errback) //uids are comma separated. like 1,2,3
+    {
+        $.ajax({
+            type: "GET",
+            url: "/ajax/initsession",
+            data: { "uids": uids },
+            success: function(data)
+            {
+                if(callback != undefined && typeof callback == "function")
+                {
+                    callback(data);
+                }
+            },
+            error: function(jqxhr,status,errorthrown)
+            {
+                if(errback != undefined && typeof errback == "function")
+                {
+                    errback(jqxhr,status,errorthrown);
+                }
+            }
+        })
+        .done(function( msg )
+        {
+                if(completeback != undefined && typeof completeback == "function")
+                {
+                    completeback(msg);
+                }
+        });
+    };
 
 	$(document).on("click",".champ_video_chat", function(e)
     {
@@ -231,7 +321,14 @@ $(document).ready(function()
 
 	$(document).on("click",".btn-popup-answer-video",function(e)
 	{
-		
+        var uid = $(this).parent().parent().find(".popup-uid").val();
+        publish_call_event(uid,"","","answer_video","");
+        $(this).parent().parent().remove();
+        console.log();
+        if(!$.trim($("#incoming_call_notification_area").html()))
+        {
+            $("#incoming_call_notification_area").remove();
+        }
 	});
 
 	$(document).on("click",".btn-popup-reject",function(e)
@@ -276,11 +373,43 @@ $(document).ready(function()
             }
             else if(response_data.msg == "answer_video")
             {
-                                
+                stop_call_notification();
+                var callee_id = response_data.publisher.uid;
+                var uids = window.champ_user_id+","+callee_id;
+                request_ot_session_info(uids,function(msg) //Complete Callback.
+                {
+
+                },
+                function(data) //Success Callback.
+                {
+                    console.log(data);
+                    initOTSession(data.ot_api_key,data.otsession);
+                    console.log("OT Session created.");
+                    console.log("Adding subscriber...");
+                    var _data = {
+                        "ot_api_key": data.ot_api_key,
+                        "ot_session":data.otsession,
+                        "ottoken": data[response_data.publisher.uid]
+                    }
+                    publish_call_event(response_data.publisher.uid,"","","start_session",_data);
+                    add_subscriber("id_video_section");
+                    connect_session(data[parseInt(window.champ_user_id)]);
+                },function(jqxhr,status,errorthrown) //Error Callback.
+                {
+
+                });
             }
             else if(response_data.msg == "start_session")
             {
-                
+                add_call_to_queue(response_data.subscriber.uid,"Anonymous","");
+                var ot_api_key = response_data.data.ot_api_key;
+                var otsession = response_data.data.ot_session;
+                var ottoken = response_data.data.ottoken;
+                initOTSession(ot_api_key,otsession);
+                console.log("OT Session created.");
+                add_subscriber("id_video_section");
+                connect_session(ottoken);
+                calls[parseInt(response_data.subscriber.uid)] = true;
             }
         }
     });

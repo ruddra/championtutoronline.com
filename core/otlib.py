@@ -34,7 +34,7 @@ def request_ot_token(session_id,*args,**kwargs):
 
 def generate_ot_tokens(user_ids=[],moderator_uid=None):
 	session = create_ot_session()
-	tokens = {"otsession":session}
+	tokens = {"otsession":session,"ot_api_key":settings.OT_API_KEY}
 	for i,uid in enumerate(user_ids):
 		token = request_ot_token(session)
 		tokens[uid] = token
