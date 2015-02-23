@@ -175,7 +175,7 @@
                 .addClass('tagit')
                 .addClass('ui-widget ui-widget-content ui-corner-all')
                 // Create the input field.
-                .append($('<li class="tagit-new"></li>').append(this.tagInput))
+                .append($('<li class="tagit-new" style="background:white;float:left;"></li>').append(this.tagInput))
                 .click(function(e) {
                     var target = $(e.target);
                     if (target.hasClass('tagit-label')) {

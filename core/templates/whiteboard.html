@@ -163,7 +163,7 @@
 
     #id_video_sharing_container
     {
-{#        bottom:  60px;#}
+        background-color: black;
     }
 
     #incoming_call_notification_area
@@ -183,18 +183,53 @@
         display: none;
     }
 
+    #outgoing_call_notification_area
+    {
+        width: 440px;
+        position: fixed;
+        top: 20%;
+        left:50%;
+        padding: 10px;
+        z-index: 9000000000;
+        background-color: #dedede;
+        border-radius: 10px;
+        border-width: 1px;
+        border-color: gray;
+        margin-left: 10px;
+        margin-top: 7px;
+        display: none;
+    }
+
+    .outgoing-call-popup
+    {
+        background-color: white;
+        margin-top: 4px;
+    }
+
     .incoming_call_popup
     {
         margin-bottom: 10px;
-        background-color: #dfdfdf;
+        background-color: white;
         padding: 10px;
-        border-radius: 10px;
     }
 
     .call-notif-popup-button
     {
         width: 120px;
         margin-right: 3px;
+    }
+
+    #id_add_buddy_group_call
+    {
+        position: absolute;
+        top: 40px;
+        left: 0px;
+        min-height: 40px;
+        width: 100%;
+        z-index: 1000;
+        padding: 3px;
+        background-color: rgb(222, 222, 222);
+        display: none;
     }
 
     </style>
@@ -214,6 +249,28 @@
 
         //     setInterval (type, 600);
         // });
+        $(document).ready(function()
+        {
+            $("#incoming_call_notification_area").css("cursor","move");
+            $("#incoming_call_notification_area").draggable();
+
+            $("#id_video_sharing_container").css("cursor","move");
+            $("#id_video_sharing_container").draggable();
+
+            $("#outgoing_call_notification_area").css("cursor","move");
+            $("#outgoing_call_notification_area").draggable();
+
+            $("#id_add_buddy_to_call_group").click(function(e)
+            {
+                $("#id_add_buddy_group_call").show();
+            });
+
+            $("#id_video_section").click(function(e)
+            {
+                $("#id_add_buddy_group_call").hide();
+            });
+
+        });
     </script>
 {% endblock script_extra %}
 
@@ -233,6 +290,9 @@
         </div>
         <div id="incoming_call_notification_area">
             
+        </div>
+        <div id="outgoing_call_notification_area">
+                
         </div>
         <div class="tabbings">
         <div id="tabs">
@@ -277,6 +337,12 @@
                             <span class="online"><img width="12" height="12" alt="img" src="{% static "images/online.png" %}"></span>
                             Audio/Video Sharing
                             <a id="hidee" href="#"> <img width="15" height="9" alt="img" src="{% static "images/hide_icon.png" %}"> </a>
+                            <a id="id_add_buddy_to_call_group" href="#"> <img width="15" height="9" alt="img" src="{% static "images/blue_pls.png" %}"> </a>
+                        </div>
+                        <div id="id_add_buddy_group_call" class="add_buddy_group_call">
+                            <input type='hidden' class='hidden-selected-val'/>
+                            <input type="text" class="form-control add-group-buddy-call" style="width: 200px;float: left;" placeholder="Type Tutor Name Here" autocomplete="on"/>
+                            <button class="btn btn-primary" id="id_add_buddy_to_group" style="float:right;background:green;">Add To Conference</button>
                         </div>
                         <div id="id_video_section" class="video_section">
 
@@ -636,9 +702,6 @@
         });
         $("a#hide").click(function () {
             $(".chat").removeClass("added");
-        });
-        $("a#hidee").click(function () {
-            $("#id_video_sharing_container").css("display","none");
         });
     </script>
     <script>

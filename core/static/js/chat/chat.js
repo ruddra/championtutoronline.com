@@ -282,7 +282,8 @@ var generateChatUUID = function(){
               for(var i = 0 ; i < _this_obj.remote_peers.length ; i++){
                   buddy_ids.push(parseInt(_this_obj.remote_peers[i]));
               }
-              if(buddy_ids.length == 0){
+              var chat_text_value = _this_obj.chat_contnt.parent().find(".add_grp_buddy_txt").val();
+              if($.trim(chat_text_value) == ""){
                   _this_obj.chat_contnt.parent().find(".add_chat_buddy_area").slideUp(200);
               }
               else{
@@ -292,7 +293,7 @@ var generateChatUUID = function(){
                         chat.chat_type = 1;
                         var chat_object = {user_id:-1,name: "Group Chat",img_url: ""};
                         chat.addNewChat(chat_object);
-                        window.chat_boxes[chat.id] = chat;
+                        //window.chat_boxes[chat.id] = chat;
                         _this_obj.chat_contnt.parent().find(".add_chat_buddy_area").slideUp(200);
                         _this_obj.chat_contnt.parent().find(".add_grp_buddy_txt").tagit("removeAll");
                     }
@@ -323,9 +324,20 @@ var generateChatUUID = function(){
         this.chat_contnt.parent().find(".chat_close").click(function(e)
         {
             $(this).parent().parent().remove();
-            if(_this_obj.remote_peers && window.chat_boxes[_this_obj.remote_peers[0]])
+
+            if(_this_obj.chat_type == 0)
             {
-                delete window.chat_boxes[_this_obj.remote_peers[0]];
+                if(_this_obj.remote_peers && window.chat_boxes[_this_obj.remote_peers[0]])
+                {
+                    delete window.chat_boxes[_this_obj.remote_peers[0]];
+                }
+            }
+            else
+            {
+                if(window.chat_boxes[_this_obj.id])
+                {
+                    delete window.chat_boxes[_this_obj.id];
+                }
             }
             redraw_chat_boxes();
         });

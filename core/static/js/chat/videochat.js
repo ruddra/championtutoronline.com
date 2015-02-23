@@ -4,13 +4,13 @@ $(document).ready(function()
 	var max_participant = 6;
 	var video_sharing_container = $("#id_video_sharing_container");
 	var video_section = $("#id_video_section");
-	var video_container_max_width = 620;
-	var video_conatiner_max_height = 450;
+	var video_container_max_width = 400;
+	var video_conatiner_max_height = 400;
 
 	var video_box_width = 200;
 	var video_box_height = 200;
 
-	var calling_timer;
+	//var calling_timer;
 
 	var calls = {};  //{2: {type: outgoing, status: calling, subscriber: subscriber_obj}}
 
@@ -19,6 +19,11 @@ $(document).ready(function()
 
     var layoutContainer = document.getElementById("id_video_section");
     var layout = TB.initLayoutContainer(layoutContainer).layout;
+
+    var timers = {}; //{1: time_obj,2: timer_obj} This puts all timer object so that later we can cancel any time.
+    var global_calling_timers = {}; //{1: value,2: value} This holds all elapsed calling time so that call ended when max time limit reached.
+
+    var max_calling_time_limit = 60000; //60 seconds.
 
 	function generateUUID(){
 	    var d = new Date().getTime();
@@ -167,7 +172,7 @@ $(document).ready(function()
 		}
 	};
 
-	var publish_call_event = function(uid,name,img_url,action,data_param)
+	var publish_call_event = function(uid,name,img_url,action,data_param,type)
 	{
 		window.socket.emit('pub_notif',{
               'publisher':{
@@ -180,20 +185,33 @@ $(document).ready(function()
                 'name': name,
                 'img': img_url
               },
+              'type':type, //p2p/group
               'msg': action,
               'data':data_param
           });
 	};
 
-	var start_notification = function(uid,name,img_url,action,data_param)
+	var start_notification = function(uid,name,img_url,action,data_param,type)
 	{
-		calling_timer = setInterval(function()
+		var delay_time = 100;
+		global_calling_timers[parseInt(uid)] = 0;
+		var calling_timer = setInterval(function()
 		{
-			publish_call_event(uid,name,img_url,action,data_param);
+			if(global_calling_timers[parseInt(uid)] < max_calling_time_limit)
+			{
+				publish_call_event(uid,name,img_url,action,data_param,type);
+				global_calling_timers[parseInt(uid)] += delay_time;
+			}
+			else
+			{
+				publish_call_event(uid,name,img_url,"call_ended",data_param,type);
+				global_calling_timers[parseInt(uid)] = 0;
+			}
 		},1000);
+		return calling_timer;
 	};
 
-	var stop_call_notification = function()
+	var stop_call_notification = function(calling_timer)
 	{
 		if(calling_timer)
 		{
@@ -201,13 +219,29 @@ $(document).ready(function()
 		}
 	};
 
-	var show_incoming_call_popup = function(uid,name,img_url)
+	var show_incoming_call_popup = function(uid,name,img_url,type,data)
 	{
-		var html = "<div class='incoming_call_popup'>";
+		var msg = "";
+		if(type == "p2p")
+		{
+			msg = "Incoming Call from "+ name;
+		}
+		else if(type == "group")
+		{
+			msg = "You are invited to attend a group call from "+ name;
+		}
+		var html = "<div class='incoming_call_popup' id='id_incoming_call_popup_"+ uid +"'>";
 			html += "<input type='hidden' class='popup-uid' value='"+ uid +"'/>";
+			html += "<input type='hidden' class='popup-call-type' value='"+ type +"'/>";
+			if(type == "group")
+			{
+				html += "<input type='hidden' class='popup-call-apikey' value='"+ data.apikey +"'/>";
+				html += "<input type='hidden' class='popup-call-otsession' value='"+ data.otsession +"'/>";
+				html += "<input type='hidden' class='popup-call-ottoken' value='"+ data.ottoken +"'/>";
+			}
             html += "<img class='close_incoming_popup' src='/static/images/cross.png' style='width: 12px;height: 12px; float: right; margin-right: 10px; margin-top: 10px; cursor: pointer;' />"
-            html += "<h4>Incoming Call From "+ name +"</h4>";
-            html += "<h5>If you receive this call all other calls will be put on hold.</h5>";
+            html += "<h4>"+ msg +"</h4>";
+            //html += "<h5>If you receive this call all other calls will be put on hold.</h5>";
             html += "<div class='text-center'>";
             html += "<button class='btn btn-primary call-notif-popup-button btn-popup-answer-audio'>Answer Audio</button>";
             html += "<button class='btn btn-primary call-notif-popup-button btn-popup-answer-video'>Answer Video</button>";
@@ -217,11 +251,75 @@ $(document).ready(function()
         $("#incoming_call_notification_area").append(html).show();
 	};
 
-    var initOTSession = function(OT_api_key,OT_session)
+	var hide_incoming_call_popup = function(uid)
+	{
+		 $("#id_incoming_call_popup_"+uid).remove();
+		 if(!$.trim($("#incoming_call_notification_area").html()))
+		 {
+		 	  $("#incoming_call_notification_area").hide();	
+		 }
+	};
+
+	var hide_outgoing_call_notification = function(uid)
+	{
+		$("#id_outgoing_call_popup_"+uid).remove();
+		if(!$.trim($("#outgoing_call_notification_area").html()))
+		{
+		    $("#outgoing_call_notification_area").hide();	
+		}
+		delete global_calling_timers[parseInt(uid)];
+
+        var timer_obj = timers[parseInt(uid)];
+
+        if(timer_obj)
+        {
+        	clearInterval(timer_obj);
+        }
+
+        delete timers[parseInt(uid)];
+	};
+
+	var outgoing_call_ui = function(uid,name)
+	{
+		 var html = "<div class=\"outgoing-call-popup\" id='id_outgoing_call_popup_"+ uid +"'>";
+             html += "<table>";
+             html += "  <tbody>";
+             html += "      <tr>";
+             html += "           <td style=\"width: 340px;padding: 10px;\">";
+             html += "               Calling "+ name;
+             html += "           </td>";
+             html += "           <td>";
+             html += "               <input type=\"hidden\" class=\"ougoing-call-hidden-uid\" value=\""+ uid +"\"/>";
+             html += "               <button class=\"btn btn-danger outgoing-call-cancel\" style=\"float: right;\">Cancel</button>";
+             html += "           </td>";
+             html += "       </tr>";
+             html += "   </tbody>";
+             html += "</table>";
+             html += "</div>";
+        return html;
+	};
+
+	var show_outgoing_call_notification = function(uid,name)
+	{
+		var html = outgoing_call_ui(uid,name);
+		$("#outgoing_call_notification_area").append(html).show();
+	}
+
+
+	var initOTSession = function(OT_api_key,OT_session)
     {
         if(OT_api_key != undefined && OT_session != undefined && ot_session == undefined)
         {
             ot_session = OT.initSession(OT_api_key, OT_session);
+
+            ot_session.on("streamDestroyed", function (event) {
+			  console.log("Stream stopped. Reason: " + event.reason);
+			});
+
+			ot_session.on("sessionConnected", function(event) {
+			   console.log("Session Initialized...");
+			 });
+
         }
     };
 
@@ -285,6 +383,30 @@ $(document).ready(function()
         });
     };
 
+    $(document).on("click",".outgoing-call-cancel",function(e)
+    {
+    	var uid = $(this).parent().find(".ougoing-call-hidden-uid").val();
+
+    	delete global_calling_timers[parseInt(uid)];
+
+        var timer_obj = timers[parseInt(uid)];
+
+        if(timer_obj)
+        {
+        	clearInterval(timer_obj);
+        }
+
+        delete timers[parseInt(uid)];
+
+        publish_call_event(uid,"","","call_ended","");
+
+    	$(this).parent().parent().parent().parent().parent().remove();
+    	if(!$.trim($("#outgoing_call_notification_area").html()))
+		{
+			$("#outgoing_call_notification_area").hide();
+		}
+    });
+
 	$(document).on("click",".champ_video_chat", function(e)
     {
         var tutor_id = $(this).parent().parent().parent().find(".tutor_uid").val();
@@ -295,11 +417,17 @@ $(document).ready(function()
         	tutor_img_url = "/static/images/profile_img.png";
         }
 
+        //Add timer obj to the global record.
+
         add_call_to_queue(tutor_id,tutor_name,tutor_img_url);
 
         calls[parseInt(tutor_id)] = true;
 
-        start_notification(tutor_id,tutor_name,tutor_img_url,"calling","");
+        show_outgoing_call_notification(tutor_id,tutor_name);
+
+        global_calling_timers[parseInt(tutor_id)] = 0;
+        var timer_obj = start_notification(tutor_id,tutor_name,tutor_img_url,"calling","","p2p");
+        timers[parseInt(tutor_id)] = timer_obj;
 
 
     });
@@ -317,12 +445,29 @@ $(document).ready(function()
 	$(document).on("click",".btn-popup-answer-video",function(e)
 	{
         var uid = $(this).parent().parent().find(".popup-uid").val();
-        publish_call_event(uid,"","","answer_video","");
-        $(this).parent().parent().remove();
-        console.log();
+        var call_type = $(this).parent().parent().find(".popup-call-type").val();
+        if(call_type == "p2p")
+        {
+        	publish_call_event(uid,"","","answer_video","",call_type);
+        	$(this).parent().parent().remove();
+        }
+        else
+        {
+        	var apikey = $(this).parent().parent().find(".popup-call-apikey").val();
+        	var otsession = $(this).parent().parent().find(".popup-call-otsession").val();
+        	var ottoken = $(this).parent().parent().find(".popup-call-ottoken").val();
+
+        	initOTSession(apikey,otsession);
+        	add_subscriber("id_video_section");
+        	connect_session(ottoken);
+
+        	publish_call_event(uid,"","","joined","",call_type);
+
+        }
+        
         if(!$.trim($("#incoming_call_notification_area").html()))
         {
-            $("#incoming_call_notification_area").remove();
+            $("#incoming_call_notification_area").hide();
         }
 	});
 
@@ -334,23 +479,24 @@ $(document).ready(function()
 		console.log();
 		if(!$.trim($("#incoming_call_notification_area").html()))
 		{
-			$("#incoming_call_notification_area").remove();
+			$("#incoming_call_notification_area").hide();
 		}
+		delete calls[parseInt(uid)];
 	});
 
     window.socket.on("on_sub_notif",function(response_data)
     {
-        console.log("Incoming message received.");
+        //console.log("Incoming message received.");
         console.log(response_data);
-        //console.log(data.callee.uid);
-        //var champ_user_id = {% if request.session.user_id %} {{ request.session.user_id }} {% endif %} -1 {% endif %};
+        
         if(parseInt(response_data.subscriber.uid)==window.champ_user_id)
         {
             if(response_data.msg == "calling")
             {
+                console.log(calls);
                 if(!calls.hasOwnProperty(response_data.publisher.uid))
                 {
-                	show_incoming_call_popup(response_data.publisher.uid,response_data.publisher.name,response_data.publisher.img);
+                	show_incoming_call_popup(response_data.publisher.uid,response_data.publisher.name,response_data.publisher.img,response_data.type,response_data.data);
                 	calls[response_data.publisher.uid] = true;
                 }
             }
@@ -358,13 +504,16 @@ $(document).ready(function()
             {
                 if(calls.hasOwnProperty(response_data.publisher.uid))
                 {
-                	stop_call_notification();
-                	delete calls[response_data.publisher.uid];
+                	// var time_obj = global_calling_timers[response_data.publisher.uid];
+                	// stop_call_notification(time_obj);
+                	// delete calls[response_data.publisher.uid];
+                	hide_outgoing_call_notification(response_data.publisher.uid);
                 }
             }
             else if(response_data.msg == "call_ended")
             {
-                
+                hide_incoming_call_popup(response_data.publisher.uid);
+                delete calls[response_data.publisher.uid];
             }
             else if(response_data.msg == "answer_video")
             {
@@ -394,6 +543,10 @@ $(document).ready(function()
 
                 });
             }
+            else if(response_data.msg == "joined")
+            {
+            	hide_outgoing_call_notification(response_data.publisher.uid);
+            }
             else if(response_data.msg == "start_session")
             {
                 add_call_to_queue(response_data.subscriber.uid,"Anonymous","");
@@ -408,5 +561,148 @@ $(document).ready(function()
             }
         }
     });
+
+
+		$(".add-group-buddy-call").tagit({
+            autocomplete: {
+                autoSelectFirst: true,
+                delay: 0, 
+                minLength: 2,
+                source: function(request, response) {
+                      var buddy_ids = [window.champ_user_id];
+
+                      $(".tagit-hidden-ids").each(function(i){
+                          buddy_ids.push(parseInt($(this).val()));
+                      });
+
+                      var buddy_ids_str = "";
+
+                      for(var i = 0 ; i < buddy_ids.length ; i++){
+                          if(i < buddy_ids.length - 1){
+                              buddy_ids_str += buddy_ids[i]+",";
+                          }
+                          else{
+                              buddy_ids_str += buddy_ids[i];
+                          }
+                      }
+
+                      $.ajax({
+                          url: "ajax/search_user",
+                          dataType: "json",
+                          data: {
+                              term: request.term,
+                              exclude: buddy_ids_str
+                          },
+                          success: function(data) {
+                              response(data);
+                          }
+                      });
+                  },
+                focus: function (event, ui) {
+                    $("#id_add_buddy_group_call").parent().find(".hidden-selected-val").val(ui.item.value);
+                    //console.log(_this_obj.chat_contnt.parent().find(".hidden-selected-val").val());
+                    ui.item.value = ui.item.label;
+                },
+                select: function( event, ui ) {
+                    
+                  },
+                create: function() {
+                    $(this).data('ui-autocomplete')._renderItem = function (ul, item) {
+                              return $("<li></li>")
+                                 .data("item.autocomplete", item)
+                                 .append("<a><div class='ui-menu-item-div' style='background:white;margin-top:1px;padding:4px;'><img src='"+ item.pimage +"' width='20' height='20' style='margin-right:10px;'/>" + item.label + "</div></a>")
+                                 .appendTo(ul);
+                               };                    
+                }
+              },
+              showAutocompleteOnFocus : true,
+              allowDuplicates : true,
+              animate: true,
+              allowSpaces: true,
+              tagLimit : 10,
+              placeholderText : "Type Name Here",
+              // Event callbacks.
+              beforeTagAdded : function(event,ui){
+                  console.log("Before Tag Added");
+                  console.log(ui);
+                  console.log("Before Tag Added done.");
+              },
+              afterTagAdded   : function(event,ui){
+                $("#id_add_buddy_group_call").parent().find(".hidden-selected-val").val("");
+              },
+              afterTagRemoved : function(event,ui){
+                
+              },
+              onTagClicked: function(event,ui){
+                //alert("Clicked!");
+              }
+        });
+
+		$("#id_add_buddy_to_group").click(function(e)
+        {
+              var buddy_ids = [];
+              $(".tagit-hidden-ids").each(function(i){
+                  buddy_ids.push(parseInt($(this).val()));
+              });
+              
+              if(buddy_ids.length == 0){
+                  $("#id_add_buddy_group_call").hide();
+              }
+              else{
+
+              		var uids = "";
+              		for(var i = 0; i < buddy_ids.length ; i++)
+              		{
+              			if(i < buddy_ids.length - 1)
+              			{
+              				uids += buddy_ids[i]+",";
+              			}
+              			else
+              			{
+              				uids += buddy_ids;
+              			}
+              		}
+
+	                request_ot_session_info(uids,function(msg) //Complete Callback.
+	                {
+
+	                },
+	                function(data) //Success Callback.
+	                {
+	                    for(var i = 0; i < buddy_ids.length ; i++)
+	                    {
+	                    	add_call_to_queue(buddy_ids[i],"Anonymous","","");
+
+					        calls[parseInt(buddy_ids[i])] = true;
+
+					        show_outgoing_call_notification(buddy_ids[i],"Anonymous");
+
+					        var otsession = data.otsession;
+					        var ot_api_key = data.ot_api_key;
+					        var ot_token = data[parseInt(buddy_ids[i])];
+
+					        var data_obj = {
+					        	"apikey": ot_api_key,
+					        	"otsession": otsession,
+					        	"ottoken": ot_token
+					        };
+
+					        global_calling_timers[parseInt(buddy_ids[i])] = 0;
+					        var timer_obj = start_notification(buddy_ids[i],"Anonymous","","calling",data_obj,"group");
+					        timers[parseInt(buddy_ids[i])] = timer_obj;
+					     }
+	                },function(jqxhr,status,errorthrown) //Error Callback.
+	                {
+
+	                });
+
+                    
+				   }	
+        });
+
+		$("a#hidee").click(function () {
+            $("#id_video_sharing_container").css("display","none");
+        });
+
 
 });

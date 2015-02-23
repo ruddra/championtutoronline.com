@@ -236,7 +236,7 @@ var on_socket_connection = function(socket)
                 var packet = data;
 
                 for(var j = 0 ; j < uids.length ; j++){
-                    io.to(uids[j]).emit("onchatmessage",packet);
+                    io.to(parseInt(uids[j])).emit("onchatmessage",packet);
                 }
             },
             function(){
