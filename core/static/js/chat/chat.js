@@ -699,21 +699,21 @@ var generateChatUUID = function(){
                 {
                     if(response_data.msg == "calling")
                     {
-                        call_obj.show_incoming_call_popup(response_data.publisher.uid,response_data.publisher.img,response_data.publisher.name);
-                        if(!sub_notif_timer)
-                        {
-                            var last_sub_received_since = new Date();
-                            sub_notif_timer = setInterval(function()
-                            {
-                                var currentTime = new Date();
-                                var diff = currentTime.getTime() - last_sub_received_since.getTime();
-                                console.log("Time difference: "+diff/1000);
-                                if(diff/1000 > 3)
-                                {
-                                    call_obj.end_incoming_call_popup();
-                                }
-                            }, 1000);
-                        }
+                        // call_obj.show_incoming_call_popup(response_data.publisher.uid,response_data.publisher.img,response_data.publisher.name);
+                        // if(!sub_notif_timer)
+                        // {
+                        //     var last_sub_received_since = new Date();
+                        //     sub_notif_timer = setInterval(function()
+                        //     {
+                        //         var currentTime = new Date();
+                        //         var diff = currentTime.getTime() - last_sub_received_since.getTime();
+                        //         console.log("Time difference: "+diff/1000);
+                        //         if(diff/1000 > 3)
+                        //         {
+                        //             call_obj.end_incoming_call_popup();
+                        //         }
+                        //     }, 1000);
+                        // }
                     }
                     else if(response_data.msg == "call_rejected")
                     {
