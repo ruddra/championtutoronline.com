@@ -25,6 +25,8 @@ $(document).ready(function()
 
     var max_calling_time_limit = 60000; //60 seconds.
 
+    var ot_session_id;
+
 	function generateUUID(){
 	    var d = new Date().getTime();
 	    var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
@@ -353,12 +355,16 @@ $(document).ready(function()
         //resize_video_window();
     };
 
-    var request_ot_session_info = function(uids,completeback,callback,errback) //uids are comma separated. like 1,2,3
+    var request_ot_session_info = function(uids,session,completeback,callback,errback) //uids are comma separated. like 1,2,3
     {
+        if(session == undefined)
+        {
+        	session = "";
+        }
         $.ajax({
             type: "GET",
             url: "/ajax/initsession",
-            data: { "uids": uids },
+            data: { "uids": uids, "ot_session": session },
             success: function(data)
             {
                 if(callback != undefined && typeof callback == "function")
@@ -429,7 +435,6 @@ $(document).ready(function()
         var timer_obj = start_notification(tutor_id,tutor_name,tutor_img_url,"calling","","p2p");
         timers[parseInt(tutor_id)] = timer_obj;
 
-
     });
 
     $(document).on("click",".close_incoming_popup", function(e)
@@ -457,11 +462,19 @@ $(document).ready(function()
         	var otsession = $(this).parent().parent().find(".popup-call-otsession").val();
         	var ottoken = $(this).parent().parent().find(".popup-call-ottoken").val();
 
+        	console.log("API KEY: " + apikey);
+        	console.log("OT Session: " + otsession);
+        	console.log("OT Token: " + ottoken);
+
+        	add_call_to_queue(uid,"Anonymous","");
+
         	initOTSession(apikey,otsession);
         	add_subscriber("id_video_section");
         	connect_session(ottoken);
 
         	publish_call_event(uid,"","","joined","",call_type);
+
+        	hide_incoming_call_popup(parseInt(uid));
 
         }
         
@@ -520,7 +533,7 @@ $(document).ready(function()
                 stop_call_notification();
                 var callee_id = response_data.publisher.uid;
                 var uids = window.champ_user_id+","+callee_id;
-                request_ot_session_info(uids,function(msg) //Complete Callback.
+                request_ot_session_info(uids,ot_session_id,function(msg) //Complete Callback.
                 {
 
                 },
@@ -535,6 +548,8 @@ $(document).ready(function()
                         "ot_session":data.otsession,
                         "ottoken": data[response_data.publisher.uid]
                     }
+                    ot_session_id = data.otsession;
+                    hide_outgoing_call_notification(response_data.publisher.uid);
                     publish_call_event(response_data.publisher.uid,"","","start_session",_data);
                     add_subscriber("id_video_section");
                     connect_session(data[parseInt(window.champ_user_id)]);
@@ -663,7 +678,7 @@ $(document).ready(function()
               			}
               		}
 
-	                request_ot_session_info(uids,function(msg) //Complete Callback.
+	                request_ot_session_info(uids,ot_session_id,function(msg) //Complete Callback.
 	                {
 
 	                },
@@ -680,6 +695,8 @@ $(document).ready(function()
 					        var otsession = data.otsession;
 					        var ot_api_key = data.ot_api_key;
 					        var ot_token = data[parseInt(buddy_ids[i])];
+
+					        ot_session_id = otsession;
 
 					        var data_obj = {
 					        	"apikey": ot_api_key,

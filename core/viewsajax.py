@@ -117,9 +117,10 @@ class VideoSessionTokens(View):
         ###Now read the ot session from ot_session table and then request a token id.
         #print request.GET.get("uids[]")
         uids = request.GET.get("uids")
+        otsession = request.GET.get("ot_session")
         uids = uids.split(",")
         uids = [uid for uid in uids if uid]
-        tokens = otlib.generate_ot_tokens(uids)
+        tokens = otlib.generate_ot_tokens(user_ids=uids,otsession=otsession)
         return HttpResponse(json.dumps(tokens), content_type="application/json")
 
 class VideoSessionStart(View):
