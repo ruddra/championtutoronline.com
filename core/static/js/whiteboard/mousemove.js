@@ -299,15 +299,13 @@ var event_mouse_move = function(e)
               lastDrawnTime = new Date();
             }
         }
+        else if(whiteboard.selected_tool.name == "Select")
+        {
+            whiteboard.drawing_action.redraw(e);
+        }
     }
     else{
-      var px = e.pageX;
-      var py = e.pageY;
-      //console.log(px+" "+py);
-      if(whiteboard.selected_tool.name == "Rectangle")
-      {
-
-      }
+        whiteboard.drawing_action.redraw(e);
     }
 
     var offX = $("#drawing_board").offset().left;
