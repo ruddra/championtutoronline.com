@@ -25,7 +25,9 @@ $(document).ready(function()
 
     var max_calling_time_limit = 60000; //60 seconds.
 
+    var call_active = false;
     var ot_session_id;
+    var publisher;
 
 	function generateUUID(){
 	    var d = new Date().getTime();
@@ -292,7 +294,15 @@ $(document).ready(function()
              html += "           </td>";
              html += "           <td>";
              html += "               <input type=\"hidden\" class=\"ougoing-call-hidden-uid\" value=\""+ uid +"\"/>";
-             html += "               <button class=\"btn btn-danger outgoing-call-cancel\" style=\"float: right;\">Cancel</button>";
+        if(!call_active)
+        {
+            html += "               <button class=\"btn btn-danger outgoing-call-cancel\" style=\"float: right;\">Cancel</button>";
+        }
+        else
+        {
+            //html += "               <button class=\"btn btn-primary outgoing-call-cancel\" style=\"position:relative;float: right;right: 120px;\">Add To Group</button>";
+            html += "               <button class=\"btn btn-danger outgoing-call-cancel\" style=\"float: right;\">Cancel</button>";
+        }
              html += "           </td>";
              html += "       </tr>";
              html += "   </tbody>";
@@ -325,35 +335,178 @@ $(document).ready(function()
         }
     };
 
-    var add_subscriber = function(id_vid_ui_element)
+    var SpeakerDetection = function(subscriber, startTalking, stopTalking) {
+        var activity = null;
+        subscriber.on('audioLevelUpdated', function(event) {
+            var now = Date.now();
+            if (event.audioLevel > 0.2) {
+                if (!activity) {
+                    activity = {timestamp: now, talking: false};
+                } else if (activity.talking) {
+                    activity.timestamp = now;
+                } else if (now- activity.timestamp > 1000) {
+                    // detected audio activity for more than 1s
+                    // for the first time.
+                    activity.talking = true;
+                    if (typeof(startTalking) === 'function') {
+                        startTalking();
+                    }
+                }
+            } else if (activity && now - activity.timestamp > 3000) {
+                // detected low audio activity for more than 3s
+                if (activity.talking) {
+                    if (typeof(stopTalking) === 'function') {
+                        stopTalking();
+                    }
+                }
+                activity = null;
+            }
+        });
+    };
+
+    var add_subscriber = function()
     {
         if(ot_session)
         {
             console.log("Inside add_subscriber method.");
             ot_session.on('streamCreated', function(event) {
                 //var subscriberProperties = {insertMode: 'append'};
-                ot_session.subscribe(event.stream, "id_video_section", {
+                var subscriber = ot_session.subscribe(event.stream, "id_video_section", {
                     insertMode: "append"
                 });
+
+                var subscriber_DOM_id = subscriber.id;
+                var subscriber_DOM_element = subscriber.element;
+                var subscriber_stream = subscriber.stream;
+
+                if (subscriber.stream.hasVideo) {
+                    var imgData = subscriber.getImgData();
+                    subscriber.setStyle('backgroundImageURI', imgData);
+                } else {
+                    subscriber.setStyle('backgroundImageURI',
+                        'http://tokbox.com/img/styleguide/tb-colors-cream.png'
+                    );
+                };
+                SpeakerDetection(subscriber, function() {
+                    console.log('started talking');
+                    $("#"+subscriber_DOM_id).css("border","1px solid green");
+                }, function() {
+                    console.log('stopped talking');
+                    $("#"+subscriber_DOM_id).css("border","none");
+                });
+
+                subscriber.on({
+                    videoDisabled: function(event)
+                    {
+                        console.log("Video disabled.");
+                        console.log(event.reason);
+                        subscriber.setStyle('backgroundImageURI',
+                            'http://tokbox.com/img/styleguide/tb-colors-cream.png'
+                        );
+                    },
+                    videoEnabled: function(event)
+                    {
+                        console.log("Video enabled.");
+                        console.log(event.reason);
+                        var imgData = subscriber.getImgData();
+                        subscriber.setStyle('backgroundImageURI', imgData);
+                    }
+                });
+
                 layout();
             });
         }
     };
 
+    var resizePublisher = function(pub_obj,width,height) {
+        var pubElement = document.getElementById(pub_obj.id);
+        pubElement.style.width = width+"px";
+        pubElement.style.height = height+"px";
+    }
+
     var connect_session = function(token)
     {
         if(ot_session)
         {
+            var audioInputDevices;
+            var videoInputDevices;
+            OT.getDevices(function(error, devices) {
+                audioInputDevices = devices.filter(function(element) {
+                    return element.kind == "audioInput";
+                });
+                videoInputDevices = devices.filter(function(element) {
+                    return element.kind == "videoInput";
+                });
+                for (var i = 0; i < audioInputDevices.length; i++) {
+                    console.log("audio input device: ", audioInputDevices[i].deviceId);
+                }
+                for (i = 0; i < videoInputDevices.length; i++) {
+                    console.log("video input device: ", videoInputDevices[i].deviceId);
+                }
+            });
+
             console.log("OT TOKEN: "+token);
             ot_session.connect(token, function(error) {
                 console.log(error);
-                var publisher = OT.initPublisher("myVideo",{width:$("#myVideo").width(), height:$("#myVideo").height()});
+
+//                var pubOptions =
+//                {
+//                    audioSource: audioInputDevices[0].deviceId,
+//                    videoSource: videoInputDevices[0].deviceId,
+//                    width:$("#myVideo").width(),
+//                    height:$("#myVideo").height()
+//                };
+
+                var pubOptions =
+                {
+                    width:$("#myVideo").width(),
+                    height:$("#myVideo").height(),
+                    buttonDisplayMode:"off"
+                };
+
+                publisher = OT.initPublisher("myVideo",pubOptions,function(error)
+                {
+                    console.log("OT.initPublisher error! :(");
+                });
                 //console.log(publisher);
+                publisher.on({
+                    accessAllowed: function (event) {
+                        // The user has granted access to the camera and mic.
+                        console.log("Camera permission granted.");
+                    },
+                    accessDenied: function (event) {
+                        // The user has denied access to the camera and mic.
+                        console.log("Camera permission denied.");
+                    },
+                    accessDialogOpened: function (event) {
+                        // The Allow/Deny dialog box is opened.
+                        console.log("Access dialog opened.");
+                    },
+                    accessDialogClosed: function (event) {
+                    // The Allow/Deny dialog box is closed.
+                        console.log("Access dialog closed.");
+                    },
+                    streamCreated:  function (event) {
+                        console.log('The publisher started streaming.');
+                    },
+                    streamDestroyed : function (event) {
+                        console.log("The publisher stopped streaming. Reason: "
+                            + event.reason);
+                    }
+                });
+
                 ot_session.publish(publisher);
             });
         }
         //resize_video_window();
     };
+
+    var startOpenTokSession = function(OT_api_key,OT_session,OT_token)
+    {
+        initOTSession(OT_api_key,OT_session);
+        add_subscriber();
+        connect_session(OT_token);
+    }
 
     var request_ot_session_info = function(uids,session,completeback,callback,errback) //uids are comma separated. like 1,2,3
     {
@@ -468,13 +621,17 @@ $(document).ready(function()
 
         	add_call_to_queue(uid,"Anonymous","");
 
-        	initOTSession(apikey,otsession);
-        	add_subscriber("id_video_section");
-        	connect_session(ottoken);
+        	//initOTSession(apikey,otsession);
+        	//add_subscriber("id_video_section");
+        	//connect_session(ottoken);
+
+            startOpenTokSession(apikey,otsession,ottoken);
 
         	publish_call_event(uid,"","","joined","",call_type);
 
         	hide_incoming_call_popup(parseInt(uid));
+
+            $(this).parent().parent().remove();
 
         }
         
@@ -540,7 +697,7 @@ $(document).ready(function()
                 function(data) //Success Callback.
                 {
                     console.log(data);
-                    initOTSession(data.ot_api_key,data.otsession);
+                    //initOTSession(data.ot_api_key,data.otsession);
                     console.log("OT Session created.");
                     console.log("Adding subscriber...");
                     var _data = {
@@ -551,8 +708,10 @@ $(document).ready(function()
                     ot_session_id = data.otsession;
                     hide_outgoing_call_notification(response_data.publisher.uid);
                     publish_call_event(response_data.publisher.uid,"","","start_session",_data);
-                    add_subscriber("id_video_section");
-                    connect_session(data[parseInt(window.champ_user_id)]);
+                    //add_subscriber("id_video_section");
+                    //connect_session(data[parseInt(window.champ_user_id)]);
+                    call_active = true;
+                    startOpenTokSession(data.ot_api_key,data.otsession,data[response_data.publisher.uid]);
                 },function(jqxhr,status,errorthrown) //Error Callback.
                 {
 
@@ -568,10 +727,11 @@ $(document).ready(function()
                 var ot_api_key = response_data.data.ot_api_key;
                 var otsession = response_data.data.ot_session;
                 var ottoken = response_data.data.ottoken;
-                initOTSession(ot_api_key,otsession);
+                //initOTSession(ot_api_key,otsession);
                 console.log("OT Session created.");
-                add_subscriber("id_video_section");
-                connect_session(ottoken);
+                //add_subscriber("id_video_section");
+                //connect_session(ottoken);
+                startOpenTokSession(ot_api_key,otsession,ottoken);
                 calls[parseInt(response_data.subscriber.uid)] = true;
             }
         }
@@ -717,8 +877,39 @@ $(document).ready(function()
 				   }	
         });
 
-		$("a#hidee").click(function () {
-            $("#id_video_sharing_container").css("display","none");
+		$("#myonoffswitch4").click(function (e) {
+            var toggle_value = $(this).val();
+            if(toggle_value == "on")
+            {
+                console.log("Toggle value on");
+                $(this).val("off");
+            }
+            else
+            {
+                console.log("Toggle value off");
+                $(this).val("on");
+            }
+        });
+
+
+        $("#myonoffswitch3").click(function(e)
+        {
+            var toggle_value = $(this).val();
+            if(toggle_value == "on")
+            {
+                console.log("Toggle value on");
+                $(this).val("off");
+                if(publisher != undefined)
+                {
+                    publisher.publishVideo(true);
+                }
+            }
+            else
+            {
+                console.log("Toggle value off");
+                $(this).val("on");
+                publisher.publishVideo(false);
+            }
         });
 
 

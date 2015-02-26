@@ -254,8 +254,8 @@
             $("#incoming_call_notification_area").css("cursor","move");
             $("#incoming_call_notification_area").draggable();
 
-            $("#id_video_sharing_container").css("cursor","move");
-            $("#id_video_sharing_container").draggable();
+            $(".sharing_video").css("cursor","move");
+            $(".sharing_video").draggable();
 
             $("#outgoing_call_notification_area").css("cursor","move");
             $("#outgoing_call_notification_area").draggable();
@@ -337,7 +337,7 @@
                             <span class="online"><img width="12" height="12" alt="img" src="{% static "images/online.png" %}"></span>
                             Audio/Video Sharing
                             <a id="hidee" href="#"> <img width="15" height="9" alt="img" src="{% static "images/hide_icon.png" %}"> </a>
-                            <a id="id_add_buddy_to_call_group" href="#"> <img width="15" height="9" alt="img" src="{% static "images/blue_pls.png" %}"> </a>
+                            <a id="id_add_buddy_to_call_group" style="" href="#"> <img width="15" height="9" alt="img" src="{% static "images/blue_pls.png" %}"> </a>
                         </div>
                         <div id="id_add_buddy_group_call" class="add_buddy_group_call">
                             <input type='hidden' class='hidden-selected-val'/>
