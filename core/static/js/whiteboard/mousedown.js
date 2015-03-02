@@ -74,6 +74,10 @@ var event_mouse_down = function(e)
             whiteboard.selected_tool.points.push(cpoint.X);
             whiteboard.selected_tool.points.push(cpoint.Y);
         }
+        else if(whiteboard.selected_tool.name == "Move")
+        {
+            console.log("Selected tool is Move");
+        }
 
         //Send stream to the server.
         var whiteboard_state = {

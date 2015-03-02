@@ -280,6 +280,8 @@ Tools.prototype._axis = function(){
     this.start_point = [];
     this.end_point = [];
     this.points = [];
+    this.local_off_x = -1;
+    this.local_off_y = -1;
     
     this.reset_tool = function(){
         //this.color = "#1c1f21";
@@ -296,6 +298,12 @@ Tools.prototype._axis = function(){
 Tools.prototype._axis.prototype = new Anchor();
 
 Tools.prototype.Axis = function(){return new this._axis()}
+
+Tools.prototype._move = function(){
+    this.name = "Move";
+}
+
+Tools.prototype.Move = function(){return new this._move()}
 
 Tools.prototype._arrow = function(){
     this.name = "Arrow";

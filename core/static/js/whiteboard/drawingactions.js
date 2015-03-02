@@ -756,7 +756,7 @@ whiteboard.drawing_action.change_board_cursor = function(anchor_name)
      }
      else
      {
-         $("#drawing_board").css("cursor","default");
+         $("#drawing_board").css("cursor","auto");
      }
 };
 
@@ -925,39 +925,57 @@ whiteboard.drawing_action.redraw = function(e,drag_state){
                         active = drawn_object.check_if_hit(e.pageX - offX,e.pageY - offY);
                     }
                     
-                    if(active && !object_found)
+                    if(!object_found)
                     {
-                        drawn_object.calculate_anchors();
-                        var anchors = drawn_object.anchors;
-
-                        console.log(anchors);
-
-                        var anchor_radius = drawn_object.anchor_circle_size;
-
-                        var draw_unit = false;
-                        if(drawn_object.show_unit)
+                        if(active)
                         {
-                            draw_unit = true;
-                        }
-                        if(drawn_object.arrow_dir == 1)
-                        {
-                            whiteboard.drawing_action.draw_axis_1(drawn_object.points, draw_unit,active,anchors,anchor_radius,true,drawn_object.anchor_fill_color);
-                        }
-                        else if(drawn_object.arrow_dir == 2)
-                        {
-                            whiteboard.drawing_action.draw_axis_2(drawn_object.points, draw_unit,active,anchors,anchor_radius,true,drawn_object.anchor_fill_color);
-                        }
+                            whiteboard.selected_tool = whiteboard.tools.Move();
+                            $("#drawing_board").css("cursor","move");
+                            drawn_object.calculate_anchors();
+                            var anchors = drawn_object.anchors;
 
-                        var anchor_hit = drawn_object.which_anchor(e.pageX - offX,e.pageY - offY);
+                            console.log(anchors);
 
-                        //console.log("Anchor: "+anchor_hit.name);
+                            var anchor_radius = drawn_object.anchor_circle_size;
 
-                        if(anchor_hit != undefined)
-                        {
-                            whiteboard.drawing_action.change_board_cursor(anchor_hit.name);
-                        }
+                            var draw_unit = false;
+                            if(drawn_object.show_unit)
+                            {
+                                draw_unit = true;
+                            }
+                            if(drawn_object.arrow_dir == 1)
+                            {
+                                whiteboard.drawing_action.draw_axis_1(drawn_object.points, draw_unit,active,anchors,anchor_radius,true,drawn_object.anchor_fill_color);
+                            }
+                            else if(drawn_object.arrow_dir == 2)
+                            {
+                                whiteboard.drawing_action.draw_axis_2(drawn_object.points, draw_unit,active,anchors,anchor_radius,true,drawn_object.anchor_fill_color);
+                            }
+
+                            var anchor_hit = drawn_object.which_anchor(e.pageX - offX,e.pageY - offY);
+
+                            //console.log("Anchor: "+anchor_hit.name);
+
+                            if(anchor_hit != undefined)
+                            {
+                                whiteboard.drawing_action.change_board_cursor(anchor_hit.name);
+                            }
+                        } 
                         else
                         {
+                            var draw_unit = false;
+                            if(drawn_object.show_unit)
+                            {
+                                draw_unit = true;
+                            }
+                            if(drawn_object.arrow_dir == 1)
+                            {
+                                whiteboard.drawing_action.draw_axis_1(drawn_object.points, draw_unit);
+                            }
+                            else if(drawn_object.arrow_dir == 2)
+                            {
+                                whiteboard.drawing_action.draw_axis_2(drawn_object.points, draw_unit);
+                            }
                             whiteboard.drawing_action.change_board_cursor("Reset");
                         }
 
