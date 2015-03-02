@@ -165,6 +165,22 @@ var Anchor = function()
         }
     };
 
+    this.draw_anchors = function()
+    {
+        if(this.active)
+        {
+            console.log("Inside Active...");
+            for(var i = 0 ; i < this.anchors ; i++)
+            {
+                if(this.anchor_circle_size > 0 && this.anchor_circle_size < 1000)
+                {
+                    console.log("Drawing Anchor...");
+                    whiteboard.drawing_action.drawAnchor(this.anchors[i].points[0],this.anchors[i].points[1],this.anchor_circle_size,true,this.anchor_fill_color);
+                }
+            }
+        }
+    };
+
     this.check_if_hit = function(ex,ey){
         var p1 = [this.area_points[0],this.area_points[1]];
         var p2 = [this.area_points[2],this.area_points[3]];
@@ -236,6 +252,8 @@ Tools.prototype._line = function(){
     this.arrow_end = 1; //1 means near end, 2 means far end, 3 means both end.
     this.arrow_angle = Math.PI/4;
     this.arrow_d = 10;
+    this.local_offset_x = -1;
+    this.local_offset_y = -1;
 };
 
 Tools.prototype._line.prototype = new Anchor();

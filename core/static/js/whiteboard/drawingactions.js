@@ -807,8 +807,13 @@ whiteboard.drawing_action.redraw = function(e,drag_state){
             else if(dobj_name == "Line")
             {
                 //The object to be drawn is Line.
+                //console.log(drawn_object);
                 whiteboard.context.strokeStyle = whiteboard.canvas_data_stack[i].color;
                 whiteboard.drawing_action.draw_points(drawn_object.points);
+                //whiteboard.drawing_action.draw_points(drawn_object.area_points);
+                drawn_object.calculate_anchors();
+                drawn_object.draw_anchors();
+
             }
             else if(dobj_name == "Polygon")
             {

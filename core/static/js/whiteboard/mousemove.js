@@ -305,6 +305,7 @@ var event_mouse_move = function(e)
         }
     }
     else{
+        whiteboard.update_tools(e);
         whiteboard.drawing_action.redraw(e);
     }
 
