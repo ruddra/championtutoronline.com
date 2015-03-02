@@ -119,8 +119,8 @@
     {
         width: 300px;
         height: 250px;
-        bottom: 96px;
-    }
+        bottom: 63px;
+        left: 3px;    }
 
     .video_section
     {
@@ -336,7 +336,7 @@
                         <div class="chat_header">
                             <span class="online"><img width="12" height="12" alt="img" src="{% static "images/online.png" %}"></span>
                             Audio/Video Sharing
-                            <a id="hidee" href="#"> <img width="15" height="9" alt="img" src="{% static "images/hide_icon.png" %}"> </a>
+                            <a id="id_hide_video_window" href="#"> <img width="15" height="9" alt="img" src="{% static "images/hide_icon.png" %}"> </a>
                             <a id="id_add_buddy_to_call_group" href="#"> <img width="15" height="9" alt="img" src="{% static "images/blue_pls.png" %}"> </a>
                         </div>
                         <div id="id_add_buddy_group_call" class="add_buddy_group_call">
@@ -692,6 +692,27 @@
             $("ul.ui-tabs-nav").hide();
             $(".show_menu_icon").show();
         });
+
+        $(document).ready(function()
+        {
+            $("ul.ui-tabs-nav").show();
+            $(".show_menu_icon").hide();
+
+            $("#id_hide_video_window").click(function(e)
+            {
+                // $("#id_video_sharing_container").hide();
+                // $("#id_video_sharing_container").children().hide();
+                //$(this).parent().show();
+                //$(this).parent().children().show();
+            });
+
+            $(".onoffswitch4").click(function()
+            {
+                //alert($(this).val());
+            });
+
+        });
+
     </script>
     <script>
         $(".sharing").click(function () {
