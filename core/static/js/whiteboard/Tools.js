@@ -151,26 +151,28 @@ var Anchor = function()
 
         }
     };
-    this.which_anchors_clicked = function(ex,ey){
+    this.which_anchor = function(ex,ey){
         for(var i = 0 ; i < this.anchors.length ; i++){
             var left = this.anchors[i].points[0] - this.anchor_circle_size;
             var right = this.anchors[i].points[0] + this.anchor_circle_size;
             var top = this.anchors[i].points[1] - this.anchor_circle_size;
             var bottom = this.anchors[i].points[1] + this.anchor_circle_size;
-
-            if(ex >= left && ex <= right && ey <= top && ey >= bottom){
-                return this.anchors;
+            console.log(left+" "+right+" "+top+" "+bottom);
+            console.log(ex+" "+ey)
+            if(ex >= left && ex <= right && ey >= top && ey <= bottom){
+                return this.anchors[i];
             }
         }
     };
 
-    this.check_if_clicked = function(ex,ey){
+    this.check_if_hit = function(ex,ey){
         var p1 = [this.area_points[0],this.area_points[1]];
         var p2 = [this.area_points[2],this.area_points[3]];
         var p3 = [this.area_points[4],this.area_points[5]];
         var p4 = [this.area_points[6],this.area_points[7]];
         return ex >= p1[0] && ex <= p2[0] && ey >= p1[1] && ey <= p3[1];
     };
+
     return this;
 };
 

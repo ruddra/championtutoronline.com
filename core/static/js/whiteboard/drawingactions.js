@@ -720,7 +720,47 @@ whiteboard.drawing_action.draw_axis_2 = function(points,show_unit,active,anchors
 
 };
 
-whiteboard.drawing_action.redraw = function(e){
+whiteboard.drawing_action.change_board_cursor = function(anchor_name)
+{
+     if(anchor_name == "TopLeft")
+     {
+         $("#drawing_board").css("cursor","nw-resize");
+     }
+     else if(anchor_name == "TopMiddle")
+     {
+         $("#drawing_board").css("cursor","n-resize");
+     }
+     else if(anchor_name == "TopRight")
+     {
+         $("#drawing_board").css("cursor","ne-resize");
+     }
+     else if(anchor_name == "RightMiddle")
+     {
+         $("#drawing_board").css("cursor","e-resize");
+     }
+     else if(anchor_name == "BottomRight")
+     {
+         $("#drawing_board").css("cursor","nw-resize");
+     }
+     else if(anchor_name == "BottomMiddle")
+     {
+         $("#drawing_board").css("cursor","ns-resize");
+     }
+     else if(anchor_name == "BottomLeft")
+     {
+         $("#drawing_board").css("cursor","nesw-resize");
+     }
+     else if(anchor_name == "LeftMiddle")
+     {
+         $("#drawing_board").css("cursor","ew-resize");
+     }
+     else
+     {
+         $("#drawing_board").css("cursor","default");
+     }
+};
+
+whiteboard.drawing_action.redraw = function(e,drag_state){
         
         var offX = $("#drawing_board").offset().left;
         var offY = $("#drawing_board").offset().top;
@@ -731,8 +771,10 @@ whiteboard.drawing_action.redraw = function(e){
 
         var selected_tool_tmp = whiteboard.selected_tool;
 
+        var object_found = false;
+
         //Whiteboard is cleaned. Now draw the stack in order.
-        for(var i = 0 ; i < whiteboard.canvas_data_stack.length ; i++)
+        for(var i = whiteboard.canvas_data_stack.length - 1 ; i >= 0 ; i--)
         {
             whiteboard.context.save();
 
@@ -800,7 +842,7 @@ whiteboard.drawing_action.redraw = function(e){
                         drawn_object.area_points.push(p4[1]);
 
 
-                        active = drawn_object.check_if_clicked(e.pageX - offX,e.pageY - offY);
+                        active = drawn_object.check_if_hit(e.pageX - offX,e.pageY - offY);
                     }
                     
 
@@ -880,10 +922,10 @@ whiteboard.drawing_action.redraw = function(e){
                     if(e != undefined)
                     {
                         drawn_object.area_points = drawn_object.points;
-                        active = drawn_object.check_if_clicked(e.pageX - offX,e.pageY - offY);
+                        active = drawn_object.check_if_hit(e.pageX - offX,e.pageY - offY);
                     }
                     
-                    if(active)
+                    if(active && !object_found)
                     {
                         drawn_object.calculate_anchors();
                         var anchors = drawn_object.anchors;
@@ -906,6 +948,20 @@ whiteboard.drawing_action.redraw = function(e){
                             whiteboard.drawing_action.draw_axis_2(drawn_object.points, draw_unit,active,anchors,anchor_radius,true,drawn_object.anchor_fill_color);
                         }
 
+                        var anchor_hit = drawn_object.which_anchor(e.pageX - offX,e.pageY - offY);
+
+                        //console.log("Anchor: "+anchor_hit.name);
+
+                        if(anchor_hit != undefined)
+                        {
+                            whiteboard.drawing_action.change_board_cursor(anchor_hit.name);
+                        }
+                        else
+                        {
+                            whiteboard.drawing_action.change_board_cursor("Reset");
+                        }
+
+                        object_found = true;
                     }
                     else
                     {
@@ -922,10 +978,8 @@ whiteboard.drawing_action.redraw = function(e){
                         {
                             whiteboard.drawing_action.draw_axis_2(drawn_object.points, draw_unit);
                         }
-                        // else
-                        // {
-                        //     whiteboard.drawing_action.draw_axis(drawn_object.points, draw_unit);
-                        // }
+
+                        //whiteboard.drawing_action.change_board_cursor("Reset");
                     }
                     
 
