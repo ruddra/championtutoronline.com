@@ -2,14 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caa75f8d-ed1c-404a-911e-d8d55024ca60" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\Projects\Github\DJango Projects\saltwaterfish\misc\css3\saltwaterfish-mastercategory.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\Github\DJango Projects\saltwaterfish\misc\google96c3231dd6aac3ed.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/src/django-nonrel" afterPath="$PROJECT_DIR$/../saltwaterfish/src/django-nonrel" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/comments/templates/comments/400-debug.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/comments/templates/comments/400-debug.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/comments/templates/comments/400-debug.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/comments/templates/comments/400-debug.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/comments/templates/comments/400-debug.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/comments/templates/comments/400-debug.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/404.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/404.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/flatpages/tests/templates/404.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/flatpages/tests/templates/404.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/formtools/tests/templates/404.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/formtools/tests/templates/404.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/404.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/404.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/flatpages/tests/templates/404.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/flatpages/tests/templates/404.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/formtools/tests/templates/404.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/formtools/tests/templates/404.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/404.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/404.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/404.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/404.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/500.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/500.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/500.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/500.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/500.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/500.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/500.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/500.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/socketioserver1/node_modules/express-mysql-session/node_modules/mysql-connection-manager/node_modules/mysql/node_modules/bignumber.js/doc/API.html" afterPath="$PROJECT_DIR$/nodejs/socketioserver1/node_modules/express-mysql-session/node_modules/mysql-connection-manager/node_modules/mysql/node_modules/bignumber.js/doc/API.html" />
@@ -29,7 +37,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/EstimatedOrderDetails.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/EstimatedOrderDetails.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/EstimatedOrderDetailsNew.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/EstimatedOrderDetailsNew.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/FedexLocations.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/FedexLocations.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/socketioserver/database/MySQL.js" afterPath="$PROJECT_DIR$/nodejs/socketioserver/database/MySQL.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/NearestFedexLoccations - Copy.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/NearestFedexLoccations - Copy.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/NearestFedexLoccations.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/NearestFedexLoccations.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation 20-01-2014.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation 20-01-2014.html" />
@@ -70,11 +77,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ViewCart_bkp_0713.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ViewCart_bkp_0713.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ViewCart_bkp_12.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ViewCart_bkp_12.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/actions.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/actions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/actions.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/actions.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/actions.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/actions.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/add-product.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/add-product.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/add-to-order.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/add-to-order.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/add_email_pages.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/add_email_pages.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/auth/user/add_form.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/auth/user/add_form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/auth/user/add_form.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/auth/user/add_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/auth/user/add_form.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/auth/user/add_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/add_html_content.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/add_html_content.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/add_product_option_menu.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/add_product_option_menu.html" />
@@ -112,34 +121,49 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_promotion_rules_categories_dialog.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_promotion_rules_categories_dialog.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/lingo/support/expresso/docs/api.html" afterPath="$PROJECT_DIR$/nodejs/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/lingo/support/expresso/docs/api.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/app_index.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/app_index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/app_index.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/app_index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/app_index.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/app_index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/comments/templates/comments/approve.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/comments/templates/comments/approve.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/comments/templates/comments/approve.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/comments/templates/comments/approve.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/comments/templates/comments/approve.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/comments/templates/comments/approve.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/comments/templates/comments/approved.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/comments/templates/comments/approved.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/comments/templates/comments/approved.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/comments/templates/comments/approved.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/comments/templates/comments/approved.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/comments/templates/comments/approved.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/context_processors/auth_attrs_access.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/context_processors/auth_attrs_access.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/context_processors/auth_attrs_access.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/context_processors/auth_attrs_access.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/auth/tests/templates/context_processors/auth_attrs_access.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/auth/tests/templates/context_processors/auth_attrs_access.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/context_processors/auth_attrs_messages.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/context_processors/auth_attrs_messages.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/context_processors/auth_attrs_messages.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/context_processors/auth_attrs_messages.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/auth/tests/templates/context_processors/auth_attrs_messages.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/auth/tests/templates/context_processors/auth_attrs_messages.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/context_processors/auth_attrs_no_access.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/context_processors/auth_attrs_no_access.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/context_processors/auth_attrs_no_access.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/context_processors/auth_attrs_no_access.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/auth/tests/templates/context_processors/auth_attrs_no_access.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/auth/tests/templates/context_processors/auth_attrs_no_access.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/context_processors/auth_attrs_perm_in_perms.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/context_processors/auth_attrs_perm_in_perms.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/context_processors/auth_attrs_perm_in_perms.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/context_processors/auth_attrs_perm_in_perms.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/context_processors/auth_attrs_perms.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/context_processors/auth_attrs_perms.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/context_processors/auth_attrs_perms.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/context_processors/auth_attrs_perms.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/auth/tests/templates/context_processors/auth_attrs_perms.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/auth/tests/templates/context_processors/auth_attrs_perms.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/context_processors/auth_attrs_test_access.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/context_processors/auth_attrs_test_access.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/context_processors/auth_attrs_test_access.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/context_processors/auth_attrs_test_access.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/auth/tests/templates/context_processors/auth_attrs_test_access.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/auth/tests/templates/context_processors/auth_attrs_test_access.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/context_processors/auth_attrs_user.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/context_processors/auth_attrs_user.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/context_processors/auth_attrs_user.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/context_processors/auth_attrs_user.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/auth/tests/templates/context_processors/auth_attrs_user.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/auth/tests/templates/context_processors/auth_attrs_user.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/banners_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/banners_search_results.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/base.html" afterPath="$PROJECT_DIR$/core/templates/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/base.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/comments/templates/comments/base.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/comments/templates/comments/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/formtools/tests/templates/base.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/formtools/tests/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/base.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/comments/templates/comments/base.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/comments/templates/comments/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/formtools/tests/templates/base.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/formtools/tests/templates/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/base.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/comments/templates/comments/base.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/comments/templates/comments/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/databrowse/templates/databrowse/base.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/databrowse/templates/databrowse/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/base.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/base_login.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/base_login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/base_site.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/base_site.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/base_site.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/base_site.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/base_site.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/base_site.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/databrowse/templates/databrowse/base_site.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/databrowse/templates/databrowse/base_site.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/socketioserver1/node_modules/jade/node_modules/constantinople/node_modules/acorn-globals/node_modules/acorn/test/bench.html" afterPath="$PROJECT_DIR$/nodejs/socketioserver1/node_modules/jade/node_modules/constantinople/node_modules/acorn-globals/node_modules/acorn/test/bench.html" />
@@ -148,6 +172,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/socketioserver/node_modules/jade/node_modules/with/node_modules/acorn/test/bench.html" afterPath="$PROJECT_DIR$/nodejs/socketioserver/node_modules/jade/node_modules/with/node_modules/acorn/test/bench.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/blackout_date.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/blackout_date.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admindocs/templates/admin_doc/bookmarklets.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admindocs/templates/admin_doc/bookmarklets.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admindocs/templates/admin_doc/bookmarklets.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admindocs/templates/admin_doc/bookmarklets.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admindocs/templates/admin_doc/bookmarklets.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admindocs/templates/admin_doc/bookmarklets.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/build-custom-export.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/build-custom-export.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/buildreef.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/buildreef.htm" />
@@ -180,17 +205,21 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/category_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/category_search_results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/categoryindex.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/categoryindex.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/categoryindex.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/categoryindex.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/championtutoronline.com.iml" afterPath="$PROJECT_DIR$/.idea/championtutoronline.com.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/change_form.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/change_form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/change_form.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/change_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/change_form.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/change_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/change_list.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/change_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/change_list.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/change_list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/change_list.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/change_list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/change_list_results.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/change_list_results.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/change_list_results.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/change_list_results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/change_list_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/change_list_results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/auth/user/change_password.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/auth/user/change_password.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/auth/user/change_password.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/auth/user/change_password.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/auth/user/change_password.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/auth/user/change_password.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/change_pwd.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/change_pwd.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/changeemail.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/changeemail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/sections/chat_box.html" afterPath="$PROJECT_DIR$/core/templates/sections/chat_box.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/checkout-response.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/checkout-response.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/checkout_base.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/checkout_base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/checkout_error.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/checkout_error.html" />
@@ -203,6 +232,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages_add.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages_add.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages_edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages_edit.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/code_editor.html" afterPath="$PROJECT_DIR$/core/templates/ajax/code_editor.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/contactus.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/contactus.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/coupon_confirmation.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/coupon_confirmation.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/coupon_modal-old.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/coupon_modal-old.html" />
@@ -232,19 +262,26 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/daa-approved.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/daa-approved.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/daa-submitted.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/daa-submitted.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/date_hierarchy.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/date_hierarchy.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/date_hierarchy.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/date_hierarchy.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/date_hierarchy.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/date_hierarchy.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/flatpages/tests/templates/flatpages/default.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/flatpages/tests/templates/flatpages/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/flatpages/tests/templates/flatpages/default.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/flatpages/tests/templates/flatpages/default.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/flatpages/tests/templates/flatpages/default.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/flatpages/tests/templates/flatpages/default.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/comments/templates/comments/delete.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/comments/templates/comments/delete.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/comments/templates/comments/delete.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/comments/templates/comments/delete.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/comments/templates/comments/delete.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/comments/templates/comments/delete.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/delete_confirmation.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/delete_confirmation.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/delete_confirmation.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/delete_confirmation.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/delete_confirmation.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/delete_confirmation.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/delete_selected_confirmation.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/delete_selected_confirmation.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/delete_selected_confirmation.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/delete_selected_confirmation.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/delete_selected_confirmation.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/delete_selected_confirmation.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/comments/templates/comments/deleted.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/comments/templates/comments/deleted.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/comments/templates/comments/deleted.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/comments/templates/comments/deleted.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/comments/templates/comments/deleted.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/comments/templates/comments/deleted.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/doa-approved.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/doa-approved.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/doa-submitted.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/doa-submitted.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/drawingboard.html" afterPath="$PROJECT_DIR$/core/templates/ajax/drawingboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/edit-blackout-date.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/edit-blackout-date.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/edit-custom-export-set.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/edit-custom-export-set.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/edit-order.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/edit-order.htm" />
@@ -270,14 +307,18 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/databrowse/templates/databrowse/fieldchoice_homepage.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/databrowse/templates/databrowse/fieldchoice_homepage.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/databrowse/templates/databrowse/fieldchoice_list.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/databrowse/templates/databrowse/fieldchoice_list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/includes/fieldset.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/includes/fieldset.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/includes/fieldset.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/includes/fieldset.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/includes/fieldset.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/includes/fieldset.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/filter.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/filter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/filter.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/filter.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/filter.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/filter.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/fishschool.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/fishschool.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/fishschool.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/fishschool.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/comments/templates/comments/flag.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/comments/templates/comments/flag.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/comments/templates/comments/flag.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/comments/templates/comments/flag.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/comments/templates/comments/flag.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/comments/templates/comments/flag.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/comments/templates/comments/flagged.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/comments/templates/comments/flagged.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/comments/templates/comments/flagged.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/comments/templates/comments/flagged.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/comments/templates/comments/flagged.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/comments/templates/comments/flagged.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/lingo/support/expresso/docs/layout/foot.html" afterPath="$PROJECT_DIR$/nodejs/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/lingo/support/expresso/docs/layout/foot.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/footer.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/footer.htm" />
@@ -285,6 +326,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/forgetpwd.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/forgetpwd.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/comments/templates/comments/form.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/comments/templates/comments/form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/formtools/templates/formtools/form.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/formtools/templates/formtools/form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/comments/templates/comments/form.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/comments/templates/comments/form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/formtools/templates/formtools/form.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/formtools/templates/formtools/form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/comments/templates/comments/form.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/comments/templates/comments/form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/formtools/templates/formtools/form.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/formtools/templates/formtools/form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/forum.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/forum.html" />
@@ -298,7 +341,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/gis/templates/gis/google/google-map.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/gis/templates/gis/google/google-map.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/gis/templates/gis/google/google-map.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/gis/templates/gis/google/google-map.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/gis/templates/gis/google/google-map.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/gis/templates/gis/google/google-map.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/misc/google96c3231dd6aac3ed.html" afterPath="$PROJECT_DIR$/../saltwaterfish/misc/google96c3231dd6aac3ed.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/lingo/support/expresso/docs/layout/head.html" afterPath="$PROJECT_DIR$/nodejs/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/lingo/support/expresso/docs/layout/head.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/header.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/header.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/home-page-admin.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/home-page-admin.htm" />
@@ -314,9 +356,16 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/registration/html_password_reset_email.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/registration/html_password_reset_email.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/images_products.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/images_products.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/import_tax_rate.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/import_tax_rate.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/index - Copy.html" afterPath="$PROJECT_DIR$/core/templates/index - Copy.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/index-backup-mar08.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/index-backup-mar08.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery-ui-1.11.3.custom/index.html" afterPath="$PROJECT_DIR$/core/static/jquery-ui-1.11.3.custom/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/js/mathdox/org/mathdox/javascript/index.html" afterPath="$PROJECT_DIR$/core/static/js/mathdox/org/mathdox/javascript/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/index.html" afterPath="$PROJECT_DIR$/core/templates (copy)/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/index.html" afterPath="$PROJECT_DIR$/core/templates/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/index.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admindocs/templates/admin_doc/index.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admindocs/templates/admin_doc/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/index.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admindocs/templates/admin_doc/index.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admindocs/templates/admin_doc/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/lingo/index.html" afterPath="$PROJECT_DIR$/nodejs/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/lingo/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/lingo/support/expresso/docs/index.html" afterPath="$PROJECT_DIR$/nodejs/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/lingo/support/expresso/docs/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/underscore/index.html" afterPath="$PROJECT_DIR$/nodejs/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/underscore/index.html" />
@@ -344,6 +393,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/misc/js/carou/index.html" afterPath="$PROJECT_DIR$/../saltwaterfish/misc/js/carou/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/index.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/invalid_setup.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/invalid_setup.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/invalid_setup.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/invalid_setup.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/invalid_setup.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/invalid_setup.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/inventory-outofstock.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/inventory-outofstock.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/inventory-uploads.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/inventory-uploads.html" />
@@ -363,24 +413,34 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/left_menu_reports.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/left_menu_reports.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/left_section.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/left_section.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/comments/templates/comments/list.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/comments/templates/comments/list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/comments/templates/comments/list.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/comments/templates/comments/list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/comments/templates/comments/list.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/comments/templates/comments/list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/registration/logged_out.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/registration/logged_out.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/registration/logged_out.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/registration/logged_out.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/registration/logged_out.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/registration/logged_out.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/registration/logged_out.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/registration/logged_out.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/registration/logged_out.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/registration/logged_out.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/login.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/login.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/login.html" afterPath="$PROJECT_DIR$/core/templates/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/login.html" afterPath="$PROJECT_DIR$/core/templates/ajax/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/login.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/registration/login.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/registration/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/flatpages/tests/templates/registration/login.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/flatpages/tests/templates/registration/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/login.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/registration/login.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/registration/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/flatpages/tests/templates/registration/login.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/flatpages/tests/templates/registration/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/login.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/login.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admindocs/templates/admin_doc/missing_docutils.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admindocs/templates/admin_doc/missing_docutils.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admindocs/templates/admin_doc/missing_docutils.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admindocs/templates/admin_doc/missing_docutils.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admindocs/templates/admin_doc/missing_docutils.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admindocs/templates/admin_doc/missing_docutils.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admindocs/templates/admin_doc/model_detail.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admindocs/templates/admin_doc/model_detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admindocs/templates/admin_doc/model_detail.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admindocs/templates/admin_doc/model_detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admindocs/templates/admin_doc/model_detail.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admindocs/templates/admin_doc/model_detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/databrowse/templates/databrowse/model_detail.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/databrowse/templates/databrowse/model_detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admindocs/templates/admin_doc/model_index.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admindocs/templates/admin_doc/model_index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admindocs/templates/admin_doc/model_index.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admindocs/templates/admin_doc/model_index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admindocs/templates/admin_doc/model_index.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admindocs/templates/admin_doc/model_index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/more_info.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/more_info.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/moreinfo_old.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/moreinfo_old.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/my_order_info.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/my_order_info.html" />
@@ -396,9 +456,14 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/myaccount_widget_bkp.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/myaccount_widget_bkp.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/myreefrewards.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/myreefrewards.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/new-edit-order.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/new-edit-order.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/new2.html" afterPath="$PROJECT_DIR$/core/templates (copy)/new2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/new2.html" afterPath="$PROJECT_DIR$/core/templates/new2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/databrowse/templates/databrowse/object_detail.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/databrowse/templates/databrowse/object_detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/object_history.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/object_history.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/object_history.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/object_history.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/object_history.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/object_history.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/online_tutors.html" afterPath="$PROJECT_DIR$/core/templates (copy)/online_tutors.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/online_tutors.html" afterPath="$PROJECT_DIR$/core/templates/online_tutors.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/onsale-cat.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/onsale-cat.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/onsale-fragment.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/onsale-fragment.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/onsale.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/onsale.htm" />
@@ -436,41 +501,61 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/gis/templates/gis/admin/osm.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/gis/templates/gis/admin/osm.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/gis/templates/gis/admin/osm.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/gis/templates/gis/admin/osm.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/formtools/tests/wizard/wizardtests/templates/other_wizard_form.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/formtools/tests/wizard/wizardtests/templates/other_wizard_form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/formtools/tests/wizard/wizardtests/templates/other_wizard_form.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/formtools/tests/wizard/wizardtests/templates/other_wizard_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/formtools/tests/wizard/wizardtests/templates/other_wizard_form.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/formtools/tests/wizard/wizardtests/templates/other_wizard_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/pages.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/pages.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/pages.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/pages.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/pages_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/pages_search_results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/pagination.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/pagination.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/pagination.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/pagination.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/pagination.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/pagination.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/registration/password_change_done.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/registration/password_change_done.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/registration/password_change_done.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/registration/password_change_done.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/registration/password_change_done.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/registration/password_change_done.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/registration/password_change_form.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/registration/password_change_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/registration/password_change_form.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/registration/password_change_form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/registration/password_change_form.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/registration/password_change_form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/registration/password_change_form.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/registration/password_change_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/registration/password_change_form.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/registration/password_change_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/registration/password_reset_complete.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/registration/password_reset_complete.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/registration/password_reset_complete.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/registration/password_reset_complete.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/registration/password_reset_complete.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/registration/password_reset_complete.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/registration/password_reset_complete.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/registration/password_reset_complete.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/registration/password_reset_complete.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/registration/password_reset_complete.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/registration/password_reset_confirm.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/registration/password_reset_confirm.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/registration/password_reset_confirm.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/registration/password_reset_confirm.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/registration/password_reset_confirm.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/registration/password_reset_confirm.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/registration/password_reset_confirm.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/registration/password_reset_confirm.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/registration/password_reset_confirm.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/registration/password_reset_confirm.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/registration/password_reset_done.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/registration/password_reset_done.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/registration/password_reset_done.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/registration/password_reset_done.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/registration/password_reset_done.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/registration/password_reset_done.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/registration/password_reset_done.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/registration/password_reset_done.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/registration/password_reset_done.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/registration/password_reset_done.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/registration/password_reset_email.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/registration/password_reset_email.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/registration/password_reset_email.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/registration/password_reset_email.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/registration/password_reset_email.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/registration/password_reset_email.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/registration/password_reset_email.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/registration/password_reset_email.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/registration/password_reset_email.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/registration/password_reset_email.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/registration/password_reset_form.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/registration/password_reset_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/registration/password_reset_form.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/templates/registration/password_reset_form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/registration/password_reset_form.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/registration/password_reset_form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/registration/password_reset_form.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/auth/tests/templates/registration/password_reset_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/registration/password_reset_form.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/registration/password_reset_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/pinterest-3c772.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/pinterest-3c772.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/popredeem.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/popredeem.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/popup_response.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/popup_response.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/popup_response.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/popup_response.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/comments/templates/comments/posted.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/comments/templates/comments/posted.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/comments/templates/comments/posted.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/comments/templates/comments/posted.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/comments/templates/comments/posted.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/comments/templates/comments/posted.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/prepopulated_fields_js.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/prepopulated_fields_js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/prepopulated_fields_js.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/prepopulated_fields_js.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/prepopulated_fields_js.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/prepopulated_fields_js.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/comments/templates/comments/preview.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/comments/templates/comments/preview.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/formtools/templates/formtools/preview.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/formtools/templates/formtools/preview.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/comments/templates/comments/preview.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/comments/templates/comments/preview.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/formtools/templates/formtools/preview.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/formtools/templates/formtools/preview.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/comments/templates/comments/preview.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/comments/templates/comments/preview.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/formtools/templates/formtools/preview.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/formtools/templates/formtools/preview.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/printorder.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/printorder.htm" />
@@ -522,6 +607,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products_wish_list.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products_wish_list.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products_wish_list_view_list.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products_wish_list_view_list.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/profile.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/profile1.html" afterPath="$PROJECT_DIR$/core/templates (copy)/profile1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/profile2.html" afterPath="$PROJECT_DIR$/core/templates (copy)/profile2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/profile2.html" afterPath="$PROJECT_DIR$/core/templates/profile2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/promotions_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/promotions_search_results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/quick-list.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/quick-list.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/quick_list.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/quick_list.htm" />
@@ -541,8 +629,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/refund-outofstock.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/refund-outofstock.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/regconfirmation.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/regconfirmation.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/registration.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/registration.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/registration.html" afterPath="$PROJECT_DIR$/core/templates/ajax/registration.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/registration.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/registration.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/registration1.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/registration1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/registration_1.html" afterPath="$PROJECT_DIR$/core/templates/registration_1.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-fedex.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-fedex.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-inventory.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-inventory.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-orders.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-orders.html" />
@@ -578,7 +668,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/saltwater-new.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/saltwater-new.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/misc/images/saltwater.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/misc/images/saltwater.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/saltwater.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/saltwater.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/misc/css3/saltwaterfish-mastercategory.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/misc/css3/saltwaterfish-mastercategory.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/saltwaterfish-mastercategory.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/saltwaterfish-mastercategory.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/saltwaterfish-reefpackage.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/saltwaterfish-reefpackage.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/socketioserver1/node_modules/mocha/lib/reporters/templates/script.html" afterPath="$PROJECT_DIR$/nodejs/socketioserver1/node_modules/mocha/lib/reporters/templates/script.html" />
@@ -587,6 +676,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/search_form.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/search_form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/search_form.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/search_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/search_form.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/search_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search_results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/searchpageresults.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/searchpageresults.htm" />
@@ -598,33 +688,43 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/settings-shipping-manager-edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/settings-shipping-manager-edit.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/settings-shipping-manager.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/settings-shipping-manager.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/settings-tax-manager.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/settings-tax-manager.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/championtutoronline/settings.py" afterPath="$PROJECT_DIR$/championtutoronline/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/settings.py" afterPath="$PROJECT_DIR$/../saltwaterfish/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/shipping_calendar.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/shipping_calendar.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/shippingcategory_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/shippingcategory_search_results.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/signup_form.html" afterPath="$PROJECT_DIR$/core/templates/ajax/signup_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/sitemap.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/sitemap.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/edit_inline/stacked.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/edit_inline/stacked.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/edit_inline/stacked.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/edit_inline/stacked.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/edit_inline/stacked.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/edit_inline/stacked.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/student-profile.html" afterPath="$PROJECT_DIR$/core/templates (copy)/student-profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/student_profile.html" afterPath="$PROJECT_DIR$/core/templates/student_profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/sections/student_section_header.html" afterPath="$PROJECT_DIR$/core/templates/sections/student_section_header.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/socketioserver1/node_modules/mocha/lib/reporters/templates/style.html" afterPath="$PROJECT_DIR$/nodejs/socketioserver1/node_modules/mocha/lib/reporters/templates/style.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/socketioserver/node_modules/mocha/lib/reporters/templates/style.html" afterPath="$PROJECT_DIR$/nodejs/socketioserver/node_modules/mocha/lib/reporters/templates/style.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/subcat.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/subcat.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/subcategory-list.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/subcategory-list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/subcategory-products.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/subcategory-products.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/submit_line.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/submit_line.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/submit_line.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/submit_line.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/submit_line.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/submit_line.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/superspecial.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/superspecial.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/edit_inline/tabular.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admin/templates/admin/edit_inline/tabular.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/edit_inline/tabular.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admin/templates/admin/edit_inline/tabular.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/edit_inline/tabular.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admin/templates/admin/edit_inline/tabular.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/tax_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/tax_search_results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/taxmanager.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/taxmanager.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/sections/teacher_section_header.html" afterPath="$PROJECT_DIR$/core/templates/sections/teacher_section_header.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/temp_redir.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/temp_redir.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/underscore.string/node_modules/underscore/test/temp_tests.html" afterPath="$PROJECT_DIR$/nodejs/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/underscore.string/node_modules/underscore/test/temp_tests.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/underscore.string/test/test_underscore/temp_tests.html" afterPath="$PROJECT_DIR$/nodejs/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/underscore.string/test/test_underscore/temp_tests.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admindocs/templates/admin_doc/template_detail.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admindocs/templates/admin_doc/template_detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admindocs/templates/admin_doc/template_detail.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admindocs/templates/admin_doc/template_detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admindocs/templates/admin_doc/template_detail.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admindocs/templates/admin_doc/template_detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admindocs/templates/admin_doc/template_filter_index.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admindocs/templates/admin_doc/template_filter_index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admindocs/templates/admin_doc/template_filter_index.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admindocs/templates/admin_doc/template_filter_index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admindocs/templates/admin_doc/template_filter_index.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admindocs/templates/admin_doc/template_filter_index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admindocs/templates/admin_doc/template_tag_index.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admindocs/templates/admin_doc/template_tag_index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admindocs/templates/admin_doc/template_tag_index.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admindocs/templates/admin_doc/template_tag_index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admindocs/templates/admin_doc/template_tag_index.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admindocs/templates/admin_doc/template_tag_index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/terms_conditions.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/terms_conditions.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/termscon.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/termscon.htm" />
@@ -633,6 +733,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/underscore.string/node_modules/underscore/test/test.html" afterPath="$PROJECT_DIR$/nodejs/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/underscore.string/node_modules/underscore/test/test.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/underscore.string/test/test.html" afterPath="$PROJECT_DIR$/nodejs/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/underscore.string/test/test.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/underscore.string/test/test_underscore/test.html" afterPath="$PROJECT_DIR$/nodejs/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/underscore.string/test/test_underscore/test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/text_editor.html" afterPath="$PROJECT_DIR$/core/templates/ajax/text_editor.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/tickets.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/tickets.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/titles_content.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/titles_content.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-checkout.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-checkout.html" />
@@ -641,21 +742,29 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-pageviews.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-pageviews.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-referrers.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-referrers.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-visits.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-visits.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/sections/tutor_body_full.html" afterPath="$PROJECT_DIR$/core/templates/sections/tutor_body_full.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/sections/tutor_body_public.html" afterPath="$PROJECT_DIR$/core/templates/sections/tutor_body_public.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/tutor_profile.html" afterPath="$PROJECT_DIR$/core/templates/tutor_profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/tutor_profile1.html" afterPath="$PROJECT_DIR$/core/templates/tutor_profile1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/tutor_profile1_1.html" afterPath="$PROJECT_DIR$/core/templates/tutor_profile1_1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/tutor_profile_public.html" afterPath="$PROJECT_DIR$/core/templates/tutor_profile_public.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/under_construction.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/under_construction.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/underscore.string/node_modules/underscore/docs/underscore.html" afterPath="$PROJECT_DIR$/nodejs/node_modules/connect-mysql-session/node_modules/sequelize/node_modules/underscore.string/node_modules/underscore/docs/underscore.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit-log.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit-log.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit-permissions.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit-permissions.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/coverage/utf8.js/utf8.js.html" afterPath="$PROJECT_DIR$/nodejs/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/coverage/utf8.js/utf8.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/vertical-tabs.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/vertical-tabs.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/videoframe.html" afterPath="$PROJECT_DIR$/core/templates/ajax/videoframe.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/videos.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/videos.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/videoso.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/videoso.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/view-general-review.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/view-general-review.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/view_cart.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/view_cart.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admindocs/templates/admin_doc/view_detail.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admindocs/templates/admin_doc/view_detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admindocs/templates/admin_doc/view_detail.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admindocs/templates/admin_doc/view_detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admindocs/templates/admin_doc/view_detail.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admindocs/templates/admin_doc/view_detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admindocs/templates/admin_doc/view_index.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/admindocs/templates/admin_doc/view_index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admindocs/templates/admin_doc/view_index.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/admindocs/templates/admin_doc/view_index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admindocs/templates/admin_doc/view_index.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/admindocs/templates/admin_doc/view_index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/viewbanners.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/viewbanners.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/viewcoupons.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/viewcoupons.htm" />
@@ -668,12 +777,22 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/waitinglist_popup.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/waitinglist_popup.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/waitinglist_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/waitinglist_search_results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/waitlistmodal.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/waitlistmodal.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/webrtctest.html" afterPath="$PROJECT_DIR$/core/templates (copy)/webrtctest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/webrtctest/webrtctest.html" afterPath="$PROJECT_DIR$/core/templates (copy)/webrtctest/webrtctest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/webrtctest.html" afterPath="$PROJECT_DIR$/core/templates/webrtctest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/webrtctest/webrtctest.html" afterPath="$PROJECT_DIR$/core/templates/webrtctest/webrtctest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/white_board.html" afterPath="$PROJECT_DIR$/core/templates (copy)/white_board.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/white_board_old.html" afterPath="$PROJECT_DIR$/core/templates (copy)/white_board_old.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/white_board_old.html" afterPath="$PROJECT_DIR$/core/templates/white_board_old.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/whiteboard - Copy.html" afterPath="$PROJECT_DIR$/core/templates/whiteboard - Copy.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/whiteboard.html" afterPath="$PROJECT_DIR$/core/templates/whiteboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/wishlist.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/wishlist.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/wishlistitems.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/wishlistitems.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/formtools/tests/templates/forms/wizard.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/formtools/tests/templates/forms/wizard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/formtools/tests/templates/forms/wizard.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/formtools/tests/templates/forms/wizard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/formtools/tests/templates/forms/wizard.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/formtools/tests/templates/forms/wizard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/formtools/templates/formtools/wizard/wizard_form.html" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/formtools/templates/formtools/wizard/wizard_form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/formtools/templates/formtools/wizard/wizard_form.html" afterPath="$PROJECT_DIR$/myEnv/build/DJango/django/contrib/formtools/templates/formtools/wizard/wizard_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/django/contrib/formtools/templates/formtools/wizard/wizard_form.html" afterPath="$PROJECT_DIR$/../saltwaterfish/django/contrib/formtools/templates/formtools/wizard/wizard_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/writereview_modal.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/writereview_modal.html" />
@@ -681,7 +800,13 @@
     </list>
     <ignored path="championtutoronline.com.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1424886147436" ignored="false" />
+    <file path="/Dummy.txt" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1425821355604" ignored="false" />
+    <file path="/settings.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1425699393761" ignored="false" />
+    <file path="/murthy_views.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1425745045401" ignored="false" />
+    <file path="/views.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1425744704636" ignored="false" />
+    <file path="$PROJECT_DIR$/../saltwaterfish/classes.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1425750421221" ignored="false" />
+    <file path="$PROJECT_DIR$/../saltwaterfish/fedex_utils.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1425750421223" ignored="false" />
+    <file path="$PROJECT_DIR$/../saltwaterfish/app.yaml" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1425750421225" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -700,17 +825,7 @@
     <favorites_list name="championtutoronline.com" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/championtutoronline/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="21" selection-start="459" selection-end="459" vertical-scroll-proportion="0.6060606">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -718,7 +833,7 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../saltwaterfish" />
   </component>
   <component name="GitLogSettings">
     <option name="myDateState">
@@ -730,6 +845,11 @@
       <list>
         <option value="$PROJECT_DIR$/core/static/js/chat/chat.js" />
         <option value="$PROJECT_DIR$/championtutoronline/settings.py" />
+        <option value="$PROJECT_DIR$/../saltwaterfish/templates/500.html" />
+        <option value="$PROJECT_DIR$/../saltwaterfish/settings.py" />
+        <option value="$PROJECT_DIR$/../saltwaterfish/views.py" />
+        <option value="$PROJECT_DIR$/../saltwaterfish/urls.py" />
+        <option value="$PROJECT_DIR$/../saltwaterfish/murthy_views.py" />
       </list>
     </option>
   </component>
@@ -753,7 +873,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="Scope" currentSubView="All" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -779,59 +899,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="championtutoronline.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="championtutoronline.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="championtutoronline.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nodejs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="championtutoronline.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="championtutoronline.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nodejs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="socketioserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="championtutoronline.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="championtutoronline.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="championtutoronline" />
+              <option name="myItemId" value="saltwaterfish" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scope">
+        <subPane subId="All">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -841,6 +938,21 @@
     <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="saltwaterfish" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -860,6 +972,45 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="saltwaterfish" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="saltwaterfish" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
     <configuration default="false" name="championtutoronline.com" type="Python.DjangoServer" factoryName="Django server">
@@ -897,14 +1048,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2840909" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13333334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -985,76 +1136,115 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/static/js/chat/chat.js">
+    <entry file="file://$PROJECT_DIR$/../saltwaterfish/templates/checkout-response.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/js/chat/chat.js">
+    <entry file="file://$PROJECT_DIR$/../saltwaterfish/templates/CheckoutError.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.986028" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../saltwaterfish/templates/checkout_error.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/js/chat/chat.js">
+    <entry file="file://$PROJECT_DIR$/../saltwaterfish/templates/OrderSummary.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.8333334" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../saltwaterfish/templates/OrderSummaryNew.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-5.548902" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../saltwaterfish/templates/OrderPageCallBackFailure.htm">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/js/chat/chat.js">
+    <entry file="file://$PROJECT_DIR$/../saltwaterfish/templates/orderpage.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.0517242" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../saltwaterfish/templates/PaypalPurchase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-7.9580836" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../saltwaterfish/templates/PaypalRedirection.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/js/chat/chat.js">
+    <entry file="file://$PROJECT_DIR$/../saltwaterfish/templates/500.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/js/chat/chat.js">
+    <entry file="file://$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="750" selection-end="750" vertical-scroll-proportion="0.0" />
+        <state line="228" column="5" selection-start="4628" selection-end="4628" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1425750332619" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425750332619" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425750332619" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425750332619" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425750332619" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425750332619" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425750332619" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425750332619" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425750332619" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425750332619" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425750332619" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425750332619" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425750332619" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425750332619" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425750332619" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../saltwaterfish/templates/checkout_login.html">
+    <entry file="file://$PROJECT_DIR$/../saltwaterfish/user_actions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="40" selection-start="40" selection-end="40" vertical-scroll-proportion="30.923077">
+        <state line="2206" column="14" selection-start="122679" selection-end="122679" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1425662002793" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../saltwaterfish/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="107" column="0" selection-start="3675" selection-end="3675" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../saltwaterfish/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1732" column="42" selection-start="81557" selection-end="81557" vertical-scroll-proportion="-3.2">
-          <folding />
+        <state line="263" column="8" selection-start="9922" selection-end="9922" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1425749514959" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425749514959" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../saltwaterfish/settings.py">
+    <entry file="file://$PROJECT_DIR$/../saltwaterfish/murthy_views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="6" selection-start="4240" selection-end="4240" vertical-scroll-proportion="-0.24485597">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../saltwaterfish/user_actions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2235" column="46" selection-start="123894" selection-end="123894" vertical-scroll-proportion="0.38049713">
+        <state line="125" column="37" selection-start="5316" selection-end="5316" vertical-scroll-proportion="0.031021899">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../saltwaterfish/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="32" selection-start="4463" selection-end="4463" vertical-scroll-proportion="0.59082216">
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/championtutoronline/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="21" selection-start="459" selection-end="459" vertical-scroll-proportion="0.6060606">
+        <state line="373" column="94" selection-start="31875" selection-end="31875" vertical-scroll-proportion="0.031021899">
           <folding />
         </state>
       </provider>
