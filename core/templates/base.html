@@ -23,7 +23,7 @@
     <script type="text/javascript">
     //Now run a script in a period interval to let inform the status of this client to the socket io server.
         {% if request.session.is_login %}
-            window.socket = io("http://192.169.219.136:3000/");
+            window.socket = io("http://127.0.0.1:3000/");
             //This is called upon a successful connection established.
 
             //Global variables.
