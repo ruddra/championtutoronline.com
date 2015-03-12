@@ -318,6 +318,52 @@ $(document).ready(function()
 	}
 
 
+    var publishStream = function() {
+        if(ot_session != undefined)
+        {
+            var pubOptions =
+            {
+                width:$("#myVideo").width(),
+                height:$("#myVideo").height(),
+                buttonDisplayMode:"off"
+            };
+
+            publisher = OT.initPublisher("myVideo",pubOptions,function(error)
+            {
+                console.log("OT.initPublisher error! :(");
+            });
+            //console.log(publisher);
+            publisher.on({
+                accessAllowed: function (event) {
+                    // The user has granted access to the camera and mic.
+                    console.log("Camera permission granted.");
+                },
+                accessDenied: function (event) {
+                    // The user has denied access to the camera and mic.
+                    console.log("Camera permission denied.");
+                },
+                accessDialogOpened: function (event) {
+                    // The Allow/Deny dialog box is opened.
+                    console.log("Access dialog opened.");
+                },
+                accessDialogClosed: function (event) {
+                    // The Allow/Deny dialog box is closed.
+                    console.log("Access dialog closed.");
+                },
+                streamCreated:  function (event) {
+                    console.log('The publisher started streaming.');
+                },
+                streamDestroyed : function (event) {
+                    console.log("The publisher stopped streaming. Reason: "
+                        + event.reason);
+                }
+            });
+
+            ot_session.publish(publisher);
+        }
+    }
+
+
 	var initOTSession = function(OT_api_key,OT_session)
     {
         if(OT_api_key != undefined && OT_session != undefined && ot_session == undefined)
@@ -330,7 +376,78 @@ $(document).ready(function()
 
 			ot_session.on("sessionConnected", function(event) {
 			   console.log("Session Initialized...");
+                console.log("Now publishing stream to the session...");
+                //Now publish the stream.
+                publishStream();
+
+                //Now subscribe to the stream that already in the session and i have just joined the session.
+                for (var i = 0; i < event.streams.length; i++) {
+                    if (event.streams[i].connection.connectionId == ot_session.connection.connectionId) {
+                        console.log("Skipping my own session.");
+                        return;
+                    }
+                    var subscriber = ot_session.subscribe(event.streams[i], "id_video_section", {
+                        insertMode: "append"
+                    });
+
+                    subscriber.on({
+                        videoDisabled: function(event)
+                        {
+                            console.log("Video disabled.");
+                            console.log(event.reason);
+                            subscriber.setStyle('backgroundImageURI',
+                                'http://tokbox.com/img/styleguide/tb-colors-cream.png'
+                            );
+                        },
+                        videoEnabled: function(event)
+                        {
+                            console.log("Video enabled.");
+                            console.log(event.reason);
+                            var imgData = subscriber.getImgData();
+                            subscriber.setStyle('backgroundImageURI', imgData);
+                        }
+                    });
+                    layout();
+                }
+
 			 });
+
+            ot_session.addEventListener('streamCreated', function(event) {
+                //This callback is fired when i am already in the session and new user has just joined the session.
+                for (var i = 0; i < event.streams.length; i++) {
+                    if (event.streams[i].connection.connectionId == ot_session.connection.connectionId) {
+                        console.log("Skipping my own session.");
+                        return;
+                    }
+                    var subscriber = ot_session.subscribe(event.streams[i], "id_video_section", {
+                        insertMode: "append"
+                    });
+
+                    subscriber.on({
+                        videoDisabled: function(event)
+                        {
+                            console.log("Video disabled.");
+                            console.log(event.reason);
+                            subscriber.setStyle('backgroundImageURI',
+                                'http://tokbox.com/img/styleguide/tb-colors-cream.png'
+                            );
+                        },
+                        videoEnabled: function(event)
+                        {
+                            console.log("Video enabled.");
+                            console.log(event.reason);
+                            var imgData = subscriber.getImgData();
+                            subscriber.setStyle('backgroundImageURI', imgData);
+                        }
+                    });
+                    layout();
+                }
+            });
+
+            ot_session.connect(token, function(error) {
+                console.log("Session Connection Error!");
+                console.log(error);
+            });
 
         }
     };
@@ -446,57 +563,6 @@ $(document).ready(function()
             });
 
             console.log("OT TOKEN: "+token);
-            ot_session.connect(token, function(error) {
-                console.log(error);
-
-//                var pubOptions =
-//                {
-//                    audioSource: audioInputDevices[0].deviceId,
-//                    videoSource: videoInputDevices[0].deviceId,
-//                    width:$("#myVideo").width(),
-//                    height:$("#myVideo").height()
-//                };
-
-                var pubOptions =
-                {
-                    width:$("#myVideo").width(),
-                    height:$("#myVideo").height(),
-                    buttonDisplayMode:"off"
-                };
-
-                publisher = OT.initPublisher("myVideo",pubOptions,function(error)
-                {
-                    console.log("OT.initPublisher error! :(");
-                });
-                //console.log(publisher);
-                publisher.on({
-                    accessAllowed: function (event) {
-                        // The user has granted access to the camera and mic.
-                        console.log("Camera permission granted.");
-                    },
-                    accessDenied: function (event) {
-                        // The user has denied access to the camera and mic.
-                        console.log("Camera permission denied.");
-                    },
-                    accessDialogOpened: function (event) {
-                        // The Allow/Deny dialog box is opened.
-                        console.log("Access dialog opened.");
-                    },
-                    accessDialogClosed: function (event) {
-                    // The Allow/Deny dialog box is closed.
-                        console.log("Access dialog closed.");
-                    },
-                    streamCreated:  function (event) {
-                        console.log('The publisher started streaming.');
-                    },
-                    streamDestroyed : function (event) {
-                        console.log("The publisher stopped streaming. Reason: "
-                            + event.reason);
-                    }
-                });
-
-                ot_session.publish(publisher);
-            });
         }
         //resize_video_window();
     };
@@ -504,8 +570,8 @@ $(document).ready(function()
     var startOpenTokSession = function(OT_api_key,OT_session,OT_token)
     {
         initOTSession(OT_api_key,OT_session);
-        add_subscriber();
-        connect_session(OT_token);
+        //add_subscriber();
+        //connect_session(OT_token);
     }
 
     var request_ot_session_info = function(uids,session,completeback,callback,errback) //uids are comma separated. like 1,2,3
