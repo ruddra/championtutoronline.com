@@ -364,7 +364,7 @@ $(document).ready(function()
     }
 
 
-	var initOTSession = function(OT_api_key,OT_session)
+	var initOTSession = function(OT_api_key,OT_session,OT_token)
     {
         if(OT_api_key != undefined && OT_session != undefined && ot_session == undefined)
         {
@@ -444,7 +444,7 @@ $(document).ready(function()
                 }
             });
 
-            ot_session.connect(token, function(error) {
+            ot_session.connect(OT_token, function(error) {
                 console.log("Session Connection Error!");
                 console.log(error);
             });
@@ -569,7 +569,7 @@ $(document).ready(function()
 
     var startOpenTokSession = function(OT_api_key,OT_session,OT_token)
     {
-        initOTSession(OT_api_key,OT_session);
+        initOTSession(OT_api_key,OT_session,OT_token);
         //add_subscriber();
         //connect_session(OT_token);
     }
