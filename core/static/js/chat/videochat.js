@@ -417,6 +417,35 @@ $(document).ready(function()
 
             ot_session.addEventListener('sessionDisconnected', function(event) {
                 console.log("Session Disconnected...");
+                for (var i = 0; i < event.streams.length; i++) {
+                    if (event.streams[i].connection.connectionId == ot_session.connection.connectionId) {
+                        console.log("Skipping my own session.");
+                        return;
+                    }
+                    var subscriber = ot_session.subscribe(event.streams[i], "id_video_section", {
+                        insertMode: "append"
+                    });
+
+                    subscriber.on({
+                        videoDisabled: function(event)
+                        {
+                            console.log("Video disabled.");
+                            console.log(event.reason);
+                            subscriber.setStyle('backgroundImageURI',
+                                //'http://tokbox.com/img/styleguide/tb-colors-cream.png'
+                                'http://127.0.0.1:8000/static/images/profile_img.png'
+                            );
+                        },
+                        videoEnabled: function(event)
+                        {
+                            console.log("Video enabled.");
+                            console.log(event.reason);
+                            var imgData = subscriber.getImgData();
+                            subscriber.setStyle('backgroundImageURI', imgData);
+                        }
+                    });
+                    layout();
+                }
             });
 
             ot_session.addEventListener('streamCreated', function(event) {
@@ -454,10 +483,68 @@ $(document).ready(function()
 
             ot_session.addEventListener('connectionDestroyed', function(event) {
                 console.log("Connection destroyed...");
+                // for (var i = 0; i < event.streams.length; i++) {
+                //     if (event.streams[i].connection.connectionId == ot_session.connection.connectionId) {
+                //         console.log("Skipping my own session.");
+                //         return;
+                //     }
+                //     var subscriber = ot_session.subscribe(event.streams[i], "id_video_section", {
+                //         insertMode: "append"
+                //     });
+
+                //     subscriber.on({
+                //         videoDisabled: function(event)
+                //         {
+                //             console.log("Video disabled.");
+                //             console.log(event.reason);
+                //             subscriber.setStyle('backgroundImageURI',
+                //                 //'http://tokbox.com/img/styleguide/tb-colors-cream.png'
+                //                 'http://127.0.0.1:8000/static/images/profile_img.png'
+                //             );
+                //         },
+                //         videoEnabled: function(event)
+                //         {
+                //             console.log("Video enabled.");
+                //             console.log(event.reason);
+                //             var imgData = subscriber.getImgData();
+                //             subscriber.setStyle('backgroundImageURI', imgData);
+                //         }
+                //     });
+                //     layout();
+                // }
             });
 
             ot_session.addEventListener('streamDestroyed', function(event) {
                 console.log("Stream destroyed...");
+                for (var i = 0; i < event.streams.length; i++) {
+                    if (event.streams[i].connection.connectionId == ot_session.connection.connectionId) {
+                        console.log("Skipping my own session.");
+                        return;
+                    }
+                    var subscriber = ot_session.subscribe(event.streams[i], "id_video_section", {
+                        insertMode: "append"
+                    });
+
+                    subscriber.on({
+                        videoDisabled: function(event)
+                        {
+                            console.log("Video disabled.");
+                            console.log(event.reason);
+                            subscriber.setStyle('backgroundImageURI',
+                                //'http://tokbox.com/img/styleguide/tb-colors-cream.png'
+                                'http://127.0.0.1:8000/static/images/profile_img.png'
+                            );
+                        },
+                        videoEnabled: function(event)
+                        {
+                            console.log("Video enabled.");
+                            console.log(event.reason);
+                            var imgData = subscriber.getImgData();
+                            subscriber.setStyle('backgroundImageURI', imgData);
+                        }
+                    });
+                    layout();
+                }
             });
 
             ot_session.connect(OT_token, function(error) {
@@ -467,6 +554,14 @@ $(document).ready(function()
 
         }
     };
+
+
+    var disconnectSession = function() {
+        if(ot_session)
+        {
+            ot_session.disconnect();
+        }
+    }
 
     var SpeakerDetection = function(subscriber, startTalking, stopTalking) {
         var activity = null;
@@ -1029,6 +1124,10 @@ $(document).ready(function()
                 $(this).val("on");
                 publisher.publishVideo(false);
             }
+        });
+
+        $("#id_end_call").click(function(e) {
+            disconnectSession();
         });
 
 

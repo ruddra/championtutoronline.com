@@ -234,6 +234,20 @@
         display: none;
     }
 
+    #controlbar
+    {
+        width: 100%;
+        height: 40px;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        z-index: 1001;
+        background-color: #303030;
+        opacity: 0.5;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
     </style>
     <script>
         // $(document).ready(function() {
@@ -349,6 +363,31 @@
                         <div id="id_video_section" class="video_section">
 
                         </div>
+                        <div id="controlbar" class="text-center">
+                            <div class="different_detail_inner text-center" style="width: 110px;">
+                                <div class="different_detail_img"> <img src="{% static "images/video_icon.png" %}" width="25" height="14" alt="img"> </div>
+                                <div class="onoffswitch3">
+                                    <input type="checkbox" name="onoffswitch3" class="onoffswitch3-checkbox" id="myonoffswitch3" checked>
+                                    <label class="onoffswitch3-label" for="myonoffswitch3">
+                                        <span class="onoffswitch3-inner"></span>
+                                        <span class="onoffswitch3-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="different_detail_inner text-center" style="width: 110px;">
+                                <div class="different_detail_img"><img src="{% static "images/wb_sound_icon.png" %}" width="21" height="19" alt="img"> </div>
+                                <div class="onoffswitch4">
+                                    <input type="checkbox" name="onoffswitch4" class="onoffswitch4-checkbox" id="myonoffswitch4" checked>
+                                    <label class="onoffswitch4-label" for="myonoffswitch4">
+                                        <span class="onoffswitch4-inner"></span>
+                                        <span class="onoffswitch4-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="different_detail_inner text-center" style="width: 110px;">
+                                <button id="id_end_call" class="btn btn-danger">End Call</button>
+                            </div>
+                        </div>
                     </div>
                     <div class="left_detail">
                         <div class="sharing radius3"><img src="{% static "images/wb_online.png" %}" width="14" height="14" alt="img">Sharing</div>
@@ -372,7 +411,7 @@
                                     </label>
                                 </div>
                             </div>
-                            <div class="different_detail_inner">
+                            <!-- <div class="different_detail_inner">
                                 <div class="different_detail_img"> <img src="{% static "images/video_icon.png" %}" width="25" height="14" alt="img"> </div>
                                 <div class="onoffswitch3">
                                     <input type="checkbox" name="onoffswitch3" class="onoffswitch3-checkbox" id="myonoffswitch3" checked>
@@ -391,7 +430,7 @@
                                         <span class="onoffswitch4-switch"></span>
                                     </label>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
 
                     </div>
@@ -706,6 +745,8 @@
                 // $("#id_video_sharing_container").children().hide();
                 //$(this).parent().show();
                 //$(this).parent().children().show();
+                console.log("Hide button clicked!");
+                $("#id_video_sharing_container").hide();
             });
 
             $(".onoffswitch4").click(function()
