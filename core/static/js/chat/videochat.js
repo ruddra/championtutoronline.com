@@ -110,20 +110,22 @@ $(document).ready(function()
         video_section.find( "[id^='id_video_pane']").css("width",video_box_width+"px");
         video_section.find( "[id^='id_video_pane']").css("height",video_box_height+"px");
 
-        $("#myVideo").remove();
+        if(call_queue.length == 1)
+        {
+            $("#myVideo").remove();
 
-        $("<div id='myVideo' class='myVideo-box'>").appendTo(video_sharing_container);
+            $("<div id='myVideo' class='myVideo-box'>").appendTo(video_sharing_container);
 
-		$("#myVideo").css("position","absolute");
-		$("#myVideo").css("right","2px");
-		$("#myVideo").css("bottom","2px");
+            $("#myVideo").css("position","absolute");
+            $("#myVideo").css("right","2px");
+            $("#myVideo").css("bottom","2px");
 
-        video_section.find("video").css("width",container_width+"px");
-        video_section.find("video").css("height",container_height+"px");
+            video_section.find("video").css("width",container_width+"px");
+            video_section.find("video").css("height",container_height+"px");
 
-        $("#myVideo").css("width",$("#myVideo").css("width"));
-        $("#myVideo").css("height",$("#myVideo").css("height"));
-
+            $("#myVideo").css("width",$("#myVideo").css("width"));
+            $("#myVideo").css("height",$("#myVideo").css("height"));
+        }
 	}
 
 	var add_call_to_queue = function(uid,name,img)
@@ -396,7 +398,8 @@ $(document).ready(function()
                             console.log("Video disabled.");
                             console.log(event.reason);
                             subscriber.setStyle('backgroundImageURI',
-                                'http://tokbox.com/img/styleguide/tb-colors-cream.png'
+                                //'http://tokbox.com/img/styleguide/tb-colors-cream.png'
+                                'http://127.0.0.1:8000/static/images/profile_img.png'
                             );
                         },
                         videoEnabled: function(event)
@@ -411,6 +414,10 @@ $(document).ready(function()
                 }
 
 			 });
+
+            ot_session.addEventListener('sessionDisconnected', function(event) {
+                console.log("Session Disconnected...");
+            });
 
             ot_session.addEventListener('streamCreated', function(event) {
                 //This callback is fired when i am already in the session and new user has just joined the session.
@@ -429,7 +436,8 @@ $(document).ready(function()
                             console.log("Video disabled.");
                             console.log(event.reason);
                             subscriber.setStyle('backgroundImageURI',
-                                'http://tokbox.com/img/styleguide/tb-colors-cream.png'
+                                //'http://tokbox.com/img/styleguide/tb-colors-cream.png'
+                                'http://127.0.0.1:8000/static/images/profile_img.png'
                             );
                         },
                         videoEnabled: function(event)
@@ -442,6 +450,14 @@ $(document).ready(function()
                     });
                     layout();
                 }
+            });
+
+            ot_session.addEventListener('connectionDestroyed', function(event) {
+                console.log("Connection destroyed...");
+            });
+
+            ot_session.addEventListener('streamDestroyed', function(event) {
+                console.log("Stream destroyed...");
             });
 
             ot_session.connect(OT_token, function(error) {
@@ -644,15 +660,52 @@ $(document).ready(function()
 
         //Add timer obj to the global record.
 
-        add_call_to_queue(tutor_id,tutor_name,tutor_img_url);
+        if(ot_session)
+        {
+            request_ot_session_info(tutor_id,ot_session_id,function(msg) //Complete Callback.
+            {
 
-        calls[parseInt(tutor_id)] = true;
+            },
+            function(data) //Success Callback.
+            {
+                //add_call_to_queue(buddy_ids[i],"Anonymous","","");
 
-        show_outgoing_call_notification(tutor_id,tutor_name);
+                calls[parseInt(tutor_id)] = true;
 
-        global_calling_timers[parseInt(tutor_id)] = 0;
-        var timer_obj = start_notification(tutor_id,tutor_name,tutor_img_url,"calling","","p2p");
-        timers[parseInt(tutor_id)] = timer_obj;
+                show_outgoing_call_notification(tutor_id,tutor_name);
+
+                var otsession = data.otsession;
+                var ot_api_key = data.ot_api_key;
+                var ot_token = data[parseInt(tutor_id)];
+
+                ot_session_id = otsession;
+
+                var data_obj = {
+                    "apikey": ot_api_key,
+                    "otsession": otsession,
+                    "ottoken": ot_token
+                };
+
+                global_calling_timers[parseInt(tutor_id)] = 0;
+                var timer_obj = start_notification(tutor_id,tutor_name,"","calling",data_obj,"group");
+                timers[parseInt(tutor_id)] = timer_obj;
+            },function(jqxhr,status,errorthrown) //Error Callback.
+            {
+
+            });
+        }
+        else
+        {
+            add_call_to_queue(tutor_id,tutor_name,tutor_img_url);
+
+            calls[parseInt(tutor_id)] = true;
+
+            show_outgoing_call_notification(tutor_id,tutor_name);
+
+            global_calling_timers[parseInt(tutor_id)] = 0;
+            var timer_obj = start_notification(tutor_id,tutor_name,tutor_img_url,"calling","","p2p");
+            timers[parseInt(tutor_id)] = timer_obj;
+        }
 
     });
 
@@ -912,7 +965,7 @@ $(document).ready(function()
 	                {
 	                    for(var i = 0; i < buddy_ids.length ; i++)
 	                    {
-	                    	add_call_to_queue(buddy_ids[i],"Anonymous","","");
+	                    	//add_call_to_queue(buddy_ids[i],"Anonymous","","");
 
 					        calls[parseInt(buddy_ids[i])] = true;
 
