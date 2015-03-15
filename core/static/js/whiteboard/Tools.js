@@ -2,6 +2,11 @@ var Tools = function(){
 
 }
 
+var BaseTool = function() {
+    this.offset_x = 0;
+    this.offset_y = 0;
+}
+
 Tools.prototype._undo = function(){
     this.name = "Undo";
 }
@@ -192,6 +197,8 @@ var Anchor = function()
     return this;
 };
 
+Anchor.prototype = new BaseTool();
+
 
 Tools.prototype._circle = function(){
     this.name = "Circle";
@@ -201,6 +208,35 @@ Tools.prototype._circle = function(){
     this.selected = false;
     this.center_point = [];
     this.radius = 0;
+    this.calculate_area_points = function() {
+        if(this.center_point.length == 2 && this.radius > 0) {
+            var p1 = [this.center_point[0] - this.radius,this.center_point[1] - this.radius];
+            //var p12 = [this.center_point[0],this.center_point[1] - this.radius];
+            var p2 = [this.center_point[0] + this.radius, this.center_point[1] - this.radius];
+            //var p23 = [this.center_point[0] + this.radius, this.center_point[1]];
+            var p3 = [this.center_point[0] + this.radius, this.center_point[1] + this.radius];
+            //var p34 = [this.center_point[0], this.center_point[1] + this.radius];
+            var p4 = [this.center_point[0] - this.radius, this.center_point[1] + this.radius];
+
+            this.area_points = [];
+            
+            this.area_points.push(p1[0]);
+            this.area_points.push(p1[1]);
+            //this.area_points.push(p12[0]);
+            //this.area_points.push(p12[1]);
+            this.area_points.push(p2[0]);
+            this.area_points.push(p2[1]);
+            //this.area_points.push(p23[0]);
+            //this.area_points.push(p23[1]);
+            this.area_points.push(p3[0]);
+            this.area_points.push(p3[1]);
+            //this.area_points.push(p34[0]);
+            //this.area_points.push(p34[1]);
+            this.area_points.push(p4[0]);
+            this.area_points.push(p4[1]);
+
+        }
+    };
 };
 
 Tools.prototype._circle.prototype = new Anchor();

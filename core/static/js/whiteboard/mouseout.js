@@ -82,6 +82,8 @@ var on_mouse_out = function(e)
             whiteboard.selected_tool.center_point.push(start_point.X);
             whiteboard.selected_tool.center_point.push(start_point.Y);
             whiteboard.selected_tool.radius = circle_radius;
+            //whiteboard.selected_tool.offset_x = start_point.X - circle_radius;
+            //whiteboard.selected_tool.offset_y = start_point.Y - circle_radius;
             var cloned_obj = deep_copy(whiteboard.selected_tool);
             whiteboard.canvas_data_stack.push(cloned_obj);
             /*

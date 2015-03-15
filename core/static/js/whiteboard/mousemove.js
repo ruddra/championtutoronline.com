@@ -301,12 +301,19 @@ var event_mouse_move = function(e)
         }
         else if(whiteboard.selected_tool.name == "Select")
         {
-            whiteboard.drawing_action.redraw(e);
+            whiteboard.drawing_action.redraw(e,"move","pressed");
         }
     }
     else{
-        whiteboard.update_tools(e);
-        whiteboard.drawing_action.redraw(e);
+        //whiteboard.update_tools(e);
+        if(whiteboard.selected_tool.name == "Select")
+        {
+            whiteboard.drawing_action.redraw(e,"move","hover");
+        }
+        else
+        {
+            whiteboard.drawing_action.redraw(e);
+        }
     }
 
     var offX = $("#drawing_board").offset().left;

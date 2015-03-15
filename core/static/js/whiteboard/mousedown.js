@@ -78,6 +78,10 @@ var event_mouse_down = function(e)
         {
             console.log("Selected tool is Move");
         }
+        else if(whiteboard.selected_tool.name == "Select") {
+            console.log("Tools is Select...");
+            whiteboard.update_tools_offset(e);
+        }
 
         //Send stream to the server.
         var whiteboard_state = {

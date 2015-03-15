@@ -760,8 +760,10 @@ whiteboard.drawing_action.change_board_cursor = function(anchor_name)
      }
 };
 
-whiteboard.drawing_action.redraw = function(e,drag_state){
+whiteboard.drawing_action.redraw = function(e,drag_state,mouse_state){  //drag_state = "move", mouse_state="pressed,hover"
         
+        whiteboard.Init();
+
         var offX = $("#drawing_board").offset().left;
         var offY = $("#drawing_board").offset().top;
 
@@ -823,11 +825,14 @@ whiteboard.drawing_action.redraw = function(e,drag_state){
             }
             else if(dobj_name == "Circle")
             {
+                console.log("Redraw Circle...");
+                console.log("Points: ");
+                console.log(drawn_object.center_point);
                 //The object to be drawm here is circle.
                 if(drawn_object.center_point.length > 0)
                 {
-                    whiteboard.context.strokeStyle = whiteboard.canvas_data_stack[i].color;
                     whiteboard.context.save();
+                    whiteboard.context.strokeStyle = whiteboard.canvas_data_stack[i].color;
                     
                     var active = false;
                     if(e != undefined)
@@ -837,6 +842,7 @@ whiteboard.drawing_action.redraw = function(e,drag_state){
                         var p3 = [drawn_object.center_point[0] + drawn_object.radius,drawn_object.center_point[1] + drawn_object.radius];
                         var p4 = [drawn_object.center_point[0] - drawn_object.radius,drawn_object.center_point[1] + drawn_object.radius];
 
+                        drawn_object.area_points = [];
                         drawn_object.area_points.push(p1[0]);
                         drawn_object.area_points.push(p1[1]);
                         drawn_object.area_points.push(p2[0]);
@@ -845,23 +851,55 @@ whiteboard.drawing_action.redraw = function(e,drag_state){
                         drawn_object.area_points.push(p3[1]);
                         drawn_object.area_points.push(p4[0]);
                         drawn_object.area_points.push(p4[1]);
-
-
+                        console.log("Area Points: ");
+                        console.log(drawn_object.area_points);
+                        console.log("Mouse Points: ");
+                        console.log((e.pageX - offX) + ", " + (e.pageY - offY));
                         active = drawn_object.check_if_hit(e.pageX - offX,e.pageY - offY);
                     }
                     
+                    console.log("Active: "+active);
 
                     if(active)
                     {
+                        if(drag_state == "move" && mouse_state == "hover") {
+                            $("#drawing_board").css("cursor","move");
+                            // var offsetx = (e.pageX - offX) - drawn_object.area_points[0];
+                            // var offsety = (e.pageY - offY) - drawn_object.area_points[1];
+                            // var temp1_x = (e.pageX - offX) - offsetx;
+                            // var temp1_y = (e.pageY - offY) - offsety;
+
+                            // drawn_object.center_point[0] = temp1_x + drawn_object.radius;
+                            // drawn_object.center_point[1] = temp1_y + drawn_object.radius;
+                        }
+
+                        console.log("Offset: ");
+                        console.log(drawn_object.offset_x);
+                        console.log(drawn_object.offset_y);
+
                         drawn_object.calculate_anchors();
                         var anchors = drawn_object.anchors;
 
+                        console.log(anchors);
+
                         var anchor_radius = drawn_object.anchor_circle_size;
+
+                        console.log(anchor_radius);
 
                         whiteboard.context.lineWidth = drawn_object.size;
                         whiteboard.context.strokeStyle = drawn_object.color;
                         //whiteboard.drawing_action.drawCircle2(drawn_object.center_point[0],drawn_object.center_point[1],drawn_object.radius);
                         whiteboard.drawing_action.drawCircle2(drawn_object.center_point[0],drawn_object.center_point[1],drawn_object.radius,false,"",active,anchors,anchor_radius,true,drawn_object.anchor_fill_color);
+
+
+                        var anchor_hit = drawn_object.which_anchor(e.pageX - offX,e.pageY - offY);
+
+                        //console.log("Anchor: "+anchor_hit.name);
+
+                        if(anchor_hit != undefined)
+                        {
+                            whiteboard.drawing_action.change_board_cursor(anchor_hit.name);
+                        }
 
                     }
                     else
@@ -869,6 +907,7 @@ whiteboard.drawing_action.redraw = function(e,drag_state){
                         whiteboard.context.lineWidth = drawn_object.size;
                         whiteboard.context.strokeStyle = drawn_object.color;
                         whiteboard.drawing_action.drawCircle2(drawn_object.center_point[0],drawn_object.center_point[1],drawn_object.radius);
+                        whiteboard.drawing_action.change_board_cursor("Reset");
                     }
 
 
@@ -934,8 +973,11 @@ whiteboard.drawing_action.redraw = function(e,drag_state){
                     {
                         if(active)
                         {
-                            whiteboard.selected_tool = whiteboard.tools.Move();
-                            $("#drawing_board").css("cursor","move");
+                            //whiteboard.selected_tool = whiteboard.tools.Move();
+                            if(drag_state == "move") {
+                                $("#drawing_board").css("cursor","move");
+                            }
+                            
                             drawn_object.calculate_anchors();
                             var anchors = drawn_object.anchors;
 
