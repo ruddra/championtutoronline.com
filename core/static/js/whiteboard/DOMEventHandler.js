@@ -387,3 +387,7 @@ $(document).on("click","#id_canvas_menu_icon_graph2",function(e){
     whiteboard.drawing_action.draw_cartesian_space();
     return false;
 });
+
+// $(document).on("click","#id_canvas_menu_icon_clearboard", function(e) {
+//     alert("Item will be cleared away...");
+// });

@@ -74,7 +74,7 @@ class WhiteboardView(View):
 
     def get(self,request,*args,**kwargs):
         #c = RequestContext(request)
-        teachers = User.objects.raw("select * from champ_user where type='teacher' and id != '%s'" % request.session.get("user_id"))
+        teachers = User.objects.raw("select * from champ_user where id != '%s'" % request.session.get("user_id"))
         return render(request, 'whiteboard.html', {"champ_userid":request.session.get("user_id"),'teachers':teachers})
 
 class ProfileView(View):
