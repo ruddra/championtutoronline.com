@@ -543,7 +543,6 @@ org = { mathdox:{formulaeditor:{options:{dragPalette:false, paletteShow: "none",
     });
 
     $(".canvas_menu_inner > a").mouseover(function(e){
-
             e.stopPropagation();
             if(whiteboard.selected_tool.name == "FX"){
                 $(this).parent().siblings('.canvas_menu_inner').children('.canvas_menu_inner > a').removeClass("menu_active");

@@ -1002,7 +1002,7 @@ a.free_trial,a.free_trial:link,a.free_trial:visited { width: 181px; height: 35px
 
 .text_area { width:100%; height:auto; float:left; background:#2d353a; padding:15px; display:inline; }
 
-.tabbings { width:100%; height:auto; float:left; position:relative; }
+.tabbings { width:100%; height:auto; float:left; position:relative; display: none; }
 
 .left_detail { width:auto; height:auto; float:left; margin-left:15px; display:inline; }
 

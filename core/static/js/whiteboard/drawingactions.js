@@ -1247,27 +1247,40 @@ whiteboard.drawing_action.cartesian_space_img = function(width,height){
     var height = canvas_obj.height;
 
     temp_canvas_context.lineWidth = 0.4;
-    temp_canvas_context.strokeStyle = "#202020";
+    temp_canvas_context.strokeStyle = "#C8C8C8";
 
     var margin = 30;
 
     var arrow_width = 20;
     var arrow_height = 10;
 
-    drawLine(margin,height/2,width-margin,height/2);
-    drawLine(width/2,margin,width/2,height-margin);
+    for(var i = 0 ; i < width ; i+= 15){
+        drawLine(i,0,i,height);
+    }
 
-    drawLine(margin,height/2,margin+arrow_width,(height/2)-arrow_height);
-    drawLine(margin,height/2,margin+arrow_width,(height/2)+arrow_height);
+    for(var i = 0 ;  i < height ; i+=15){
+        drawLine(0,i,width,i);
+    }
 
-    drawLine(width-margin,height/2,width-margin-arrow_width,(height/2)-arrow_height);
-    drawLine(width-margin,height/2,width-margin-arrow_width,(height/2)+arrow_height);        
+    console.log("Total Slot: "+((Math.floor(width/30))*15));
 
-    drawLine(width/2,margin,(width/2)-arrow_height,margin+arrow_width);
-    drawLine(width/2,margin,(width/2)+arrow_height,margin+arrow_width);
+    temp_canvas_context.lineWidth = 0.4;
+    temp_canvas_context.strokeStyle = "#202020";
 
-    drawLine(width/2,height-margin,(width/2)-arrow_height,height-margin-arrow_width);
-    drawLine(width/2,height-margin,(width/2)+arrow_height,height-margin-arrow_width);
+    drawLine(margin,((Math.floor(height/30))*15),width-margin,((Math.floor(height/30))*15));
+    drawLine(((Math.floor(width/30))*15),margin,((Math.floor(width/30))*15),height-margin);
+
+    drawLine(margin,((Math.floor(height/30))*15),margin+arrow_width,(((Math.floor(height/30))*15))-arrow_height);
+    drawLine(margin,((Math.floor(height/30))*15),margin+arrow_width,(((Math.floor(height/30))*15))+arrow_height);
+
+    drawLine(width-margin,((Math.floor(height/30))*15),width-margin-arrow_width,(((Math.floor(height/30))*15))-arrow_height);
+    drawLine(width-margin,((Math.floor(height/30))*15),width-margin-arrow_width,(((Math.floor(height/30))*15))+arrow_height);        
+
+    drawLine(((Math.floor(width/30))*15),margin,(((Math.floor(width/30))*15))-arrow_height,margin+arrow_width);
+    drawLine(((Math.floor(width/30))*15),margin,(((Math.floor(width/30))*15))+arrow_height,margin+arrow_width);
+
+    drawLine(((Math.floor(width/30))*15),height-margin,(((Math.floor(width/30))*15))-arrow_height,height-margin-arrow_width);
+    drawLine(((Math.floor(width/30))*15),height-margin,(((Math.floor(width/30))*15))+arrow_height,height-margin-arrow_width);
 
     var graph_img = temp_canvas_context.getImageData(0,0,canvas_obj.width,canvas_obj.height);
     $("#id_temp_canvas").remove();

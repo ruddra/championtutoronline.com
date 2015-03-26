@@ -11,6 +11,8 @@ function set_default_color_menu_border()
     $("#gray").css({"border":"2px solid #6a6b7e"});
 }
 
+var drawing_color_selected = "#1c1f21";
+
 color_menu_click_handler = function(event)
 {
     set_default_color_menu_border();
@@ -52,6 +54,8 @@ color_menu_click_handler = function(event)
 
     whiteboard.selected_tool.color = color;
 
+    drawing_color_selected = color;
+
     //console.log("Tool color selected: "+whiteboard.selected_tool.color);
 
     return false;
@@ -85,12 +89,13 @@ $(document).on("click","#id_canvas_menu_icon_pen_size5",function(e)
 {
     whiteboard.Init();
 
-    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon4.png),auto');
+    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon4_cursor.png) 0 19, auto');
 
     deselect_tools();
     //$("#id_canvas_menu_icon_pen_menu").addClass('menu_active');
     var pen_tool = whiteboard.tools.Pen();
     pen_tool.size = pen_tool.Size.NORMAL;
+    pen_tool.color = drawing_color_selected;
     whiteboard.selected_tool = pen_tool;
     return false;
 });
@@ -99,12 +104,13 @@ $(document).on("click","#id_canvas_menu_icon_pen_size10",function(e)
 {
     whiteboard.Init();
 
-    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon4.png),auto');
+    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon4_cursor.png) 0 19, auto');
 
     deselect_tools();
     //$("#id_canvas_menu_icon_pen_menu").addClass('menu_active');
     var pen_tool = whiteboard.tools.Pen();
     pen_tool.size = pen_tool.Size.MEDIUM;
+    pen_tool.color = drawing_color_selected;
     whiteboard.selected_tool = pen_tool;
     return false;
 });
@@ -113,12 +119,13 @@ $(document).on("click","#id_canvas_menu_icon_pen_size15",function(e)
 {
     whiteboard.Init();
 
-    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon4.png),auto');
+    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon4_cursor.png) 0 19, auto');
 
     deselect_tools();
     //$("#id_canvas_menu_icon_pen_menu").addClass('menu_active');
     var pen_tool = whiteboard.tools.Pen();
     pen_tool.size = pen_tool.Size.LARGE;
+    pen_tool.color = drawing_color_selected;
     whiteboard.selected_tool = pen_tool;
     return false;
 });
@@ -127,12 +134,13 @@ $(document).on("click","#id_canvas_menu_icon_pen_size20",function(e)
 {
     whiteboard.Init();
 
-    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon4.png),auto');
+    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon4_cursor.png) 0 19, auto');
 
     deselect_tools();
     //$("#id_canvas_menu_icon_pen_menu").addClass('menu_active');
     var pen_tool = whiteboard.tools.Pen();
     pen_tool.size = pen_tool.Size.EXTRA_LARGE;
+    pen_tool.color = drawing_color_selected;
     whiteboard.selected_tool = pen_tool;
     return false;
 });
@@ -141,7 +149,7 @@ $(document).on("click","#id_canvas_menu_icon_eraser_size5",function(e)
 {
     whiteboard.Init();
 
-    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon5.png),auto');
+    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon5_cursor.png) 0 19,auto');
 
     deselect_tools();
     var eraser_tool = whiteboard.tools.Eraser();
@@ -154,7 +162,7 @@ $(document).on("click","#id_canvas_menu_icon_eraser_size10",function(e)
 {
     whiteboard.Init();
 
-    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon5.png),auto');
+    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon5_cursor.png) 0 19,auto');
 
     deselect_tools();
     var eraser_tool = whiteboard.tools.Eraser();
@@ -167,7 +175,7 @@ $(document).on("click","#id_canvas_menu_icon_eraser_size15",function(e)
 {
     whiteboard.Init();
 
-    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon5.png),auto');
+    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon5_cursor.png) 0 19,auto');
 
     deselect_tools();
     var eraser_tool = whiteboard.tools.Eraser();
@@ -180,7 +188,7 @@ $(document).on("click","#id_canvas_menu_icon_eraser_size20",function(e)
 {
     whiteboard.Init();
 
-    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon5.png),auto');
+    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon5_cursor.png) 0 19,auto');
 
     deselect_tools();
     var eraser_tool = whiteboard.tools.Eraser();
@@ -194,11 +202,12 @@ $(document).on("click","#id_canvas_menu_icon_brush_size5",function(e)
 {
     whiteboard.Init();
 
-    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon6.png),auto');
+    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon6_cusror.png) 0 19,auto');
 
     deselect_tools();
     var brush_tool = whiteboard.tools.Brush();
     brush_tool.size = brush_tool.Size.NORMAL;
+    brush_tool.color = drawing_color_selected;
     whiteboard.selected_tool = brush_tool;
     return false;
 });
@@ -206,10 +215,11 @@ $(document).on("click","#id_canvas_menu_icon_brush_size5",function(e)
 $(document).on("click","#id_canvas_menu_icon_brush_size10",function(e)
 {
     whiteboard.Init();
-    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon6.png),auto');
+    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon6_cusror.png) 0 19,auto');
     deselect_tools();
     var brush_tool = whiteboard.tools.Brush();
     brush_tool.size = brush_tool.Size.MEDIUM;
+    brush_tool.color = drawing_color_selected;
     whiteboard.selected_tool = brush_tool;
     return false;
 });
@@ -217,10 +227,11 @@ $(document).on("click","#id_canvas_menu_icon_brush_size10",function(e)
 $(document).on("click","#id_canvas_menu_icon_brush_size15",function(e)
 {
     whiteboard.Init();
-    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon6.png),auto');
+    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon6_cusror.png) 0 19,auto');
     deselect_tools();
     var brush_tool = whiteboard.tools.Brush();
     brush_tool.size = brush_tool.Size.LARGE;
+    brush_tool.color = drawing_color_selected;
     whiteboard.selected_tool = brush_tool;
     return false;
 });
@@ -228,10 +239,11 @@ $(document).on("click","#id_canvas_menu_icon_brush_size15",function(e)
 $(document).on("click","#id_canvas_menu_icon_brush_size20",function(e)
 {
     whiteboard.Init();
-    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon6.png),auto');
+    $("#drawing_board").css('cursor','url(/static/images/wb_menu_icon6_cusror.png) 0 19,auto');
     deselect_tools();
     var brush_tool = whiteboard.tools.Brush();
     brush_tool.size = brush_tool.Size.EXTRA_LARGE;
+    brush_tool.color = drawing_color_selected;
     whiteboard.selected_tool = brush_tool;
     return false;
 });
@@ -242,6 +254,7 @@ $(document).on("click","#id_canvas_menu_icon_shape_circle",function(e)
     $("#drawing_board").css('cursor','crosshair');
     deselect_tools();
     var circle_tool = whiteboard.tools.Circle();
+    circle_tool.color = drawing_color_selected;
     whiteboard.selected_tool = circle_tool;
     return false;
 });
@@ -252,6 +265,7 @@ $(document).on("click","#id_canvas_menu_icon_shape_hexa",function(e)
     $("#drawing_board").css('cursor','crosshair');
     deselect_tools();
     var circle_hexa_tool = whiteboard.tools.CircleHexa();
+    circle_hexa_tool.color = drawing_color_selected;
     whiteboard.selected_tool = circle_hexa_tool;
     whiteboard.canvas_data_bfr_drawng_start = whiteboard.context.getImageData(0,0,whiteboard.canvas.width,whiteboard.canvas.height);
     return false;
@@ -263,6 +277,7 @@ $(document).on("click","#id_canvas_menu_icon_shape_penta",function(e)
     $("#drawing_board").css('cursor','crosshair');
     deselect_tools();
     var circle_penta = whiteboard.tools.CirclePenta();
+    circle_penta.color = drawing_color_selected;
     whiteboard.selected_tool = circle_penta;
     whiteboard.canvas_data_bfr_drawng_start = whiteboard.context.getImageData(0,0,whiteboard.canvas.width,whiteboard.canvas.height);
     return false;
@@ -274,6 +289,7 @@ $(document).on("click","#id_canvas_menu_icon_shape_rect",function(e)
     $("#drawing_board").css('cursor','crosshair');
     deselect_tools();
     var rect_tool = whiteboard.tools.Rectangle();
+    rect_tool.color = drawing_color_selected;
     whiteboard.selected_tool = rect_tool;
     whiteboard.canvas_data_bfr_drawng_start = whiteboard.context.getImageData(0,0,whiteboard.canvas.width,whiteboard.canvas.height);
     return false;
@@ -285,6 +301,7 @@ $(document).on("click","#id_canvas_menu_icon_shape_triangle",function(e)
     $("#drawing_board").css('cursor','crosshair');
     deselect_tools();
     var triangle_tool = whiteboard.tools.Triangle();
+    triangle_tool.color = drawing_color_selected;
     whiteboard.selected_tool = triangle_tool;
     whiteboard.canvas_data_bfr_drawng_start = whiteboard.context.getImageData(0,0,whiteboard.canvas.width,whiteboard.canvas.height);
     return false;
@@ -296,6 +313,7 @@ $(document).on("click","#id_canvas_menu_icon_shape_line",function(e)
     $("#drawing_board").css('cursor','crosshair');
     deselect_tools();
     var line_tool = whiteboard.tools.Line();
+    line_tool.color = drawing_color_selected;
     whiteboard.selected_tool = line_tool;
     whiteboard.canvas_data_bfr_drawng_start = whiteboard.context.getImageData(0,0,whiteboard.canvas.width,whiteboard.canvas.height);
     return false;
@@ -308,6 +326,7 @@ $(document).on("click","#id_canvas_menu_icon_shape_righttriangle",function(e)
     deselect_tools();
     var right_triangle = whiteboard.tools.Triangle();
     right_triangle.right_triangle = true;
+    right_triangle.color = drawing_color_selected;
     whiteboard.selected_tool = right_triangle;
     whiteboard.canvas_data_bfr_drawng_start = whiteboard.context.getImageData(0,0,whiteboard.canvas.width,whiteboard.canvas.height);
     return false;
@@ -321,6 +340,7 @@ $(document).on("click","#id_canvas_menu_icon_shape_arrow1",function(e)
     var line_tool = whiteboard.tools.Line();
     line_tool.draw_arrow = true;
     line_tool.arrow_end = 2;
+    line_tool.color = drawing_color_selected;
     whiteboard.selected_tool = line_tool;
     whiteboard.canvas_data_bfr_drawng_start = whiteboard.context.getImageData(0,0,whiteboard.canvas.width,whiteboard.canvas.height);
     return false;
@@ -333,6 +353,7 @@ $(document).on("click","#id_canvas_menu_icon_shape_arrow2",function(e)
     var line_tool = whiteboard.tools.Line();
     line_tool.draw_arrow = true;
     line_tool.arrow_end = 3;
+    line_tool.color = drawing_color_selected;
     whiteboard.selected_tool = line_tool;
     whiteboard.canvas_data_bfr_drawng_start = whiteboard.context.getImageData(0,0,whiteboard.canvas.width,whiteboard.canvas.height);
     return false;
@@ -345,6 +366,7 @@ $(document).on("click","#id_canvas_menu_icon_axis1",function(e)
     deselect_tools();
     var axis_tool = whiteboard.tools.Axis();
     axis_tool.arrow_dir = 2; //Top right.
+    axis_tool.color = drawing_color_selected;
     whiteboard.selected_tool = axis_tool;
     whiteboard.canvas_data_bfr_drawng_start = whiteboard.context.getImageData(0,0,whiteboard.canvas.width,whiteboard.canvas.height);
     return false;
@@ -358,6 +380,7 @@ $(document).on("click","#id_canvas_menu_icon_axismarked",function(e)
     var axis_tool = whiteboard.tools.Axis();
     axis_tool.arrow_dir = 2; //Top right.
     axis_tool.show_unit = true;
+    axis_tool.color = drawing_color_selected;
     whiteboard.selected_tool = axis_tool;
     whiteboard.canvas_data_bfr_drawng_start = whiteboard.context.getImageData(0,0,whiteboard.canvas.width,whiteboard.canvas.height);
     return false;

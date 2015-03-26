@@ -313,7 +313,7 @@
         <div class="tabbings">
         <div id="tabs">
             <div id="tabs-1">
-                <div class="canvas_menu">
+                <!-- <div class="canvas_menu">
                     <div class="radius3 text_editor"> <a href="#" id="text"> Text </a> </div>
 
                     <div class="radius3 text_editor"> <a href="#" id="default"> Default </a> </div>
@@ -334,7 +334,7 @@
                         <textarea class="documnet_contnt radius3"></textarea>
 
                     </div>
-                </div>
+                </div> -->
             </div>
             <div id="tabs-2">
                 <!-- Data for Text Editor. !-->
@@ -929,7 +929,10 @@
     </script>
     <script src="{% static "js/jquery-ui-1.10.4.custom.js" %}"></script>
     <script>
-        $( "#tabs" ).tabs();
+        $( "#tabs" ).tabs(
+            {
+                active: 2
+            });
 
         function load_js_async(url)
         {
@@ -949,6 +952,7 @@
             });
         }
 
+        var code_editor_loaded = false;
         var text_editor_loaded = false;
         var drawing_board_loaded = false;
         var js_script_loaded = false;
@@ -964,6 +968,37 @@
                 js_script_loaded = true;
             }
         }
+
+        $("#id_tab_code_editor").click(function(e){
+           if(!code_editor_loaded)
+            {
+                $("#loading_container").show();
+                $.ajax({
+                    type: "GET",
+                    url: "ajax/code_editor",
+                    data: {},
+                    success: function(data)
+                    {
+                        $("#tabs-1").html(data);
+                        code_editor_loaded = true;
+                        console.log("Code Editor loaded.");
+                        //load_whiteboard_scripts_async();
+                    },
+                    error: function(jqxhr, status, error)
+                    {
+
+                    }
+                })
+                .done(function( msg ) {
+                    $("#loading_container").hide();
+                });
+            }
+            else
+            {
+                console.log("Code Editor Already Loaded!");
+            } 
+        });
+
         $("#id_tab_text_editor").click(function(e)
         {
             if(!text_editor_loaded)
@@ -1024,5 +1059,39 @@
                 console.log("Drawing Board Already Loaded!");
             }
         });
+
+
+        $(document).ready(function(){
+            $(".tabbings").show();
+            if(!drawing_board_loaded)
+            {
+                $("#loading_container").show();
+                $.ajax({
+                    type: "GET",
+                    url: "ajax/drawing_board",
+                    data: {},
+                    success: function(data)
+                    {
+                        $("#tabs-3").html(data);
+                        drawing_board_loaded = true;
+                        console.log("Drawing board loaded.");
+                        //load_whiteboard_scripts_async();
+                    },
+                    error: function(jqxhr, status, error)
+                    {
+
+                    }
+                })
+                .done(function( msg ) {
+                            $("#loading_container").hide();
+                });
+            }
+            else
+            {
+                console.log("Drawing Board Already Loaded!");
+            }
+        });
+
+
     </script>
 {% endblock more_extra %}
