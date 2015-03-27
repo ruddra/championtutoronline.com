@@ -72,10 +72,35 @@ class WhiteboardView(View):
     def dispatch(self, request, *args, **kwargs):
        return super(self.__class__, self).dispatch(request, *args, **kwargs)
 
+    def get_context_data(self,request):
+        data = {}
+        _this_user_id = request.session.get("user_id")
+        user_objs = User.objects.filter(id=_this_user_id)
+        if user_objs:
+            user_obj = user_objs[0]
+            data["utype"] = user_obj.type
+
+            query = None
+
+            if user_obj.type == "student":
+                #query to get teachers with recent chat and also teachers who initiated a chat with this student.
+                query = "select * from champ_user where type='teacher' and id != '%s'" % _this_user_id
+            else:
+                #query to get students with recent chat and also students who initiated a chat with this teacher.
+                query = "select * from champ_user where type='student' and id != '%s'" % _this_user_id
+
+            if query:
+                data["buddies"] = User.objects.raw(query)
+
+        return data
+
+
     def get(self,request,*args,**kwargs):
         #c = RequestContext(request)
-        teachers = User.objects.raw("select * from champ_user where id != '%s'" % request.session.get("user_id"))
-        return render(request, 'whiteboard.html', {"champ_userid":request.session.get("user_id"),'teachers':teachers})
+        #teachers = User.objects.raw("select * from champ_user where id != '%s'" % request.session.get("user_id"))
+        context_data = self.get_context_data(request)
+        context_data["champ_userid"] = request.session.get("user_id")
+        return render(request, 'whiteboard.html', context_data)
 
 class ProfileView(View):
     def get(self,request,*args,**kwargs):

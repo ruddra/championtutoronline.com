@@ -12,7 +12,7 @@ class User(models.Model):
     state = models.TextField(blank=True,null=True,max_length=40)
     zip = models.TextField(blank=True,null=True,max_length=40)
     country = models.TextField(blank=True,null=True,max_length=40)
-    type = models.TextField(blank=True,null=True,max_length=10)
+    type = models.TextField(blank=True,null=True,max_length=10) #student,teacher
 
     class Meta:
         db_table = 'champ_user'

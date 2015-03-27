@@ -447,7 +447,7 @@
             </div>
         </div>
         <div id="id_chat_sidebar_floating" class="center-right">
-            <button class="btn btn-primary" id="id_button_tut_online_toggle">Students Online</button>
+            <button class="btn btn-primary" id="id_button_tut_online_toggle">{% if utype == "student" %}Teachers Online{% else %} Students Online {% endif %}</button>
             <div class="chat_sidebar radius3_top" id="id_chat_tutor_list">
 <!--                     <div class="chat_sidebar_header">
                         <a href="#"><h4 style="color:white;">Tutors Online</h4></a>
@@ -462,10 +462,10 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {% for teacher in teachers %}
+                            {% for buddy in buddies %}
                                 <tr>
                                     <td>
-                                        <input type="hidden" class="tutor_uid" value="{{ teacher.id }}"/>
+                                        <input type="hidden" class="tutor_uid" value="{{ buddy.id }}"/>
                                         <input type="hidden" class="online_status" value="offline"/>
                                         <img src="{% static "images/msg_img1.png" %}" class="pimg_url" width="40" height="40"/>
                                         <br/>
@@ -473,7 +473,7 @@
                                         <span class="badge">6/10</span>
                                         </td>
                                     <td style="width: 220px;">
-                                        <div><a href="#"><label class="tut_name">{{ teacher.fullname }}</label><span class="pull-right ic_online" style="display:none;"><img src="{% static "images/online.png" %}" width="12" height="12"/></span></a></div>
+                                        <div><a href="#"><label class="tut_name">{{ buddy.fullname }}</label><span class="pull-right ic_online" style="display:none;"><img src="{% static "images/online.png" %}" width="12" height="12"/></span></a></div>
                                         <div style="color:gray;">Expert in Computer Science</div>
                                         <div>Category: Computer Science</div>
                                         <div><span class="glyphicon glyphicon-comment champ_text_chat"></span>

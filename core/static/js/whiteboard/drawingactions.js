@@ -1268,7 +1268,7 @@ whiteboard.drawing_action.cartesian_space_img = function(width,height){
     temp_canvas_context.strokeStyle = "#202020";
 
     drawLine(margin,((Math.floor(height/30))*15),width-margin,((Math.floor(height/30))*15));
-    drawLine(((Math.floor(width/30))*15),margin,((Math.floor(width/30))*15),height-margin);
+    drawLine(((Math.floor(width/30))*15),margin,((Math.floor(width/30))*15),height-margin*3);
 
     drawLine(margin,((Math.floor(height/30))*15),margin+arrow_width,(((Math.floor(height/30))*15))-arrow_height);
     drawLine(margin,((Math.floor(height/30))*15),margin+arrow_width,(((Math.floor(height/30))*15))+arrow_height);
@@ -1279,8 +1279,8 @@ whiteboard.drawing_action.cartesian_space_img = function(width,height){
     drawLine(((Math.floor(width/30))*15),margin,(((Math.floor(width/30))*15))-arrow_height,margin+arrow_width);
     drawLine(((Math.floor(width/30))*15),margin,(((Math.floor(width/30))*15))+arrow_height,margin+arrow_width);
 
-    drawLine(((Math.floor(width/30))*15),height-margin,(((Math.floor(width/30))*15))-arrow_height,height-margin-arrow_width);
-    drawLine(((Math.floor(width/30))*15),height-margin,(((Math.floor(width/30))*15))+arrow_height,height-margin-arrow_width);
+    drawLine(((Math.floor(width/30))*15),height-margin*3,(((Math.floor(width/30))*15))-arrow_height,height-margin*3-arrow_width);
+    drawLine(((Math.floor(width/30))*15),height-margin*3,(((Math.floor(width/30))*15))+arrow_height,height-margin*3-arrow_width);
 
     var graph_img = temp_canvas_context.getImageData(0,0,canvas_obj.width,canvas_obj.height);
     $("#id_temp_canvas").remove();
