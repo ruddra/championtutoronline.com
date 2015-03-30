@@ -519,6 +519,7 @@ $(document).ready(function()
             ot_session.addEventListener('connectionDestroyed', function(event) {
                 connection_count--;
                 console.log("Connection destroyed...");
+                console.log("Connection Count: "+connection_count);
 
                 var container_width_redefined = 300 ;// + (connection_count - 2) * 100;
                 var container_height_redefined = 300 ;// + (connection_count - 2) * 100;

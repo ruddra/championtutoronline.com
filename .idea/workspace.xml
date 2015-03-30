@@ -57,8 +57,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ShippingDeliveryCalError.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ShippingDeliveryCalError.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ShippingDeliveryCal_bkp.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ShippingDeliveryCal_bkp.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ShippingDeliveryCal_bkp_0713.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ShippingDeliveryCal_bkp_0713.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/js/whiteboard/Tools.js" afterPath="$PROJECT_DIR$/core/static/js/whiteboard/Tools.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/socketioserver/models/User.js" afterPath="$PROJECT_DIR$/nodejs/socketioserver/models/User.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ViewCart.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ViewCart.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ViewCart_bkp-0528.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ViewCart_bkp-0528.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ViewCart_bkp_0604.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ViewCart_bkp_0604.html" />
@@ -104,7 +102,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_promotion_products_list_dialog.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_promotion_products_list_dialog.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_promotion_products_search_in_dialog.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_promotion_products_search_in_dialog.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_promotion_rules_categories_dialog.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_promotion_rules_categories_dialog.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/socketioserver/app.js" afterPath="$PROJECT_DIR$/nodejs/socketioserver/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/banners_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/banners_search_results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/base.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/base_login.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/base_login.html" />
@@ -137,7 +134,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/categoryindex.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/categoryindex.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/change_pwd.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/change_pwd.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/changeemail.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/changeemail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/js/chat/chat.js" afterPath="$PROJECT_DIR$/core/static/js/chat/chat.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/checkout-response.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/checkout-response.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/checkout_base.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/checkout_base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/checkout_error.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/checkout_error.html" />
@@ -175,8 +171,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/daa-submitted.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/daa-submitted.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/doa-approved.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/doa-approved.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/doa-submitted.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/doa-submitted.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/js/whiteboard/drawingactions.js" afterPath="$PROJECT_DIR$/core/static/js/whiteboard/drawingactions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/drawingboard.html" afterPath="$PROJECT_DIR$/core/templates/ajax/drawingboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/edit-blackout-date.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/edit-blackout-date.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/edit-custom-export-set.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/edit-custom-export-set.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/edit-order.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/edit-order.htm" />
@@ -244,7 +238,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/login.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/more_info.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/more_info.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/moreinfo_old.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/moreinfo_old.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/js/whiteboard/mousemove.js" afterPath="$PROJECT_DIR$/core/static/js/whiteboard/mousemove.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/my_order_info.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/my_order_info.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/my_orders.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/my_orders.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/my_rma_requests.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/my_rma_requests.html" />
@@ -453,10 +446,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/waitinglist_popup.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/waitinglist_popup.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/waitinglist_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/waitinglist_search_results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/waitlistmodal.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/waitlistmodal.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/whiteboard.html" afterPath="$PROJECT_DIR$/core/templates/whiteboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/wishlist.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/wishlist.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/wishlistitems.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/wishlistitems.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/writereview_modal.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/writereview_modal.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/writereview_popup.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/writereview_popup.htm" />
     </list>
@@ -467,7 +458,7 @@
     <file path="/murthy_views.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1425745045401" ignored="false" />
     <file path="/views.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1425744704636" ignored="false" />
     <file path="/checkout_error.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1426005997972" ignored="false" />
-    <file path="/videochat.js" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1427734109568" ignored="false" />
+    <file path="/videochat.js" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1427737020266" ignored="false" />
     <file path="/product.html" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1427526107746" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -530,7 +521,7 @@
       <file leaf-file-name="videochat.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/static/js/chat/videochat.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="528" column="17" selection-start="20427" selection-end="20427" vertical-scroll-proportion="0.56569344">
+            <state line="521" column="67" selection-start="20086" selection-end="20086" vertical-scroll-proportion="0.34854016">
               <folding />
             </state>
           </provider>
@@ -950,7 +941,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1139,7 +1130,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/static/js/chat/videochat.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="528" column="17" selection-start="20427" selection-end="20427" vertical-scroll-proportion="0.56569344">
+        <state line="521" column="67" selection-start="20086" selection-end="20086" vertical-scroll-proportion="0.34854016">
           <folding />
         </state>
       </provider>
