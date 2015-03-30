@@ -34,6 +34,8 @@ var parser = require("./lib/Parser");
 
 var message_model = require("./models/Message")(app,mysql.connection);
 
+var user_model = require("./models/User")(app,mysql.connection);
+
 // var insert_chat_message_session_DB = function(data_obj,callback,errback)
 // {
 //     connection.query("insert into champ_chat_messages(sender_id,receiver_id,msg) values("+ data_obj.publisher_id +","+ data_obj.subsciber_id + ", '" + data_obj.msg +"')", function(err){
@@ -235,9 +237,25 @@ var on_socket_connection = function(socket)
                 //Now prepare the message packet and broadcast to all.
                 var packet = data;
 
-                for(var j = 0 ; j < uids.length ; j++){
-                    io.to(parseInt(uids[j])).emit("onchatmessage",packet);
-                }
+                user_model.get_user(uids,function(data){
+                    console.log("Inside get_user success callback.");
+                    console.log(data);
+
+                    for(var j = 0 ; j < uids.length ; j++){
+                        packet["user"] = data[pub_id];
+                        io.to(parseInt(uids[j])).emit("onchatmessage",packet);
+                    }
+
+                },function(error){
+                    console.log("Inside get_user error callback.");
+                    console.log(error);
+                });
+
+//                packet["name"] = "Another User";
+//
+//                for(var j = 0 ; j < uids.length ; j++){
+//                    io.to(parseInt(uids[j])).emit("onchatmessage",packet);
+//                }
             },
             function(){
                 if(DEBUG){

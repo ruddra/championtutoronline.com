@@ -835,7 +835,7 @@ var generateChatUUID = function(){
                             {
                                 var chat_object = {
                                     user_id:remote_peer_id,
-                                    name: "Sohel",//data.local_peer.name,
+                                    name: data.user.fullname,//data.local_peer.name,
                                     img_url: "" //data.local_peer.pimg_url
                                 };
                                 var chat = new Chat();
@@ -860,7 +860,7 @@ var generateChatUUID = function(){
                             {
                                 var chat_object = {
                                     user_id:remote_peer_uid,
-                                    name: "Sohel",//data.local_peer.name,
+                                    name: data.user.fullname,//data.local_peer.name,
                                     img_url: "" //data.local_peer.pimg_url
                                 };
                                 var chat = new Chat();

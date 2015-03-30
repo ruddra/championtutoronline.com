@@ -834,82 +834,86 @@ whiteboard.drawing_action.redraw = function(e,drag_state,mouse_state){  //drag_s
                     whiteboard.context.save();
                     whiteboard.context.strokeStyle = whiteboard.canvas_data_stack[i].color;
                     
-                    var active = false;
-                    if(e != undefined)
-                    {
-                        var p1 = [drawn_object.center_point[0] - drawn_object.radius,drawn_object.center_point[1] - drawn_object.radius];
-                        var p2 = [drawn_object.center_point[0] + drawn_object.radius,drawn_object.center_point[1] - drawn_object.radius];
-                        var p3 = [drawn_object.center_point[0] + drawn_object.radius,drawn_object.center_point[1] + drawn_object.radius];
-                        var p4 = [drawn_object.center_point[0] - drawn_object.radius,drawn_object.center_point[1] + drawn_object.radius];
+                    // var active = false;
+                    // if(e != undefined)
+                    // {
+                    //     var p1 = [drawn_object.center_point[0] - drawn_object.radius,drawn_object.center_point[1] - drawn_object.radius];
+                    //     var p2 = [drawn_object.center_point[0] + drawn_object.radius,drawn_object.center_point[1] - drawn_object.radius];
+                    //     var p3 = [drawn_object.center_point[0] + drawn_object.radius,drawn_object.center_point[1] + drawn_object.radius];
+                    //     var p4 = [drawn_object.center_point[0] - drawn_object.radius,drawn_object.center_point[1] + drawn_object.radius];
 
-                        drawn_object.area_points = [];
-                        drawn_object.area_points.push(p1[0]);
-                        drawn_object.area_points.push(p1[1]);
-                        drawn_object.area_points.push(p2[0]);
-                        drawn_object.area_points.push(p2[1]);
-                        drawn_object.area_points.push(p3[0]);
-                        drawn_object.area_points.push(p3[1]);
-                        drawn_object.area_points.push(p4[0]);
-                        drawn_object.area_points.push(p4[1]);
-                        console.log("Area Points: ");
-                        console.log(drawn_object.area_points);
-                        console.log("Mouse Points: ");
-                        console.log((e.pageX - offX) + ", " + (e.pageY - offY));
-                        active = drawn_object.check_if_hit(e.pageX - offX,e.pageY - offY);
-                    }
+                    //     drawn_object.area_points = [];
+                    //     drawn_object.area_points.push(p1[0]);
+                    //     drawn_object.area_points.push(p1[1]);
+                    //     drawn_object.area_points.push(p2[0]);
+                    //     drawn_object.area_points.push(p2[1]);
+                    //     drawn_object.area_points.push(p3[0]);
+                    //     drawn_object.area_points.push(p3[1]);
+                    //     drawn_object.area_points.push(p4[0]);
+                    //     drawn_object.area_points.push(p4[1]);
+                    //     console.log("Area Points: ");
+                    //     console.log(drawn_object.area_points);
+                    //     console.log("Mouse Points: ");
+                    //     console.log((e.pageX - offX) + ", " + (e.pageY - offY));
+                    //     active = drawn_object.check_if_hit(e.pageX - offX,e.pageY - offY);
+                    // }
                     
-                    console.log("Active: "+active);
+                    // console.log("Active: "+active);
 
-                    if(active)
-                    {
-                        if(drag_state == "move" && mouse_state == "hover") {
-                            $("#drawing_board").css("cursor","move");
-                            // var offsetx = (e.pageX - offX) - drawn_object.area_points[0];
-                            // var offsety = (e.pageY - offY) - drawn_object.area_points[1];
-                            // var temp1_x = (e.pageX - offX) - offsetx;
-                            // var temp1_y = (e.pageY - offY) - offsety;
+                    // if(active)
+                    // {
+                    //     if(drag_state == "move" && mouse_state == "hover") {
+                    //         $("#drawing_board").css("cursor","move");
+                    //         // var offsetx = (e.pageX - offX) - drawn_object.area_points[0];
+                    //         // var offsety = (e.pageY - offY) - drawn_object.area_points[1];
+                    //         // var temp1_x = (e.pageX - offX) - offsetx;
+                    //         // var temp1_y = (e.pageY - offY) - offsety;
 
-                            // drawn_object.center_point[0] = temp1_x + drawn_object.radius;
-                            // drawn_object.center_point[1] = temp1_y + drawn_object.radius;
-                        }
+                    //         // drawn_object.center_point[0] = temp1_x + drawn_object.radius;
+                    //         // drawn_object.center_point[1] = temp1_y + drawn_object.radius;
+                    //     }
 
-                        console.log("Offset: ");
-                        console.log(drawn_object.offset_x);
-                        console.log(drawn_object.offset_y);
+                    //     console.log("Offset: ");
+                    //     console.log(drawn_object.offset_x);
+                    //     console.log(drawn_object.offset_y);
 
-                        drawn_object.calculate_anchors();
-                        var anchors = drawn_object.anchors;
+                    //     drawn_object.calculate_anchors();
+                    //     var anchors = drawn_object.anchors;
 
-                        console.log(anchors);
+                    //     console.log(anchors);
 
-                        var anchor_radius = drawn_object.anchor_circle_size;
+                    //     var anchor_radius = drawn_object.anchor_circle_size;
 
-                        console.log(anchor_radius);
+                    //     console.log(anchor_radius);
 
-                        whiteboard.context.lineWidth = drawn_object.size;
-                        whiteboard.context.strokeStyle = drawn_object.color;
-                        //whiteboard.drawing_action.drawCircle2(drawn_object.center_point[0],drawn_object.center_point[1],drawn_object.radius);
-                        whiteboard.drawing_action.drawCircle2(drawn_object.center_point[0],drawn_object.center_point[1],drawn_object.radius,false,"",active,anchors,anchor_radius,true,drawn_object.anchor_fill_color);
+                    //     whiteboard.context.lineWidth = drawn_object.size;
+                    //     whiteboard.context.strokeStyle = drawn_object.color;
+                    //     //whiteboard.drawing_action.drawCircle2(drawn_object.center_point[0],drawn_object.center_point[1],drawn_object.radius);
+                    //     whiteboard.drawing_action.drawCircle2(drawn_object.center_point[0],drawn_object.center_point[1],drawn_object.radius,false,"",active,anchors,anchor_radius,true,drawn_object.anchor_fill_color);
 
 
-                        var anchor_hit = drawn_object.which_anchor(e.pageX - offX,e.pageY - offY);
+                    //     var anchor_hit = drawn_object.which_anchor(e.pageX - offX,e.pageY - offY);
 
-                        //console.log("Anchor: "+anchor_hit.name);
+                    //     //console.log("Anchor: "+anchor_hit.name);
 
-                        if(anchor_hit != undefined)
-                        {
-                            whiteboard.drawing_action.change_board_cursor(anchor_hit.name);
-                        }
+                    //     if(anchor_hit != undefined)
+                    //     {
+                    //         whiteboard.drawing_action.change_board_cursor(anchor_hit.name);
+                    //     }
 
-                    }
-                    else
-                    {
-                        whiteboard.context.lineWidth = drawn_object.size;
-                        whiteboard.context.strokeStyle = drawn_object.color;
-                        whiteboard.drawing_action.drawCircle2(drawn_object.center_point[0],drawn_object.center_point[1],drawn_object.radius);
-                        whiteboard.drawing_action.change_board_cursor("Reset");
-                    }
+                    // }
+                    // else
+                    // {
+                    //     whiteboard.context.lineWidth = drawn_object.size;
+                    //     whiteboard.context.strokeStyle = drawn_object.color;
+                    //     whiteboard.drawing_action.drawCircle2(drawn_object.center_point[0],drawn_object.center_point[1],drawn_object.radius);
+                    //     whiteboard.drawing_action.change_board_cursor("Reset");
+                    // }
 
+                    whiteboard.context.lineWidth = drawn_object.size;
+                    whiteboard.context.strokeStyle = drawn_object.color;
+                    whiteboard.drawing_action.drawCircle2(drawn_object.center_point[0],drawn_object.center_point[1],drawn_object.radius);
+                    //whiteboard.drawing_action.change_board_cursor("Reset");
 
                     whiteboard.context.restore();
                 }
@@ -961,92 +965,105 @@ whiteboard.drawing_action.redraw = function(e,drag_state,mouse_state){  //drag_s
                 {
                     whiteboard.context.strokeStyle = drawn_object.color;
 
-                    var active = false;
+                    // var active = false;
 
-                    if(e != undefined)
-                    {
-                        drawn_object.area_points = drawn_object.points;
-                        active = drawn_object.check_if_hit(e.pageX - offX,e.pageY - offY);
-                    }
+                    // if(e != undefined)
+                    // {
+                    //     drawn_object.area_points = drawn_object.points;
+                    //     active = drawn_object.check_if_hit(e.pageX - offX,e.pageY - offY);
+                    // }
                     
-                    if(!object_found)
-                    {
-                        if(active)
-                        {
-                            //whiteboard.selected_tool = whiteboard.tools.Move();
-                            if(drag_state == "move") {
-                                $("#drawing_board").css("cursor","move");
-                            }
+                    // if(!object_found)
+                    // {
+                    //     if(active)
+                    //     {
+                    //         //whiteboard.selected_tool = whiteboard.tools.Move();
+                    //         if(drag_state == "move") {
+                    //             $("#drawing_board").css("cursor","move");
+                    //         }
                             
-                            drawn_object.calculate_anchors();
-                            var anchors = drawn_object.anchors;
+                    //         drawn_object.calculate_anchors();
+                    //         var anchors = drawn_object.anchors;
 
-                            console.log(anchors);
+                    //         console.log(anchors);
 
-                            var anchor_radius = drawn_object.anchor_circle_size;
+                    //         var anchor_radius = drawn_object.anchor_circle_size;
 
-                            var draw_unit = false;
-                            if(drawn_object.show_unit)
-                            {
-                                draw_unit = true;
-                            }
-                            if(drawn_object.arrow_dir == 1)
-                            {
-                                whiteboard.drawing_action.draw_axis_1(drawn_object.points, draw_unit,active,anchors,anchor_radius,true,drawn_object.anchor_fill_color);
-                            }
-                            else if(drawn_object.arrow_dir == 2)
-                            {
-                                whiteboard.drawing_action.draw_axis_2(drawn_object.points, draw_unit,active,anchors,anchor_radius,true,drawn_object.anchor_fill_color);
-                            }
+                    //         var draw_unit = false;
+                    //         if(drawn_object.show_unit)
+                    //         {
+                    //             draw_unit = true;
+                    //         }
+                    //         if(drawn_object.arrow_dir == 1)
+                    //         {
+                    //             whiteboard.drawing_action.draw_axis_1(drawn_object.points, draw_unit,active,anchors,anchor_radius,true,drawn_object.anchor_fill_color);
+                    //         }
+                    //         else if(drawn_object.arrow_dir == 2)
+                    //         {
+                    //             whiteboard.drawing_action.draw_axis_2(drawn_object.points, draw_unit,active,anchors,anchor_radius,true,drawn_object.anchor_fill_color);
+                    //         }
 
-                            var anchor_hit = drawn_object.which_anchor(e.pageX - offX,e.pageY - offY);
+                    //         var anchor_hit = drawn_object.which_anchor(e.pageX - offX,e.pageY - offY);
 
-                            //console.log("Anchor: "+anchor_hit.name);
+                    //         //console.log("Anchor: "+anchor_hit.name);
 
-                            if(anchor_hit != undefined)
-                            {
-                                whiteboard.drawing_action.change_board_cursor(anchor_hit.name);
-                            }
-                        } 
-                        else
-                        {
-                            var draw_unit = false;
-                            if(drawn_object.show_unit)
-                            {
-                                draw_unit = true;
-                            }
-                            if(drawn_object.arrow_dir == 1)
-                            {
-                                whiteboard.drawing_action.draw_axis_1(drawn_object.points, draw_unit);
-                            }
-                            else if(drawn_object.arrow_dir == 2)
-                            {
-                                whiteboard.drawing_action.draw_axis_2(drawn_object.points, draw_unit);
-                            }
-                            whiteboard.drawing_action.change_board_cursor("Reset");
-                        }
+                    //         if(anchor_hit != undefined)
+                    //         {
+                    //             whiteboard.drawing_action.change_board_cursor(anchor_hit.name);
+                    //         }
+                    //     } 
+                    //     else
+                    //     {
+                    //         var draw_unit = false;
+                    //         if(drawn_object.show_unit)
+                    //         {
+                    //             draw_unit = true;
+                    //         }
+                    //         if(drawn_object.arrow_dir == 1)
+                    //         {
+                    //             whiteboard.drawing_action.draw_axis_1(drawn_object.points, draw_unit);
+                    //         }
+                    //         else if(drawn_object.arrow_dir == 2)
+                    //         {
+                    //             whiteboard.drawing_action.draw_axis_2(drawn_object.points, draw_unit);
+                    //         }
+                    //         whiteboard.drawing_action.change_board_cursor("Reset");
+                    //     }
 
-                        object_found = true;
-                    }
-                    else
-                    {
-                        var draw_unit = false;
-                        if(drawn_object.show_unit)
-                        {
-                            draw_unit = true;
-                        }
-                        if(drawn_object.arrow_dir == 1)
-                        {
-                            whiteboard.drawing_action.draw_axis_1(drawn_object.points, draw_unit);
-                        }
-                        else if(drawn_object.arrow_dir == 2)
-                        {
-                            whiteboard.drawing_action.draw_axis_2(drawn_object.points, draw_unit);
-                        }
+                    //     object_found = true;
+                    // }
+                    // else
+                    // {
+                    //     var draw_unit = false;
+                    //     if(drawn_object.show_unit)
+                    //     {
+                    //         draw_unit = true;
+                    //     }
+                    //     if(drawn_object.arrow_dir == 1)
+                    //     {
+                    //         whiteboard.drawing_action.draw_axis_1(drawn_object.points, draw_unit);
+                    //     }
+                    //     else if(drawn_object.arrow_dir == 2)
+                    //     {
+                    //         whiteboard.drawing_action.draw_axis_2(drawn_object.points, draw_unit);
+                    //     }
 
-                        //whiteboard.drawing_action.change_board_cursor("Reset");
-                    }
+                    //     //whiteboard.drawing_action.change_board_cursor("Reset");
+                    // }
                     
+                    var draw_unit = false;
+                    if(drawn_object.show_unit)
+                    {
+                        draw_unit = true;
+                    }
+                    if(drawn_object.arrow_dir == 1)
+                    {
+                        whiteboard.drawing_action.draw_axis_1(drawn_object.points, draw_unit);
+                    }
+                    else if(drawn_object.arrow_dir == 2)
+                    {
+                        whiteboard.drawing_action.draw_axis_2(drawn_object.points, draw_unit);
+                    }
 
                 }
 

@@ -29,6 +29,8 @@ $(document).ready(function()
     var ot_session_id;
     var publisher;
 
+    var connection_count = 0;
+
 	function generateUUID(){
 	    var d = new Date().getTime();
 	    var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
@@ -320,7 +322,7 @@ $(document).ready(function()
 	}
 
 
-    var publishStream = function() {
+    var publishStream = function(audio_mode_only) {
         if(ot_session != undefined)
         {
             var pubOptions =
@@ -329,6 +331,10 @@ $(document).ready(function()
                 height:$("#myVideo").height(),
                 buttonDisplayMode:"off"
             };
+
+            if(audio_mode_only != undefined && audio_mode_only == true){
+                pubOptions["videoSource"] = null;
+            }
 
             publisher = OT.initPublisher("myVideo",pubOptions,function(error)
             {
@@ -366,21 +372,21 @@ $(document).ready(function()
     }
 
 
-	var initOTSession = function(OT_api_key,OT_session,OT_token)
+	var initOTSession = function(OT_api_key,OT_session,OT_token,audio_only_mode)
     {
         if(OT_api_key != undefined && OT_session != undefined && ot_session == undefined)
         {
             ot_session = OT.initSession(OT_api_key, OT_session);
 
-            ot_session.on("streamDestroyed", function (event) {
-			  console.log("Stream stopped. Reason: " + event.reason);
-			});
+//            ot_session.on("streamDestroyed", function (event) {
+//			  console.log("Stream stopped. Reason: " + event.reason);
+//			});
 
 			ot_session.on("sessionConnected", function(event) {
 			   console.log("Session Initialized...");
                 console.log("Now publishing stream to the session...");
                 //Now publish the stream.
-                publishStream();
+                publishStream(audio_only_mode);
 
                 //Now subscribe to the stream that already in the session and i have just joined the session.
                 for (var i = 0; i < event.streams.length; i++) {
@@ -450,6 +456,7 @@ $(document).ready(function()
 
             ot_session.addEventListener('streamCreated', function(event) {
                 //This callback is fired when i am already in the session and new user has just joined the session.
+                console.log("Stream created. Stream ID: "+event.stream.streamId);
                 for (var i = 0; i < event.streams.length; i++) {
                     if (event.streams[i].connection.connectionId == ot_session.connection.connectionId) {
                         console.log("Skipping my own session.");
@@ -481,41 +488,64 @@ $(document).ready(function()
                 }
             });
 
-            ot_session.addEventListener('connectionDestroyed', function(event) {
-                console.log("Connection destroyed...");
-                // for (var i = 0; i < event.streams.length; i++) {
-                //     if (event.streams[i].connection.connectionId == ot_session.connection.connectionId) {
-                //         console.log("Skipping my own session.");
-                //         return;
-                //     }
-                //     var subscriber = ot_session.subscribe(event.streams[i], "id_video_section", {
-                //         insertMode: "append"
-                //     });
+            ot_session.addEventListener('connectionCreated', function(event) {
+                 connection_count++;
+                console.log("Connection Created...");
+                var container_width_redefined = 300 ;// + (connection_count - 2) * 100;
+                var container_height_redefined = 300 ;// + (connection_count - 2) * 100;
 
-                //     subscriber.on({
-                //         videoDisabled: function(event)
-                //         {
-                //             console.log("Video disabled.");
-                //             console.log(event.reason);
-                //             subscriber.setStyle('backgroundImageURI',
-                //                 //'http://tokbox.com/img/styleguide/tb-colors-cream.png'
-                //                 'http://127.0.0.1:8000/static/images/profile_img.png'
-                //             );
-                //         },
-                //         videoEnabled: function(event)
-                //         {
-                //             console.log("Video enabled.");
-                //             console.log(event.reason);
-                //             var imgData = subscriber.getImgData();
-                //             subscriber.setStyle('backgroundImageURI', imgData);
-                //         }
-                //     });
-                //     layout();
-                // }
+                if(connection_count >= 2){
+                    container_width_redefined = 300 + (connection_count - 2) * 100;
+                    container_height_redefined = 300 + (connection_count - 2) * 100;
+                }
+
+                console.log("Width and height redefined: "+container_width_redefined+", "+container_height_redefined);
+
+                video_sharing_container.css("width",container_width_redefined+"px");
+                video_sharing_container.css("height",container_height_redefined+"px");
+
+                video_section.css("width",container_width_redefined+"px");
+                video_section.css("height",container_height_redefined+"px");
+
+                video_section.find(".video-box").css("width",video_box_width+"px");
+                video_section.find(".video-box").css("height",video_box_height+"px");
+
+                video_section.find( "[id^='id_video_pane']").css("width",video_box_width+"px");
+                video_section.find( "[id^='id_video_pane']").css("height",video_box_height+"px");
+
+                layout();
+            });
+
+            ot_session.addEventListener('connectionDestroyed', function(event) {
+                connection_count--;
+                console.log("Connection destroyed...");
+
+                var container_width_redefined = 300 ;// + (connection_count - 2) * 100;
+                var container_height_redefined = 300 ;// + (connection_count - 2) * 100;
+
+                if(connection_count >= 2){
+                    container_width_redefined = 300 + (connection_count - 2) * 100;
+                    container_height_redefined = 300 + (connection_count - 2) * 100;
+                }
+
+                video_sharing_container.css("width",container_width_redefined+"px");
+                video_sharing_container.css("height",container_height_redefined+"px");
+
+                video_section.css("width",container_width_redefined+"px");
+                video_section.css("height",container_height_redefined+"px");
+
+                video_section.find(".video-box").css("width",video_box_width+"px");
+                video_section.find(".video-box").css("height",video_box_height+"px");
+
+                video_section.find( "[id^='id_video_pane']").css("width",video_box_width+"px");
+                video_section.find( "[id^='id_video_pane']").css("height",video_box_height+"px");
+
+                layout();
+
             });
 
             ot_session.addEventListener('streamDestroyed', function(event) {
-                console.log("Stream destroyed...");
+                console.log("Stream destroyed...Stream ID: "+event.stream.streamId);
                 for (var i = 0; i < event.streams.length; i++) {
                     if (event.streams[i].connection.connectionId == ot_session.connection.connectionId) {
                         console.log("Skipping my own session.");
@@ -678,9 +708,9 @@ $(document).ready(function()
         //resize_video_window();
     };
 
-    var startOpenTokSession = function(OT_api_key,OT_session,OT_token)
+    var startOpenTokSession = function(OT_api_key,OT_session,OT_token,audio_mode_only)
     {
-        initOTSession(OT_api_key,OT_session,OT_token);
+        initOTSession(OT_api_key,OT_session,OT_token,audio_mode_only);
         //add_subscriber();
         //connect_session(OT_token);
     }
@@ -811,7 +841,43 @@ $(document).ready(function()
 
 	$(document).on("click",".btn-popup-answer-audio",function(e)
 	{
-		
+		var uid = $(this).parent().parent().find(".popup-uid").val();
+        var call_type = $(this).parent().parent().find(".popup-call-type").val();
+        if(call_type == "p2p")
+        {
+            publish_call_event(uid,"","","answer_video","",call_type);
+            $(this).parent().parent().remove();
+        }
+        else
+        {
+            var apikey = $(this).parent().parent().find(".popup-call-apikey").val();
+            var otsession = $(this).parent().parent().find(".popup-call-otsession").val();
+            var ottoken = $(this).parent().parent().find(".popup-call-ottoken").val();
+
+            console.log("API KEY: " + apikey);
+            console.log("OT Session: " + otsession);
+            console.log("OT Token: " + ottoken);
+
+            add_call_to_queue(uid,"Anonymous","");
+
+            //initOTSession(apikey,otsession);
+            //add_subscriber("id_video_section");
+            //connect_session(ottoken);
+
+            startOpenTokSession(apikey,otsession,ottoken,true);
+
+            publish_call_event(uid,"","","joined","",call_type);
+
+            hide_incoming_call_popup(parseInt(uid));
+
+            $(this).parent().parent().remove();
+
+        }
+        
+        if(!$.trim($("#incoming_call_notification_area").html()))
+        {
+            $("#incoming_call_notification_area").hide();
+        }
 	});
 
 	$(document).on("click",".btn-popup-answer-video",function(e)

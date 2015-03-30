@@ -301,18 +301,34 @@ var event_mouse_move = function(e)
         }
         else if(whiteboard.selected_tool.name == "Select")
         {
-            whiteboard.drawing_action.redraw(e,"move","pressed");
+            if(diff > drawing_time_interval){
+                whiteboard.context.save();
+                //whiteboard.context.putImageData(whiteboard.canvas_data_bfr_drawng_start,0,0);
+                whiteboard.drawing_action.redraw();
+
+                whiteboard.selected_tool.points = [];
+                whiteboard.selected_tool.points.push(whiteboard.draw_starting_point.X);
+                whiteboard.selected_tool.points.push(whiteboard.draw_starting_point.Y);
+                whiteboard.selected_tool.points.push(whiteboard.current_point.X);
+                whiteboard.selected_tool.points.push(whiteboard.current_point.Y);
+
+                whiteboard.context.lineWidth = 1;
+                whiteboard.context.strokeStyle = "#C0C0C0";
+                whiteboard.drawing_action.drawRectangle(whiteboard.draw_starting_point.X,whiteboard.draw_starting_point.Y,whiteboard.current_point.X,whiteboard.current_point.Y);
+                whiteboard.context.restore();
+                lastDrawnTime = new Date();
+              }
         }
     }
     else{
         //whiteboard.update_tools(e);
         if(whiteboard.selected_tool.name == "Select")
         {
-            whiteboard.drawing_action.redraw(e,"move","hover");
+            //whiteboard.drawing_action.redraw(e,"move","hover");
         }
         else
         {
-            whiteboard.drawing_action.redraw(e);
+            //whiteboard.drawing_action.redraw(e);
         }
     }
 

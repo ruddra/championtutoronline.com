@@ -469,10 +469,15 @@ org = { mathdox:{formulaeditor:{options:{dragPalette:false, paletteShow: "none",
             }
             else if($(e.target).parent().attr("id") == "id_canvas_menu_icon_select"){
                 whiteboard.Init();
+                $("#drawing_board").css('cursor','auto');
                 deselect_tools();
                 $("#id_canvas_menu_icon_select").addClass('menu_active');
-                whiteboard.selected_tool = whiteboard.tools.Select();
+                var select_tool = whiteboard.tools.Select();
+                whiteboard.selected_tool = select_tool;
+                console.log("Tool Selected: "+select_tool.name);
+                whiteboard.canvas_data_bfr_drawng_start = whiteboard.context.getImageData(0,0,whiteboard.canvas.width,whiteboard.canvas.height);
                 return false;
+
             }
             else if($(e.target).parent().attr("id") == "id_canvas_menu_icon_redo"){
                 whiteboard.Init();

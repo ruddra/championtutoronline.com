@@ -21,6 +21,8 @@ Tools.prototype.Redo = function(){return new this._redo();}
 
 Tools.prototype._select = function(){
     this.name = "Select";
+    this.rect_area_start_point = [];
+    this.rect_area_end_point = [];
 }
 
 Tools.prototype.Select = function(){return new this._select();}
