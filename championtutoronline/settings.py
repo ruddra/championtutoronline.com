@@ -13,16 +13,14 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'champ_db',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
-        'PORT': '',
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
+
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -171,3 +169,5 @@ OT_API_SECRET = '5c202e71e6735a565e3b8f9c89e0952bacc34429'
 COMMON_DATA_CONTEXT = {
     "socketio_url": SOCKETIO_URL
 }
+
+DEFAULT_MAIL_SENDER = 'codenginebd@gmail.com'

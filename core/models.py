@@ -1,7 +1,7 @@
 from django.db import models
 
 class User(models.Model):
-    id= models.AutoField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     fullname = models.TextField(blank=False,null=False,max_length=100)
     password = models.TextField(blank=False,null=False,max_length=200)
     email = models.TextField(blank=False,null=False,max_length=100)
@@ -67,5 +67,13 @@ class OTSessionTable(models.Model):
 
     class Meta:
         db_table='ot_session'
+
+class EmailQueue(models.Model):
+    subjects = models.CharField(max_length=255)
+    email = models.CharField(max_length=5000)
+    to_email = models.EmailField()
+    has_sent = models.BooleanField(default=0)
+
+
         
 
