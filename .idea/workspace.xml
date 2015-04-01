@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caa75f8d-ed1c-404a-911e-d8d55024ca60" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Projects\Github\DJango Projects\championtutoronline.com\core\templates (copy)\online_tutors.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Github\DJango Projects\championtutoronline.com\core\templates\ajax\registration.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Github\DJango Projects\championtutoronline.com\core\templates\online_tutors.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Github\DJango Projects\championtutoronline.com\core\templates\tutor_profile_public.html" afterPath="" />
       <change type="DELETED" beforePath="C:\Projects\Github\DJango Projects\saltwaterfish\templates\ordershippingcategorydetailspage.htm" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/src/django-nonrel" afterPath="$PROJECT_DIR$/../saltwaterfish/src/django-nonrel" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Etherpad/etherpad-lite-win" afterPath="$PROJECT_DIR$/Etherpad/etherpad-lite-win" />
@@ -103,6 +99,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_promotion_products_search_in_dialog.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_promotion_products_search_in_dialog.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_promotion_rules_categories_dialog.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_promotion_rules_categories_dialog.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/banners_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/banners_search_results.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/base.html" afterPath="$PROJECT_DIR$/core/templates/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/base.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/base_login.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/base_login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/blackout_date.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/blackout_date.html" />
@@ -134,6 +131,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/categoryindex.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/categoryindex.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/change_pwd.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/change_pwd.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/changeemail.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/changeemail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/sections/chat_box.html" afterPath="$PROJECT_DIR$/core/templates/sections/chat_box.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/checkout-response.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/checkout-response.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/checkout_base.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/checkout_base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/checkout_error.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/checkout_error.html" />
@@ -144,6 +142,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages_add.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages_add.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages_edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages_edit.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/code_editor.html" afterPath="$PROJECT_DIR$/core/templates/ajax/code_editor.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/contactus.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/contactus.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/coupon_confirmation.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/coupon_confirmation.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/coupon_modal-old.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/coupon_modal-old.html" />
@@ -171,6 +170,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/daa-submitted.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/daa-submitted.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/doa-approved.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/doa-approved.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/doa-submitted.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/doa-submitted.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/drawingboard.html" afterPath="$PROJECT_DIR$/core/templates/ajax/drawingboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/edit-blackout-date.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/edit-blackout-date.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/edit-custom-export-set.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/edit-custom-export-set.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/edit-order.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/edit-order.htm" />
@@ -215,7 +215,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/home.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/images_products.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/images_products.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/import_tax_rate.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/import_tax_rate.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/index - Copy.html" afterPath="$PROJECT_DIR$/core/templates/index - Copy.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/index-backup-mar08.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/index-backup-mar08.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery-ui-1.11.3.custom/index.html" afterPath="$PROJECT_DIR$/core/static/jquery-ui-1.11.3.custom/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/js/mathdox/org/mathdox/javascript/index.html" afterPath="$PROJECT_DIR$/core/static/js/mathdox/org/mathdox/javascript/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/index.html" afterPath="$PROJECT_DIR$/core/templates (copy)/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/index.html" afterPath="$PROJECT_DIR$/core/templates/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/misc/js/carou/index.html" afterPath="$PROJECT_DIR$/../saltwaterfish/misc/js/carou/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/index.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/inventory-outofstock.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/inventory-outofstock.html" />
@@ -235,6 +240,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/left_menu_reports.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/left_menu_reports.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/left_section.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/left_section.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/login.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/login.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/login.html" afterPath="$PROJECT_DIR$/core/templates/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/login.html" afterPath="$PROJECT_DIR$/core/templates/ajax/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/login.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/more_info.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/more_info.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/moreinfo_old.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/moreinfo_old.html" />
@@ -251,6 +258,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/myaccount_widget_bkp.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/myaccount_widget_bkp.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/myreefrewards.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/myreefrewards.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/new-edit-order.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/new-edit-order.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/new2.html" afterPath="$PROJECT_DIR$/core/templates (copy)/new2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/new2.html" afterPath="$PROJECT_DIR$/core/templates/new2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/online_tutors.html" afterPath="$PROJECT_DIR$/core/templates/online_tutors.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/onsale-cat.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/onsale-cat.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/onsale-fragment.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/onsale-fragment.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/onsale.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/onsale.htm" />
@@ -331,6 +341,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products_wish_list.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products_wish_list.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products_wish_list_view_list.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products_wish_list_view_list.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/profile.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/profile1.html" afterPath="$PROJECT_DIR$/core/templates (copy)/profile1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/profile2.html" afterPath="$PROJECT_DIR$/core/templates (copy)/profile2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/profile2.html" afterPath="$PROJECT_DIR$/core/templates/profile2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/promotions_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/promotions_search_results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/quick-list.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/quick-list.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/quick_list.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/quick_list.htm" />
@@ -350,8 +363,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/refund-outofstock.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/refund-outofstock.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/regconfirmation.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/regconfirmation.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/registration.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/registration.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/registration.html" afterPath="$PROJECT_DIR$/core/templates/ajax/registration.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/registration.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/registration.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/registration1.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/registration1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/registration_1.html" afterPath="$PROJECT_DIR$/core/templates/registration_1.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-fedex.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-fedex.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-inventory.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-inventory.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-orders.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-orders.html" />
@@ -405,18 +420,24 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/settings.py" afterPath="$PROJECT_DIR$/../saltwaterfish/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/shipping_calendar.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/shipping_calendar.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/shippingcategory_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/shippingcategory_search_results.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/signup_form.html" afterPath="$PROJECT_DIR$/core/templates/ajax/signup_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/sitemap.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/sitemap.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/student-profile.html" afterPath="$PROJECT_DIR$/core/templates (copy)/student-profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/student_profile.html" afterPath="$PROJECT_DIR$/core/templates/student_profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/sections/student_section_header.html" afterPath="$PROJECT_DIR$/core/templates/sections/student_section_header.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/subcat.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/subcat.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/subcategory-list.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/subcategory-list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/subcategory-products.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/subcategory-products.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/superspecial.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/superspecial.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/tax_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/tax_search_results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/taxmanager.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/taxmanager.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/sections/teacher_section_header.html" afterPath="$PROJECT_DIR$/core/templates/sections/teacher_section_header.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/temp_redir.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/temp_redir.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/terms_conditions.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/terms_conditions.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/termscon.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/termscon.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/test-coupon-code.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/test-coupon-code.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/test-tax-code.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/test-tax-code.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/text_editor.html" afterPath="$PROJECT_DIR$/core/templates/ajax/text_editor.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/tickets.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/tickets.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/titles_content.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/titles_content.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-checkout.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-checkout.html" />
@@ -425,12 +446,18 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-pageviews.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-pageviews.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-referrers.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-referrers.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-visits.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-visits.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/sections/tutor_body_full.html" afterPath="$PROJECT_DIR$/core/templates/sections/tutor_body_full.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/sections/tutor_body_public.html" afterPath="$PROJECT_DIR$/core/templates/sections/tutor_body_public.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/tutor_profile.html" afterPath="$PROJECT_DIR$/core/templates/tutor_profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/tutor_profile1.html" afterPath="$PROJECT_DIR$/core/templates/tutor_profile1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/tutor_profile1_1.html" afterPath="$PROJECT_DIR$/core/templates/tutor_profile1_1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/tutor_profile_public.html" afterPath="$PROJECT_DIR$/core/templates/tutor_profile_public.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/under_construction.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/under_construction.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit-log.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit-log.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit-permissions.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit-permissions.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/vertical-tabs.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/vertical-tabs.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/js/chat/videochat.js" afterPath="$PROJECT_DIR$/core/static/js/chat/videochat.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/videoframe.html" afterPath="$PROJECT_DIR$/core/templates/ajax/videoframe.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/videos.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/videos.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/videoso.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/videoso.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/view-general-review.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/view-general-review.html" />
@@ -446,14 +473,23 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/waitinglist_popup.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/waitinglist_popup.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/waitinglist_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/waitinglist_search_results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/waitlistmodal.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/waitlistmodal.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/webrtctest.html" afterPath="$PROJECT_DIR$/core/templates (copy)/webrtctest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/webrtctest/webrtctest.html" afterPath="$PROJECT_DIR$/core/templates (copy)/webrtctest/webrtctest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/webrtctest.html" afterPath="$PROJECT_DIR$/core/templates/webrtctest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/webrtctest/webrtctest.html" afterPath="$PROJECT_DIR$/core/templates/webrtctest/webrtctest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/white_board.html" afterPath="$PROJECT_DIR$/core/templates (copy)/white_board.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/white_board_old.html" afterPath="$PROJECT_DIR$/core/templates (copy)/white_board_old.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/white_board_old.html" afterPath="$PROJECT_DIR$/core/templates/white_board_old.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/whiteboard.html" afterPath="$PROJECT_DIR$/core/templates/whiteboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/wishlist.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/wishlist.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/wishlistitems.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/wishlistitems.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/writereview_modal.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/writereview_modal.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/writereview_popup.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/writereview_popup.htm" />
     </list>
     <ignored path="championtutoronline.com.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1427726494457" ignored="false" />
+    <file path="/Dummy.txt" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1427896073591" ignored="false" />
     <file path="/settings.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1425699393761" ignored="false" />
     <file path="/murthy_views.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1425745045401" ignored="false" />
     <file path="/views.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1425744704636" ignored="false" />
@@ -479,49 +515,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="User.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nodejs/socketioserver/models/User.js">
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../saltwaterfish/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="2" selection-start="1791" selection-end="1791" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chat.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/static/js/chat/chat.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="837" column="84" selection-start="33949" selection-end="33949" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="whiteboard.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/templates/whiteboard.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="430" column="0" selection-start="16212" selection-end="16212" vertical-scroll-proportion="-7.3461537">
-              <folding>
-                <element signature="e#11392#11425#0" expanded="true" />
-                <element signature="e#11568#11605#0" expanded="true" />
-                <element signature="e#11912#11933#0" expanded="true" />
-                <element signature="e#12738#12759#0" expanded="true" />
-                <element signature="e#13566#13587#0" expanded="true" />
-                <element signature="e#18472#18522#0" expanded="true" />
-                <element signature="e#19679#19700#0" expanded="true" />
-                <element signature="e#19846#19867#0" expanded="true" />
-                <element signature="e#19999#20018#0" expanded="true" />
-                <element signature="e#32356#32403#0" expanded="true" />
-                <element signature="e#32416#32458#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="videochat.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/static/js/chat/videochat.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="521" column="67" selection-start="20086" selection-end="20086" vertical-scroll-proportion="0.34854016">
+            <state line="0" column="75" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -535,7 +532,7 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../saltwaterfish" />
   </component>
   <component name="GitLogSettings">
     <option name="myDateState">
@@ -601,201 +598,17 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
+            <PATH_ELEMENT USER_OBJECT="saltwaterfish">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
+            <PATH_ELEMENT USER_OBJECT="C:\Projects\Github\DJango Projects\saltwaterfish">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="nodejs">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="nodejs">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="socketioserver">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="nodejs">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="socketioserver">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="models">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="core">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="core">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="templates">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="core">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="static">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="core">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="static">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="js">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="core">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="static">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="js">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="chat">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -941,14 +754,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2189394" sideWeight="0.6712095" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22651514" sideWeight="0.6712095" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1059,11 +872,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../saltwaterfish/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="74" selection-start="4559" selection-end="4559" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../saltwaterfish/templates/product.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="464" column="89" selection-start="29789" selection-end="29789" vertical-scroll-proportion="0.5210728" />
@@ -1071,16 +879,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../saltwaterfish/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1017" column="22" selection-start="47798" selection-end="47810" vertical-scroll-proportion="0.031021899">
-          <folding />
-        </state>
+        <state line="1017" column="22" selection-start="47798" selection-end="47810" vertical-scroll-proportion="0.031021899" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../saltwaterfish/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="47" selection-start="9780" selection-end="9780" vertical-scroll-proportion="0.031021899">
-          <folding />
-        </state>
+        <state line="130" column="47" selection-start="9780" selection-end="9780" vertical-scroll-proportion="0.031021899" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../saltwaterfish/app.yaml">
@@ -1088,49 +892,34 @@
         <state line="1" column="10" selection-start="41" selection-end="41" vertical-scroll-proportion="0.030303031" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nodejs/socketioserver/models/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="2" selection-start="1791" selection-end="1791" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nodejs/socketioserver/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="251" column="19" selection-start="7357" selection-end="7357" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/js/chat/chat.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="837" column="84" selection-start="33949" selection-end="33949" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/whiteboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="430" column="0" selection-start="16212" selection-end="16212" vertical-scroll-proportion="-7.3461537">
-          <folding>
-            <element signature="e#11392#11425#0" expanded="true" />
-            <element signature="e#11568#11605#0" expanded="true" />
-            <element signature="e#11912#11933#0" expanded="true" />
-            <element signature="e#12738#12759#0" expanded="true" />
-            <element signature="e#13566#13587#0" expanded="true" />
-            <element signature="e#18472#18522#0" expanded="true" />
-            <element signature="e#19679#19700#0" expanded="true" />
-            <element signature="e#19846#19867#0" expanded="true" />
-            <element signature="e#19999#20018#0" expanded="true" />
-            <element signature="e#32356#32403#0" expanded="true" />
-            <element signature="e#32416#32458#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="251" column="19" selection-start="7357" selection-end="7357" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/static/js/chat/videochat.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="521" column="67" selection-start="20086" selection-end="20086" vertical-scroll-proportion="0.34854016">
+        <state line="521" column="67" selection-start="20086" selection-end="20086" vertical-scroll-proportion="0.34854016" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/whiteboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="430" column="0" selection-start="16212" selection-end="16212" vertical-scroll-proportion="0.3659004" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/static/js/chat/chat.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="837" column="84" selection-start="33949" selection-end="33949" vertical-scroll-proportion="0.28284672" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nodejs/socketioserver/models/User.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="2" selection-start="1791" selection-end="1791" vertical-scroll-proportion="1.6363636" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../saltwaterfish/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="75" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
