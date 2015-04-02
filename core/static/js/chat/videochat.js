@@ -4,8 +4,8 @@ $(document).ready(function()
 	var max_participant = 6;
 	var video_sharing_container = $("#id_video_sharing_container");
 	var video_section = $("#id_video_section");
-	var video_container_max_width = 400;
-	var video_conatiner_max_height = 400;
+	var video_container_max_width = 300;
+	var video_conatiner_max_height = 300;
 
 	var video_box_width = 200;
 	var video_box_height = 200;
@@ -241,6 +241,7 @@ $(document).ready(function()
 		var html = "<div class='incoming_call_popup' id='id_incoming_call_popup_"+ uid +"'>";
 			html += "<input type='hidden' class='popup-uid' value='"+ uid +"'/>";
 			html += "<input type='hidden' class='popup-call-type' value='"+ type +"'/>";
+            html += "<input type='hidden' class='popup-call-mode' value='"+ data.request_call_mode +"'/>";
 			if(type == "group")
 			{
 				html += "<input type='hidden' class='popup-call-apikey' value='"+ data.apikey +"'/>";
@@ -325,6 +326,7 @@ $(document).ready(function()
     var publishStream = function(audio_mode_only) {
         if(ot_session != undefined)
         {
+            console.log("Audio mode set: "+audio_mode_only);
             var pubOptions =
             {
                 width:$("#myVideo").width(),
@@ -332,14 +334,17 @@ $(document).ready(function()
                 buttonDisplayMode:"off"
             };
 
-            if(audio_mode_only != undefined && audio_mode_only == true){
-                pubOptions["videoSource"] = null;
-            }
-
             publisher = OT.initPublisher("myVideo",pubOptions,function(error)
             {
                 console.log("OT.initPublisher error! :(");
             });
+
+            if(audio_mode_only != undefined && audio_mode_only == true){
+                console.log("Voice only session...");
+                publisher.publishAudio(true);
+                publisher.publishVideo(false);
+            }
+
             //console.log(publisher);
             publisher.on({
                 accessAllowed: function (event) {
@@ -711,6 +716,7 @@ $(document).ready(function()
 
     var startOpenTokSession = function(OT_api_key,OT_session,OT_token,audio_mode_only)
     {
+        console.log("Audio mode only: "+audio_mode_only);
         initOTSession(OT_api_key,OT_session,OT_token,audio_mode_only);
         //add_subscriber();
         //connect_session(OT_token);
@@ -774,51 +780,53 @@ $(document).ready(function()
 		}
     });
 
-	$(document).on("click",".champ_video_chat", function(e)
+    var start_calling = function(tutor_id,tutor_name,tutor_img_url,call_mode) //call_mode can be audio/video
     {
-        var tutor_id = $(this).parent().parent().parent().find(".tutor_uid").val();
-        var tutor_name = $(this).parent().parent().find(".tut_name").text();
-        var tutor_img_url = $(this).parent().parent().parent().find(".pimg_url").attr("src");
         if(tutor_img_url == "" || tutor_img_url == "#")
         {
-        	tutor_img_url = "/static/images/profile_img.png";
+            tutor_img_url = "/static/images/profile_img.png";
         }
-
-        //Add timer obj to the global record.
 
         if(ot_session)
         {
             request_ot_session_info(tutor_id,ot_session_id,function(msg) //Complete Callback.
-            {
+                {
 
-            },
-            function(data) //Success Callback.
-            {
-                //add_call_to_queue(buddy_ids[i],"Anonymous","","");
+                },
+                function(data) //Success Callback.
+                {
+                    //add_call_to_queue(buddy_ids[i],"Anonymous","","");
 
-                calls[parseInt(tutor_id)] = true;
+                    calls[parseInt(tutor_id)] = true;
 
-                show_outgoing_call_notification(tutor_id,tutor_name);
+                    show_outgoing_call_notification(tutor_id,tutor_name);
 
-                var otsession = data.otsession;
-                var ot_api_key = data.ot_api_key;
-                var ot_token = data[parseInt(tutor_id)];
+                    var otsession = data.otsession;
+                    var ot_api_key = data.ot_api_key;
+                    var ot_token = data[parseInt(tutor_id)];
 
-                ot_session_id = otsession;
+                    ot_session_id = otsession;
 
-                var data_obj = {
-                    "apikey": ot_api_key,
-                    "otsession": otsession,
-                    "ottoken": ot_token
-                };
+                    var data_obj = {
+                        "apikey": ot_api_key,
+                        "otsession": otsession,
+                        "ottoken": ot_token
+                    };
 
-                global_calling_timers[parseInt(tutor_id)] = 0;
-                var timer_obj = start_notification(tutor_id,tutor_name,"","calling",data_obj,"group");
-                timers[parseInt(tutor_id)] = timer_obj;
-            },function(jqxhr,status,errorthrown) //Error Callback.
-            {
+                    if(call_mode == "audio"){
+                        data_obj["request_call_mode"] = "audio";
+                    }
+                    else{ //call_mode is video.
+                        data_obj["request_call_mode"] = "video";
+                    }
 
-            });
+                    global_calling_timers[parseInt(tutor_id)] = 0;
+                    var timer_obj = start_notification(tutor_id,tutor_name,"","calling",data_obj,"group");
+                    timers[parseInt(tutor_id)] = timer_obj;
+                },function(jqxhr,status,errorthrown) //Error Callback.
+                {
+
+                });
         }
         else
         {
@@ -828,10 +836,38 @@ $(document).ready(function()
 
             show_outgoing_call_notification(tutor_id,tutor_name);
 
+            data_obj = {};
+
+            if(call_mode == "audio"){
+                data_obj["request_call_mode"] = "audio";
+            }
+            else{ //call_mode is video.
+                data_obj["request_call_mode"] = "video";
+            }
+
             global_calling_timers[parseInt(tutor_id)] = 0;
-            var timer_obj = start_notification(tutor_id,tutor_name,tutor_img_url,"calling","","p2p");
+            var timer_obj = start_notification(tutor_id,tutor_name,tutor_img_url,"calling",data_obj,"p2p");
             timers[parseInt(tutor_id)] = timer_obj;
         }
+    }
+
+    $(document).on("click",".champ_audio_chat", function(e)
+    {
+        var tutor_id = $(this).parent().parent().parent().find(".tutor_uid").val();
+        var tutor_name = $(this).parent().parent().find(".tut_name").text();
+        var tutor_img_url = $(this).parent().parent().parent().find(".pimg_url").attr("src");
+
+        start_calling(tutor_id,tutor_name,tutor_img_url,"audio");
+        
+    });
+
+	$(document).on("click",".champ_video_chat", function(e)
+    {
+        var tutor_id = $(this).parent().parent().parent().find(".tutor_uid").val();
+        var tutor_name = $(this).parent().parent().find(".tut_name").text();
+        var tutor_img_url = $(this).parent().parent().parent().find(".pimg_url").attr("src");
+
+        start_calling(tutor_id,tutor_name,tutor_img_url,"video");
 
     });
 
@@ -844,9 +880,14 @@ $(document).ready(function()
 	{
 		var uid = $(this).parent().parent().find(".popup-uid").val();
         var call_type = $(this).parent().parent().find(".popup-call-type").val();
+        var request_call_mode = $(this).parent().parent().find(".popup-call-mode").val();
+        data_obj = {
+            "request_call_mode": request_call_mode,
+            "response_call_mode": "audio"
+        };
         if(call_type == "p2p")
         {
-            publish_call_event(uid,"","","answer_video","",call_type);
+            publish_call_event(uid,"","","answer",data_obj,call_type);
             $(this).parent().parent().remove();
         }
         else
@@ -867,7 +908,7 @@ $(document).ready(function()
 
             startOpenTokSession(apikey,otsession,ottoken,true);
 
-            publish_call_event(uid,"","","joined","",call_type);
+            publish_call_event(uid,"","","joined",data_obj,call_type);
 
             hide_incoming_call_popup(parseInt(uid));
 
@@ -885,9 +926,14 @@ $(document).ready(function()
 	{
         var uid = $(this).parent().parent().find(".popup-uid").val();
         var call_type = $(this).parent().parent().find(".popup-call-type").val();
+        var request_call_mode = $(this).parent().parent().find(".popup-call-mode").val();
+        data_obj = {
+            "request_call_mode": request_call_mode,
+            "response_call_mode": "video"
+        };
         if(call_type == "p2p")
         {
-        	publish_call_event(uid,"","","answer_video","",call_type);
+        	publish_call_event(uid,"","","answer",data_obj,call_type);
         	$(this).parent().parent().remove();
         }
         else
@@ -908,7 +954,7 @@ $(document).ready(function()
 
             startOpenTokSession(apikey,otsession,ottoken);
 
-        	publish_call_event(uid,"","","joined","",call_type);
+        	publish_call_event(uid,"","","joined",data_obj,call_type);
 
         	hide_incoming_call_popup(parseInt(uid));
 
@@ -947,7 +993,8 @@ $(document).ready(function()
                 console.log(calls);
                 if(!calls.hasOwnProperty(response_data.publisher.uid))
                 {
-                	show_incoming_call_popup(response_data.publisher.uid,response_data.publisher.name,response_data.publisher.img,response_data.type,response_data.data);
+                	console.log("Calling Again...");
+                    show_incoming_call_popup(response_data.publisher.uid,response_data.publisher.name,response_data.publisher.img,response_data.type,response_data.data);
                 	calls[response_data.publisher.uid] = true;
                 }
             }
@@ -966,7 +1013,7 @@ $(document).ready(function()
                 hide_incoming_call_popup(response_data.publisher.uid);
                 delete calls[response_data.publisher.uid];
             }
-            else if(response_data.msg == "answer_video")
+            else if(response_data.msg == "answer")
             {
                 stop_call_notification();
                 var callee_id = response_data.publisher.uid;
@@ -984,7 +1031,8 @@ $(document).ready(function()
                     var _data = {
                         "ot_api_key": data.ot_api_key,
                         "ot_session":data.otsession,
-                        "ottoken": data[response_data.publisher.uid]
+                        "ottoken": data[response_data.publisher.uid],
+                        "response_call_mode": response_data.data.response_call_mode
                     }
                     ot_session_id = data.otsession;
                     hide_outgoing_call_notification(response_data.publisher.uid);
@@ -992,7 +1040,15 @@ $(document).ready(function()
                     //add_subscriber("id_video_section");
                     //connect_session(data[parseInt(window.champ_user_id)]);
                     call_active = true;
-                    startOpenTokSession(data.ot_api_key,data.otsession,data[response_data.publisher.uid]);
+
+                    //If request_call_mode is audio then start Opentok session in audio mode else start opentok session in video mode.
+                    if(response_data.data.request_call_mode == "audio"){
+                        startOpenTokSession(data.ot_api_key,data.otsession,data[response_data.publisher.uid],true);
+                    }
+                    else{
+                        startOpenTokSession(data.ot_api_key,data.otsession,data[response_data.publisher.uid]);
+                    }
+                    
                 },function(jqxhr,status,errorthrown) //Error Callback.
                 {
 
@@ -1008,11 +1064,18 @@ $(document).ready(function()
                 var ot_api_key = response_data.data.ot_api_key;
                 var otsession = response_data.data.ot_session;
                 var ottoken = response_data.data.ottoken;
+                var response_call_mode = response_data.data.response_call_mode;
                 //initOTSession(ot_api_key,otsession);
                 console.log("OT Session created.");
                 //add_subscriber("id_video_section");
                 //connect_session(ottoken);
-                startOpenTokSession(ot_api_key,otsession,ottoken);
+                //Start Opentok session based on response call mode.
+                if(response_call_mode == "audio"){
+                    startOpenTokSession(ot_api_key,otsession,ottoken,true);
+                }
+                else{
+                    startOpenTokSession(ot_api_key,otsession,ottoken);
+                }
                 calls[parseInt(response_data.subscriber.uid)] = true;
             }
         }
@@ -1195,6 +1258,12 @@ $(document).ready(function()
 
         $("#id_end_call").click(function(e) {
             disconnectSession();
+            calls = {};
+            ot_session = null;
+            call_active = false;
+            ot_session_id = null;
+            publisher = null;
+            connection_count = 0;
         });
 
 
