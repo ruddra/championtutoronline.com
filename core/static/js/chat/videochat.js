@@ -528,6 +528,13 @@ $(document).ready(function()
                 console.log("Connection destroyed...");
                 console.log("Connection Count: "+connection_count);
                 if(connection_count == 1){
+                    disconnectSession();
+                    calls = {};
+                    ot_session = null;
+                    call_active = false;
+                    ot_session_id = null;
+                    publisher = null;
+                    connection_count = 0;
                     $(".sharing_video").css("display","none");
                 }
 

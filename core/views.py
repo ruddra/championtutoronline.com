@@ -158,7 +158,7 @@ class ResetPasswordRequestView(FormView):
                             c = {
                                 'email': user.email,
                                 'domain': request.META['HTTP_HOST'],
-                                'site_name': 'championtutorial.com',
+                                'site_name': 'championtutoronline.com',
                                 'uid': urlsafe_base64_encode(force_bytes(user.pk)),
                                 'user': user,
                                 'token': default_token_generator.make_token(user),
@@ -166,7 +166,7 @@ class ResetPasswordRequestView(FormView):
                                 }
                             subject_template_name='registration/password_reset_subject.txt'
                             email_template_name='registration/password_reset_email.html'
-                            subject = loader.render_to_string(subject_template_name, c)
+                            subject = "Password Reset" #loader.render_to_string(subject_template_name, c)
                             subject = ''.join(subject.splitlines())
                             email = loader.render_to_string(email_template_name, c)
                             send_mail(subject, email, DEFAULT_FROM_EMAIL , [user.email], fail_silently=False)
@@ -180,7 +180,7 @@ class ResetPasswordRequestView(FormView):
             messages.error(request, 'Invalid Input')
             return self.form_invalid(form)
         except Exception as e:
-            raise e
+            print e
         
 
 class PasswordResetConfirmView(FormView):
