@@ -1,13 +1,13 @@
 from django.http import HttpResponse
 from django.views.generic.base import View
+from django.utils.encoding import smart_unicode
 from django.shortcuts import render
-from championtutoronline.settings import DEFAULT_MAIL_SENDER
-from core.models import EmailQueue
+from championtutoronline.settings import DEFAULT_MAIL_SENDER, DEFAULT_FROM_EMAIL
 from core.tasks import email_sending_method
 from forms import LoginForm,SignUpForm, PasswordResetRequestForm, SetPasswordForm
 import time
 import hashlib
-from models import ConsoleUser
+from models import ChampUser
 import json
 from django.http import HttpResponseRedirect
 from django.template import RequestContext
@@ -41,10 +41,20 @@ class LoginView(View):
         login_form = LoginForm(request.POST)
         if not login_form.is_valid():
             return HttpResponseRedirect(reverse("user_login"))
-        email = request.POST.get('email')
-        password = request.POST.get('password')
-        password_hash = hashlib.md5(password).hexdigest()
-        user_objs = User.objects.filter(email=email,password=password_hash)
+        if login_form.is_valid():
+            if login_form.authenticate(request):
+                    request.session['is_login'] = True
+                    # request.session['user_id'] = user_objs[0].id
+                    # request.session['email'] = email
+                    # request.session['utype'] = user_objs[0].type
+                    # if request.POST.get("rememberme"):
+                    #     seven_days = 24*60*60*7
+                    #     request.session.set_expiry(seven_days)
+                    redirect_url = reverse("user_profile")
+                    if request.POST.get("next"):
+                        redirect_url = request.POST["next"]
+        return HttpResponseRedirect(redirect_url)
+
         if not user_objs:
             login_form = LoginForm(request.POST)
             error_msg = 'Email or Password Invalid'
@@ -129,8 +139,8 @@ class ProfileView(View):
 
 
 class ResetPasswordRequestView(FormView):
-    template_name = "account/test_template.html"    #code for template is given below the view's code
-    success_url = '/account/login'
+    template_name = "reset_password.html"    #code for template is given below the view's code
+    success_url = '/profile'
     form_class = PasswordResetRequestForm
 
     @staticmethod
@@ -151,13 +161,13 @@ class ResetPasswordRequestView(FormView):
                 '''
                 If the input is an valid email address, then the following code will lookup for users associated with that email address. If found then an email will be sent to the address, else an error message will be printed on the screen.
                 '''
-                associated_users= User.objects.filter(Q(email=data)|Q(username=data))
+                associated_users= User.objects.filter(email=data)
                 if associated_users.exists():
                     for user in associated_users:
                             c = {
-                                'email': user.email,
+                                'email': str(user.email),
                                 'domain': request.META['HTTP_HOST'],
-                                'site_name': 'your site',
+                                'site_name': 'championstutorialonoline.com',
                                 'uid': urlsafe_base64_encode(force_bytes(user.pk)),
                                 'user': user,
                                 'token': default_token_generator.make_token(user),
@@ -169,8 +179,8 @@ class ResetPasswordRequestView(FormView):
                             # Email subject *must not* contain newlines
                             subject = ''.join(subject.splitlines())
                             email = loader.render_to_string(email_template_name, c)
-                            # send_mail(subject, email, DEFAULT_FROM_EMAIL , [user.email], fail_silently=False)
-                            email_sending_method.apply_async(user.email, subject, email, DEFAULT_MAIL_SENDER)
+                            send_mail(subject, email, DEFAULT_FROM_EMAIL , [str(user.email)], fail_silently=False)
+                            # email_sending_method.apply_async(user.email, subject, email, DEFAULT_MAIL_SENDER)
                     result = self.form_valid(form)
                     messages.success(request, 'An email has been sent to ' + data +". Please check its inbox to continue reseting password.")
                     return result
@@ -184,22 +194,24 @@ class ResetPasswordRequestView(FormView):
                 associated_users= User.objects.filter(username=data)
                 if associated_users.exists():
                     for user in associated_users:
+                        user_email= str(smart_unicode(user.email))
                         c = {
-                            'email': user.email,
-                            'domain': 'example.info',
-                            'site_name': 'example',
+                            'email': user_email,
+                            'domain': 'championstutorialonoline.com',
+                            'site_name': 'championstutorialonoline',
                             'uid': urlsafe_base64_encode(force_bytes(user.pk)),
                             'user': user,
                             'token': default_token_generator.make_token(user),
                             'protocol': 'http',
                             }
-                        subject_template_name='registration/password_reset_subject.txt'
-                        email_template_name='registration/password_reset_email.html'
+                        subject_template_name = 'registration/password_reset_subject.txt'
+                        email_template_name = 'registration/password_reset_email.html'
                         subject = loader.render_to_string(subject_template_name, c)
                         # Email subject *must not* contain newlines
                         subject = ''.join(subject.splitlines())
                         email = loader.render_to_string(email_template_name, c)
-                        send_mail(subject, email, DEFAULT_FROM_EMAIL , [user.email], fail_silently=False)
+                        #email_sending_method.apply_async(str(user.email), subject, email, DEFAULT_MAIL_SENDER)
+                        send_mail(subject, email, DEFAULT_FROM_EMAIL , [user_email], fail_silently=False)
                     result = self.form_valid(form)
                     messages.success(request, 'Email has been sent to ' + data +"'s email address. Please check its inbox to continue reseting password.")
                     return result
@@ -208,7 +220,7 @@ class ResetPasswordRequestView(FormView):
                 return result
             messages.error(request, 'Invalid Input')
         except Exception as e:
-            print(e)
+            raise e
         return self.form_invalid(form)
 
 class PasswordResetConfirmView(FormView):

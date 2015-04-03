@@ -170,4 +170,5 @@ COMMON_DATA_CONTEXT = {
     "socketio_url": SOCKETIO_URL
 }
 
-DEFAULT_MAIL_SENDER = 'codenginebd@gmail.com'
+DEFAULT_MAIL_SENDER = DEFAULT_FROM_EMAIL = 'codenginebd@gmail.com'
+DEFAULT_FROM_EMAIL

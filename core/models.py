@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 from django.db import models
 
 
-class ConsoleUser(models.Model):
+class ChampUser(models.Model):
     user = models.OneToOneField(User)
     fullname = models.TextField(blank=False,null=False,max_length=100)
     phone = models.TextField(blank=False,null=False,max_length=20)
@@ -13,11 +13,11 @@ class ConsoleUser(models.Model):
     zip = models.TextField(blank=True,null=True,max_length=40)
     country = models.TextField(blank=True,null=True,max_length=40)
     type = models.TextField(blank=True,null=True,max_length=10)
-    date_created = models.DateTimeField(auto_now_add=True, auto_now=True)
-    last_updated = models.DateField(auto_now_add=True)
+    # date_created = models.DateTimeField(auto_now_add=True, auto_now=True)
+    # last_updated = models.DateField(auto_now_add=True)
 
 class UserTimezoneSettings(models.Model):
-    user_id = models.ForeignKey(ConsoleUser)
+    user_id = models.ForeignKey(ChampUser)
     timezone = models.CharField(max_length=6) ##This field will contain timezone information in +=360 format. Say timezone is UTC+6 then it will store -360
     last_updated = models.DateField(auto_now_add=True)
 

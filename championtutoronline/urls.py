@@ -25,6 +25,6 @@ urlpatterns = patterns('',
     url(r'^ajax/text_editor$', TextEditorAjaxView.as_view(), name='ajax_text_editor'),
     url(r'^ajax/code_editor$', CodeEditorAjaxView.as_view(), name='ajax_code_editor'),
     url(r'^ajax/search_user$', SearchUserByKeyword.as_view(), name='ajax_user_search'),
-    url(r'^account/reset_password_confirm/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$', PasswordResetConfirmView.as_view(), name='reset_password_confirm'),
-    url(r'^account/reset_password', ResetPasswordRequestView.as_view(), name="reset_password"),
+    url(r'^reset_password_confirm/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$', PasswordResetConfirmView.as_view(), name='reset_password_confirm'),
+    url(r'^reset_password', ResetPasswordRequestView.as_view(), name="reset_password"),
 )

@@ -52,9 +52,9 @@ class LoginAjaxView(View):
                 return HttpResponse(json.dumps(response))
         ###Passed login. Now set session
         request.session['is_login'] = True
-        request.session['user_id'] = user_objs[0].id
-        request.session['email'] = email
-        request.session['utype'] = user_objs[0].type
+        # request.session['user_id'] = user_objs[0].id
+        # request.session['email'] = email
+        # request.session['utype'] = user_objs[0].type
 
         response = {'status':'successful','message':'Login Successful.'}
         return HttpResponse(json.dumps(response))
@@ -84,11 +84,11 @@ class SignUpAjaxView(View):
         role = request.POST.get("role")
 
         ###Check if email is already registered.
-        user_objs = ConsoleUser.objects.filter(email=email)
+        user_objs = ChampUser.objects.filter(email=email)
         if user_objs:
             response['message'] = 'EMAIL_REGISTERED'
             return HttpResponse(json.dumps(response))
-        user_obj = ConsoleUser()
+        user_obj = ChampUser()
         user_obj.fullname = name
         user_obj.email = email
         user_obj.password = hashlib.md5(password).hexdigest()

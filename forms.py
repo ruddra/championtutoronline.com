@@ -1,5 +1,5 @@
 from django.contrib.auth import authenticate, login
-from core.models import ConsoleUser
+from core.models import ChampUser
 
 __author__ = 'Codengine'
 
@@ -53,7 +53,7 @@ class LoginForm(LoginBase):
     def authenticate(self, request):
         data = self.cleaned_data
         try:
-            c_user = ConsoleUser.objects.filter(user__email = data['email']).first()
+            c_user = ChampUser.objects.filter(user__email = data['email']).first()
             user = authenticate(username=c_user.username, password=data["password"])
             if user is not None:
                 if user.is_active:
