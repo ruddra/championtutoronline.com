@@ -240,6 +240,7 @@ var on_socket_connection = function(socket)
                 user_model.get_user(uids,function(data){
                     console.log("Inside get_user success callback.");
                     console.log(data);
+                    console.log(pub_id);
 
                     for(var j = 0 ; j < uids.length ; j++){
                         packet["user"] = data[pub_id];

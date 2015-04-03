@@ -1,5 +1,7 @@
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.models import User
 from core.models import ChampUser
+import hashlib
 
 __author__ = 'Codengine'
 
@@ -9,7 +11,7 @@ class PasswordResetRequestForm(forms.Form):
     '''
     prompts user to input either username or email address of that user and sends him a email for resetting his password.
     '''
-    email_or_username = forms.CharField(label=("Email Or Username"), max_length=254)
+    email_or_username = forms.CharField(label='',required=True,widget=forms.TextInput(attrs={'placeholder':'Enter Email or User Name','autocomplete':'off','class':'form-control input-lg'}))
 
 
 class SetPasswordForm(forms.Form):
@@ -54,7 +56,10 @@ class LoginForm(LoginBase):
         data = self.cleaned_data
         try:
             c_user = ChampUser.objects.filter(user__email = data['email']).first()
-            user = authenticate(username=c_user.username, password=data["password"])
+            print c_user.user.username
+            print data["password"]
+            user = authenticate(username=c_user.user.username, password=data["password"])
+            print user
             if user is not None:
                 if user.is_active:
                     login(request, user)
@@ -65,9 +70,11 @@ class LoginForm(LoginBase):
                         request.session.set_expiry(seven_days)
                     return True
                 else:
-                    self.add_error('username', "Your account has been disabled!")
+                    #self.add_error('username', "Your account has been disabled!")
+                    pass
             else:
-                self.add_error('username', "Your username and password were incorrect.")
+                #self.add_error('username', "Your username and password were incorrect.")
+                pass
             return False
         except Exception as e:
             print e

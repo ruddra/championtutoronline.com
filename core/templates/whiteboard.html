@@ -478,7 +478,7 @@
                             {% for buddy in buddies %}
                                 <tr>
                                     <td>
-                                        <input type="hidden" class="tutor_uid" value="{{ buddy.id }}"/>
+                                        <input type="hidden" class="tutor_uid" value="{{ buddy.user_id }}"/>
                                         <input type="hidden" class="online_status" value="offline"/>
                                         <img src="{% static "images/msg_img1.png" %}" class="pimg_url" width="40" height="40"/>
                                         <br/>
