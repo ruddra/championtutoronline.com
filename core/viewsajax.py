@@ -46,21 +46,16 @@ class LoginAjaxView(View):
         if not login_form.is_valid():
             response = {'status':'unsuccessful','message':'Form contains invalid data.'}
             return HttpResponse(json.dumps(response))
-        email = request.POST.get('email')
-        password = request.POST.get('password')
-        password_hash = hashlib.md5(password).hexdigest()
-        user_objs = User.objects.filter(email=email,password=password_hash)
-        if not user_objs:
-            response = {'status':'unsuccessful','message':'Email or Password Invalid.'}
-            return HttpResponse(json.dumps(response))
+        if login_form.is_valid():
+            if login_form.authenticate(request):
+                response = {'status':'unsuccessful','message':'Email or Password Invalid.'}
+                return HttpResponse(json.dumps(response))
         ###Passed login. Now set session
         request.session['is_login'] = True
         request.session['user_id'] = user_objs[0].id
         request.session['email'] = email
         request.session['utype'] = user_objs[0].type
-        if request.POST.get("rememberme"):
-            seven_days = 24*60*60*7
-            request.session.set_expiry(seven_days)
+
         response = {'status':'successful','message':'Login Successful.'}
         return HttpResponse(json.dumps(response))
 
@@ -89,11 +84,11 @@ class SignUpAjaxView(View):
         role = request.POST.get("role")
 
         ###Check if email is already registered.
-        user_objs = User.objects.filter(email=email)
+        user_objs = ConsoleUser.objects.filter(email=email)
         if user_objs:
             response['message'] = 'EMAIL_REGISTERED'
             return HttpResponse(json.dumps(response))
-        user_obj = User()
+        user_obj = ConsoleUser()
         user_obj.fullname = name
         user_obj.email = email
         user_obj.password = hashlib.md5(password).hexdigest()

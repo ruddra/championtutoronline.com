@@ -1,11 +1,13 @@
 from django.http import HttpResponse
 from django.views.generic.base import View
 from django.shortcuts import render
+from championtutoronline.settings import DEFAULT_MAIL_SENDER
 from core.models import EmailQueue
-from forms import LoginForm,SignUpForm, PasswordResetRequestForm
+from core.tasks import email_sending_method
+from forms import LoginForm,SignUpForm, PasswordResetRequestForm, SetPasswordForm
 import time
 import hashlib
-from models import User
+from models import ConsoleUser
 import json
 from django.http import HttpResponseRedirect
 from django.template import RequestContext
@@ -162,15 +164,13 @@ class ResetPasswordRequestView(FormView):
                                 'protocol': 'http',
                                 }
                             subject_template_name = 'registration/password_reset_subject.txt'
-                            # copied from django/contrib/admin/templates/registration/password_reset_subject.txt to templates directory
                             email_template_name = 'registration/password_reset_email.html'
-                            # copied from django/contrib/admin/templates/registration/password_reset_email.html to templates directory
                             subject = loader.render_to_string(subject_template_name, c)
                             # Email subject *must not* contain newlines
                             subject = ''.join(subject.splitlines())
                             email = loader.render_to_string(email_template_name, c)
                             # send_mail(subject, email, DEFAULT_FROM_EMAIL , [user.email], fail_silently=False)
-                            EmailQueue.objects.create(subject=subject, email=email, to_email=user.email)
+                            email_sending_method.apply_async(user.email, subject, email, DEFAULT_MAIL_SENDER)
                     result = self.form_valid(form)
                     messages.success(request, 'An email has been sent to ' + data +". Please check its inbox to continue reseting password.")
                     return result
