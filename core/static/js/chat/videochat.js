@@ -4,8 +4,8 @@ $(document).ready(function()
 	var max_participant = 6;
 	var video_sharing_container = $("#id_video_sharing_container");
 	var video_section = $("#id_video_section");
-	var video_container_max_width = 300;
-	var video_conatiner_max_height = 300;
+	var video_container_max_width = 200;
+	var video_conatiner_max_height = 200;
 
 	var video_box_width = 200;
 	var video_box_height = 200;
@@ -364,6 +364,7 @@ $(document).ready(function()
                     console.log("Access dialog closed.");
                 },
                 streamCreated:  function (event) {
+                    $("#id_end_call").prop("disabled",false);
                     console.log('The publisher started streaming.');
                 },
                 streamDestroyed : function (event) {
@@ -462,6 +463,7 @@ $(document).ready(function()
             ot_session.addEventListener('streamCreated', function(event) {
                 //This callback is fired when i am already in the session and new user has just joined the session.
                 console.log("Stream created. Stream ID: "+event.stream.streamId);
+                $("#id_end_call").prop("disabled",false);
                 for (var i = 0; i < event.streams.length; i++) {
                     if (event.streams[i].connection.connectionId == ot_session.connection.connectionId) {
                         console.log("Skipping my own session.");
@@ -494,14 +496,14 @@ $(document).ready(function()
             });
 
             ot_session.addEventListener('connectionCreated', function(event) {
-                 connection_count++;
+                connection_count++;
                 console.log("Connection Created...");
-                var container_width_redefined = 300 ;// + (connection_count - 2) * 100;
-                var container_height_redefined = 300 ;// + (connection_count - 2) * 100;
+                var container_width_redefined = 200 ;// + (connection_count - 2) * 100;
+                var container_height_redefined = 200 ;// + (connection_count - 2) * 100;
 
                 if(connection_count >= 2){
-                    container_width_redefined = 300 + (connection_count - 2) * 100;
-                    container_height_redefined = 300 + (connection_count - 2) * 100;
+                    container_width_redefined = 200 + (connection_count - 2) * 100;
+                    container_height_redefined = 200 + (connection_count - 2) * 100;
                 }
 
                 console.log("Width and height redefined: "+container_width_redefined+", "+container_height_redefined);
@@ -525,13 +527,16 @@ $(document).ready(function()
                 connection_count--;
                 console.log("Connection destroyed...");
                 console.log("Connection Count: "+connection_count);
+                if(connection_count == 1){
+                    $(".sharing_video").css("display","none");
+                }
 
-                var container_width_redefined = 300 ;// + (connection_count - 2) * 100;
-                var container_height_redefined = 300 ;// + (connection_count - 2) * 100;
+                var container_width_redefined = 200 ;// + (connection_count - 2) * 100;
+                var container_height_redefined = 200 ;// + (connection_count - 2) * 100;
 
                 if(connection_count >= 2){
-                    container_width_redefined = 300 + (connection_count - 2) * 100;
-                    container_height_redefined = 300 + (connection_count - 2) * 100;
+                    container_width_redefined = 200 + (connection_count - 2) * 100;
+                    container_height_redefined = 200 + (connection_count - 2) * 100;
                 }
 
                 video_sharing_container.css("width",container_width_redefined+"px");
@@ -1264,6 +1269,7 @@ $(document).ready(function()
             ot_session_id = null;
             publisher = null;
             connection_count = 0;
+            $(".sharing_video").css("display","none");
         });
 
 
