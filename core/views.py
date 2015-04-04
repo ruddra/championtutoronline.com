@@ -99,20 +99,20 @@ class WhiteboardView(View):
 
     def get_context_data(self,request):
         data = {}
-        _this_user_id = request.session.get("user_id")
-        user_objs = User.objects.filter(id=_this_user_id)
+        _this_user_id = request.user.id
+        user_objs = ChampUser.objects.filter(user__id=_this_user_id)
         if user_objs:
             user_obj = user_objs[0]
-            data["utype"] = user_obj.type
+            #data["utype"] = user_obj.type
 
             query = None
 
             if user_obj.type == "student":
                 #query to get teachers with recent chat and also teachers who initiated a chat with this student.
-                query = "select * from champ_user where type='teacher' and id != '%s'" % _this_user_id
+                query = "select * from champ_user where type='teacher' and user_id != '%s'" % _this_user_id
             else:
                 #query to get students with recent chat and also students who initiated a chat with this teacher.
-                query = "select * from champ_user where type='student' and id != '%s'" % _this_user_id
+                query = "select * from champ_user where type='student' and user_id != '%s'" % _this_user_id
 
             if query:
                 data["buddies"] = User.objects.raw(query)
@@ -124,15 +124,19 @@ class WhiteboardView(View):
         #c = RequestContext(request)
         #teachers = User.objects.raw("select * from champ_user where id != '%s'" % request.session.get("user_id"))
         context_data = self.get_context_data(request)
-        context_data["champ_userid"] = request.session.get("user_id")
+        context_data["champ_userid"] = request.user.id
         return render(request, 'whiteboard.html', context_data)
 
 class ProfileView(View):
     def get(self,request,*args,**kwargs):
         template_name = "tutor_profile.html"
-        
-        if request.session.get('utype') == 'student':
-            template_name = 'student_profile.html'
+        _this_user_id = request.user.id
+        user_objs = ChampUser.objects.filter(user__id=_this_user_id)
+        print user_objs
+        if user_objs:
+            user_obj = user_objs[0]
+            if user_obj.type == 'student':
+                template_name = 'student_profile.html'
         return render(request,template_name,{})
 
 
@@ -154,7 +158,7 @@ class ResetPasswordRequestView(FormView):
                             c = {
                                 'email': user.email,
                                 'domain': request.META['HTTP_HOST'],
-                                'site_name': 'championtutorial.com',
+                                'site_name': 'championtutoronline.com',
                                 'uid': urlsafe_base64_encode(force_bytes(user.pk)),
                                 'user': user,
                                 'token': default_token_generator.make_token(user),
@@ -162,7 +166,7 @@ class ResetPasswordRequestView(FormView):
                                 }
                             subject_template_name='registration/password_reset_subject.txt'
                             email_template_name='registration/password_reset_email.html'
-                            subject = loader.render_to_string(subject_template_name, c)
+                            subject = "Password Reset" #loader.render_to_string(subject_template_name, c)
                             subject = ''.join(subject.splitlines())
                             email = loader.render_to_string(email_template_name, c)
                             send_mail(subject, email, DEFAULT_FROM_EMAIL , [user.email], fail_silently=False)
@@ -176,7 +180,7 @@ class ResetPasswordRequestView(FormView):
             messages.error(request, 'Invalid Input')
             return self.form_invalid(form)
         except Exception as e:
-            raise e
+            print e
         
 
 class PasswordResetConfirmView(FormView):

@@ -152,12 +152,19 @@ var generateChatUUID = function(){
         this.chat_contnt.parent().show();
      };
 
-     Chat.prototype.addNewChat = function(user_obj) //user_obj = {user_id:1233,name: "Sohel",img_url: ""}
+     Chat.prototype.addNewChat = function(user_obj,offline) //user_obj = {user_id:1233,name: "Sohel",img_url: ""}
      {
          var chat_html = "<div class=\"chat radius3_top\" style=\"right:"+ this.margin_right +"px;display:none;\">";
              chat_html +=   "<div class=\"chat_header\">";
              chat_html +=   "<input type=\"hidden\" class=\"chat_widget_name\" value=\"\"/>"
-             chat_html +=       "<span class=\"online\"><img src=\"/static/images/online.png\" width=\"12\" height=\"12\" alt=\"img\"></span>";
+             if(offline == undefined || offline == false)
+             {
+                 chat_html +=       "<span class=\"online\"><img src=\"/static/images/online.png\" width=\"12\" height=\"12\" alt=\"img\"></span>";
+             }
+             else
+             {
+                 chat_html +=       "&nbsp;&nbsp;&nbsp;";
+             }
              chat_html +=       user_obj.name;
              chat_html +=       "<a href=\"#\" class=\"chat_close\"> <img src=\"/static/images/cross.png\" width=\"15\" height=\"9\" alt=\"img\"> </a>";
              chat_html +=       "<a href=\"#\" class=\"chat_add_buddy\"> <img src=\"/static/images/blue_pls.png\" width=\"12\" height=\"12\" alt=\"img\"> </a>";
@@ -1029,6 +1036,13 @@ var generateChatUUID = function(){
         {
             //get the tutor's user_id value.
             var uid = $(this).parent().parent().parent().find(".tutor_uid").val();
+            var offline_status = true; //Say user is offline
+            var offline_status_found = $(this).parent().parent().parent().find(".online_status").val();
+
+            if(offline_status_found == "online"){
+                offline_status = false;
+            }
+
             uid = parseInt(uid);
 
             console.log(window.chat_boxes);
@@ -1042,7 +1056,7 @@ var generateChatUUID = function(){
                 var chat = new Chat();
                 var uids = [uid];
                 chat.remote_peers = uids;
-                chat.addNewChat(chat_object);
+                chat.addNewChat(chat_object,offline_status);
                 //window.chat_boxes[uid] = chat;
             }
             else

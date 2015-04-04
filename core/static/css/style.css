@@ -1754,6 +1754,7 @@ ul.rcmdtn > li:nth-of-type(2n+2) { width:60%; }
 .header_bottom { margin-top:0px; }
 .canvas_menu_icon > a, .canvas_menu_icon > a:link, .canvas_menu_icon > a:visited { padding:0px; margin:0; width:41px; height:38px; }
 .document > div { width:508px; }
+.text-document > div { width:100%; }
 .left_detail { margin-left:5px; margin-bottom:15px; }
 .different_detail { margin:0px; left:5px; float:right; width:390px; }
 .different_detail_inner { margin-right:6px; }
