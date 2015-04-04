@@ -165,7 +165,7 @@ class ResetPasswordRequestView(FormView):
                          "Your username, in case you've forgotten:{2}".format(c['domain'], '', c['user'].username)
 
                         print(reverse("reset_password_confirm",kwargs={'token': c['token']}))
-                        EmailClient.send_email(user.email, subject, email, email, DEFAULT_FROM_EMAIL)
+                        EmailClient().send_email(user.email, subject, email, email, DEFAULT_FROM_EMAIL)
                     messages.success(request, 'An email has been sent to ' + data +". Please check its inbox to continue reseting password.")
                     return self.form_valid(form)
                 else:
