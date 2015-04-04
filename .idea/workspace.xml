@@ -1,33 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="caa75f8d-ed1c-404a-911e-d8d55024ca60" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/templates/reset_password.html" />
-      <change type="DELETED" beforePath="E:\Technical\Source\championtutoronline.com\core\migrations\0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="E:\Technical\Source\championtutoronline.com\core\migrations\0002_onlinestatus.py" afterPath="" />
-      <change type="DELETED" beforePath="E:\Technical\Source\championtutoronline.com\core\migrations\0003_role.py" afterPath="" />
-      <change type="DELETED" beforePath="E:\Technical\Source\championtutoronline.com\core\migrations\0004_auto_20150128_1054.py" afterPath="" />
-      <change type="DELETED" beforePath="E:\Technical\Source\championtutoronline.com\core\migrations\0005_messages_otsessiontable.py" afterPath="" />
-      <change type="DELETED" beforePath="E:\Technical\Source\championtutoronline.com\core\migrations\0006_chatmessages.py" afterPath="" />
-      <change type="DELETED" beforePath="E:\Technical\Source\championtutoronline.com\core\migrations\0007_auto_20150203_1042.py" afterPath="" />
-      <change type="DELETED" beforePath="E:\Technical\Source\championtutoronline.com\nodejs\socketioserver\npm-debug.log" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/setuptools/cli-32.exe" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/setuptools/cli-32.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/setuptools/cli.exe" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/setuptools/cli.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/setuptools/gui-32.exe" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/setuptools/gui-32.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/setuptools/gui.exe" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/setuptools/gui.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/pip/_vendor/distlib/t32.exe" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/pip/_vendor/distlib/t32.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myEnv/Lib/site-packages/pip/_vendor/distlib/w32.exe" afterPath="$PROJECT_DIR$/myEnv/Lib/site-packages/pip/_vendor/distlib/w32.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/socketioserver/node_modules/.bin/_mocha" afterPath="$PROJECT_DIR$/nodejs/socketioserver/node_modules/.bin/_mocha" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forms.py" afterPath="$PROJECT_DIR$/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/models.py" afterPath="$PROJECT_DIR$/core/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/championtutoronline/settings.py" afterPath="$PROJECT_DIR$/championtutoronline/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/championtutoronline/urls.py" afterPath="$PROJECT_DIR$/championtutoronline/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/views.py" afterPath="$PROJECT_DIR$/core/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/viewsajax.py" afterPath="$PROJECT_DIR$/core/viewsajax.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/viewssearch.py" afterPath="$PROJECT_DIR$/core/viewssearch.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="caa75f8d-ed1c-404a-911e-d8d55024ca60" name="Default" comment="" />
     <ignored path="championtutoronline.com.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -728,7 +702,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39967898" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39967898" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
