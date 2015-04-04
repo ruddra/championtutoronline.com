@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caa75f8d-ed1c-404a-911e-d8d55024ca60" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\Projects\Github\DJango Projects\championtutoronline.com\core\templates\ajax\registration.html" afterPath="" />
       <change type="DELETED" beforePath="C:\Projects\Github\DJango Projects\saltwaterfish\templates\ordershippingcategorydetailspage.htm" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/src/django-nonrel" afterPath="$PROJECT_DIR$/../saltwaterfish/src/django-nonrel" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/404.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/404.html" />
@@ -129,7 +130,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/categoryindex.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/categoryindex.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/change_pwd.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/change_pwd.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/changeemail.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/changeemail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/js/chat/chat.js" afterPath="$PROJECT_DIR$/core/static/js/chat/chat.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/checkout-response.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/checkout-response.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/checkout_base.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/checkout_base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/checkout_error.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/checkout_error.html" />
@@ -231,7 +231,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/left_menu_reports.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/left_menu_reports.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/left_section.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/left_section.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/login.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/login.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/login.html" afterPath="$PROJECT_DIR$/core/templates/ajax/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/login.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/more_info.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/more_info.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/moreinfo_old.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/moreinfo_old.html" />
@@ -414,7 +413,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/termscon.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/termscon.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/test-coupon-code.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/test-coupon-code.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/test-tax-code.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/test-tax-code.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/text_editor.html" afterPath="$PROJECT_DIR$/core/templates/ajax/text_editor.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/tickets.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/tickets.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/titles_content.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/titles_content.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-checkout.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-checkout.html" />
@@ -428,7 +426,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit-permissions.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit-permissions.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/vertical-tabs.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/vertical-tabs.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/js/chat/videochat.js" afterPath="$PROJECT_DIR$/core/static/js/chat/videochat.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/videos.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/videos.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/videoso.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/videoso.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/view-general-review.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/view-general-review.html" />
@@ -440,7 +437,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/vieworders.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/vieworders.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/vieworders_not_completed.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/vieworders_not_completed.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/viewrequest.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/viewrequest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/views.py" afterPath="$PROJECT_DIR$/core/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/virtual-terminal.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/virtual-terminal.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/waitinglist_popup.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/waitinglist_popup.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/waitinglist_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/waitinglist_search_results.html" />
@@ -453,7 +449,7 @@
     </list>
     <ignored path="championtutoronline.com.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428059193189" ignored="false" />
+    <file path="/Dummy.txt" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428125537838" ignored="false" />
     <file path="/settings.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1425699393761" ignored="false" />
     <file path="/murthy_views.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1425745045401" ignored="false" />
     <file path="/views.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428089738490" ignored="false" />
@@ -469,6 +465,7 @@
     <file path="/User.js" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428088041855" ignored="false" />
     <file path="/login.html" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428089444843" ignored="false" />
     <file path="/chat.js" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428090445684" ignored="false" />
+    <file path="/text_editor.html" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428092066738" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -488,10 +485,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="videochat.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="videochat.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/static/js/chat/videochat.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="536" column="41" selection-start="20789" selection-end="20789" vertical-scroll-proportion="0.719917">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/championtutoronline/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="163" column="14" selection-start="5508" selection-end="5508" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -500,10 +506,8 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="167" column="88" selection-start="7440" selection-end="7440" vertical-scroll-proportion="-9.52">
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
-              </folding>
+            <state line="167" column="88" selection-start="7440" selection-end="7440" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -511,20 +515,26 @@
       <file leaf-file-name="chat.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/static/js/chat/chat.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="165" column="55" selection-start="4937" selection-end="4937" vertical-scroll-proportion="-5.92">
+            <state line="165" column="55" selection-start="4937" selection-end="4937" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="text_editor.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="text_editor.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/templates/ajax/text_editor.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="8" selection-start="26" selection-end="71" vertical-scroll-proportion="-2.6153846">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="61" column="0" selection-start="2709" selection-end="2709" vertical-scroll-proportion="3.3596838">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="whiteboard.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/templates/whiteboard.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="947" column="0" selection-start="43148" selection-end="43148" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -550,7 +560,6 @@
         <option value="$PROJECT_DIR$/../saltwaterfish/custom/middleware/checkout_error.py" />
         <option value="$PROJECT_DIR$/../saltwaterfish/settings.py" />
         <option value="$PROJECT_DIR$/../saltwaterfish/templates/product.html" />
-        <option value="$PROJECT_DIR$/core/templates/whiteboard.html" />
         <option value="$PROJECT_DIR$/core/templates/base.html" />
         <option value="$PROJECT_DIR$/forms.py" />
         <option value="$PROJECT_DIR$/core/viewsajax.py" />
@@ -561,8 +570,9 @@
         <option value="$PROJECT_DIR$/core/templates/ajax/login.html" />
         <option value="$PROJECT_DIR$/core/views.py" />
         <option value="$PROJECT_DIR$/core/static/js/chat/chat.js" />
-        <option value="$PROJECT_DIR$/core/templates/ajax/text_editor.html" />
         <option value="$PROJECT_DIR$/core/static/js/chat/videochat.js" />
+        <option value="$PROJECT_DIR$/core/templates/whiteboard.html" />
+        <option value="$PROJECT_DIR$/core/templates/ajax/text_editor.html" />
       </list>
     </option>
   </component>
@@ -675,32 +685,6 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="templates">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="ajax">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="core">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="static">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
@@ -719,45 +703,7 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="core">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="static">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="js">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="core">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="static">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="js">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="chat">
+            <PATH_ELEMENT USER_OBJECT="championtutoronline">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -789,12 +735,12 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../saltwaterfish" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -820,27 +766,6 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <module name="" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
-      <method />
-    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -862,6 +787,27 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -878,6 +824,13 @@
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="false" name="championtutoronline.com" type="Python.DjangoServer" factoryName="Django server">
@@ -922,7 +875,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2576687" sideWeight="0.6712095" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26150307" sideWeight="0.6712095" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1003,121 +956,94 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/templates/ajax/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="231" column="24" selection-start="7011" selection-end="7011" vertical-scroll-proportion="0.7195876">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/championtutoronline/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="84" selection-start="1712" selection-end="1726" vertical-scroll-proportion="0.7201646">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/viewsajax.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="9" selection-start="2163" selection-end="2163" vertical-scroll-proportion="0.70414203">
-          <folding>
-            <element signature="e#26#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nodejs/socketioserver/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="239" column="26" selection-start="6827" selection-end="6837" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="239" column="26" selection-start="6827" selection-end="6837" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/templates/registration/logged_out.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/templates/registration/password_reset_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/templates/registration/password_reset_done.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/templates/registration/password_reset_confirm.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.3670103">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.3670103" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/templates/registration/password_reset_complete.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/templates/registration/password_change_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.0494071">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.0494071" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/registration/password_change_done.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/registration/password_reset_email.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="56" selection-start="790" selection-end="803" vertical-scroll-proportion="0.40316206" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/championtutoronline/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="163" column="14" selection-start="5508" selection-end="5508" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/registration/password_change_done.html">
+    <entry file="file://$PROJECT_DIR$/core/static/js/chat/videochat.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/registration/password_reset_email.html">
+    <entry file="file://$PROJECT_DIR$/core/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="56" selection-start="790" selection-end="803" vertical-scroll-proportion="0.40316206">
+        <state line="13" column="62" selection-start="613" selection-end="743" vertical-scroll-proportion="0.4367589" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/whiteboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="947" column="0" selection-start="43148" selection-end="43148" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="167" column="88" selection-start="7440" selection-end="7440" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/static/js/chat/chat.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="165" column="55" selection-start="4937" selection-end="4937" vertical-scroll-proportion="-5.92">
+        <state line="165" column="55" selection-start="4937" selection-end="4937" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/templates/ajax/text_editor.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="8" selection-start="26" selection-end="71" vertical-scroll-proportion="-2.6153846">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="167" column="88" selection-start="7440" selection-end="7440" vertical-scroll-proportion="-9.52">
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/js/chat/videochat.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="536" column="41" selection-start="20789" selection-end="20789" vertical-scroll-proportion="0.719917">
+        <state line="61" column="0" selection-start="2709" selection-end="2709" vertical-scroll-proportion="3.3596838">
           <folding />
         </state>
       </provider>
