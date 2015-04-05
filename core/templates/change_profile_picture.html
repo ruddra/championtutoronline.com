@@ -16,18 +16,24 @@
     {% endblock header %}
     {% block bodycontent %}
         <div class="container text-center" style="margin-top: 100px;margin-bottom:40px;padding: 20px;width: 400px; border: 1px solid gray; border-radius: 10px;">
-        <div style="background: green;color: white;padding: 7px; margin-bottom: 10px;text-align: left;">Password Reset Form</div>
+        <div style="background: green;color: white;padding: 7px; margin-bottom: 10px;text-align: left;">Change Profile Picture</div>
+
 
             <form method="post" enctype="multipart/form-data">{% csrf_token %}
                 <div class="row">
-                    <div class="col-md-12">{{ form.as_p }}</div>
+                    <div class="col-md-12">{{ form.image_field }}</div>
                 </div>
+                {% if form.id == None %}
+                <div class="row">
+                    <div class="col-md-12">{{ form.cropping }}</div>
+                </div>
+                {% endif %}
                 <div class="row">
                     <div class="col-md-12">
                         <input type="submit" class="btn btn-primary" style="margin-top: 10px; float: right;" value="Change Profile Picture" />
                     </div>
                 </div>
-                
+
             </form>
         </div>
 

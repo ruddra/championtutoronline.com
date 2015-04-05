@@ -1,5 +1,5 @@
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from easy_thumbnails.conf import Settings as thumbnail_settings
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 ENVIRONMENT = os.environ
@@ -159,6 +159,8 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'django.contrib.humanize',
+    'easy_thumbnails',
+    'image_cropping',
     'core',
     'authentication',
     'common'
@@ -182,4 +184,7 @@ COMMON_DATA_CONTEXT = {
 }
 
 DEFAULT_MAIL_SENDER = DEFAULT_FROM_EMAIL = 'codenginebd@gmail.com'
-DEFAULT_FROM_EMAIL
+
+THUMBNAIL_PROCESSORS = (
+    'image_cropping.thumbnail_processors.crop_corners',
+) + thumbnail_settings.THUMBNAIL_PROCESSORS

@@ -1,6 +1,8 @@
 from django.contrib.auth.models import User
 from django.db import models
 from datetime import datetime
+from image_cropping import ImageRatioField
+from image_cropping.fields import ImageCropField
 
 
 class Address(models.Model):
@@ -13,7 +15,9 @@ class Address(models.Model):
 
 
 class ProfilePicture(models.Model):
-    image = models.ImageField(upload_to='/media')
+    image_field = ImageCropField(upload_to='image/')
+    cropping = ImageRatioField('image_field', size='120x100', allow_fullsize=True)
+
 
 class ChampUser(models.Model):
     user = models.OneToOneField(User)
