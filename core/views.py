@@ -1,11 +1,12 @@
 import datetime
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 import time
+from easy_thumbnails.files import get_thumbnailer
 from championtutoronline.settings import DEFAULT_FROM_EMAIL
 from core.emails import EmailClient
-from core.models import ResetPasswordToken
+from core.models import ResetPasswordToken, ProfilePicture
 from core.tasks import email_sending_method
-from forms import LoginForm,SignUpForm, PasswordResetRequestForm, SetPasswordForm
+from forms import LoginForm,SignUpForm, PasswordResetRequestForm, SetPasswordForm, ProfilePictureForm
 from models import ChampUser
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
@@ -121,14 +122,54 @@ class ProfileView(View):
         template_name = "tutor_profile.html"
         _this_user_id = request.user.id
         user_objs = ChampUser.objects.filter(user__id=_this_user_id)
-        print user_objs
+        if user_objs.exists():
+            user = user_objs.first()
+            image = user.profile_picture
+            thumbnail_url = get_thumbnailer(image.image_field).get_thumbnail({
+                    'size': (129, 129),
+                    'box': image.cropping,
+                    'crop': True,
+                    'detail': True,
+                }).url
+        else:
+            thumbnail_url = ''
         if user_objs:
             user_obj = user_objs[0]
             if user_obj.type == 'student':
                 template_name = 'student_profile.html'
-        return render(request,template_name,{})
+        return render(request,template_name, {'thumbnail_url': thumbnail_url})
 
 
+
+class ChangeProfilePictureView(FormView):
+    template_name = "change_profile_picture.html"
+    success_url = '/profile'
+    form_class = ProfilePictureForm
+
+    def get(self, request, image_id=None, *args, **kwargs):
+        image = get_object_or_404(ProfilePicture, pk=image_id) if image_id else None
+        form_class = self.get_form_class()
+        form = form_class(instance=image)
+        self.object = None
+        return self.render_to_response(self.get_context_data(form=form))
+
+    def post(self, request, image_id=None, *args, **kwargs):
+        image = get_object_or_404(ProfilePicture, pk=image_id) if image_id else None
+        form = self.form_class(request.POST, request.FILES, instance=image)
+        if form.is_valid():
+            if not image:
+                image = form.save()
+                return HttpResponseRedirect(reverse('change_pp', args=(image.pk,)))
+            else:
+                image = form.save()
+                users = ChampUser.objects.filter(user=request.user)
+                if users.exists():
+                    user = users[0]
+                    user.profile_picture = image
+                    user.save()
+                return redirect(self.success_url)
+        else:
+            return self.form_invalid(form)
 
 
 class ResetPasswordRequestView(FormView):
