@@ -1,465 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="caa75f8d-ed1c-404a-911e-d8d55024ca60" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Projects\Github\DJango Projects\championtutoronline.com\core\templates (copy)\online_tutors.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Github\DJango Projects\championtutoronline.com\core\templates\ajax\registration.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Github\DJango Projects\championtutoronline.com\core\templates\online_tutors.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Github\DJango Projects\championtutoronline.com\core\templates\tutor_profile_public.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projects\Github\DJango Projects\saltwaterfish\templates\ordershippingcategorydetailspage.htm" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/src/django-nonrel" afterPath="$PROJECT_DIR$/../saltwaterfish/src/django-nonrel" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Etherpad/etherpad-lite-win" afterPath="$PROJECT_DIR$/Etherpad/etherpad-lite-win" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/404.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/404.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/500.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/500.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/AddressForm.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/AddressForm.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/BuyGift.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/BuyGift.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/CartConfirmation.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/CartConfirmation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/CartConfirmation_actual.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/CartConfirmation_actual.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/CartConfirmation_bkp.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/CartConfirmation_bkp.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/CartConfirmation_new.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/CartConfirmation_new.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ChangePWD.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ChangePWD.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/CheckOutLogin.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/CheckOutLogin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/CheckOutLogin_bkp.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/CheckOutLogin_bkp.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/CheckOutLogin_bkp2.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/CheckOutLogin_bkp2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/CheckOutLogin_bkp_0707.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/CheckOutLogin_bkp_0707.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/CheckoutError.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/CheckoutError.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/EstimatedOrderDetails.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/EstimatedOrderDetails.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/EstimatedOrderDetailsNew.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/EstimatedOrderDetailsNew.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/FedexLocations.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/FedexLocations.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/NearestFedexLoccations - Copy.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/NearestFedexLoccations - Copy.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/NearestFedexLoccations.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/NearestFedexLoccations.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation 20-01-2014.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation 20-01-2014.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation_0702.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation_0702.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation_bk1.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation_bk1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation_bkp.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation_bkp.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation_bkp0627.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation_bkp0627.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation_bkp0701.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation_bkp0701.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation_bkp12.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation_bkp12.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation_bkp_0604.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation_bkp_0604.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation_bkp_0618.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation_bkp_0618.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation_bkp_0620.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation_bkp_0620.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation_bkp_0626.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation_bkp_0626.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation_bkp_0628.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation_bkp_0628.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation_bkp_0713.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation_bkp_0713.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/OrderPageCallBackFailure.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/OrderPageCallBackFailure.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/OrderPageCallBackSuccess.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/OrderPageCallBackSuccess.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/OrderSummary - Copy.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/OrderSummary - Copy.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/OrderSummary.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/OrderSummary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/OrderSummaryNew.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/OrderSummaryNew.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/PaypalPurchase.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/PaypalPurchase.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/PaypalRedirection.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/PaypalRedirection.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/RecreateOrderConfirmation 20-01-2014.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/RecreateOrderConfirmation 20-01-2014.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/RecreateOrderConfirmation.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/RecreateOrderConfirmation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/RecreateOrderViewCart.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/RecreateOrderViewCart.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/RecreateOrderViewCartCopy.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/RecreateOrderViewCartCopy.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ShippingDeliveryCal.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ShippingDeliveryCal.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ShippingDeliveryCalError.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ShippingDeliveryCalError.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ShippingDeliveryCal_bkp.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ShippingDeliveryCal_bkp.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ShippingDeliveryCal_bkp_0713.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ShippingDeliveryCal_bkp_0713.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ViewCart.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ViewCart.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ViewCart_bkp-0528.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ViewCart_bkp-0528.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ViewCart_bkp_0604.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ViewCart_bkp_0604.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ViewCart_bkp_0619.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ViewCart_bkp_0619.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ViewCart_bkp_0628.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ViewCart_bkp_0628.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ViewCart_bkp_0702.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ViewCart_bkp_0702.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ViewCart_bkp_0713.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ViewCart_bkp_0713.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ViewCart_bkp_12.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ViewCart_bkp_12.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/add-product.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/add-product.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/add-to-order.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/add-to-order.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/add_email_pages.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/add_email_pages.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/add_html_content.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/add_html_content.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/add_product_option_menu.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/add_product_option_menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/add_product_variant.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/add_product_variant.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/add_product_variant_option.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/add_product_variant_option.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/add_rma.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/add_rma.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/addaddressbook.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/addaddressbook.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/addbanner.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/addbanner.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/addprod_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/addprod_search_results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/addrequest.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/addrequest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/addrequestform.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/addrequestform.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/address_form.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/address_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/address_templ.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/address_templ.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/addressbook.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/addressbook.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/addressbooks.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/addressbooks.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/addrma.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/addrma.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/admin-header1.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/admin-header1.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/admin-header2.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/admin-header2.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/admin-home.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/admin-home.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/admin_footer.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/admin_footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/admin_header.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/admin_header.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/admin_header_0419_bkp.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/admin_header_0419_bkp.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/admin_header_bkp.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/admin_header_bkp.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/admin_login.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/admin_login.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/admins.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/admins.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/admins_add.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/admins_add.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/admins_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/admins_search_results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/adminshippingmanager.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/adminshippingmanager.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_coupon_gift_credit_option_dialog - Copy.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_coupon_gift_credit_option_dialog - Copy.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_coupon_gift_credit_option_dialog.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_coupon_gift_credit_option_dialog.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_coupon_gift_credit_option_dialog_confirmation.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_coupon_gift_credit_option_dialog_confirmation.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_promotion_exludelist_countries_and_states.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_promotion_exludelist_countries_and_states.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_promotion_products_list_dialog.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_promotion_products_list_dialog.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_promotion_products_search_in_dialog.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_promotion_products_search_in_dialog.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_promotion_rules_categories_dialog.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_promotion_rules_categories_dialog.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/banners_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/banners_search_results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/base.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/base_login.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/base_login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/blackout_date.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/blackout_date.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/build-custom-export.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/build-custom-export.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/buildreef.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/buildreef.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/bundles_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/bundles_search_results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cart1.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cart1.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cart10.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cart10.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cart2.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cart2.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cart3.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cart3.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cart4.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cart4.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cart4.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cart4.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cart5.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cart5.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cart5.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cart5.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cart6.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cart6.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cart7.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cart7.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cart8.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cart8.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cart9.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cart9.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cart_confirm.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cart_confirm.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/categories.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/categories.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/category-fragment.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/category-fragment.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/category.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/category.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/category.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/category.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/category_bkp_0615.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/category_bkp_0615.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/category_list.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/category_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/category_listo.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/category_listo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/category_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/category_search_results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/categoryindex.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/categoryindex.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/categoryindex.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/categoryindex.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/change_pwd.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/change_pwd.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/changeemail.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/changeemail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/checkout-response.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/checkout-response.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/checkout_base.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/checkout_base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/checkout_error.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/checkout_error.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/checkout_login.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/checkout_login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/checkout_user_address.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/checkout_user_address.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cms-pages-edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cms-pages-edit.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cms-pages.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cms-pages.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages_add.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages_add.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages_edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages_edit.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/contactus.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/contactus.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/coupon_confirmation.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/coupon_confirmation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/coupon_modal-old.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/coupon_modal-old.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/coupon_modal.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/coupon_modal.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/crm.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/crm.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/crm_edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/crm_edit.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/crm_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/crm_search_results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/custom-exports.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/custom-exports.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/customer-credits.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/customer-credits.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/customer_add.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/customer_add.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/customerlist.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/customerlist.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/misc/images/customers-edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/misc/images/customers-edit.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/customers-edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/customers-edit.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/customers-export.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/customers-export.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/customers-info.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/customers-info.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/customers-orders.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/customers-orders.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/customers-rewards.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/customers-rewards.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/customers-store-credit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/customers-store-credit.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/customers-wishlist.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/customers-wishlist.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/customers.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/customers.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/customers_info.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/customers_info.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/customers_info_bkp.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/customers_info_bkp.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/customers_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/customers_search_results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/daa-approved.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/daa-approved.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/daa-submitted.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/daa-submitted.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/doa-approved.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/doa-approved.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/doa-submitted.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/doa-submitted.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/edit-blackout-date.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/edit-blackout-date.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/edit-custom-export-set.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/edit-custom-export-set.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/edit-order.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/edit-order.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/edit-orders.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/edit-orders.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/edit_address.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/edit_address.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/edit_giftcertificate.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/edit_giftcertificate.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/edit_html_content.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/edit_html_content.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/editaddress.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/editaddress.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/editbanner.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/editbanner.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/editrequestform.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/editrequestform.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/email-orders-notcompleted.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/email-orders-notcompleted.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/email_friend_template.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/email_friend_template.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/email_pages.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/email_pages.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/email_pages_edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/email_pages_edit.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/emailfriend_popup.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/emailfriend_popup.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/emails_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/emails_search_results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/estimate_order_details.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/estimate_order_details.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/fedex-overnight-delay.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/fedex-overnight-delay.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/fedex-overnight.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/fedex-overnight.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/fedex-priority.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/fedex-priority.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/fedex_popup.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/fedex_popup.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/fishschool.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/fishschool.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/fishschool.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/fishschool.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/footer.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/footer.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/footer.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/forgetpwd.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/forgetpwd.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/forum.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/forum.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/front.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/front.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/fullimage_popup.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/fullimage_popup.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/gcsfiles.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/gcsfiles.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/giftcertificate.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/giftcertificate.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/giftcertificate.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/giftcertificate.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/giftcertificate_pages.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/giftcertificate_pages.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/giftcertificates_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/giftcertificates_search_results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/header.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/header.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/home-page-admin.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/home-page-admin.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/home-page-admin.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/home-page-admin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/home-page-admin1.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/home-page-admin1.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/home-page-left.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/home-page-left.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/home-page-subdrop.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/home-page-subdrop.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/home-top-dropdown.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/home-top-dropdown.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/home.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/images_products.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/images_products.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/import_tax_rate.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/import_tax_rate.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/index-backup-mar08.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/index-backup-mar08.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/misc/js/carou/index.html" afterPath="$PROJECT_DIR$/../saltwaterfish/misc/js/carou/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/index.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/inventory-outofstock.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/inventory-outofstock.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/inventory-uploads.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/inventory-uploads.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/inventory_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/inventory_search_results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/latest-index.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/latest-index.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/lef_menu_products.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/lef_menu_products.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/left-menu-orders.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/left-menu-orders.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/left.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/left.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/left1.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/left1.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/left2.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/left2.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/left2.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/left2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/left_menu3.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/left_menu3.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/left_menu_cms.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/left_menu_cms.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/left_menu_crm.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/left_menu_crm.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/left_menu_customers.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/left_menu_customers.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/left_menu_reports.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/left_menu_reports.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/left_section.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/left_section.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/login.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/login.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/login.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/more_info.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/more_info.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/moreinfo_old.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/moreinfo_old.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/my_order_info.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/my_order_info.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/my_orders.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/my_orders.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/my_rma_requests.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/my_rma_requests.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/my_support_requests.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/my_support_requests.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/my_waiting_list.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/my_waiting_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/myaccount.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/myaccount.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/myaccount.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/myaccount.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/myaccount_bkp.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/myaccount_bkp.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/myaccount_links.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/myaccount_links.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/myaccount_widget.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/myaccount_widget.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/myaccount_widget_bkp.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/myaccount_widget_bkp.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/myreefrewards.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/myreefrewards.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/new-edit-order.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/new-edit-order.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/onsale-cat.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/onsale-cat.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/onsale-fragment.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/onsale-fragment.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/onsale.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/onsale.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/onsale.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/onsale.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/onsaleo.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/onsaleo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/order-step2.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/order-step2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/order_confirm.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/order_confirm.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/order_search.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/order_search.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/order_summary.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/order_summary.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/orderdetails_not_completed.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/orderdetails_not_completed.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/orderinfo.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/orderinfo.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/orderinfo_bkp_0628.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/orderinfo_bkp_0628.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/orderpage - Copy.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/orderpage - Copy.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/orderpage.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/orderpage.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/orders-by-date.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/orders-by-date.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/orders-by-promotion.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/orders-by-promotion.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/orders-cancelled.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/orders-cancelled.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/orders-edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/orders-edit.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/orders-export.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/orders-export.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/misc/images/orders-new.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/misc/images/orders-new.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/orders-new.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/orders-new.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/orders-new.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/orders-new.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/orders.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/orders.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/orders_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/orders_search_results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/orders_status.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/orders_status.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/orders_status_add.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/orders_status_add.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/pages.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/pages.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/pages.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/pages.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/pages_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/pages_search_results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/pinterest-3c772.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/pinterest-3c772.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/popredeem.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/popredeem.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/printorder.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/printorder.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/product-bundle-add.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/product-bundle-add.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/product-bundle-edit.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/product-bundle-edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/product-category-list.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/product-category-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/product.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/product.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/product.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/product.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/product1.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/product1.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/product_article_add.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/product_article_add.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/product_article_edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/product_article_edit.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/product_articles.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/product_articles.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/product_nodesign.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/product_nodesign.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/product_noimages.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/product_noimages.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/product_options_edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/product_options_edit.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/product_reviews.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/product_reviews.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/product_tabs.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/product_tabs.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/productedit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/productedit.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/productindex.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/productindex.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/productindext.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/productindext.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/productlist.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/productlist.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/productrelated.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/productrelated.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products-7-reviews-edit-2-edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products-7-reviews-edit-2-edit.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products-7-reviews-edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products-7-reviews-edit.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products-7-reviews.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products-7-reviews.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products-articles.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products-articles.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products-bundles-edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products-bundles-edit.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products-bundles-view-edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products-bundles-view-edit.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products-categories-add.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products-categories-add.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products-categories-options.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products-categories-options.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products-categories-view.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products-categories-view.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products-edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products-edit.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products-images-videos.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products-images-videos.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products-import-export.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products-import-export.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products-info.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products-info.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products-inventory.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products-inventory.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products-options.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products-options.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products-related.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products-related.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products-reviews-edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products-reviews-edit.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products-reviews.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products-reviews.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products-wish-list-view-list.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products-wish-list-view-list.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products-wish-list.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products-wish-list.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products_7_reviews.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products_7_reviews.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products_7_reviews_edit_2_edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products_7_reviews_edit_2_edit.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products_bkp.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products_bkp.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products_review_view_list.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products_review_view_list.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/products_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/products_search_results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products_wish_list.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products_wish_list.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products_wish_list_view_list.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products_wish_list_view_list.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/profile.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/promotions_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/promotions_search_results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/quick-list.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/quick-list.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/quick_list.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/quick_list.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/quick_list_bkp-0614.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/quick_list_bkp-0614.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/quick_list_bkp.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/quick_list_bkp.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/quicklist-fragment.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/quicklist-fragment.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/quicklist.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/quicklist.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/redeem_reef_rewards.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/redeem_reef_rewards.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/redeemproducts.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/redeemproducts.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reefpackage.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reefpackage.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reefpackage_bkp_0622.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reefpackage_bkp_0622.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reefrewards.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reefrewards.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/referral-info.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/referral-info.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/refund-cancelled.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/refund-cancelled.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/refund-doa.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/refund-doa.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/refund-misc.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/refund-misc.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/refund-outofstock.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/refund-outofstock.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/regconfirmation.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/regconfirmation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/registration.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/registration.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/registration.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/registration.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/registration1.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/registration1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-fedex.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-fedex.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-inventory.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-inventory.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-orders.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-orders.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-refunds.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-refunds.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-rma.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-rma.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-sales.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-sales.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-traffic.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-traffic.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/base/resp_base.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/base/resp_base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/base/resp_base_full.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/base/resp_base_full.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/review-edit.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/review-edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reviews.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reviews.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reviews0.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reviews0.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/reviews_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/reviews_search_results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/reward-points.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/reward-points.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/rma-action-response.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/rma-action-response.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/rma-customer.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/rma-customer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/rma.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/rma.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/rma_info.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/rma_info.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/rma_pages.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/rma_pages.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/rma_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/rma_search_results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/rmarequest.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/rmarequest.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/rmaview.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/rmaview.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/sales-by-categories.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/sales-by-categories.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/sales-by-city.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/sales-by-city.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/sales-by-customer.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/sales-by-customer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/sales-by-day.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/sales-by-day.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/sales-by-hour.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/sales-by-hour.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/sales-by-month.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/sales-by-month.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/sales-by-paymentmethod.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/sales-by-paymentmethod.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/sales-by-products.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/sales-by-products.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/sales-by-promotion.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/sales-by-promotion.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/sales-by-state.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/sales-by-state.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/saltwater-new.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/saltwater-new.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/misc/images/saltwater.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/misc/images/saltwater.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/saltwater.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/saltwater.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/saltwaterfish-mastercategory.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/saltwaterfish-mastercategory.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/saltwaterfish-reefpackage.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/saltwaterfish-reefpackage.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search-header.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search-header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search_results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/searchpageresults.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/searchpageresults.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/settings-coupons-manager-add.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/settings-coupons-manager-add.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/settings-coupons-manager-details.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/settings-coupons-manager-details.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/settings-coupons-manager-edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/settings-coupons-manager-edit.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/settings-coupons-manager.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/settings-coupons-manager.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/settings-shipping-manager-add.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/settings-shipping-manager-add.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/settings-shipping-manager-edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/settings-shipping-manager-edit.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/settings-shipping-manager.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/settings-shipping-manager.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/settings-tax-manager.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/settings-tax-manager.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/settings.py" afterPath="$PROJECT_DIR$/../saltwaterfish/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/shipping_calendar.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/shipping_calendar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/shippingcategory_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/shippingcategory_search_results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/sitemap.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/sitemap.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/subcat.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/subcat.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/subcategory-list.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/subcategory-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/subcategory-products.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/subcategory-products.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/superspecial.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/superspecial.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/tax_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/tax_search_results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/taxmanager.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/taxmanager.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/temp_redir.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/temp_redir.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/terms_conditions.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/terms_conditions.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/termscon.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/termscon.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/test-coupon-code.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/test-coupon-code.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/test-tax-code.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/test-tax-code.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/tickets.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/tickets.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/titles_content.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/titles_content.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-checkout.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-checkout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-conversions.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-conversions.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-keywords.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-keywords.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-pageviews.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-pageviews.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-referrers.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-referrers.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-visits.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-visits.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/under_construction.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/under_construction.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit-log.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit-log.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit-permissions.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit-permissions.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/vertical-tabs.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/vertical-tabs.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/js/chat/videochat.js" afterPath="$PROJECT_DIR$/core/static/js/chat/videochat.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/videos.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/videos.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/videoso.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/videoso.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/view-general-review.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/view-general-review.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/view_cart.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/view_cart.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/viewbanners.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/viewbanners.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/viewcoupons.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/viewcoupons.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/vieworders - Copy.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/vieworders - Copy.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/vieworders-bkp.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/vieworders-bkp.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/vieworders.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/vieworders.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/vieworders_not_completed.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/vieworders_not_completed.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/viewrequest.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/viewrequest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/virtual-terminal.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/virtual-terminal.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/waitinglist_popup.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/waitinglist_popup.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/waitinglist_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/waitinglist_search_results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/waitlistmodal.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/waitlistmodal.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/wishlist.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/wishlist.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/wishlistitems.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/wishlistitems.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/writereview_modal.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/writereview_modal.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/writereview_popup.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/writereview_popup.htm" />
-    </list>
+    <list default="true" id="caa75f8d-ed1c-404a-911e-d8d55024ca60" name="Default" comment="" />
     <ignored path="championtutoronline.com.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1427726494457" ignored="false" />
-    <file path="/settings.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1425699393761" ignored="false" />
-    <file path="/murthy_views.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1425745045401" ignored="false" />
-    <file path="/views.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1425744704636" ignored="false" />
-    <file path="/checkout_error.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1426005997972" ignored="false" />
-    <file path="/videochat.js" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1427737020266" ignored="false" />
-    <file path="/product.html" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1427526107746" ignored="false" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -479,49 +24,107 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="User.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nodejs/socketioserver/models/User.js">
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="2" selection-start="1791" selection-end="1791" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chat.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/static/js/chat/chat.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="837" column="84" selection-start="33949" selection-end="33949" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="whiteboard.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/templates/whiteboard.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="430" column="0" selection-start="16212" selection-end="16212" vertical-scroll-proportion="-7.3461537">
+            <state vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="1326">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
-                <element signature="e#11392#11425#0" expanded="true" />
-                <element signature="e#11568#11605#0" expanded="true" />
-                <element signature="e#11912#11933#0" expanded="true" />
-                <element signature="e#12738#12759#0" expanded="true" />
-                <element signature="e#13566#13587#0" expanded="true" />
-                <element signature="e#18472#18522#0" expanded="true" />
-                <element signature="e#19679#19700#0" expanded="true" />
-                <element signature="e#19846#19867#0" expanded="true" />
-                <element signature="e#19999#20018#0" expanded="true" />
-                <element signature="e#32356#32403#0" expanded="true" />
-                <element signature="e#32416#32458#0" expanded="true" />
+                <element signature="e#0#51#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="videochat.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/static/js/chat/videochat.js">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="521" column="67" selection-start="20086" selection-end="20086" vertical-scroll-proportion="0.34854016">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3408" max-vertical-offset="4505">
+              <caret line="207" column="71" selection-start-line="207" selection-start-column="71" selection-end-line="207" selection-end-column="71" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="validators.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Python27/Lib/site-packages/django/core/validators.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1517" max-vertical-offset="3706">
+              <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Python27/Lib/site-packages/django/views/generic/base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1177" max-vertical-offset="3655">
+              <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/flatpages/tests/test_views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1332" max-vertical-offset="2193">
+              <caret line="92" column="6" selection-start-line="92" selection-start-column="6" selection-end-line="92" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="viewsajax.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/viewsajax.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-19.310345" vertical-offset="358" max-vertical-offset="2312">
+              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="56" selection-end-column="54" />
+              <folding>
+                <element signature="e#26#68#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Python27/Lib/site-packages/django/views/generic/edit.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4726">
+              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/championtutoronline/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="612">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reset_password.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/templates/reset_password.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.44299674" vertical-offset="0" max-vertical-offset="1445">
+              <caret line="8" column="73" selection-start-line="8" selection-start-column="73" selection-end-line="8" selection-end-column="73" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/templates/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.576923" vertical-offset="2805" max-vertical-offset="5049">
+              <caret line="172" column="22" selection-start-line="172" selection-start-column="22" selection-end-line="172" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -543,30 +146,25 @@
     </option>
   </component>
   <component name="IdeDocumentHistory">
-    <option name="changedFiles">
+    <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/configuration/celery.py" />
+        <option value="$PROJECT_DIR$/forms.py" />
+        <option value="$PROJECT_DIR$/core/tasks.py" />
+        <option value="$PROJECT_DIR$/core/models.py" />
         <option value="$PROJECT_DIR$/championtutoronline/settings.py" />
-        <option value="$PROJECT_DIR$/../saltwaterfish/templates/500.html" />
-        <option value="$PROJECT_DIR$/../saltwaterfish/views.py" />
-        <option value="$PROJECT_DIR$/../saltwaterfish/urls.py" />
-        <option value="$PROJECT_DIR$/../saltwaterfish/murthy_views.py" />
-        <option value="$PROJECT_DIR$/../saltwaterfish/app.yaml" />
-        <option value="$PROJECT_DIR$/../saltwaterfish/custom/middleware/checkout_error.py" />
-        <option value="$PROJECT_DIR$/../saltwaterfish/settings.py" />
-        <option value="$PROJECT_DIR$/../saltwaterfish/templates/product.html" />
-        <option value="$PROJECT_DIR$/nodejs/socketioserver/models/User.js" />
-        <option value="$PROJECT_DIR$/nodejs/socketioserver/app.js" />
-        <option value="$PROJECT_DIR$/core/static/js/chat/chat.js" />
-        <option value="$PROJECT_DIR$/core/templates/whiteboard.html" />
-        <option value="$PROJECT_DIR$/core/static/js/chat/videochat.js" />
+        <option value="$PROJECT_DIR$/core/viewsajax.py" />
+        <option value="$PROJECT_DIR$/championtutoronline/urls.py" />
+        <option value="$PROJECT_DIR$/core/templates/reset_password.html" />
+        <option value="$PROJECT_DIR$/core/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="y" value="22" />
     <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -582,7 +180,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="Scope" currentSubView="All" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -594,6 +192,108 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="championtutoronline.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="championtutoronline.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="championtutoronline.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="championtutoronline.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="championtutoronline.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="championtutoronline.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="championtutoronline.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="championtutoronline.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="championtutoronline.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="registration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="championtutoronline.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="championtutoronline.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="championtutoronline.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="championtutoronline.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="championtutoronline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="All">
           <PATH>
@@ -802,35 +502,26 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="championtutoronline.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="championtutoronline.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="saltwaterfish" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../saltwaterfish" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/manage.py" />
     <property name="FullScreen" value="false" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="ajax&#9;FILE&#9;file://E:/Technical/Source/championtutoronline.com/core/viewsajax.py&#10;viewa&#9;null&#9;null&#10;ConsoleU&#9;null&#9;null&#10;task&#9;FILE&#9;file://E:/Technical/Source/championtutoronline.com/core/tasks.py&#10;Loginform&#9;null&#9;null&#10;resetco&#9;null&#9;null" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
-  <component name="RunManager">
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings />
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.run">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -840,10 +531,13 @@
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="saltwaterfish" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -853,6 +547,8 @@
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="saltwaterfish" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
@@ -867,25 +563,47 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+    <configuration default="true" type="tests" factoryName="py.test">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
+      <envs />
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
-      <module name="" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="championtutoronline.com" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="championtutoronline.com" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -895,6 +613,8 @@
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="saltwaterfish" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
@@ -906,64 +626,113 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="championtutoronline.com" type="Python.DjangoServer" factoryName="Django server">
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="championtutoronline.com" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="run" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="championtutoronline.com" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
+      <option name="PARAMETERS" value="runserver" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
     <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Django server.championtutoronline.com" />
+      <item index="0" class="java.lang.String" itemvalue="Python.run" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="caa75f8d-ed1c-404a-911e-d8d55024ca60" name="Default" comment="" />
       <created>1423232054219</created>
+      <option name="number" value="Default" />
       <updated>1423232054219</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="22" width="1382" height="754" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21875" sideWeight="0.6712095" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39967898" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21875" sideWeight="0.6712095" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2189394" sideWeight="0.6712095" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-    </layout>
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39967898" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -977,164 +746,286 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_NEW_TODO" value="true" />
     <option name="myTodoPanelSettings">
-      <value>
-        <are-packages-shown value="false" />
-        <are-modules-shown value="false" />
-        <flatten-packages value="false" />
-        <is-autoscroll-to-source value="false" />
-      </value>
+      <TodoPanelSettings />
     </option>
-    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
-    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
-    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
-    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
-    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
-    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
-    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
-    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
-    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
-    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
-    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
-    <option name="LIMIT_HISTORY" value="true" />
-    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
-    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
-    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
-    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
-    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
-    <option name="ACTIVE_VCS_NAME" />
-    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
-    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
-    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
-    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/core/views.py</url>
+          <line>198</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="14" />
+    </breakpoint-manager>
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../saltwaterfish/murthy_views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="360" column="18" selection-start="14135" selection-end="14135" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../saltwaterfish/user_actions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2989" column="51" selection-start="166300" selection-end="166300" vertical-scroll-proportion="0.031021899" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../saltwaterfish/classes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2000" column="6" selection-start="85769" selection-end="85769" vertical-scroll-proportion="0.031021899" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../saltwaterfish/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="502" column="57" selection-start="25906" selection-end="25906" vertical-scroll-proportion="0.031021899" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../saltwaterfish/custom/middleware/checkout_error.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="37" selection-start="4697" selection-end="4697" vertical-scroll-proportion="2.957935" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../saltwaterfish/templates/product.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../saltwaterfish/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="74" selection-start="4559" selection-end="4559" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../saltwaterfish/templates/product.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="464" column="89" selection-start="29789" selection-end="29789" vertical-scroll-proportion="0.5210728" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../saltwaterfish/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1017" column="22" selection-start="47798" selection-end="47810" vertical-scroll-proportion="0.031021899">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../saltwaterfish/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="47" selection-start="9780" selection-end="9780" vertical-scroll-proportion="0.031021899">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../saltwaterfish/app.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="10" selection-start="41" selection-end="41" vertical-scroll-proportion="0.030303031" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nodejs/socketioserver/models/User.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="2" selection-start="1791" selection-end="1791" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodejs/socketioserver/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="251" column="19" selection-start="7357" selection-end="7357" vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="1020">
+          <caret line="54" column="2" selection-start-line="54" selection-start-column="2" selection-end-line="54" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/static/js/chat/chat.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="837" column="84" selection-start="33949" selection-end="33949" vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="14229" max-vertical-offset="18207">
+          <caret line="837" column="84" selection-start-line="837" selection-start-column="84" selection-end-line="837" selection-end-column="84" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/templates/whiteboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="430" column="0" selection-start="16212" selection-end="16212" vertical-scroll-proportion="-7.3461537">
+        <state vertical-scroll-proportion="0.0" vertical-offset="7310" max-vertical-offset="18887">
+          <caret line="430" column="0" selection-start-line="430" selection-start-column="0" selection-end-line="430" selection-end-column="0" />
           <folding>
-            <element signature="e#11392#11425#0" expanded="true" />
-            <element signature="e#11568#11605#0" expanded="true" />
-            <element signature="e#11912#11933#0" expanded="true" />
-            <element signature="e#12738#12759#0" expanded="true" />
-            <element signature="e#13566#13587#0" expanded="true" />
-            <element signature="e#18472#18522#0" expanded="true" />
-            <element signature="e#19679#19700#0" expanded="true" />
-            <element signature="e#19846#19867#0" expanded="true" />
-            <element signature="e#19999#20018#0" expanded="true" />
-            <element signature="e#32356#32403#0" expanded="true" />
-            <element signature="e#32416#32458#0" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#div#1;n#div#0;n#ul#0;n#div#0;n#div#3;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#ul#0;n#div#0;n#div#3;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#ul#0;n#div#0;n#div#3;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#ul#0;n#div#0;n#div#3;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#2;n#div#3;n#div#0;n#ul#0;n#div#0;n#div#3;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#4;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#4;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#4;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#4;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#7;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#div#7;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/static/js/chat/videochat.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="521" column="67" selection-start="20086" selection-end="20086" vertical-scroll-proportion="0.34854016">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="20502">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nodejs/socketioserver/models/User.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="1020">
+          <caret line="54" column="2" selection-start-line="54" selection-start-column="2" selection-end-line="54" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nodejs/socketioserver/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="251" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/static/js/chat/chat.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="14229" max-vertical-offset="18207">
+          <caret line="837" column="84" selection-start-line="837" selection-start-column="84" selection-end-line="837" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/whiteboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="7310" max-vertical-offset="18887">
+          <caret line="430" column="0" selection-start-line="430" selection-start-column="0" selection-end-line="430" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#input#1;n#div#1;n#div#0;n#ul#0;n#div#0;n#div#3;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#ul#0;n#div#0;n#div#3;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#ul#0;n#div#0;n#div#3;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#ul#0;n#div#0;n#div#3;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#2;n#div#3;n#div#0;n#ul#0;n#div#0;n#div#3;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#4;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#4;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#4;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#4;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#7;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#div#7;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/static/js/chat/videochat.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="8449" max-vertical-offset="20502">
+          <caret line="521" column="67" selection-start-line="521" selection-start-column="67" selection-end-line="521" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuration/celery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.36" vertical-offset="0" max-vertical-offset="170">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/django/db/models/fields/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.4827585" vertical-offset="11814" max-vertical-offset="24123">
+          <caret line="731" column="25" selection-start-line="731" selection-start-column="17" selection-end-line="731" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/auth/tests/test_auth_backends.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5446" max-vertical-offset="8466">
+          <caret line="430" column="55" selection-start-line="430" selection-start-column="55" selection-end-line="430" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/django/contrib/auth/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="2601">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/django/contrib/auth/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5854" max-vertical-offset="8721">
+          <caret line="360" column="6" selection-start-line="360" selection-start-column="6" selection-end-line="360" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1173">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="72.57692" vertical-offset="1887" max-vertical-offset="3723">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/championtutoronline/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2652" max-vertical-offset="3043">
+          <caret line="172" column="40" selection-start-line="172" selection-start-column="40" selection-end-line="172" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/django/views/generic/edit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="40" max-vertical-offset="4726">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/flatpages/tests/test_views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1332" max-vertical-offset="2193">
+          <caret line="92" column="6" selection-start-line="92" selection-start-column="6" selection-end-line="92" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/viewsajax.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.310345" vertical-offset="358" max-vertical-offset="2312">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="56" selection-end-column="54" />
+          <folding>
+            <element signature="e#26#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923" vertical-offset="2805" max-vertical-offset="5049">
+          <caret line="172" column="22" selection-start-line="172" selection-start-column="22" selection-end-line="172" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/django/views/generic/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1177" max-vertical-offset="3655">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/django/core/validators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1517" max-vertical-offset="3706">
+          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="1326">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/championtutoronline/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="612">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3408" max-vertical-offset="4505">
+          <caret line="207" column="71" selection-start-line="207" selection-start-column="71" selection-end-line="207" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/reset_password.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44299674" vertical-offset="0" max-vertical-offset="1445">
+          <caret line="8" column="73" selection-start-line="8" selection-start-column="73" selection-end-line="8" selection-end-column="73" />
           <folding />
         </state>
       </provider>
     </entry>
   </component>
 </project>
-

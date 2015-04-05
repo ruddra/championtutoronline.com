@@ -92,7 +92,7 @@
 
             var publish_online_status = function(){
                 var user_status = true;
-                var user_id = {{ request.session.user_id }};
+                var user_id = {{ request.user.id }};
                 window.socket.emit('online_status',{"uid":user_id,"status":user_status});
             };
 

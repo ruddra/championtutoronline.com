@@ -11,6 +11,7 @@ from emails import EmailClient
 import otlib
 import json
 from django.conf import settings
+from django.contrib.auth.models import User
 
 class DrawingBoardAjaxView(View):
     def get(self,request,*args,**kwargs):
@@ -46,21 +47,16 @@ class LoginAjaxView(View):
         if not login_form.is_valid():
             response = {'status':'unsuccessful','message':'Form contains invalid data.'}
             return HttpResponse(json.dumps(response))
-        email = request.POST.get('email')
-        password = request.POST.get('password')
-        password_hash = hashlib.md5(password).hexdigest()
-        user_objs = User.objects.filter(email=email,password=password_hash)
-        if not user_objs:
-            response = {'status':'unsuccessful','message':'Email or Password Invalid.'}
-            return HttpResponse(json.dumps(response))
+        if login_form.is_valid():
+            if not login_form.authenticate(request):
+                response = {'status':'unsuccessful','message':'Email or Password Invalid.'}
+                return HttpResponse(json.dumps(response))
         ###Passed login. Now set session
         request.session['is_login'] = True
-        request.session['user_id'] = user_objs[0].id
-        request.session['email'] = email
-        request.session['utype'] = user_objs[0].type
-        if request.POST.get("rememberme"):
-            seven_days = 24*60*60*7
-            request.session.set_expiry(seven_days)
+        request.session['user_id'] = request.user.id
+        request.session['email'] = request.user.email
+        #request.session['utype'] = request.user.type
+
         response = {'status':'successful','message':'Login Successful.'}
         return HttpResponse(json.dumps(response))
 
@@ -74,43 +70,53 @@ class SignUpAjaxView(View):
         if not request.is_ajax():
             response = {'status':'unsuccessful','message':'Invalid Request.'}
             return HttpResponse(json.dumps(response))
-        #try:
+        try:
 
-        signup_form = SignUpForm(request.POST)
+            signup_form = SignUpForm(request.POST)
 
-        if not signup_form.is_valid():
-            response = {'status':'unsuccessful','message':'Form contains invalid data.'}
+            if not signup_form.is_valid():
+                response = {'status':'unsuccessful','message':'Form contains invalid data.'}
+                return HttpResponse(json.dumps(response))
+
+            name = request.POST.get("name")
+            email = request.POST.get("email")
+            password = request.POST.get("password")
+            pass_repeat = request.POST.get("password_repeat")
+            role = request.POST.get("role")
+
+            ###Check if email is already registered.
+            user_objs = ChampUser.objects.filter(user__email=email)
+            if user_objs:
+                response['message'] = 'EMAIL_REGISTERED'
+                return HttpResponse(json.dumps(response))
+            user_obj = ChampUser()
+            user_obj.fullname = name
+
+            auth_user = User.objects.create_user(username=email,email=email,password=password)
+
+            # auth_user = User()
+            # auth_user.email = email
+            # auth_user.username = email
+            # auth_user.password = hashlib.md5(password).hexdigest()
+            # auth_user.save()
+            user_obj.user = auth_user
+            print request.POST
+            # user_obj.user.email = email
+            # user_obj.user.password = hashlib.md5(password).hexdigest()
+            user_obj.type = role
+            user_obj.save()
+            response['status'] = 'successful'
+            response['message'] = 'Successful.'
+
+            ###Now send email.
+            #email_sender_obj = EmailClient()
+            #email_sender_obj.send_email(email,"Registration Verification","Thank you for registering championtutoronline.com","Thank you for registering championtutoronline.com","codenginebd@gmail.com")
+
             return HttpResponse(json.dumps(response))
-
-        name = request.POST.get("name")
-        email = request.POST.get("email")
-        password = request.POST.get("password")
-        pass_repeat = request.POST.get("password_repeat")
-        role = request.POST.get("role")
-
-        ###Check if email is already registered.
-        user_objs = User.objects.filter(email=email)
-        if user_objs:
-            response['message'] = 'EMAIL_REGISTERED'
+        except Exception,msg:
+            response['status'] = 'Unsuccessful.'
+            response['message'] = 'Exception occured. Message: %s' % str(msg)
             return HttpResponse(json.dumps(response))
-        user_obj = User()
-        user_obj.fullname = name
-        user_obj.email = email
-        user_obj.password = hashlib.md5(password).hexdigest()
-        user_obj.type = role
-        user_obj.save()
-        response['status'] = 'successful'
-        response['message'] = 'Successful.'
-
-        ###Now send email.
-        #email_sender_obj = EmailClient()
-        #email_sender_obj.send_email(email,"Registration Verification","Thank you for registering championtutoronline.com","Thank you for registering championtutoronline.com","codenginebd@gmail.com")
-
-        return HttpResponse(json.dumps(response))
-        # except Exception,msg:
-        #     response['status'] = 'Unsuccessful.'
-        #     response['message'] = 'Exception occured. Message: %s' % str(msg)
-        #     return HttpResponse(json.dumps(response))
 
 class VideoSessionTokens(View):
     def get(self,request,*args,**kwargs):

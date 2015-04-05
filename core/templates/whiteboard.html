@@ -119,15 +119,15 @@
 
     .sharing_video
     {
-        width: 300px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
         bottom: 63px;
         left: 3px;    }
 
     .video_section
     {
-        width: 300px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
         background: black;
         border: 1px solid gray;
     }
@@ -237,15 +237,19 @@
     #controlbar
     {
         width: 100%;
-        height: 40px;
         position: absolute;
         right: 0px;
         bottom: 0px;
         z-index: 1001;
         background-color: #303030;
-        opacity: 0.5;
-        padding-left: 10px;
-        padding-right: 10px;
+        opacity: 1.0;
+        padding: 3px;
+    }
+
+    #tabs-1,#tabs-2,#tabs-3
+    {
+        width: 100%;
+        margin: 0px;
     }
 
     </style>
@@ -361,7 +365,7 @@
                         <div class="chat_header">
                             <span class="online"><img width="12" height="12" alt="img" src="{% static "images/online.png" %}"></span>
                             Audio/Video Sharing
-                            <a id="id_hide_video_window" href="#"> <img width="15" height="9" alt="img" src="{% static "images/hide_icon.png" %}"> </a>
+                            <a id="id_hide_video_window" href="#"> <img width="15" height="9" alt="img" src="{% static "images/hide_icon.png" %}" style="display:none;"> </a>
                             <!-- <a id="id_add_buddy_to_call_group" href="#"> <img width="15" height="9" alt="img" src="{% static "images/blue_pls.png" %}"> </a> -->
                         </div>
                         <div id="id_add_buddy_group_call" class="add_buddy_group_call">
@@ -373,7 +377,7 @@
 
                         </div>
                         <div id="controlbar" class="text-center">
-                            <div class="different_detail_inner text-center" style="width: 110px;">
+                            <!-- <div class="different_detail_inner text-center" style="width: 110px;">
                                 <div class="different_detail_img"> <img src="{% static "images/video_icon.png" %}" width="25" height="14" alt="img"> </div>
                                 <div class="onoffswitch3">
                                     <input type="checkbox" name="onoffswitch3" class="onoffswitch3-checkbox" id="myonoffswitch3" checked>
@@ -392,9 +396,9 @@
                                         <span class="onoffswitch4-switch"></span>
                                     </label>
                                 </div>
-                            </div>
-                            <div class="different_detail_inner text-center" style="width: 110px;">
-                                <button id="id_end_call" class="btn btn-danger">End Call</button>
+                            </div> -->
+                            <div class="different_detail_inner text-center" style="width:100%;">
+                                <button id="id_end_call" class="btn btn-danger" style="width: 90%;margin-left:auto;margin-right:auto;" disabled>End Call</button>
                             </div>
                         </div>
                     </div>
@@ -420,26 +424,26 @@
                                     </label>
                                 </div>
                             </div>
-{#                            <div class="different_detail_inner">#}
-{#                                <div class="different_detail_img"> <img src="{% static "images/video_icon.png" %}" width="25" height="14" alt="img"> </div>#}
-{#                                <div class="onoffswitch3">#}
-{#                                    <input type="checkbox" name="onoffswitch3" class="onoffswitch3-checkbox" id="myonoffswitch3" checked>#}
-{#                                    <label class="onoffswitch3-label" for="myonoffswitch3">#}
-{#                                        <span class="onoffswitch3-inner"></span>#}
-{#                                        <span class="onoffswitch3-switch"></span>#}
-{#                                    </label>#}
-{#                                </div>#}
-{#                            </div>#}
-{#                            <div class="different_detail_inner">#}
-{#                                <div class="different_detail_img"><img src="{% static "images/wb_sound_icon.png" %}" width="21" height="19" alt="img"> </div>#}
-{#                                <div class="onoffswitch4">#}
-{#                                    <input type="checkbox" name="onoffswitch4" class="onoffswitch4-checkbox" id="myonoffswitch4" checked>#}
-{#                                    <label class="onoffswitch4-label" for="myonoffswitch4">#}
-{#                                        <span class="onoffswitch4-inner"></span>#}
-{#                                        <span class="onoffswitch4-switch"></span>#}
-{#                                    </label>#}
-{#                                </div>#}
-{#                            </div>#}
+                            <div class="different_detail_inner">
+                                <div class="different_detail_img"> <img src="{% static "images/video_icon.png" %}" width="25" height="14" alt="img"> </div>
+                                <div class="onoffswitch3">
+                                    <input type="checkbox" name="onoffswitch3" class="onoffswitch3-checkbox" id="myonoffswitch3" checked>
+                                    <label class="onoffswitch3-label" for="myonoffswitch3">
+                                        <span class="onoffswitch3-inner"></span>
+                                        <span class="onoffswitch3-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="different_detail_inner">
+                                <div class="different_detail_img"><img src="{% static "images/wb_sound_icon.png" %}" width="21" height="19" alt="img"> </div>
+                                <div class="onoffswitch4">
+                                    <input type="checkbox" name="onoffswitch4" class="onoffswitch4-checkbox" id="myonoffswitch4" checked>
+                                    <label class="onoffswitch4-label" for="myonoffswitch4">
+                                        <span class="onoffswitch4-inner"></span>
+                                        <span class="onoffswitch4-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
@@ -474,7 +478,7 @@
                             {% for buddy in buddies %}
                                 <tr>
                                     <td>
-                                        <input type="hidden" class="tutor_uid" value="{{ buddy.id }}"/>
+                                        <input type="hidden" class="tutor_uid" value="{{ buddy.user_id }}"/>
                                         <input type="hidden" class="online_status" value="offline"/>
                                         <img src="{% static "images/msg_img1.png" %}" class="pimg_url" width="40" height="40"/>
                                         <br/>
@@ -485,8 +489,8 @@
                                         <div><a href="#"><label class="tut_name">{{ buddy.fullname }}</label><span class="pull-right ic_online" style="display:none;"><img src="{% static "images/online.png" %}" width="12" height="12"/></span></a></div>
                                         <div style="color:gray;">Expert in Computer Science</div>
                                         <div>Category: Computer Science</div>
-                                        <div><span class="glyphicon glyphicon-comment champ_text_chat"></span>
-                                        &nbsp;<span class="glyphicon glyphicon-earphone champ_video_chat" disabled></span></div>
+                                        <div><span style="cursor:pointer;" class="glyphicon glyphicon-comment champ_text_chat"></span>
+                                        &nbsp;<span style="cursor:pointer;" class="glyphicon glyphicon-earphone champ_audio_chat" disabled></span>&nbsp;&nbsp;<span style="cursor:pointer;" class="glyphicon glyphicon-facetime-video champ_video_chat"></span></div>
                                     </td>
                                 </tr>
                             {% endfor %}
@@ -1020,6 +1024,7 @@
                     success: function(data)
                     {
                         $("#tabs-2").html(data);
+                        //$("#tabs-2").css("width","100%");
                         text_editor_loaded = true;
                         console.log("Text Editor loaded.");
                         //load_whiteboard_scripts_async();

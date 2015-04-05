@@ -2,7 +2,7 @@ __author__ = 'codengine'
 
 from django.views.generic.base import View
 from django.http import HttpResponse
-from models import User
+from models import ChampUser
 import json
 
 class SearchUserByKeyword(View):
@@ -13,15 +13,15 @@ class SearchUserByKeyword(View):
 		excludes = [int(i) for i in excludes]
 		this_uid = request.session["user_id"]
 		excludes += [this_uid]
-		users = User.objects.filter(fullname__icontains=keyword.strip()).exclude(id__in=excludes)[:7]
+		users = ChampUser.objects.filter(fullname__icontains=keyword.strip()).exclude(user__id__in=excludes)[:7]
 		json_response = []
 		for user in users:
 			json_response += [
 				{
-					"id" : user.id,
+					"id" : user.user_id,
 					"pimage": "/static/images/profile_img.png", 
 					"label" : user.fullname,
-					"value" : str(user.id) + "|"+user.fullname
+					"value" : str(user.user_id) + "|"+user.fullname
 				}
 			]
 		return HttpResponse(json.dumps(json_response))
