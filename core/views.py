@@ -159,14 +159,15 @@ class ChangeProfilePictureView(FormView):
         if form.is_valid():
             if not image:
                 image = form.save()
-                return HttpResponseRedirect(reverse('change_pp', args=(image.pk,)))
+                return HttpResponseRedirect(reverse('crop_pp', args=(image.pk,)))
             else:
                 image = form.save()
-                users = ChampUser.objects.filter(user=request.user)
-                if users.exists():
-                    user = users[0]
-                    user.profile_picture = image
-                    user.save()
+                if request.user.is_authenticated():
+                    users = ChampUser.objects.filter(user=request.user)
+                    if users.exists():
+                        user = users[0]
+                        user.profile_picture = image
+                        user.save()
                 return redirect(self.success_url)
         else:
             return self.form_invalid(form)
