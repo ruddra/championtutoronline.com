@@ -1,6 +1,6 @@
 from django.contrib.auth import authenticate, login
-from core.models import ChampUser
-
+from core.models import ChampUser, ProfilePicture
+from image_cropping import ImageCropWidget
 __author__ = 'Codengine'
 
 from django import forms
@@ -71,3 +71,8 @@ class LoginForm(LoginBase):
             return False
         except Exception as e:
             print e
+
+
+class ProfilePictureForm(forms.ModelForm):
+        class Meta:
+            model = ProfilePicture
