@@ -154,7 +154,8 @@ INSTALLED_APPS = (
     'django.contrib.humanize',
     'core',
     'authentication',
-    'common'
+    'common',
+    'pyetherpad'
 )
 
 LOGIN_URL = '/login/'
@@ -163,9 +164,14 @@ LOGOUT_URL = '/logout/'
 
 SOCKETIO_URL = 'http://127.0.0.1:3000/'
 
+SERVER_HOST = 'http://127.0.0.1/'
+
 SENDGRID_SMTP = "smtp.sendgrid.net"
 SENDGRID_USERNAME = "codenginebd"
 SENDGRID_PASSWORD = "lapsso065CommlinkCommlink"
+
+ETHERPAD_API_KEY = 'f5560d6d5f946a6b72c7d4708965a0fca2258f7c1df1948db763ef7852019004'
+ETHERPAD_API_URL = 'http://127.0.0.1:9001/api/'
 
 OT_API_KEY = 45178522
 OT_API_SECRET = '5c202e71e6735a565e3b8f9c89e0952bacc34429'

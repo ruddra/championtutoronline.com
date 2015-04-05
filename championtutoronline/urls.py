@@ -4,6 +4,7 @@ from core.views import *
 from core.viewsajax import *
 from core.viewssearch import *
 from core.decorators import user_login_required
+import pyetherpad
 
 urlpatterns = patterns('',
     # Examples:
@@ -27,4 +28,5 @@ urlpatterns = patterns('',
     url(r'^ajax/search_user$', SearchUserByKeyword.as_view(), name='ajax_user_search'),
     url(r'^reset_password_confirm/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$', PasswordResetConfirmView.as_view(), name='reset_password_confirm'),
     url(r'^reset_password', ResetPasswordRequestView.as_view(), name="reset_password"),
+    url(r'^texteditor/', include('pyetherpad.urls')),
 )
