@@ -19,7 +19,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'champ_db',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': '123456',
         'HOST': '127.0.0.1',
         'PORT': '',
         }
@@ -154,7 +154,8 @@ INSTALLED_APPS = (
     'django.contrib.humanize',
     'core',
     'authentication',
-    'common'
+    'common',
+    'etherpadlite'
 )
 
 LOGIN_URL = '/login/'
@@ -162,6 +163,8 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_URL = '/logout/'
 
 SOCKETIO_URL = 'http://127.0.0.1:3000/'
+
+SESSION_COOKIE_DOMAIN = 'http://127.0.0.1'
 
 SENDGRID_SMTP = "smtp.sendgrid.net"
 SENDGRID_USERNAME = "codenginebd"

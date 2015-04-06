@@ -1,16 +1,17 @@
-from django.conf.urls import patterns, include, url
-#from django.contrib import admin
+from django.conf.urls import patterns, url, include
+from django.contrib import admin
 from core.views import *
 from core.viewsajax import *
 from core.viewssearch import *
 from core.decorators import user_login_required
+import etherpadlite
 
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'championtutoronline.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    #url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
     url(r'^$', HomePage.as_view(), name='home_page'),
     url(r'^login$',LoginView.as_view(),name='user_login'),
     url(r'^logout$',LogoutView.as_view(),name='user_logout'),
@@ -27,4 +28,7 @@ urlpatterns = patterns('',
     url(r'^ajax/search_user$', SearchUserByKeyword.as_view(), name='ajax_user_search'),
     url(r'^reset_password_confirm/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$', PasswordResetConfirmView.as_view(), name='reset_password_confirm'),
     url(r'^reset_password', ResetPasswordRequestView.as_view(), name="reset_password"),
+    url(r'^etherpad', include('etherpadlite.urls')),
+    url(r'^accounts/profile/$', include('etherpadlite.urls')),
+    url(r'^logout$', include('etherpadlite.urls')),
 )
