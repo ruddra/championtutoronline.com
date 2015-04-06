@@ -40,7 +40,6 @@
                 <div class="padding20">
                 <div class="top_img_section">
                   <div class="img_box radius3"> <img src="{{ thumbnail_url|safe }}" /> </div>
-                    <a class="btn btn-small" href="{% url 'change_pp'%}">Change Profile Picture</a>
                     <div class="img_detail">
                       <a href="#">Maxence D. <span>(ID 10231)</span> </a>
                         <span class="british"><img src="{% static "images/british.png" %}" width="23" height="16" alt="img"> British | £25 -30</span>
@@ -54,6 +53,9 @@
                             <li><img src="{% static "images/grade_non_active.png" %}" width="17" height="18" alt="img"></li>
                         </ul>
                         <a href="#" class="verified radius3" onClick="return false"><img src="{% static "images/varified_btn.png" %}" width="16" height="14" alt="img"> NRIC Verified <span>Tutor's national registration identity card has been verified</span> </a>
+                    </div>
+                    <div style="width: 100%; float: left;">
+                        <a class="btn btn-small" href="{% url 'change_pp'%}">Change Profile Picture</a>
                     </div>
                 </div>
                   <p class="txt"><span>Major :</span>  Statistics, Literature, Biochemistry, Pre-Calculus, Physics, French, Calculus, 
