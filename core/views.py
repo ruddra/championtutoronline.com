@@ -1,16 +1,14 @@
-from django.http import HttpResponse
-from django.views.generic.base import View
-from django.utils.encoding import smart_unicode
-from django.shortcuts import render
-from championtutoronline.settings import DEFAULT_MAIL_SENDER, DEFAULT_FROM_EMAIL
-from core.tasks import email_sending_method
-from forms import LoginForm,SignUpForm, PasswordResetRequestForm, SetPasswordForm
+import datetime
+from django.shortcuts import render, get_object_or_404, redirect
 import time
-import hashlib
+from easy_thumbnails.files import get_thumbnailer
+from championtutoronline.settings import DEFAULT_FROM_EMAIL
+from core.emails import EmailClient
+from core.models import ResetPasswordToken, ProfilePicture
+from core.tasks import email_sending_method
+from forms import LoginForm,SignUpForm, PasswordResetRequestForm, SetPasswordForm, ProfilePictureForm
 from models import ChampUser
-import json
 from django.http import HttpResponseRedirect
-from django.template import RequestContext
 from django.core.urlresolvers import reverse
 from django.utils.decorators import method_decorator
 from common.decorators import user_login_required
@@ -22,8 +20,6 @@ from django.db.models.query_utils import Q
 from django.utils.encoding import force_bytes
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.template import loader
-from django.core.validators import validate_email
-from django.core.exceptions import ValidationError
 from django.core.mail import send_mail
 from django.views.generic import *
 from django.contrib import messages
@@ -44,12 +40,6 @@ class LoginView(View):
         if login_form.is_valid():
             if login_form.authenticate(request):
                     request.session['is_login'] = True
-                    # request.session['user_id'] = user_objs[0].id
-                    # request.session['email'] = email
-                    # request.session['utype'] = user_objs[0].type
-                    # if request.POST.get("rememberme"):
-                    #     seven_days = 24*60*60*7
-                    #     request.session.set_expiry(seven_days)
                     redirect_url = reverse("user_profile")
                     if request.POST.get("next"):
                         redirect_url = request.POST["next"]
@@ -133,17 +123,58 @@ class ProfileView(View):
         _this_user_id = request.user.id
         user_objs = ChampUser.objects.filter(user__id=_this_user_id)
         print user_objs
+        if user_objs.exists():
+            user = user_objs.first()
+            image = user.profile_picture
+            thumbnail_url = get_thumbnailer(image.image_field).get_thumbnail({
+                    'size': (129, 129),
+                    'box': image.cropping,
+                    'crop': True,
+                    'detail': True,
+                }).url
+        else:
+            thumbnail_url = ''
         if user_objs:
             user_obj = user_objs[0]
             if user_obj.type == 'student':
                 template_name = 'student_profile.html'
-        return render(request,template_name,{})
+        return render(request,template_name, {'thumbnail_url': thumbnail_url})
 
 
+class ChangeProfilePictureView(FormView):
+    template_name = "change_profile_picture.html"
+    success_url = '/profile'
+    form_class = ProfilePictureForm
+
+    def get(self, request, image_id=None, *args, **kwargs):
+        image = get_object_or_404(ProfilePicture, pk=image_id) if image_id else None
+        form_class = self.get_form_class()
+        form = form_class(instance=image)
+        self.object = None
+        return self.render_to_response(self.get_context_data(form=form))
+
+    def post(self, request, image_id=None, *args, **kwargs):
+        image = get_object_or_404(ProfilePicture, pk=image_id) if image_id else None
+        form = self.form_class(request.POST, request.FILES, instance=image)
+        if form.is_valid():
+            if not image:
+                image = form.save()
+                return HttpResponseRedirect(reverse('crop_pp', args=(image.pk,)))
+            else:
+                image = form.save()
+                if request.user.is_authenticated():
+                    users = ChampUser.objects.filter(user=request.user)
+                    if users.exists():
+                        user = users[0]
+                        user.profile_picture = image
+                        user.save()
+                return redirect(self.success_url)
+        else:
+            return self.form_invalid(form)
 
 
 class ResetPasswordRequestView(FormView):
-    template_name = "reset_password.html"    #code for template is given below the view's code
+    template_name = "reset_password.html"
     success_url = '/profile'
     form_class = PasswordResetRequestForm
 
@@ -151,27 +182,32 @@ class ResetPasswordRequestView(FormView):
         form = self.form_class(request.POST)
         try:
             if form.is_valid():
-                data= form.cleaned_data["email_or_username"]
-                associated_users= User.objects.filter(Q(email=data)|Q(username=data))
+                data = form.cleaned_data["email_or_username"]
+                associated_users = User.objects.filter(Q(email=data) | Q(username=data))
                 if associated_users.exists():
                     for user in associated_users:
-                            c = {
-                                'email': user.email,
-                                'domain': request.META['HTTP_HOST'],
-                                'site_name': 'championtutoronline.com',
-                                'uid': urlsafe_base64_encode(force_bytes(user.pk)),
-                                'user': user,
-                                'token': default_token_generator.make_token(user),
-                                'protocol': 'http',
-                                }
-                            subject_template_name='registration/password_reset_subject.txt'
-                            email_template_name='registration/password_reset_email.html'
-                            subject = "Password Reset" #loader.render_to_string(subject_template_name, c)
-                            subject = ''.join(subject.splitlines())
-                            email = loader.render_to_string(email_template_name, c)
-                            send_mail(subject, email, DEFAULT_FROM_EMAIL , [user.email], fail_silently=False)
-                            #email_sending_method.apply_async(str(user.email), subject, email, DEFAULT_MAIL_SENDER)
-                            # ^^ Reason for not using celery for now because I don't have rabbitmq in my windows machine.
+                        import hashlib
+                        token = hashlib.sha224(str(time.time()*1000)+user.username).hexdigest()
+                        ResetPasswordToken.objects.create(token=token,user_id=user.id)
+                        c = {
+                            'email': 'ruddra90@gmail.com',
+                            'domain': request.META['HTTP_HOST'],
+                            'site_name': 'championtutoronline.com',
+                            'uid': '',
+                            'user': user,
+                            'token': token,
+                            'protocol': 'http',
+                            }
+                        email_template_name='registration/password_reset_email.html'
+                        subject = "Password Reset"
+                        subject = ''.join(subject.splitlines())
+                        email = '<p>This email has been sent to you because you requested a password reset for your user account at {0}.<br/>' \
+                        "Please go to the following page and choose a new password:<br\>"\
+                        "<a href='{0}{1}>LINK</a>"\
+                         "Your username, in case you've forgotten:{2}".format(c['domain'], '', c['user'].username)
+
+                        print(reverse("reset_password_confirm",kwargs={'token': c['token']}))
+                        EmailClient().send_email(user.email, subject, email, email, DEFAULT_FROM_EMAIL)
                     messages.success(request, 'An email has been sent to ' + data +". Please check its inbox to continue reseting password.")
                     return self.form_valid(form)
                 else:
@@ -184,36 +220,33 @@ class ResetPasswordRequestView(FormView):
         
 
 class PasswordResetConfirmView(FormView):
-    template_name = "account/test_template.html"
+    template_name = "registration/password_change_form.html"
     success_url = '/'
     form_class = SetPasswordForm
 
-    def post(self, request, uidb64=None, token=None, *arg, **kwargs):
+    def post(self, request, token=None, *arg, **kwargs):
         """
         View that checks the hash in a password reset link and presents a
         form for entering a new password.
         """
         UserModel = get_user_model()
         form = self.form_class(request.POST)
-        assert uidb64 is not None and token is not None  # checked by URLconf
-        try:
-            uid = urlsafe_base64_decode(uidb64)
-            user = UserModel._default_manager.get(pk=uid)
-        except (TypeError, ValueError, OverflowError, UserModel.DoesNotExist):
-            user = None
+        if ResetPasswordToken.objects.filter(token=token).exists():
+            r_token = ResetPasswordToken.objects.get(token=token)
+            user = r_token.user
+            if r_token.date_created + datetime.timedelta(days=3) <= datetime.datetime.now():
+                if form.is_valid():
+                    new_password= form.cleaned_data['new_password2']
+                    user.set_password(new_password)
+                    user.save()
+                    messages.success(request, 'Password has been reset.')
+                    return self.form_valid(form)
+                else:
+                    messages.error(request, 'Password reset has not been unsuccessful.')
+                    return self.form_invalid(form)
 
-        if user is not None and default_token_generator.check_token(user, token):
-            if form.is_valid():
-                new_password= form.cleaned_data['new_password2']
-                user.set_password(new_password)
-                user.save()
-                messages.success(request, 'Password has been reset.')
-                return self.form_valid(form)
-            else:
-                messages.error(request, 'Password reset has not been unsuccessful.')
-                return self.form_invalid(form)
-        else:
-            messages.error(request,'The reset password link is no longer valid.')
-            return self.form_invalid(form)
+        messages.error(request,'The reset password link is no longer valid.')
+        return self.form_invalid(form)
+
 
 

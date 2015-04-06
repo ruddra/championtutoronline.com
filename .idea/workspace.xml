@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caa75f8d-ed1c-404a-911e-d8d55024ca60" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/templates/change_profile_picture.html" />
       <change type="DELETED" beforePath="C:\Projects\Github\DJango Projects\championtutoronline.com\core\templates\ajax\registration.html" afterPath="" />
       <change type="DELETED" beforePath="C:\Projects\Github\DJango Projects\saltwaterfish\templates\ordershippingcategorydetailspage.htm" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/src/django-nonrel" afterPath="$PROJECT_DIR$/../saltwaterfish/src/django-nonrel" />
@@ -99,7 +100,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_promotion_products_search_in_dialog.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_promotion_products_search_in_dialog.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_promotion_rules_categories_dialog.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/ajax_promotion_rules_categories_dialog.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/banners_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/banners_search_results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/etherpadlite/templates/etherpad-lite/base.html" afterPath="$PROJECT_DIR$/etherpadlite/templates/etherpad-lite/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/base.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/base_login.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/base_login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/blackout_date.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/blackout_date.html" />
@@ -141,7 +141,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages_add.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages_add.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages_edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages_edit.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/etherpadlite/templates/etherpad-lite/confirm.html" afterPath="$PROJECT_DIR$/etherpadlite/templates/etherpad-lite/confirm.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/contactus.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/contactus.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/coupon_confirmation.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/coupon_confirmation.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/coupon_modal-old.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/coupon_modal-old.html" />
@@ -184,6 +183,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/email_pages.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/email_pages.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/email_pages_edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/email_pages_edit.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/emailfriend_popup.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/emailfriend_popup.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/emails.py" afterPath="$PROJECT_DIR$/core/emails.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/emails_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/emails_search_results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/estimate_order_details.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/estimate_order_details.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/fedex-overnight-delay.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/fedex-overnight-delay.html" />
@@ -195,6 +195,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/footer.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/footer.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/footer.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/footer.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/forgetpwd.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/forgetpwd.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forms.py" afterPath="$PROJECT_DIR$/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/forum.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/forum.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/front.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/front.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/fullimage_popup.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/fullimage_popup.htm" />
@@ -203,7 +204,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/giftcertificate.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/giftcertificate.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/giftcertificate_pages.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/giftcertificate_pages.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/giftcertificates_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/giftcertificates_search_results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/etherpadlite/templates/etherpad-lite/groupCreate.html" afterPath="$PROJECT_DIR$/etherpadlite/templates/etherpad-lite/groupCreate.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/header.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/header.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/home-page-admin.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/home-page-admin.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/home-page-admin.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/home-page-admin.html" />
@@ -234,9 +234,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/left_menu_reports.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/left_menu_reports.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/left_section.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/left_section.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/login.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/login.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/etherpadlite/templates/etherpad-lite/login.html" afterPath="$PROJECT_DIR$/etherpadlite/templates/etherpad-lite/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/login.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/etherpadlite/templates/etherpad-lite/logout.html" afterPath="$PROJECT_DIR$/etherpadlite/templates/etherpad-lite/logout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/models.py" afterPath="$PROJECT_DIR$/core/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/more_info.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/more_info.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/moreinfo_old.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/moreinfo_old.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/my_order_info.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/my_order_info.html" />
@@ -278,11 +277,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/orders_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/orders_search_results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/orders_status.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/orders_status.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/orders_status_add.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/orders_status_add.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/etherpadlite/templates/etherpad-lite/pad.html" afterPath="$PROJECT_DIR$/etherpadlite/templates/etherpad-lite/pad.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/etherpadlite/templates/etherpad-lite/padCreate.html" afterPath="$PROJECT_DIR$/etherpadlite/templates/etherpad-lite/padCreate.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/pages.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/pages.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/pages.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/pages.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/pages_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/pages_search_results.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/registration/password_change_form.html" afterPath="$PROJECT_DIR$/core/templates/registration/password_change_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/pinterest-3c772.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/pinterest-3c772.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/popredeem.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/popredeem.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/printorder.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/printorder.htm" />
@@ -333,7 +331,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/products_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/products_search_results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products_wish_list.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products_wish_list.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/products_wish_list_view_list.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/products_wish_list_view_list.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/etherpadlite/templates/etherpad-lite/profile.html" afterPath="$PROJECT_DIR$/etherpadlite/templates/etherpad-lite/profile.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/profile.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/profile.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/promotions_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/promotions_search_results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/quick-list.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/quick-list.htm" />
@@ -363,6 +360,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-rma.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-rma.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-sales.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-sales.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-traffic.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-traffic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/base/resp_base.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/base/resp_base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/base/resp_base_full.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/base/resp_base_full.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/review-edit.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/review-edit.html" />
@@ -406,6 +404,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/settings-shipping-manager-edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/settings-shipping-manager-edit.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/settings-shipping-manager.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/settings-shipping-manager.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/settings-tax-manager.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/settings-tax-manager.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/championtutoronline/settings.py" afterPath="$PROJECT_DIR$/championtutoronline/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/settings.py" afterPath="$PROJECT_DIR$/../saltwaterfish/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/shipping_calendar.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/shipping_calendar.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/shippingcategory_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/shippingcategory_search_results.html" />
@@ -414,6 +413,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/subcategory-list.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/subcategory-list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/subcategory-products.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/subcategory-products.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/superspecial.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/superspecial.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/tasks.py" afterPath="$PROJECT_DIR$/core/tasks.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/tax_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/tax_search_results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/taxmanager.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/taxmanager.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/temp_redir.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/temp_redir.html" />
@@ -429,8 +429,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-pageviews.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-pageviews.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-referrers.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-referrers.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-visits.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-visits.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/sections/tutor_body_full.html" afterPath="$PROJECT_DIR$/core/templates/sections/tutor_body_full.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/sections/tutor_body_public.html" afterPath="$PROJECT_DIR$/core/templates/sections/tutor_body_public.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/tutor_profile.html" afterPath="$PROJECT_DIR$/core/templates/tutor_profile.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/under_construction.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/under_construction.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyetherpad/urls.py" afterPath="$PROJECT_DIR$/pyetherpad/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/championtutoronline/urls.py" afterPath="$PROJECT_DIR$/championtutoronline/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit-log.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit-log.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit-permissions.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit-permissions.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit.htm" />
@@ -446,7 +449,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/vieworders.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/vieworders.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/vieworders_not_completed.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/vieworders_not_completed.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/viewrequest.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/viewrequest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyetherpad/views.py" afterPath="$PROJECT_DIR$/pyetherpad/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/views.py" afterPath="$PROJECT_DIR$/core/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/virtual-terminal.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/virtual-terminal.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/waitinglist_popup.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/waitinglist_popup.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/waitinglist_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/waitinglist_search_results.html" />
@@ -519,18 +522,71 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/championtutoronline/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="47" selection-start="1795" selection-end="1795" vertical-scroll-proportion="-15.64">
+            <state line="35" column="6" selection-start="2117" selection-end="2117" vertical-scroll-proportion="-21.28">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/championtutoronline/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="119.48">
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pyetherpad/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="5" selection-start="105" selection-end="105" vertical-scroll-proportion="0.12592593">
+            <state line="4" column="5" selection-start="105" selection-end="105" vertical-scroll-proportion="-2.72">
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.0">
+              <folding>
+                <element signature="e#26#77#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="186" column="35" selection-start="7912" selection-end="7928" vertical-scroll-proportion="28.88">
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="29" selection-start="1427" selection-end="1427" vertical-scroll-proportion="23.44">
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -540,24 +596,6 @@
         <entry file="file://$PROJECT_DIR$/djangoetherpadlite/django-etherpad-lite-master/etherpadlite/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="164" column="50" selection-start="4685" selection-end="4685" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/djangoetherpadlite/django-etherpad-lite-master/etherpadlite/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="223" column="12" selection-start="6484" selection-end="6490" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/py_etherpad/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="234" column="17" selection-start="7341" selection-end="7350" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -581,22 +619,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/core/models.py" />
-        <option value="$PROJECT_DIR$/nodejs/socketioserver/app.js" />
-        <option value="$PROJECT_DIR$/nodejs/socketioserver/models/User.js" />
         <option value="$PROJECT_DIR$/core/viewssearch.py" />
         <option value="$PROJECT_DIR$/core/templates/ajax/login.html" />
-        <option value="$PROJECT_DIR$/core/views.py" />
         <option value="$PROJECT_DIR$/core/static/js/chat/chat.js" />
         <option value="$PROJECT_DIR$/core/static/js/chat/videochat.js" />
         <option value="$PROJECT_DIR$/core/templates/ajax/text_editor.html" />
         <option value="$PROJECT_DIR$/core/templates/ajax/drawingboard.html" />
         <option value="$PROJECT_DIR$/core/templates/whiteboard.html" />
-        <option value="$PROJECT_DIR$/championtutoronline/urls.py" />
         <option value="$PROJECT_DIR$/championtutoronline/settings.py" />
         <option value="$PROJECT_DIR$/pyetherpad/models.py" />
         <option value="$PROJECT_DIR$/pyetherpad/views.py" />
         <option value="$PROJECT_DIR$/pyetherpad/urls.py" />
+        <option value="$PROJECT_DIR$/forms.py" />
+        <option value="$PROJECT_DIR$/core/views.py" />
+        <option value="$PROJECT_DIR$/core/models.py" />
+        <option value="$PROJECT_DIR$/championtutoronline/urls.py" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
       </list>
     </option>
   </component>
@@ -708,6 +746,24 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="championtutoronline">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT=".idea">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -960,26 +1016,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/templates/whiteboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/ajax/drawingboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="309" column="75" selection-start="29893" selection-end="29893" vertical-scroll-proportion="0.03256705" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/ajax/text_editor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="6" selection-start="408" selection-end="689" vertical-scroll-proportion="0.03256705" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/js/chat/chat.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="165" column="55" selection-start="4937" selection-end="4937" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/static/js/chat/videochat.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -1025,13 +1061,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/championtutoronline/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-4.3572817">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pyetherpad/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="14" selection-start="394" selection-end="394" vertical-scroll-proportion="-4.76">
@@ -1041,28 +1070,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/championtutoronline/urls.py">
+    <entry file="file://$PROJECT_DIR$/pyetherpad/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="47" selection-start="1795" selection-end="1795" vertical-scroll-proportion="-15.64">
-          <folding />
+        <state line="4" column="5" selection-start="105" selection-end="105" vertical-scroll-proportion="-2.72">
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#26#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myEnv/Lib/site-packages/django/contrib/messages/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.7270917">
+        <state line="186" column="35" selection-start="7912" selection-end="7928" vertical-scroll-proportion="28.88">
           <folding>
-            <element signature="e#0#36#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyetherpad/urls.py">
+    <entry file="file://$PROJECT_DIR$/core/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="5" selection-start="105" selection-end="105" vertical-scroll-proportion="0.12592593">
+        <state line="31" column="29" selection-start="1427" selection-end="1427" vertical-scroll-proportion="23.44">
           <folding>
-            <element signature="e#0#51#0" expanded="true" />
+            <element signature="e#0#43#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/championtutoronline/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="6" selection-start="2117" selection-end="2117" vertical-scroll-proportion="-21.28">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/championtutoronline/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="119.48">
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
