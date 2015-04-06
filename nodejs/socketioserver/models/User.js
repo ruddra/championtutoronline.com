@@ -14,14 +14,14 @@ var exports = module.exports = function(app,connection){
                 }
             }
             uids_tuple += ")";
-            connection.query('SELECT * FROM champ_user where id in '+ uids_tuple, function(err, rows){
+            connection.query('SELECT * FROM champ_user where user_id in '+ uids_tuple, function(err, rows){
 
                 result = {};
 
                 if(!err)
                 {
                     for(var j = 0 ; j < rows.length ; j++){
-                        result[parseInt(rows[j].id)] = rows[j];
+                        result[parseInt(rows[j].user_id)] = rows[j];
                     }
 
                     if(app.DEBUG)

@@ -122,15 +122,19 @@ class ProfileView(View):
         template_name = "tutor_profile.html"
         _this_user_id = request.user.id
         user_objs = ChampUser.objects.filter(user__id=_this_user_id)
+        print user_objs
         if user_objs.exists():
             user = user_objs.first()
             image = user.profile_picture
-            thumbnail_url = get_thumbnailer(image.image_field).get_thumbnail({
-                    'size': (129, 129),
-                    'box': image.cropping,
-                    'crop': True,
-                    'detail': True,
-                }).url
+            if image:
+                thumbnail_url = get_thumbnailer(image.image_field).get_thumbnail({
+                        'size': (129, 129),
+                        'box': image.cropping,
+                        'crop': True,
+                        'detail': True,
+                    }).url
+            else:
+                thumbnail_url = ''
         else:
             thumbnail_url = ''
         if user_objs:
@@ -138,7 +142,6 @@ class ProfileView(View):
             if user_obj.type == 'student':
                 template_name = 'student_profile.html'
         return render(request,template_name, {'thumbnail_url': thumbnail_url})
-
 
 
 class ChangeProfilePictureView(FormView):
@@ -216,7 +219,7 @@ class ResetPasswordRequestView(FormView):
             messages.error(request, 'Invalid Input')
             return self.form_invalid(form)
         except Exception as e:
-            raise e
+            print e
         
 
 class PasswordResetConfirmView(FormView):

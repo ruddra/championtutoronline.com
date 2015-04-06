@@ -29,7 +29,7 @@ class ChampUser(models.Model):
     # date_created = models.DateTimeField(auto_now_add=True, auto_now=True)
     # last_updated = models.DateField(auto_now_add=True)
     class Meta:
-        db_table = 'champ_user'
+        db_table='champ_user'
             
 
 class UserTimezoneSettings(models.Model):

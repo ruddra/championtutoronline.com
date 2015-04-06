@@ -28,9 +28,13 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'champ_db',
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'HOST': '127.0.0.1',
+        'PORT': '',
+        }
 }
 
 # Local time zone for this installation. Choices can be found here:
@@ -163,7 +167,8 @@ INSTALLED_APPS = (
     'image_cropping',
     'core',
     'authentication',
-    'common'
+    'common',
+    'pyetherpad'
 )
 
 LOGIN_URL = '/login/'
@@ -172,12 +177,20 @@ LOGOUT_URL = '/logout/'
 
 SOCKETIO_URL = 'http://127.0.0.1:3000/'
 
+SERVER_HOST = 'http://127.0.0.1/'
+
+###SENDGRID Account is associated with codenginebd@gmail.com
 SENDGRID_SMTP = "smtp.sendgrid.net"
-SENDGRID_USERNAME = "codenginebd"
+SENDGRID_USERNAME = "codengine"
 SENDGRID_PASSWORD = "lapsso065CommlinkCommlink"
 
-OT_API_KEY = 45178522
-OT_API_SECRET = '5c202e71e6735a565e3b8f9c89e0952bacc34429'
+ETHERPAD_API_KEY = 'f5560d6d5f946a6b72c7d4708965a0fca2258f7c1df1948db763ef7852019004'
+ETHERPAD_API_URL = 'http://127.0.0.1:9001/api/'
+
+###Opentok Account: tokboxtest2
+
+OT_API_KEY = 45200402
+OT_API_SECRET = 'd7fa5524c79992416f2cd075a5cb1d5567980499'
 
 COMMON_DATA_CONTEXT = {
     "socketio_url": SOCKETIO_URL

@@ -109,8 +109,8 @@ class SignUpAjaxView(View):
             response['message'] = 'Successful.'
 
             ###Now send email.
-            #email_sender_obj = EmailClient()
-            #email_sender_obj.send_email(email,"Registration Verification","Thank you for registering championtutoronline.com","Thank you for registering championtutoronline.com","codenginebd@gmail.com")
+            email_sender_obj = EmailClient()
+            email_sender_obj.send_email(email,"Registration Verification","Thank you for registering championtutoronline.com","Thank you for registering championtutoronline.com","codenginebd@gmail.com")
 
             return HttpResponse(json.dumps(response))
         except Exception,msg:
