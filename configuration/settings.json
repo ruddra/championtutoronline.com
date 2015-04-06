@@ -1,0 +1,22 @@
+{
+    "APP_SERVER":
+    {
+        "IP": "127.0.0.1",
+        "PORT":8000
+    },
+    "NODEJS_SERVER":
+    {
+        "IP": "127.0.0.1",
+        "PORT":3000
+    },
+    "ETHERPAD_SERVER":
+    {
+        "IP": "127.0.0.1",
+        "PORT":9001
+    },
+    "SHAREJS_SERVER":
+    {
+        "IP": "127.0.0.1",
+        "PORT":9002
+    }
+}

@@ -126,12 +126,15 @@ class ProfileView(View):
         if user_objs.exists():
             user = user_objs.first()
             image = user.profile_picture
-            thumbnail_url = get_thumbnailer(image.image_field).get_thumbnail({
-                    'size': (129, 129),
-                    'box': image.cropping,
-                    'crop': True,
-                    'detail': True,
-                }).url
+            if image:
+                thumbnail_url = get_thumbnailer(image.image_field).get_thumbnail({
+                        'size': (129, 129),
+                        'box': image.cropping,
+                        'crop': True,
+                        'detail': True,
+                    }).url
+            else:
+                thumbnail_url = ''
         else:
             thumbnail_url = ''
         if user_objs:
