@@ -106,6 +106,14 @@ class PadUtil:
 # Create your views here.
 class CreateGroupPad(View):
     def get(self,request,*args,**kwargs):
+        if not request.is_ajax():
+            response_data = {
+                "ERROR": 1,
+                "CAUSE": "AJAX_REQUIRED"
+            }
+
+            response =  HttpResponse(json.dumps(response_data), mimetype='application/json')
+            return response
         if request.user.is_authenticated():
             pad_name = request.GET.get('pad_name')
             pad_util = PadUtil()
@@ -191,10 +199,28 @@ class CreateGroupPad(View):
 
 class SharePad(View):
     def get(self,request,*args,**kwargs):
+        if not request.is_ajax():
+            response_data = {
+                "ERROR": 1,
+                "CAUSE": "AJAX_REQUIRED"
+            }
+
+            response =  HttpResponse(json.dumps(response_data), mimetype='application/json')
+            return response
+        shared_users = request.GET.get("uids")
+        shared_users = shared_users.split(",")
         pass
 
 class DeletePad(View):
     def get(self,request,*args,**kwargs):
+        if not request.is_ajax():
+            response_data = {
+                "ERROR": 1,
+                "CAUSE": "AJAX_REQUIRED"
+            }
+
+            response =  HttpResponse(json.dumps(response_data), mimetype='application/json')
+            return response
         if request.user.is_authenticated():
             if request.GET.get("pad_id"):
                 pad_util = PadUtil()
