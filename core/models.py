@@ -1,19 +1,31 @@
 from django.contrib.auth.models import User
 from django.db import models
 from datetime import datetime
+from image_cropping import ImageRatioField
+from image_cropping.fields import ImageCropField
+
+
+class Address(models.Model):
+    street_address1 = models.TextField(blank=True, null=True, max_length=200)
+    street_address2 = models.TextField(blank=True, null=True, max_length=200)
+    city = models.TextField(blank=True, null=True, max_length=40)
+    state = models.TextField(blank=True, null=True, max_length=40)
+    zip = models.TextField(blank=True, null=True, max_length=40)
+    country = models.TextField(blank=True, null=True, max_length=40)
+
+
+class ProfilePicture(models.Model):
+    image_field = ImageCropField(upload_to='image/')
+    cropping = ImageRatioField('image_field', size='120x100', allow_fullsize=True)
 
 
 class ChampUser(models.Model):
     user = models.OneToOneField(User)
-    fullname = models.TextField(blank=False,null=False,max_length=100)
-    phone = models.TextField(blank=False,null=False,max_length=20)
-    street_address1 = models.TextField(blank=True,null=True,max_length=200)
-    street_address2 = models.TextField(blank=True,null=True,max_length=200)
-    city = models.TextField(blank=True,null=True,max_length=40)
-    state = models.TextField(blank=True,null=True,max_length=40)
-    zip = models.TextField(blank=True,null=True,max_length=40)
-    country = models.TextField(blank=True,null=True,max_length=40)
-    type = models.TextField(blank=True,null=True,max_length=10)
+    fullname = models.TextField(blank=False, null=False, max_length=100)
+    phone = models.TextField(blank=False, null=False, max_length=20)
+    address = models.ForeignKey(Address, null=True, default=None)
+    profile_picture = models.ForeignKey(ProfilePicture, null=True, default=None)
+    type = models.TextField(blank=True, null=True, max_length=10)
     # date_created = models.DateTimeField(auto_now_add=True, auto_now=True)
     # last_updated = models.DateField(auto_now_add=True)
     class Meta:
@@ -65,6 +77,13 @@ class OTSessionTable(models.Model):
 
     class Meta:
         db_table='ot_session'
+
+
+
+class ResetPasswordToken(models.Model):
+    date_created = models.DateTimeField(auto_now=True)
+    user = models.ForeignKey(User)
+    token = models.CharField(max_length=255)
 
         
 

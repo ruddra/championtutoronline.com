@@ -4,8 +4,10 @@ from core.views import *
 from core.viewsajax import *
 from core.viewssearch import *
 from core.decorators import user_login_required
-import etherpadlite
-
+import pyetherpad
+from django.conf.urls.static import static
+from django.conf import settings
+from django.contrib.auth.decorators import login_required
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'championtutoronline.views.home', name='home'),
@@ -26,9 +28,13 @@ urlpatterns = patterns('',
     url(r'^ajax/text_editor$', TextEditorAjaxView.as_view(), name='ajax_text_editor'),
     url(r'^ajax/code_editor$', CodeEditorAjaxView.as_view(), name='ajax_code_editor'),
     url(r'^ajax/search_user$', SearchUserByKeyword.as_view(), name='ajax_user_search'),
-    url(r'^reset_password_confirm/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$', PasswordResetConfirmView.as_view(), name='reset_password_confirm'),
+    url(r'^reset_password_confirm/(?P<token>.+)/$', PasswordResetConfirmView.as_view(), name='reset_password_confirm'),
     url(r'^reset_password', ResetPasswordRequestView.as_view(), name="reset_password"),
-    url(r'^etherpad', include('etherpadlite.urls')),
-    url(r'^accounts/profile/$', include('etherpadlite.urls')),
-    url(r'^logout$', include('etherpadlite.urls')),
-)
+    url(r'^texteditor/', include('pyetherpad.urls')),
+    url(r'^change_profile_picture/(?P<image_id>\d+)/$', ChangeProfilePictureView.as_view(), name="crop_pp"),
+    url(r'^change_profile_picture/', ChangeProfilePictureView.as_view(), name="change_pp"),
+    #url(r'^change_profile_picture/(?P<image_id>\d+)/$', login_required(ChangeProfilePictureView.as_view(), name="crop_pp"),
+    #url(r'^change_profile_picture/', login_required(ChangeProfilePictureView.as_view()), name="change_pp"),
+
+
+)+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

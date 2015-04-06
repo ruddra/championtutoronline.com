@@ -6,10 +6,9 @@ from core.emails import EmailClient
 from celery import task
 
 
-@task(default_retry_delay=5, max_retries=12)
+# @task(default_retry_delay=5, max_retries=12)
 def email_sending_method(email_to, email_subject, email, default_mail_sender):
     try:
-            EmailClient.send_email(email_to, email_subject, email, default_mail_sender)
-            print 'Email sent successfully'
+        EmailClient.send_email(email_to, email_subject, email, default_mail_sender)
     except Exception as e:
         print e

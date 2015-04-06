@@ -1,5 +1,5 @@
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from easy_thumbnails.conf import Settings as thumbnail_settings
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 ENVIRONMENT = os.environ
@@ -14,6 +14,18 @@ ADMINS = (
 MANAGERS = ADMINS
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'champ_db',
+#         'USER': 'root',
+#         'PASSWORD': '',
+#         'HOST': '127.0.0.1',
+#         'PORT': '',
+#         }
+# }
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -24,7 +36,6 @@ DATABASES = {
         'PORT': '',
         }
 }
-
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -152,10 +163,12 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'django.contrib.humanize',
+    'easy_thumbnails',
+    'image_cropping',
     'core',
     'authentication',
     'common',
-    'etherpadlite'
+    'pyetherpad'
 )
 
 LOGIN_URL = '/login/'
@@ -164,11 +177,14 @@ LOGOUT_URL = '/logout/'
 
 SOCKETIO_URL = 'http://127.0.0.1:3000/'
 
-SESSION_COOKIE_DOMAIN = 'http://127.0.0.1'
+SERVER_HOST = 'http://127.0.0.1/'
 
 SENDGRID_SMTP = "smtp.sendgrid.net"
 SENDGRID_USERNAME = "codenginebd"
 SENDGRID_PASSWORD = "lapsso065CommlinkCommlink"
+
+ETHERPAD_API_KEY = 'f5560d6d5f946a6b72c7d4708965a0fca2258f7c1df1948db763ef7852019004'
+ETHERPAD_API_URL = 'http://127.0.0.1:9001/api/'
 
 OT_API_KEY = 45178522
 OT_API_SECRET = '5c202e71e6735a565e3b8f9c89e0952bacc34429'
@@ -178,4 +194,7 @@ COMMON_DATA_CONTEXT = {
 }
 
 DEFAULT_MAIL_SENDER = DEFAULT_FROM_EMAIL = 'codenginebd@gmail.com'
-DEFAULT_FROM_EMAIL
+
+THUMBNAIL_PROCESSORS = (
+    'image_cropping.thumbnail_processors.crop_corners',
+) + thumbnail_settings.THUMBNAIL_PROCESSORS
