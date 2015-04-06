@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load cropping %}
+{% load cropping thumbnail %}
+{% block head_extra %}
+    {{ form.media }}
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <style type="text/css">
+
+    </style>
+{% endblock head_extra %}
+
+{% block body %}
+    {% block header %}
+        {{ block.super }}
+    {% endblock header %}
+    {% block bodycontent %}
+        <div class="container text-center" style="margin-top: 100px;margin-bottom:40px;padding: 20px;width: 400px; border: 1px solid gray; border-radius: 10px;">
+        <div style="background: green;color: white;padding: 7px; margin-bottom: 10px;text-align: left;">Change Profile Picture</div>
+
+
+            <form method="post" enctype="multipart/form-data">{% csrf_token %}
+                <div class="row">
+                    <div class="col-md-12">{{ form.image_field }}</div>
+                </div>
+                {% if form.id == None %}
+                <div class="row">
+                    <div class="col-md-12">{{ form.cropping }}</div>
+                </div>
+                {% endif %}
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="submit" class="btn btn-primary" style="margin-top: 10px; float: right;" value="Change Profile Picture" />
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+    {% endblock bodycontent %}
+    {% block footer %}
+        <footer>
+            <div class="wrapper">
+                <div class="ftr_logo"><img src="{% static "images/prfct_tutor_footer.png" %}" width="201" height="40" alt="img"></div>
+                <ul class="ftr_lnk">
+                    <span class="lnk_hdng">About</span>
+                    <li><a href="#">Our Mission</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Our Interns</a></li>
+                    <li><a href="#">Our Content Specialists</a></li>
+                </ul>
+                <ul class="ftr_lnk">
+                    <span class="lnk_hdng">Coaching</span>
+                    <li><a href="#">Coach Reports</a></li>
+                    <li><a href="#">Coach Resources</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#">Common Core</a></li>
+                </ul>
+                <ul class="ftr_lnk">
+                    <span class="lnk_hdng">Careers</span>
+                    <li><a href="#">Full Time</a></li>
+                    <li><a href="#">Internships</a></li>
+                </ul>
+                <ul class="ftr_lnk">
+                    <span class="lnk_hdng">Help</span>
+                    <li><a href="#">Report a Problem</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <div class="socl_link">
+                    <ul class="social_icon">
+                        <span class="lnk_hdng">Social</span>
+                        <li><a href="#"><img src="{% static "images/fb.png" %}" width="9" height="17" alt="icon"></a></li>
+                        <li><a href="#"><img src="{% static "images/twtr.png" %}" width="20" height="16" alt="icon"></a></li>
+                        <li><a href="#"><img src="{% static "images/gogle.png" %}" width="17" height="17" alt="icon"></a></li>
+                        <li><a href="#"><img src="{% static "images/blogster.png" %}" width="16" height="16" alt="icon"></a></li>
+                    </ul>
+                    <ul class="ftr_lnk">
+                        <span class="lnk_hdng">Countact us</span>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    {% endblock footer %}
+    {% block footernote %}
+        <div class="lwr_ftr">
+            <div class="wrapper">
+                <ul class="prvt_plcy">
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+                <p class="ftr_txt"> © championtutoronline <br>Except where noted, all rights reserved.</p>
+
+            </div>
+        </div>
+    {% endblock footernote %}
+{% endblock body %}
+
+{% block more_extra %}
+
+{% endblock more_extra %}

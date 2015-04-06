@@ -34,12 +34,13 @@
         <li><a href="#recorded-sessions-content">My Recorded Sessions</a></li>
 
         </ul>
-        
+
         <div id="content">
             <div id="feed-content" class="contentblock">
                 <div class="padding20">
                 <div class="top_img_section">
-                  <div class="img_box radius3"><img src="{% static "images/profile_img.png" %}" width="129" height="129" alt="img"></div>
+                  <div class="img_box radius3"> <img src="{{ thumbnail_url|safe }}" /> </div>
+                    <a class="btn btn-small" href="{% url 'change_pp'%}">Change Profile Picture</a>
                     <div class="img_detail">
                       <a href="#">Maxence D. <span>(ID 10231)</span> </a>
                         <span class="british"><img src="{% static "images/british.png" %}" width="23" height="16" alt="img"> British | £25 -30</span>
