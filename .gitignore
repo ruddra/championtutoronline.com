@@ -3,7 +3,7 @@ migrations
 .idea
 *.iml
 myEnv
-.sqlite3
+*.sqlite3
 *.xml
 # Byte-compiled / optimized / DLL files
 __pycache__/
