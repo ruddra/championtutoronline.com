@@ -1,24 +1,84 @@
+{#{% load staticfiles %}#}
+
+{#<div class="canvas_menu">#}
+{#    <div class="radius3 text_editor"> <a href="#" id="text"> Text </a> </div>#}
+{##}
+{#    <div class="radius3 text_editor"> <a href="#" id="default"> Default </a> </div>#}
+{##}
+{#    <div class="radius3 text_editor"> <a href="#"><img src="{% static "images/wb_rotate_left.png" %}" width="14" height="15" alt="img"></a> <a href="#"><img src="{% static "images/wb_rotate_right.png" %}" width="14" height="14" alt="img"></a> </div>#}
+{##}
+{#    <div class="radius3 text_editor"> <a href="#"><img src="{% static "images/wb_small_A_icon.png" %}" width="10" height="9" alt="img"></a> <a href="#"><img src="{% static "images/wb_large_A_icon.png" %}" width="13" height="12" alt="img"> </a> </div>#}
+{##}
+{#    <div class="radius3 text_editor"> <a href="#"><img src="{% static "images/wb_p_icon.png" %}" width="25" height="11" alt="img"></a> </div>#}
+{#</div>#}
+{#<div class="document">#}
+{#    <div>#}
+{#        <div class="document_top">#}
+{#            <a href="#" class="Document1 radius3">Document 1</a>#}
+{#            <a href="#" class="new radius3"> New </a>#}
+{#        </div>#}
+{##}
+{#        <textarea class="documnet_contnt radius3"></textarea>#}
+{##}
+{#    </div>#}
+{#</div>#}
+
 {% load staticfiles %}
 
-<div class="canvas_menu">
-    <div class="radius3 text_editor"> <a href="#" id="text"> Text </a> </div>
+<link rel="stylesheet" type="text/css" href="{% static "jquery.easyui-1.4.2/themes/black/easyui.css" %}"/>
+{#<script type="text/javascript" src="{% static "jquery.easyui-1.4.2/jquery.min.js" %}"></script>#}
+<script type="text/javascript" src="{% static "jquery.easyui-1.4.2/jquery.easyui.min.js" %}"></script>
+{#<script type="text/javascript" src="{% static "js/etherpad.js" %}"></script>#}
 
-    <div class="radius3 text_editor"> <a href="#" id="default"> Default </a> </div>
-
-    <div class="radius3 text_editor"> <a href="#"><img src="{% static "images/wb_rotate_left.png" %}" width="14" height="15" alt="img"></a> <a href="#"><img src="{% static "images/wb_rotate_right.png" %}" width="14" height="14" alt="img"></a> </div>
-
-    <div class="radius3 text_editor"> <a href="#"><img src="{% static "images/wb_small_A_icon.png" %}" width="10" height="9" alt="img"></a> <a href="#"><img src="{% static "images/wb_large_A_icon.png" %}" width="13" height="12" alt="img"> </a> </div>
-
-    <div class="radius3 text_editor"> <a href="#"><img src="{% static "images/wb_p_icon.png" %}" width="25" height="11" alt="img"></a> </div>
-</div>
-<div class="document">
-    <div>
-        <div class="document_top">
-            <a href="#" class="Document1 radius3">Document 1</a>
-            <a href="#" class="new radius3"> New </a>
-        </div>
-
-        <textarea class="documnet_contnt radius3"></textarea>
+<div id="id_codeditor_tab" class="easyui-tabs" style="width: 100%;float:left; margin-top: 30px;">
+    <div title="1" id="id_codeditor_tab_1" data-options="closable:false">
 
     </div>
+    <button id="id_add_new_code_tab" class="btn btn-primary" data-options="closable:false" style="padding:3px;float:left;">
+        Add New Pad
+    </button>
 </div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var code_tab_counter = 1;
+
+        function AddNewPad(pad_id){
+            console.log(pad_id);
+            {#          $("#id_pad_tab_"+pad_id).pad(#}
+            {#                  {#}
+            {#                      'padId':pad_id,#}
+            {#                      'height':1300,#}
+            {#                      'host'             : 'http://127.0.0.1:9001', // the host and port of the Etherpad instance, by  default the foundation will host your pads for you#}
+            {#                      'baseUrl'          : '/p/', // The base URL of the pads#}
+            {#                      'showControls'     : true, // If you want to show controls IE bold, italic, etc.#}
+            {#                      'showChat'         : false, // If you want to show the chat button or not#}
+            {#                      'showLineNumbers'  : true, // If you want to show the line numbers or not#}
+            {#                      'userName'         : 'Sohel', // The username you want to pass to the pad#}
+            {#                      'useMonospaceFont' : false, // Use monospaced fonts#}
+            {#                      'noColors'         : false, // Disable background colors on author text#}
+            {#                      'userColor'        : false, // The background color of this authors text in hex format IE #000#}
+            {#                      'hideQRCode'       : false, // Hide QR code#}
+            {#                      'alwaysShowChat'   : false, // Always show the chat on the UI#}
+            {#                      'border'           : 1,    // The width of the border (make sure to append px to a numerical value)#}
+            {#                      'borderStyle'      : 'solid', // The CSS style of the border    [none, dotted, dashed, solid, double, groove, ridge, inset, outset]#}
+            {#                      'rtl'              : false // Show text from right to left#}
+            {#                  });#}
+            //$("#id_codeditor_tab_"+pad_id).html('<iframe id="epframeid_pad_tab_"+pad_id name="epframeid_pad_tab_"+pad_id src="http://127.0.0.1:9001/p/'+pad_id+'?showControls=true&amp;showChat=false&amp;showLineNumbers=true&amp;useMonospaceFont=false&amp;userName=Sohel&amp;noColors=false&amp;userColor=false&amp;hideQRCode=false&amp;alwaysShowChat=false&amp;rtl=false" style="border:1; border-style:solid;" width="100%" height="1300"></iframe>');
+        }
+
+        AddNewPad(1);
+
+        $(document).on("click","#id_add_new_code_tab",function(e){
+            $('#tt').tabs('add',{
+                title:(code_tab_counter+1),
+                id: "id_codeditor_tab_"+(code_tab_counter + 1),
+                content:'',
+                closable:true
+            });
+            code_tab_counter++;
+            AddNewPad(code_tab_counter);
+        });
+
+    });
+
+</script>
