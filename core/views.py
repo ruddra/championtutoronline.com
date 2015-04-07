@@ -40,7 +40,7 @@ class LoginView(View):
         if login_form.is_valid():
             if login_form.authenticate(request):
                     request.session['is_login'] = True
-                    redirect_url = reverse("user_profile")
+                    redirect_url = reverse("user_profile", args=ChampUser.objects.get(user=request.user).id)
                     if request.POST.get("next"):
                         redirect_url = request.POST["next"]
         return HttpResponseRedirect(redirect_url)
@@ -78,7 +78,7 @@ class SignUpView(View):
 class HomePage(View):
     def get(self, request):
         if request.session.get('is_login'):
-            return HttpResponseRedirect(reverse("user_profile"))
+            return HttpResponseRedirect(reverse("user_profile", args= str(ChampUser.objects.get(user=request.user).id)))
         return render(request, 'index.html', {'title':'Championtutor Online'})
 
 class WhiteboardView(View):
@@ -117,37 +117,62 @@ class WhiteboardView(View):
         context_data["champ_userid"] = request.user.id
         return render(request, 'whiteboard.html', context_data)
 
-class ProfileView(View):
-    def get(self,request,*args,**kwargs):
-        template_name = "tutor_profile.html"
-        _this_user_id = request.user.id
-        user_objs = ChampUser.objects.filter(user__id=_this_user_id)
-        print user_objs
-        if user_objs.exists():
-            user = user_objs.first()
-            image = user.profile_picture
-            if image:
-                thumbnail_url = get_thumbnailer(image.image_field).get_thumbnail({
+# class ProfileView(View):
+#     def get(self,request,*args,**kwargs):
+#         template_name = "tutor_profile.html"
+#         _this_user_id = request.user.id
+#         user_objs = ChampUser.objects.filter(user__id=_this_user_id)
+#         if user_objs.exists():
+#             user = user_objs.first()
+#             image = user.profile_picture
+#             if image:
+#                 thumbnail_url = get_thumbnailer(image.image_field).get_thumbnail({
+#                         'size': (129, 129),
+#                         'box': image.cropping,
+#                         'crop': True,
+#                         'detail': True,
+#                     }).url
+#             else:
+#                 thumbnail_url = ''
+#         else:
+#             thumbnail_url = ''
+#         if user_objs:
+#             user_obj = user_objs[0]
+#             if user_obj.type == 'student':
+#                 template_name = 'student_profile.html'
+#         return render(request,template_name, {'thumbnail_url': thumbnail_url})
+
+class ProfileView(DetailView):
+    model = ChampUser
+    template_name = 'tutor_profile.html'
+
+    def get_template_names(self):
+        if self.object.type == 'teacher':
+            return self.template_name
+        else:
+            return 'student_profile.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(ProfileView, self).get_context_data(**kwargs)
+        context['thumbnail_url'] = get_thumbnailer(self.object.profile_picture.image_field).get_thumbnail({
                         'size': (129, 129),
-                        'box': image.cropping,
+                        'box': self.object.profile_picture.cropping,
                         'crop': True,
                         'detail': True,
-                    }).url
-            else:
-                thumbnail_url = ''
-        else:
-            thumbnail_url = ''
-        if user_objs:
-            user_obj = user_objs[0]
-            if user_obj.type == 'student':
-                template_name = 'student_profile.html'
-        return render(request,template_name, {'thumbnail_url': thumbnail_url})
+                    }).url if self.object.profile_picture else ''
+
+        context['pp_editable'] = True if self.object.user.id == self.request.user.id else False
+        return context
+
 
 
 class ChangeProfilePictureView(FormView):
     template_name = "change_profile_picture.html"
-    success_url = '/profile'
+    success_url = '/'
     form_class = ProfilePictureForm
+
+    def get_success_url(self):
+        return reverse('user_profile', args=str(ChampUser.objects.get(user=self.request.user).id))
 
     def get(self, request, image_id=None, *args, **kwargs):
         image = get_object_or_404(ProfilePicture, pk=image_id) if image_id else None
@@ -171,14 +196,14 @@ class ChangeProfilePictureView(FormView):
                         user = users[0]
                         user.profile_picture = image
                         user.save()
-                return redirect(self.success_url)
+                return redirect(self.get_success_url())
         else:
             return self.form_invalid(form)
 
 
 class ResetPasswordRequestView(FormView):
     template_name = "reset_password.html"
-    success_url = '/profile'
+    success_url = '/'
     form_class = PasswordResetRequestForm
 
     def post(self, request, *args, **kwargs):
@@ -219,7 +244,7 @@ class ResetPasswordRequestView(FormView):
             messages.error(request, 'Invalid Input')
             return self.form_invalid(form)
         except Exception as e:
-            print e
+            print(e)
         
 
 class PasswordResetConfirmView(FormView):

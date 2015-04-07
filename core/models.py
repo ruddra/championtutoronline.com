@@ -41,7 +41,6 @@ class UserTimezoneSettings(models.Model):
 
 class Role(models.Model):
     roles=(('Student','Student'),('Teacher','Teacher'))
-    id=models.AutoField(primary_key=True)
     name=models.CharField(blank=False,null=False,max_length=10,choices=roles)
 
 

@@ -20,7 +20,10 @@
                 <div class="wrapper">
                   <div class="main_cntnt radius3">
                     <div class="stdnt_detal">
-                        <div class="img_box radius3"><img width="129" height="129" alt="img" src="{% static "images/profile_img.png" %}"></div>
+                    <div class="img_box radius3"> <img src="{{ thumbnail_url|safe }}" /> </div>
+                    {% if pp_editable %}
+                    <a class="button btn" href="{% url 'change_pp' %}">Change Profile Picture</a>
+                    {% endif %}
                         <div class="stdnt_img_dtl">
                             <div class="skul_nme">Harvard Business School</div>
                             <div class="stdnt_name">Wilson Tan (Year 1995)</div>
