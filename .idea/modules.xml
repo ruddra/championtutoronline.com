@@ -3,8 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/championtutoronline.com.iml" filepath="$PROJECT_DIR$/.idea/championtutoronline.com.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../saltwaterfish/.idea/saltwaterfish.iml" filepath="$PROJECT_DIR$/../saltwaterfish/.idea/saltwaterfish.iml" />
     </modules>
   </component>
 </project>
-
