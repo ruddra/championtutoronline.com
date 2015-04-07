@@ -314,7 +314,7 @@ var event_mouse_move = function(e)
 
                 whiteboard.context.lineWidth = 1;
                 whiteboard.context.strokeStyle = "#C0C0C0";
-                whiteboard.drawing_action.drawRectangle(whiteboard.draw_starting_point.X,whiteboard.draw_starting_point.Y,whiteboard.current_point.X,whiteboard.current_point.Y);
+                whiteboard.drawing_action.drawSelectRectangle(whiteboard.draw_starting_point.X,whiteboard.draw_starting_point.Y,whiteboard.current_point.X,whiteboard.current_point.Y);
                 whiteboard.context.restore();
                 lastDrawnTime = new Date();
               }

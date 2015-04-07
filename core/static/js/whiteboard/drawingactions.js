@@ -443,6 +443,29 @@ whiteboard.drawing_action.drawRectangle = function(startx,starty,currentx,curren
         whiteboard.context.closePath();
     };
 
+whiteboard.drawing_action.drawSelectRectangle = function(startx,starty,currentx,currenty){
+
+    var x = Math.min(currentx, startx),
+        y = Math.min(currenty, starty),
+        w = Math.abs(currentx - startx),
+        h = Math.abs(currenty - starty);
+//    whiteboard.context.beginPath();
+//    whiteboard.context.fillStyle = "yellow";
+//    whiteboard.context.fillRect((x, y, w, h));
+//    whiteboard.context.lineWidth = 3;
+//    whiteboard.context.strokeRect(x, y, w, h);
+//    whiteboard.context.closePath();
+    whiteboard.context.beginPath();
+    whiteboard.context.globalAlpha = 0.3;
+    whiteboard.context.rect(x, y, w, h);
+    whiteboard.context.fillStyle = '#FFFF99';
+    whiteboard.context.fill();
+    whiteboard.context.globalAlpha = 0.8;
+    whiteboard.context.lineWidth = 1;
+    whiteboard.context.strokeStyle = '#686868 ';
+    whiteboard.context.stroke();
+};
+
 whiteboard.drawing_action.draw_polygon = function(x,y,points)
 {
     whiteboard.context.putImageData(whiteboard.canvas_data_bfr_drawng_start,0,0);
