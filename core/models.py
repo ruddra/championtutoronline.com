@@ -30,7 +30,24 @@ class ChampUser(models.Model):
     # last_updated = models.DateField(auto_now_add=True)
     class Meta:
         db_table='champ_user'
+
+
+class Education(models.Model):
+    degree = models.CharField(max_length=255)
+    current_institution = models.CharField(max_length=255)
             
+class Profile(models.Model):
+    user = models.ForeignKey(ChampUser)
+    hourly_rate = models.FloatField(default=float(0.0))
+    title = models.CharField(max_length=255, null=True)
+    description = models.TextField(null=True)
+    nationality = models.CharField(max_length=255, null=True)
+    rating = models.FloatField(default=float(0.0))
+    nric_verification_status = models.BooleanField(default=False)
+    major_subject = models.CharField(max_length=255, null=True)
+
+    class Meta:
+        db_table=u'champ_profile'
 
 class UserTimezoneSettings(models.Model):
     # user_id = models.ForeignKey(ChampUser)

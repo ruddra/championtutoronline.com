@@ -178,7 +178,7 @@ INSTALLED_APPS = (
     'pyetherpad'
 )
 
-LOGIN_URL = '/login/'
+LOGIN_URL = '/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_URL = '/logout/'
 

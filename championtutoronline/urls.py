@@ -4,6 +4,7 @@ from core.views import *
 from core.viewsajax import *
 from core.viewssearch import *
 from core.decorators import user_login_required
+from forms import AboutMeUpdateForm
 import pyetherpad
 from django.conf.urls.static import static
 from django.conf import settings
@@ -33,6 +34,9 @@ urlpatterns = patterns('',
     url(r'^texteditor/', include('pyetherpad.urls')),
     url(r'^change_profile_picture/(?P<image_id>\d+)/$', ChangeProfilePictureView.as_view(), name="crop_pp"),
     url(r'^change_profile_picture/', ChangeProfilePictureView.as_view(), name="change_pp"),
+    url(r'^change_major_subject/', ChampFormView.as_view(form_class=SubjectMajorUpdateForm), name="change_major"),
+    url(r'^change_about_me/', ChampFormView.as_view(form_class=AboutMeUpdateForm), name="change_about_me"),
+
     #url(r'^change_profile_picture/(?P<image_id>\d+)/$', login_required(ChangeProfilePictureView.as_view(), name="crop_pp"),
     #url(r'^change_profile_picture/', login_required(ChangeProfilePictureView.as_view()), name="change_pp"),
 

@@ -92,26 +92,14 @@ class SignUpAjaxView(View):
             user_obj = ChampUser()
             user_obj.fullname = name
 
-            auth_user = User.objects.create_user(username=email,email=email,password=password)
-
-            # auth_user = User()
-            # auth_user.email = email
-            # auth_user.username = email
-            # auth_user.password = hashlib.md5(password).hexdigest()
-            # auth_user.save()
+            auth_user = User.objects.create_user(username=email, email=email, password=password)
             user_obj.user = auth_user
-            print request.POST
-            # user_obj.user.email = email
-            # user_obj.user.password = hashlib.md5(password).hexdigest()
             user_obj.type = role
             user_obj.save()
             response['status'] = 'successful'
             response['message'] = 'Successful.'
-
-            ###Now send email.
             email_sender_obj = EmailClient()
             email_sender_obj.send_email(email,"Registration Verification","Thank you for registering championtutoronline.com","Thank you for registering championtutoronline.com","codenginebd@gmail.com")
-
             return HttpResponse(json.dumps(response))
         except Exception,msg:
             response['status'] = 'Unsuccessful.'

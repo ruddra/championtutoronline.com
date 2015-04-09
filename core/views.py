@@ -4,9 +4,8 @@ import time
 from easy_thumbnails.files import get_thumbnailer
 from championtutoronline.settings import DEFAULT_FROM_EMAIL
 from core.emails import EmailClient
-from core.models import ResetPasswordToken, ProfilePicture
-from core.tasks import email_sending_method
-from forms import LoginForm,SignUpForm, PasswordResetRequestForm, SetPasswordForm, ProfilePictureForm
+from core.models import ResetPasswordToken, ProfilePicture, Profile
+from forms import LoginForm,SignUpForm, PasswordResetRequestForm, SetPasswordForm, ProfilePictureForm, SubjectMajorUpdateForm
 from models import ChampUser
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
@@ -15,15 +14,22 @@ from common.decorators import user_login_required
 from django.contrib.sessions.models import Session
 from common.methods import check_login
 from django.contrib.auth import get_user_model
-from django.contrib.auth.tokens import default_token_generator
 from django.db.models.query_utils import Q
-from django.utils.encoding import force_bytes
-from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
-from django.template import loader
-from django.core.mail import send_mail
 from django.views.generic import *
 from django.contrib import messages
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
+
+
+class ProtectedView(View):
+
+    @method_decorator(login_required)
+    def dispatch(self, request, *args, **kwargs):
+        if request.method.lower() in self.http_method_names:
+            handler = getattr(self, request.method.lower(), self.http_method_not_allowed)
+        else:
+            handler = self.http_method_not_allowed
+        return handler(request, *args, **kwargs)
 
 class LoginView(View):
     def get(self,request,*args,**kwargs):
@@ -117,31 +123,6 @@ class WhiteboardView(View):
         context_data["champ_userid"] = request.user.id
         return render(request, 'whiteboard.html', context_data)
 
-# class ProfileView(View):
-#     def get(self,request,*args,**kwargs):
-#         template_name = "tutor_profile.html"
-#         _this_user_id = request.user.id
-#         user_objs = ChampUser.objects.filter(user__id=_this_user_id)
-#         if user_objs.exists():
-#             user = user_objs.first()
-#             image = user.profile_picture
-#             if image:
-#                 thumbnail_url = get_thumbnailer(image.image_field).get_thumbnail({
-#                         'size': (129, 129),
-#                         'box': image.cropping,
-#                         'crop': True,
-#                         'detail': True,
-#                     }).url
-#             else:
-#                 thumbnail_url = ''
-#         else:
-#             thumbnail_url = ''
-#         if user_objs:
-#             user_obj = user_objs[0]
-#             if user_obj.type == 'student':
-#                 template_name = 'student_profile.html'
-#         return render(request,template_name, {'thumbnail_url': thumbnail_url})
-
 class ProfileView(DetailView):
     model = ChampUser
     template_name = 'tutor_profile.html'
@@ -160,13 +141,17 @@ class ProfileView(DetailView):
                         'crop': True,
                         'detail': True,
                     }).url if self.object.profile_picture else ''
+        if Profile.objects.filter(user=self.object.user).exists():
+            context['profile'] = Profile.objects.filter(user=self.object).first()
+        else:
+             context['profile'] = Profile.objects.create(user=self.object)
 
-        context['pp_editable'] = True if self.object.user.id == self.request.user.id else False
+        context['content_editable'] = True if self.object.user.id == self.request.user.id else False
         return context
 
 
 
-class ChangeProfilePictureView(FormView):
+class ChangeProfilePictureView(ProtectedView, FormView):
     template_name = "change_profile_picture.html"
     success_url = '/'
     form_class = ProfilePictureForm
@@ -275,6 +260,24 @@ class PasswordResetConfirmView(FormView):
 
         messages.error(request,'The reset password link is no longer valid.')
         return self.form_invalid(form)
+
+class ChampFormView(ProtectedView, FormView):
+    template_name = 'change_major.html'
+
+    def get_success_url(self):
+        return reverse('user_profile', args=str(ChampUser.objects.get(user=self.request.user).id))
+
+    def post(self, request, *args, **kwargs):
+        form = self.form_class(request.POST)
+        if form.is_valid():
+            form.save(request)
+            return self.form_valid(form)
+        else:
+            messages.error(request, 'Error occurred')
+            return self.form_invalid(form)
+
+
+
 
 
 
