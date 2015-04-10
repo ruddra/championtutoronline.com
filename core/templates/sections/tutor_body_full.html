@@ -65,6 +65,10 @@
                   <h3> <img src="{% static "images/skul_attended_icon.png" %}" width="20" height="21" alt="img"> School attended</h3>
                     
                    <a href="#" class="skul_atnd_btn radius3" onClick="return false"> <img src="{% static "images/crtfcte_icon.png" %}" width="18" height="16" alt="img"> Certificates Verified <span>Academic certificates of the tutor has been verified</span></a>
+                  {% if content_editable %}
+                      <p><a class="btn" href="{% url 'add_education' %}"> Add Educational Experience </a> <a class="btn" href="{% url 'delete_education' pk=item.pk %}"> remove </a> </p>
+                   {% endif %}
+                  
                   {% for item in profile.education.all %}
                      <h3 class="hdng_inr"> {{ item.session }} {{ item.degree }} (<span class="chicago"> {{ item.institution }} </span>) </h3>
                        <p class="txt"> {{ item.topics }} - {{ item.cgpa }} </p>
