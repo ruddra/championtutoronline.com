@@ -299,14 +299,11 @@ class EducationUpdateView(ProtectedView, UpdateView):
     model = Education
     template_name = 'create.html'
 
+class EducationDeleteView(ProtectedView, DeleteView):
+    model = Education
+
     def get_success_url(self):
         return reverse('user_profile', args=str(ChampUser.objects.get(user=self.request.user).id))
 
-    def post(self, request, *args, **kwargs):
-        post = super(EducationUpdateView, self).post(request, *args, **kwargs)
-        profile = Profile.objects.get(user__user=request.user)
-        profile.education.add(self.object)
-        return post
-
-class EducationDeleteView(ProtectedView, DeleteView):
-    model = Education
+    def get(self, request, *args, **kwargs):
+        return self.delete(request, *args, **kwargs)

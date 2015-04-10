@@ -38,6 +38,7 @@ urlpatterns = patterns('',
     url(r'^change_about_me/', ProtectedFormView.as_view(form_class=AboutMeUpdateForm), name="change_about_me"),
     url(r'^add_education/', EducationAddView.as_view(), name="add_education"),
     url(r'^update_education/(?P<pk>[0-9]+)/', EducationUpdateView.as_view(), name='update_education'),
+    url(r'^delete_education/(?P<pk>[0-9]+)/', EducationDeleteView.as_view(), name='delete_education'),
 
     #url(r'^change_profile_picture/(?P<image_id>\d+)/$', login_required(ChangeProfilePictureView.as_view(), name="crop_pp"),
     #url(r'^change_profile_picture/', login_required(ChangeProfilePictureView.as_view()), name="change_pp"),

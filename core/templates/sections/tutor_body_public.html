@@ -77,7 +77,7 @@ and Biomechanical Engineering</p>
                 
                 {% for item in profile.education.all %}
                 <h3 class="hdng_inr"> {{ item.class }} {{ item.degree }} (<span class="chicago"> {{ item.institute }} </span>) </h3>
-                <p class="txt"> {{ item.topics }} </p>
+                <p class="txt"> {{ item.topics }} {{ item.cgpa }} </p>
                    {% if item.is_current %}
                        <p class="txt"> Currently studying here. </p>
                    {% endif %}
