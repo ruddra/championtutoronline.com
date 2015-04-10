@@ -22,6 +22,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/EstimatedOrderDetails.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/EstimatedOrderDetails.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/EstimatedOrderDetailsNew.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/EstimatedOrderDetailsNew.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/FedexLocations.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/FedexLocations.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Google_App_Engine_SDK.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Google_App_Engine_SDK.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/socketioserver/database/MySQL.js" afterPath="$PROJECT_DIR$/nodejs/socketioserver/database/MySQL.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/NearestFedexLoccations - Copy.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/NearestFedexLoccations - Copy.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/NearestFedexLoccations.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/NearestFedexLoccations.html" />
@@ -130,6 +131,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/layout/autoheight.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/layout/autoheight.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tabs/autoheight.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tabs/autoheight.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/banners_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/banners_search_results.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/base.html" afterPath="$PROJECT_DIR$/core/templates/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/djangoetherpadlite/django-etherpad-lite-master/etherpadlite/templates/etherpad-lite/base.html" afterPath="$PROJECT_DIR$/djangoetherpadlite/django-etherpad-lite-master/etherpadlite/templates/etherpad-lite/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/base.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/base_login.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/base_login.html" />
@@ -225,6 +227,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/categoryindex.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/categoryindex.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/cellediting.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/cellediting.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/cellstyle.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/cellstyle.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/change_profile_picture.html" afterPath="$PROJECT_DIR$/core/templates/change_profile_picture.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/change_pwd.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/change_pwd.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/changeemail.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/changeemail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/checkbox.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/checkbox.html" />
@@ -245,7 +248,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages_add.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages_add.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages_edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages_edit.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/code_editor.html" afterPath="$PROJECT_DIR$/core/templates/ajax/code_editor.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/columngroup.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/columngroup.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/layout/complex.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/layout/complex.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/complextoolbar.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/complextoolbar.html" />
@@ -447,11 +449,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/djangoetherpadlite/django-etherpad-lite-master/etherpadlite/templates/etherpad-lite/login.html" afterPath="$PROJECT_DIR$/djangoetherpadlite/django-etherpad-lite-master/etherpadlite/templates/etherpad-lite/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/login.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/djangoetherpadlite/django-etherpad-lite-master/etherpadlite/templates/etherpad-lite/logout.html" afterPath="$PROJECT_DIR$/djangoetherpadlite/django-etherpad-lite-master/etherpadlite/templates/etherpad-lite/logout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/js/whiteboard/main.js" afterPath="$PROJECT_DIR$/core/static/js/whiteboard/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/toolbar/menu.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/toolbar/menu.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/menu/menubar.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/menu/menubar.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/mergecells.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/mergecells.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/dialog/message.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/dialog/message.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/window/modalwindow.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/window/modalwindow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/models.py" afterPath="$PROJECT_DIR$/core/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/more_info.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/more_info.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/moreinfo_old.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/moreinfo_old.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/combobox/multiline.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/combobox/multiline.html" />
@@ -613,6 +617,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-sales.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-sales.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-traffic.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-traffic.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/treegrid/reports.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/treegrid/reports.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/base/resp_base.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/base/resp_base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/base/resp_base_full.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/base/resp_base_full.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datebox/restrict.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datebox/restrict.html" />
@@ -679,6 +684,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/droppable/sort.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/droppable/sort.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tabs/striptools.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tabs/striptools.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/student-profile.html" afterPath="$PROJECT_DIR$/core/templates (copy)/student-profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/css/style.css" afterPath="$PROJECT_DIR$/core/static/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/button/style.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/button/style.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/linkbutton/style.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/linkbutton/style.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tabs/style.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tabs/style.html" />
@@ -698,7 +704,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/termscon.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/termscon.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/test-coupon-code.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/test-coupon-code.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/test-tax-code.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/test-tax-code.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/text_editor.html" afterPath="$PROJECT_DIR$/core/templates/ajax/text_editor.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/input/textbox.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/input/textbox.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/tickets.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/tickets.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/titles_content.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/titles_content.htm" />
@@ -714,6 +719,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-visits.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-visits.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/transform.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/transform.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/under_construction.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/under_construction.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/championtutoronline/urls.py" afterPath="$PROJECT_DIR$/championtutoronline/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit-log.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit-log.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit-permissions.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit-permissions.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit.htm" />
@@ -733,6 +739,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/vieworders.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/vieworders.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/vieworders_not_completed.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/vieworders_not_completed.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/viewrequest.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/viewrequest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/viewsajax.py" afterPath="$PROJECT_DIR$/core/viewsajax.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/virtual-terminal.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/virtual-terminal.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/waitinglist_popup.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/waitinglist_popup.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/waitinglist_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/waitinglist_search_results.html" />
@@ -750,7 +757,7 @@
     </list>
     <ignored path="championtutoronline.com.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428411059118" ignored="false" />
+    <file path="/Dummy.txt" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428637513269" ignored="false" />
     <file path="/settings.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428258370268" ignored="false" />
     <file path="/murthy_views.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1425745045401" ignored="false" />
     <file path="/views.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428291747118" ignored="false" />
@@ -758,21 +765,23 @@
     <file path="/videochat.js" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1427905746724" ignored="false" />
     <file path="/product.html" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1427526107746" ignored="false" />
     <file path="/forms.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428084923447" ignored="false" />
-    <file path="/viewsajax.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428085174963" ignored="false" />
+    <file path="/viewsajax.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428640410470" ignored="false" />
     <file path="/base.html" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428082118100" ignored="false" />
-    <file path="/models.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428258857154" ignored="false" />
+    <file path="/models.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428641041521" ignored="false" />
     <file path="/viewssearch.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428088442239" ignored="false" />
     <file path="/app.js" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428087903884" ignored="false" />
     <file path="/User.js" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428088041855" ignored="false" />
     <file path="/login.html" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428089444843" ignored="false" />
     <file path="/chat.js" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428090445684" ignored="false" />
     <file path="/text_editor.html" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428434020371" ignored="false" />
-    <file path="/urls.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428292676874" ignored="false" />
+    <file path="/urls.py" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428639792883" ignored="false" />
     <file path="/drawingactions.js" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428342316703" ignored="false" />
-    <file path="/drawingboard.html" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428430398988" ignored="false" />
+    <file path="/drawingboard.html" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428639375258" ignored="false" />
     <file path="/whiteboard.html" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428434176142" ignored="false" />
     <file path="/easyloader.js" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428424204741" ignored="false" />
     <file path="/code_editor.html" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428431768832" ignored="false" />
+    <file path="/style.css" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428601535801" ignored="false" />
+    <file path="/main.js" changelist="caa75f8d-ed1c-404a-911e-d8d55024ca60" time="1428603249373" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -792,76 +801,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DOMEventHandler.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/static/js/whiteboard/DOMEventHandler.js">
+      <file leaf-file-name="drawingboard.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/templates/ajax/drawingboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="394" column="30" selection-start="34201" selection-end="34201" vertical-scroll-proportion="-9.192307">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mousemove.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/static/js/whiteboard/mousemove.js">
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/championtutoronline/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="316" column="52" selection-start="17978" selection-end="17978" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="drawingactions.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/static/js/whiteboard/drawingactions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="434" column="84" selection-start="13736" selection-end="13736" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="text_editor.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/templates/ajax/text_editor.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="21" selection-start="3370" selection-end="3370" vertical-scroll-proportion="-3.7307692">
+            <state line="21" column="48" selection-start="891" selection-end="891" vertical-scroll-proportion="-6.0">
               <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#0#51#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="code_editor.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/templates/ajax/code_editor.html">
+      <file leaf-file-name="viewsajax.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/viewsajax.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="38" selection-start="4906" selection-end="4906" vertical-scroll-proportion="-35.615383">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="146" column="0" selection-start="5853" selection-end="5853" vertical-scroll-proportion="-16.84">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="whiteboard.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/templates/whiteboard.html">
+      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1027" column="42" selection-start="45751" selection-end="45751" vertical-scroll-proportion="0.7838983">
+            <state line="87" column="31" selection-start="3375" selection-end="3375" vertical-scroll-proportion="0.25239006">
               <folding>
-                <element signature="e#11013#11034#0" expanded="true" />
-                <element signature="e#11494#11527#0" expanded="true" />
-                <element signature="e#11670#11707#0" expanded="true" />
-                <element signature="e#13677#13696#0" expanded="true" />
-                <element signature="e#13778#13832#0" expanded="true" />
-                <element signature="e#18565#18615#0" expanded="true" />
-                <element signature="e#19777#19798#0" expanded="true" />
-                <element signature="e#19944#19965#0" expanded="true" />
-                <element signature="e#20097#20116#0" expanded="true" />
-                <element signature="e#20279#20302#0" expanded="true" />
-                <element signature="e#20415#20438#0" expanded="true" />
-                <element signature="e#20527#20550#0" expanded="true" />
-                <element signature="e#32611#32658#0" expanded="true" />
-                <element signature="e#32671#32713#0" expanded="true" />
+                <element signature="e#0#43#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -885,29 +859,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/pyetherpad/views.py" />
-        <option value="$PROJECT_DIR$/pyetherpad/urls.py" />
-        <option value="$PROJECT_DIR$/forms.py" />
-        <option value="$PROJECT_DIR$/core/views.py" />
-        <option value="$PROJECT_DIR$/core/models.py" />
-        <option value="$PROJECT_DIR$/championtutoronline/urls.py" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/championtutoronline/settings.py" />
         <option value="$PROJECT_DIR$/core/static/js/whiteboard/mousemove.js" />
         <option value="$PROJECT_DIR$/core/static/js/whiteboard/drawingactions.js" />
-        <option value="$PROJECT_DIR$/nodejs/socketioserver/database/MySQL.js" />
         <option value="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/src/easyloader.js" />
-        <option value="$PROJECT_DIR$/core/templates/ajax/drawingboard.html" />
         <option value="$PROJECT_DIR$/core/templates/ajax/code_editor.html" />
         <option value="$PROJECT_DIR$/core/templates/ajax/text_editor.html" />
         <option value="$PROJECT_DIR$/core/templates/whiteboard.html" />
+        <option value="$PROJECT_DIR$/nodejs/socketioserver/database/MySQL.js" />
+        <option value="$PROJECT_DIR$/core/static/css/style.css" />
+        <option value="$PROJECT_DIR$/core/templates/base.html" />
+        <option value="$PROJECT_DIR$/core/static/js/whiteboard/main.js" />
+        <option value="$PROJECT_DIR$/core/templates/ajax/drawingboard.html" />
+        <option value="$PROJECT_DIR$/championtutoronline/urls.py" />
+        <option value="$PROJECT_DIR$/core/viewsajax.py" />
+        <option value="$PROJECT_DIR$/core/models.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="width" value="1040" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -936,6 +910,26 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="championtutoronline.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="championtutoronline.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="saltwaterfish" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="All">
           <PATH>
@@ -971,72 +965,6 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="nodejs">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="nodejs">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="socketioserver">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="nodejs">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="socketioserver">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="database">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="core">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
@@ -1055,107 +983,9 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="core">
+            <PATH_ELEMENT USER_OBJECT="championtutoronline">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="templates">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="core">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="templates">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="ajax">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="core">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="static">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="core">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="static">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="js">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="championtutoronline.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="championtutoronline.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="saltwaterfish" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -1165,12 +995,12 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../saltwaterfish" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -1196,27 +1026,6 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <module name="championtutoronline.com" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -1236,6 +1045,27 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="championtutoronline.com" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -1298,14 +1128,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1040" height="744" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28560606" sideWeight="0.6712095" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28732106" sideWeight="0.6712095" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1386,47 +1216,88 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/core/templates/ajax/text_editor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="5" selection-start="3354" selection-end="3354" vertical-scroll-proportion="0.18582375" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nodejs/socketioserver/models/Message.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="404" selection-end="404" vertical-scroll-proportion="0.24817519" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/change_profile_picture.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/static/js/whiteboard/drawingactions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="1" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/easyloader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="2238" selection-start="2492" selection-end="2494" vertical-scroll-proportion="0.33266932" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1388" column="58" selection-start="82550" selection-end="82550" vertical-scroll-proportion="-6.96" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="279" column="71" selection-start="11549" selection-end="11549" vertical-scroll-proportion="-10.09804" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/static/js/whiteboard/init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/ajax/drawingboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="394" column="30" selection-start="34201" selection-end="34201" vertical-scroll-proportion="-9.192307">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/static/js/whiteboard/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="51" selection-start="1463" selection-end="1463" vertical-scroll-proportion="0.67741936">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="6" selection-start="3755" selection-end="3755" vertical-scroll-proportion="0.34860557">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/championtutoronline/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="6" selection-start="2115" selection-end="2115" vertical-scroll-proportion="0.6666667">
+        <state line="21" column="48" selection-start="891" selection-end="891" vertical-scroll-proportion="-6.0">
           <folding>
-            <element signature="e#0#51#0" expanded="false" />
+            <element signature="e#0#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/models.py">
+    <entry file="file://$PROJECT_DIR$/core/viewsajax.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.0478013" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/js/chat/videochat.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.6514599" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/js/whiteboard/script_fresh_canvas.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="396" column="30" selection-start="12341" selection-end="12341" vertical-scroll-proportion="0.33211678" />
+        <state line="146" column="0" selection-start="5853" selection-end="5853" vertical-scroll-proportion="-16.84">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/static/js/whiteboard/mousemove.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="316" column="52" selection-start="17978" selection-end="17978" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/js/whiteboard/drawingactions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="434" column="84" selection-start="13736" selection-end="13736" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodejs/socketioserver/database/MySQL.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="14" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1438,81 +1309,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/jquery.min.js">
+    <entry file="file://$PROJECT_DIR$/core/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="87" column="31" selection-start="3375" selection-end="3375" vertical-scroll-proportion="0.25239006">
           <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/src/easyloader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="8" selection-start="1808" selection-end="1808" vertical-scroll-proportion="0.16829745">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="71" selection-start="613" selection-end="680" vertical-scroll-proportion="0.4071856">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/ajax/drawingboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="342" column="16" selection-start="31876" selection-end="31876" vertical-scroll-proportion="-13.884615">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/js/etherpad.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.3939395">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/ajax/text_editor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="21" selection-start="3370" selection-end="3370" vertical-scroll-proportion="-3.7307692">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/ajax/code_editor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="38" selection-start="4906" selection-end="4906" vertical-scroll-proportion="-35.615383">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/whiteboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1027" column="42" selection-start="45751" selection-end="45751" vertical-scroll-proportion="0.7838983">
-          <folding>
-            <element signature="e#11013#11034#0" expanded="true" />
-            <element signature="e#11494#11527#0" expanded="true" />
-            <element signature="e#11670#11707#0" expanded="true" />
-            <element signature="e#13677#13696#0" expanded="true" />
-            <element signature="e#13778#13832#0" expanded="true" />
-            <element signature="e#18565#18615#0" expanded="true" />
-            <element signature="e#19777#19798#0" expanded="true" />
-            <element signature="e#19944#19965#0" expanded="true" />
-            <element signature="e#20097#20116#0" expanded="true" />
-            <element signature="e#20279#20302#0" expanded="true" />
-            <element signature="e#20415#20438#0" expanded="true" />
-            <element signature="e#20527#20550#0" expanded="true" />
-            <element signature="e#32611#32658#0" expanded="true" />
-            <element signature="e#32671#32713#0" expanded="true" />
+            <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>

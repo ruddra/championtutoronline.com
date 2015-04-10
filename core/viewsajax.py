@@ -140,3 +140,7 @@ class VideoSessionStart(View):
             "OT_TOKEN": token
         }
         return render(request,"ajax/videoframe.html",data)
+
+class WhiteboardAjaxView(View):
+    def get(self,request,*args,**kwargs):
+        board_id = request.GET.get("board_id")

@@ -85,5 +85,31 @@ class ResetPasswordToken(models.Model):
     user = models.ForeignKey(User)
     token = models.CharField(max_length=255)
 
+class Whiteboard(models.Model):
+    user = models.ForeignKey(ChampUser)
+    name = models.CharField(max_length=255)
+    created_date = models.DateTimeField(auto_now_add=True,blank=False)
+    active = models.IntegerField()
+
+    class Meta:
+        db_table=u'whiteboard'
+
+class DrawingBoard(models.Model):
+    whiteboard = models.ForeignKey(Whiteboard)
+    name = models.CharField(max_length=255)
+    create_date = models.DateTimeField(auto_now_add=True,blank=False)
+
+    class Meta:
+        db_table=u'drawing_board'
+
+class UserDrawingBoard(models.Model):
+    user = models.ForeignKey(ChampUser)
+    drawingboard = models.ForeignKey(DrawingBoard)
+    numeric_name = models.IntegerField()
+    label = models.CharField(max_length=255)
+
+    class Meta:
+        db_table=u'user_drawing_board'
+
         
 

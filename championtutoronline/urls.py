@@ -18,7 +18,11 @@ urlpatterns = patterns('',
     url(r'^login$',LoginView.as_view(),name='user_login'),
     url(r'^logout$',LogoutView.as_view(),name='user_logout'),
     url(r'^signup$',SignUpView.as_view(),name='sign_up'),
+    ##All whiteboard related urls here.
     url(r'^whiteboard$', user_login_required(WhiteboardView.as_view()), name='whiteboard'),
+    url(r'^ajax/add_whiteboard_tab$', WhiteboardView.as_view(), name='ajax_add_whiteboard_tab'),
+    url(r'^ajax/whiteboard_tabs$', WhiteboardView.as_view(), name='ajax_whiteboard_tabs'),
+
     url(r'^profile', ProfileView.as_view(), name='user_profile'),
     url(r'^ajax/login$', LoginAjaxView.as_view(), name='ajax_login'),
     url(r'^ajax/signup$', SignUpAjaxView.as_view(), name='ajax_signup'),
