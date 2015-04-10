@@ -4,8 +4,9 @@ import time
 from easy_thumbnails.files import get_thumbnailer
 from championtutoronline.settings import DEFAULT_FROM_EMAIL
 from core.emails import EmailClient
-from core.models import ResetPasswordToken, ProfilePicture, Profile
-from forms import LoginForm,SignUpForm, PasswordResetRequestForm, SetPasswordForm, ProfilePictureForm, SubjectMajorUpdateForm
+from core.models import ResetPasswordToken, ProfilePicture, Profile, Education
+from forms import LoginForm,SignUpForm, PasswordResetRequestForm, SetPasswordForm, ProfilePictureForm, SubjectMajorUpdateForm, \
+    EducationForm
 from models import ChampUser
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
@@ -21,7 +22,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 
 
-class ProtectedView(View):
+class ProtectedView(object):
 
     @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
@@ -261,8 +262,8 @@ class PasswordResetConfirmView(FormView):
         messages.error(request,'The reset password link is no longer valid.')
         return self.form_invalid(form)
 
-class ChampFormView(ProtectedView, FormView):
-    template_name = 'change_major.html'
+class ProtectedFormView(ProtectedView, FormView):
+    template_name = 'create.html'
 
     def get_success_url(self):
         return reverse('user_profile', args=str(ChampUser.objects.get(user=self.request.user).id))
@@ -276,8 +277,36 @@ class ChampFormView(ProtectedView, FormView):
             messages.error(request, 'Error occurred')
             return self.form_invalid(form)
 
+class EducationAddView(ProtectedView,FormView):
+    form_class = EducationForm
+    template_name = 'create.html'
 
+    def get_success_url(self):
+        return reverse('user_profile', args=str(ChampUser.objects.get(user=self.request.user).id))
 
+    def post(self, request, *args, **kwargs):
+        form = self.form_class(request.POST)
+        if form.is_valid():
+            instance = form.save()
+            profile = Profile.objects.get(user__user=request.user)
+            profile.education.add(instance)
+            return self.form_valid(form)
+        else:
+            messages.error(request, 'Error occurred')
+            return self.form_invalid(form)
 
+class EducationUpdateView(ProtectedView, UpdateView):
+    model = Education
+    template_name = 'create.html'
 
+    def get_success_url(self):
+        return reverse('user_profile', args=str(ChampUser.objects.get(user=self.request.user).id))
 
+    def post(self, request, *args, **kwargs):
+        post = super(EducationUpdateView, self).post(request, *args, **kwargs)
+        profile = Profile.objects.get(user__user=request.user)
+        profile.education.add(self.object)
+        return post
+
+class EducationDeleteView(ProtectedView, DeleteView):
+    model = Education

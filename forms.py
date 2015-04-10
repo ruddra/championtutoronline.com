@@ -3,8 +3,9 @@ __author__ = 'Codengine'
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 import hashlib
-from core.models import ChampUser, ProfilePicture, Profile
+from core.models import ChampUser, ProfilePicture, Profile, Education
 from image_cropping import ImageCropWidget
+from core.tools.form import DateSelectorWidget
 
 from django import forms
 
@@ -101,3 +102,7 @@ class AboutMeUpdateForm(forms.Form):
         profile = Profile.objects.get(user=ChampUser.objects.get(user=request.user))
         profile.description = self.cleaned_data['about_me']
         profile.save()
+
+class EducationForm(forms.ModelForm):
+    class Meta:
+        model = Education

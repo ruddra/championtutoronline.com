@@ -65,15 +65,15 @@
                   <h3> <img src="{% static "images/skul_attended_icon.png" %}" width="20" height="21" alt="img"> School attended</h3>
                     
                    <a href="#" class="skul_atnd_btn radius3" onClick="return false"> <img src="{% static "images/crtfcte_icon.png" %}" width="18" height="16" alt="img"> Certificates Verified <span>Academic certificates of the tutor has been verified</span></a>
-                    
-                    <h3 class="hdng_inr"> 2011 Bachelor (<span class="chicago">The University of chicago</span>) </h3>
-                    <p class="txt"> Bachelor of Arts (Economics) with General Honours </p>
-                    
-                    <h3 class="hdng_inr"> 2011 Transcript (<span class="chicago">The University of chicago</span>) </h3>
-                    <p class="txt"> official Transcript - Bachelor of arts with General Honours (Economics) - GPA 3.81/4.00 </p>
-                    
-                    <h3 class="hdng_inr"> 2011 Transcript (<span class="chicago">The University of chicago</span>) </h3>
-                    <p class="txt"> official Transcript - Bachelor of arts with General Honours (Economics) - GPA 3.81/4.00 </p>
+                  {% for item in profile.education.all %}
+                     <h3 class="hdng_inr"> {{ item.session }} {{ item.degree }} (<span class="chicago"> {{ item.institution }} </span>) </h3>
+                       <p class="txt"> {{ item.topics }} </p>
+                       <p class="txt"> {{ item.cgpa }} </p>
+                   {% if item.is_current %}
+                       <p class="txt"> Currently studying here. </p>
+                   {% endif %}
+
+                  {% endfor %}
                     
               </div>
               
