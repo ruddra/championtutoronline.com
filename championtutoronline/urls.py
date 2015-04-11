@@ -4,6 +4,7 @@ from core.views import *
 from core.viewsajax import *
 from core.viewssearch import *
 from core.decorators import user_login_required
+from forms import AboutMeUpdateForm
 import pyetherpad
 from django.conf.urls.static import static
 from django.conf import settings
@@ -23,7 +24,8 @@ urlpatterns = patterns('',
     url(r'^ajax/add_whiteboard_tab$', WhiteboardView.as_view(), name='ajax_add_whiteboard_tab'),
     url(r'^ajax/whiteboard_tabs$', WhiteboardView.as_view(), name='ajax_whiteboard_tabs'),
 
-    url(r'^profile', ProfileView.as_view(), name='user_profile'),
+    #url(r'^profile', ProfileView.as_view(), name='user_profile'),
+    url(r'^profile/(?P<pk>[0-9]+)/', ProfileView.as_view(), name='user_profile'),
     url(r'^ajax/login$', LoginAjaxView.as_view(), name='ajax_login'),
     url(r'^ajax/signup$', SignUpAjaxView.as_view(), name='ajax_signup'),
     url(r'^ajax/initsession$',VideoSessionTokens.as_view(), name='ajax_video_session_init'),
@@ -37,6 +39,12 @@ urlpatterns = patterns('',
     url(r'^texteditor/', include('pyetherpad.urls')),
     url(r'^change_profile_picture/(?P<image_id>\d+)/$', ChangeProfilePictureView.as_view(), name="crop_pp"),
     url(r'^change_profile_picture/', ChangeProfilePictureView.as_view(), name="change_pp"),
+    url(r'^change_major_subject/', ProtectedFormView.as_view(form_class=SubjectMajorUpdateForm), name="change_major"),
+    url(r'^change_about_me/', ProtectedFormView.as_view(form_class=AboutMeUpdateForm), name="change_about_me"),
+    url(r'^add_education/', EducationAddView.as_view(), name="add_education"),
+    url(r'^update_education/(?P<pk>[0-9]+)/', EducationUpdateView.as_view(), name='update_education'),
+    url(r'^delete_education/(?P<pk>[0-9]+)/', EducationDeleteView.as_view(), name='delete_education'),
+
     #url(r'^change_profile_picture/(?P<image_id>\d+)/$', login_required(ChangeProfilePictureView.as_view(), name="crop_pp"),
     #url(r'^change_profile_picture/', login_required(ChangeProfilePictureView.as_view()), name="change_pp"),
 

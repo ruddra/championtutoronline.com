@@ -30,7 +30,30 @@ class ChampUser(models.Model):
     # last_updated = models.DateField(auto_now_add=True)
     class Meta:
         db_table='champ_user'
-            
+
+
+class Education(models.Model):
+    degree = models.CharField(max_length=255)
+    institution = models.CharField(max_length=255)
+    session = models.CharField(max_length=255, null=True, verbose_name='class')
+    cgpa = models.CharField(max_length=255, verbose_name='GPA/CGPA', default='0.0')
+    # from_month = models.DateField()
+    # to_time = models.DateField(null=True)
+    is_current = models.BooleanField(default=False)
+
+class Profile(models.Model):
+    user = models.ForeignKey(ChampUser)
+    hourly_rate = models.FloatField(default=float(0.0))
+    title = models.CharField(max_length=255, null=True)
+    description = models.TextField(null=True)
+    nationality = models.CharField(max_length=255, null=True)
+    rating = models.FloatField(default=float(0.0))
+    nric_verification_status = models.BooleanField(default=False)
+    major_subject = models.CharField(max_length=255, null=True)
+    education = models.ManyToManyField(Education)
+
+    class Meta:
+        db_table=u'champ_profile'
 
 class UserTimezoneSettings(models.Model):
     # user_id = models.ForeignKey(ChampUser)
@@ -41,7 +64,6 @@ class UserTimezoneSettings(models.Model):
 
 class Role(models.Model):
     roles=(('Student','Student'),('Teacher','Teacher'))
-    id=models.AutoField(primary_key=True)
     name=models.CharField(blank=False,null=False,max_length=10,choices=roles)
 
 

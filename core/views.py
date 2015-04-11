@@ -4,9 +4,9 @@ import time
 from easy_thumbnails.files import get_thumbnailer
 from championtutoronline.settings import DEFAULT_FROM_EMAIL
 from core.emails import EmailClient
-from core.models import ResetPasswordToken, ProfilePicture
-from core.tasks import email_sending_method
-from forms import LoginForm,SignUpForm, PasswordResetRequestForm, SetPasswordForm, ProfilePictureForm
+from core.models import ResetPasswordToken, ProfilePicture, Profile, Education
+from forms import LoginForm,SignUpForm, PasswordResetRequestForm, SetPasswordForm, ProfilePictureForm, SubjectMajorUpdateForm, \
+    EducationForm
 from models import ChampUser
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
@@ -15,15 +15,22 @@ from common.decorators import user_login_required
 from django.contrib.sessions.models import Session
 from common.methods import check_login
 from django.contrib.auth import get_user_model
-from django.contrib.auth.tokens import default_token_generator
 from django.db.models.query_utils import Q
-from django.utils.encoding import force_bytes
-from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
-from django.template import loader
-from django.core.mail import send_mail
 from django.views.generic import *
 from django.contrib import messages
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
+
+
+class ProtectedView(object):
+
+    @method_decorator(login_required)
+    def dispatch(self, request, *args, **kwargs):
+        if request.method.lower() in self.http_method_names:
+            handler = getattr(self, request.method.lower(), self.http_method_not_allowed)
+        else:
+            handler = self.http_method_not_allowed
+        return handler(request, *args, **kwargs)
 
 class LoginView(View):
     def get(self,request,*args,**kwargs):
@@ -40,7 +47,7 @@ class LoginView(View):
         if login_form.is_valid():
             if login_form.authenticate(request):
                     request.session['is_login'] = True
-                    redirect_url = reverse("user_profile")
+                    redirect_url = reverse("user_profile", args=ChampUser.objects.get(user=request.user).id)
                     if request.POST.get("next"):
                         redirect_url = request.POST["next"]
         return HttpResponseRedirect(redirect_url)
@@ -78,7 +85,7 @@ class SignUpView(View):
 class HomePage(View):
     def get(self, request):
         if request.session.get('is_login'):
-            return HttpResponseRedirect(reverse("user_profile"))
+            return HttpResponseRedirect(reverse("user_profile", args= str(ChampUser.objects.get(user=request.user).id)))
         return render(request, 'index.html', {'title':'Championtutor Online'})
 
 class WhiteboardView(View):
@@ -117,37 +124,41 @@ class WhiteboardView(View):
         context_data["champ_userid"] = request.user.id
         return render(request, 'whiteboard.html', context_data)
 
-class ProfileView(View):
-    def get(self,request,*args,**kwargs):
-        template_name = "tutor_profile.html"
-        _this_user_id = request.user.id
-        user_objs = ChampUser.objects.filter(user__id=_this_user_id)
-        print user_objs
-        if user_objs.exists():
-            user = user_objs.first()
-            image = user.profile_picture
-            if image:
-                thumbnail_url = get_thumbnailer(image.image_field).get_thumbnail({
+class ProfileView(DetailView):
+    model = ChampUser
+    template_name = 'tutor_profile.html'
+
+    def get_template_names(self):
+        if self.object.type == 'teacher':
+            return self.template_name
+        else:
+            return 'student_profile.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(ProfileView, self).get_context_data(**kwargs)
+        context['thumbnail_url'] = get_thumbnailer(self.object.profile_picture.image_field).get_thumbnail({
                         'size': (129, 129),
-                        'box': image.cropping,
+                        'box': self.object.profile_picture.cropping,
                         'crop': True,
                         'detail': True,
-                    }).url
-            else:
-                thumbnail_url = ''
+                    }).url if self.object.profile_picture else ''
+        if Profile.objects.filter(user=self.object.user).exists():
+            context['profile'] = Profile.objects.filter(user=self.object).first()
         else:
-            thumbnail_url = ''
-        if user_objs:
-            user_obj = user_objs[0]
-            if user_obj.type == 'student':
-                template_name = 'student_profile.html'
-        return render(request,template_name, {'thumbnail_url': thumbnail_url})
+             context['profile'] = Profile.objects.create(user=self.object)
+
+        context['content_editable'] = True if self.object.user.id == self.request.user.id else False
+        return context
 
 
-class ChangeProfilePictureView(FormView):
+
+class ChangeProfilePictureView(ProtectedView, FormView):
     template_name = "change_profile_picture.html"
-    success_url = '/profile'
+    success_url = '/'
     form_class = ProfilePictureForm
+
+    def get_success_url(self):
+        return reverse('user_profile', args=str(ChampUser.objects.get(user=self.request.user).id))
 
     def get(self, request, image_id=None, *args, **kwargs):
         image = get_object_or_404(ProfilePicture, pk=image_id) if image_id else None
@@ -171,14 +182,14 @@ class ChangeProfilePictureView(FormView):
                         user = users[0]
                         user.profile_picture = image
                         user.save()
-                return redirect(self.success_url)
+                return redirect(self.get_success_url())
         else:
             return self.form_invalid(form)
 
 
 class ResetPasswordRequestView(FormView):
     template_name = "reset_password.html"
-    success_url = '/profile'
+    success_url = '/'
     form_class = PasswordResetRequestForm
 
     def post(self, request, *args, **kwargs):
@@ -219,7 +230,7 @@ class ResetPasswordRequestView(FormView):
             messages.error(request, 'Invalid Input')
             return self.form_invalid(form)
         except Exception as e:
-            print e
+            print(e)
         
 
 class PasswordResetConfirmView(FormView):
@@ -251,5 +262,48 @@ class PasswordResetConfirmView(FormView):
         messages.error(request,'The reset password link is no longer valid.')
         return self.form_invalid(form)
 
+class ProtectedFormView(ProtectedView, FormView):
+    template_name = 'create.html'
 
+    def get_success_url(self):
+        return reverse('user_profile', args=str(ChampUser.objects.get(user=self.request.user).id))
 
+    def post(self, request, *args, **kwargs):
+        form = self.form_class(request.POST)
+        if form.is_valid():
+            form.save(request)
+            return self.form_valid(form)
+        else:
+            messages.error(request, 'Error occurred')
+            return self.form_invalid(form)
+
+class EducationAddView(ProtectedView,FormView):
+    form_class = EducationForm
+    template_name = 'create.html'
+
+    def get_success_url(self):
+        return reverse('user_profile', args=str(ChampUser.objects.get(user=self.request.user).id))
+
+    def post(self, request, *args, **kwargs):
+        form = self.form_class(request.POST)
+        if form.is_valid():
+            instance = form.save()
+            profile = Profile.objects.get(user__user=request.user)
+            profile.education.add(instance)
+            return self.form_valid(form)
+        else:
+            messages.error(request, 'Error occurred')
+            return self.form_invalid(form)
+
+class EducationUpdateView(ProtectedView, UpdateView):
+    model = Education
+    template_name = 'create.html'
+
+class EducationDeleteView(ProtectedView, DeleteView):
+    model = Education
+
+    def get_success_url(self):
+        return reverse('user_profile', args=str(ChampUser.objects.get(user=self.request.user).id))
+
+    def get(self, request, *args, **kwargs):
+        return self.delete(request, *args, **kwargs)
