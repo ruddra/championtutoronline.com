@@ -153,9 +153,8 @@ class ProfileView(DetailView):
         return context
 
 
-class UpdateProfileView(View):
+class UpdateProfileView(ProtectedView, View):
     def post(self, request, params, *args, **kwargs):
-        # params = request.POST.get('params', None)
         if params is not None:
             data = dict()
             if params == 'abt_me_form':
@@ -327,7 +326,16 @@ class EducationAddView(ProtectedView,FormView):
             instance = form.save()
             profile = Profile.objects.get(user__user=request.user)
             profile.education.add(instance)
-            return self.form_valid(form)
+            data = dict()
+            data['added_edu'] = 'True'
+            # <h3 class="hdng_inr"> {{ item.session }} {{ item.degree }} (<span class="chicago"> {{ item.institution }} </span>)
+
+            data['session'] = instance.session
+            data['degree'] = instance.degree
+            data['institution'] = instance.institution
+            data['update_data_class'] = '.add_new_edu'
+            # data['update_btn_class'] = '.update_abt_me'
+            return HttpResponse(json.dumps(data), content_type="application/json")
         else:
             messages.error(request, 'Error occurred')
             return self.form_invalid(form)
