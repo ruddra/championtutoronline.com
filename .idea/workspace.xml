@@ -22,8 +22,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/EstimatedOrderDetails.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/EstimatedOrderDetails.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/EstimatedOrderDetailsNew.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/EstimatedOrderDetailsNew.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/FedexLocations.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/FedexLocations.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Google_App_Engine_SDK.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Google_App_Engine_SDK.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nodejs/socketioserver/database/MySQL.js" afterPath="$PROJECT_DIR$/nodejs/socketioserver/database/MySQL.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/NearestFedexLoccations - Copy.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/NearestFedexLoccations - Copy.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/NearestFedexLoccations.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/NearestFedexLoccations.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation 20-01-2014.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/OrderConfirmation 20-01-2014.html" />
@@ -230,6 +228,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/change_profile_picture.html" afterPath="$PROJECT_DIR$/core/templates/change_profile_picture.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/change_pwd.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/change_pwd.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/changeemail.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/changeemail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/sections/chat_box.html" afterPath="$PROJECT_DIR$/core/templates/sections/chat_box.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/checkbox.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/checkbox.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datalist/checkbox.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datalist/checkbox.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tree/checkbox.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tree/checkbox.html" />
@@ -248,6 +247,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages_add.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages_add.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages_edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/cms_pages_edit.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/code_editor.html" afterPath="$PROJECT_DIR$/core/templates/ajax/code_editor.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/columngroup.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/columngroup.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/layout/complex.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/layout/complex.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/complextoolbar.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/complextoolbar.html" />
@@ -408,10 +408,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/images_products.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/images_products.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/import_tax_rate.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/import_tax_rate.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/numberspinner/increment.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/numberspinner/increment.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/index - Copy.html" afterPath="$PROJECT_DIR$/core/templates/index - Copy.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/index-backup-mar08.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/index-backup-mar08.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery-ui-1.11.3.custom/index.html" afterPath="$PROJECT_DIR$/core/static/jquery-ui-1.11.3.custom/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/js/mathdox/org/mathdox/javascript/index.html" afterPath="$PROJECT_DIR$/core/static/js/mathdox/org/mathdox/javascript/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/index.html" afterPath="$PROJECT_DIR$/core/templates (copy)/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/index.html" afterPath="$PROJECT_DIR$/core/templates/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/misc/js/carou/index.html" afterPath="$PROJECT_DIR$/../saltwaterfish/misc/js/carou/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/index.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/combogrid/initvalue.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/combogrid/initvalue.html" />
@@ -445,17 +447,18 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/badge/list.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/badge/list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/form/load.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/form/load.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/panel/loadcontent.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/panel/loadcontent.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/registration/logged_out.html" afterPath="$PROJECT_DIR$/core/templates/registration/logged_out.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/login.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/login.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/login.html" afterPath="$PROJECT_DIR$/core/templates/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/login.html" afterPath="$PROJECT_DIR$/core/templates/ajax/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/djangoetherpadlite/django-etherpad-lite-master/etherpadlite/templates/etherpad-lite/login.html" afterPath="$PROJECT_DIR$/djangoetherpadlite/django-etherpad-lite-master/etherpadlite/templates/etherpad-lite/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/login.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/djangoetherpadlite/django-etherpad-lite-master/etherpadlite/templates/etherpad-lite/logout.html" afterPath="$PROJECT_DIR$/djangoetherpadlite/django-etherpad-lite-master/etherpadlite/templates/etherpad-lite/logout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/js/whiteboard/main.js" afterPath="$PROJECT_DIR$/core/static/js/whiteboard/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/toolbar/menu.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/toolbar/menu.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/menu/menubar.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/menu/menubar.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/mergecells.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/mergecells.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/dialog/message.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/dialog/message.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/window/modalwindow.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/window/modalwindow.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/models.py" afterPath="$PROJECT_DIR$/core/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/more_info.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/more_info.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/moreinfo_old.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/moreinfo_old.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/combobox/multiline.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/combobox/multiline.html" />
@@ -487,9 +490,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tabs/nestedtabs.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tabs/nestedtabs.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/new-edit-order.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/new-edit-order.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/new2.html" afterPath="$PROJECT_DIR$/core/templates (copy)/new2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/new2.html" afterPath="$PROJECT_DIR$/core/templates/new2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/layout/nocollapsible.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/layout/nocollapsible.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/slider/nonlinear.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/slider/nonlinear.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/input/numberspinner.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/input/numberspinner.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/online_tutors.html" afterPath="$PROJECT_DIR$/core/templates/online_tutors.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/onsale-cat.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/onsale-cat.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/onsale-fragment.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/onsale-fragment.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/onsale.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/onsale.htm" />
@@ -522,6 +527,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/pages.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/pages.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/pages_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/pages_search_results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/panel/paneltools.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/panel/paneltools.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/registration/password_change_done.html" afterPath="$PROJECT_DIR$/core/templates/registration/password_change_done.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/registration/password_change_form.html" afterPath="$PROJECT_DIR$/core/templates/registration/password_change_form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/registration/password_reset_complete.html" afterPath="$PROJECT_DIR$/core/templates/registration/password_reset_complete.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/registration/password_reset_confirm.html" afterPath="$PROJECT_DIR$/core/templates/registration/password_reset_confirm.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/registration/password_reset_done.html" afterPath="$PROJECT_DIR$/core/templates/registration/password_reset_done.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/registration/password_reset_email.html" afterPath="$PROJECT_DIR$/core/templates/registration/password_reset_email.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/registration/password_reset_form.html" afterPath="$PROJECT_DIR$/core/templates/registration/password_reset_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/tabs/pill.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/tabs/pill.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/pinterest-3c772.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/pinterest-3c772.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/linkbutton/plain.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/linkbutton/plain.html" />
@@ -581,6 +593,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/profile.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/profile.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/profile1.html" afterPath="$PROJECT_DIR$/core/templates (copy)/profile1.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/profile2.html" afterPath="$PROJECT_DIR$/core/templates (copy)/profile2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/profile2.html" afterPath="$PROJECT_DIR$/core/templates/profile2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/promotions_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/promotions_search_results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/quick-list.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/quick-list.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/quick_list.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/quick_list.htm" />
@@ -604,8 +617,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/refund-outofstock.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/refund-outofstock.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/regconfirmation.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/regconfirmation.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/registration.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/registration.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/registration.html" afterPath="$PROJECT_DIR$/core/templates/ajax/registration.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/registration.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/registration.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/registration1.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/registration1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/registration_1.html" afterPath="$PROJECT_DIR$/core/templates/registration_1.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/combobox/remotedata.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/combobox/remotedata.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datalist/remotedata.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datalist/remotedata.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/combobox/remotejsonp.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/combobox/remotejsonp.html" />
@@ -617,7 +632,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-sales.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-sales.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-traffic.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/report-traffic.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/treegrid/reports.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/treegrid/reports.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/reset_password.html" afterPath="$PROJECT_DIR$/core/templates/reset_password.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/base/resp_base.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/base/resp_base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/base/resp_base_full.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/base/resp_base_full.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datebox/restrict.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datebox/restrict.html" />
@@ -674,6 +689,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/shipping_calendar.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/shipping_calendar.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/shippingcategory_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/shippingcategory_search_results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datetimebox/showseconds.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datetimebox/showseconds.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/signup_form.html" afterPath="$PROJECT_DIR$/core/templates/ajax/signup_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/pagination/simple.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/pagination/simple.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/simpletoolbar.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/simpletoolbar.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/sitemap.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/sitemap.html" />
@@ -684,7 +700,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/droppable/sort.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/droppable/sort.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tabs/striptools.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tabs/striptools.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/student-profile.html" afterPath="$PROJECT_DIR$/core/templates (copy)/student-profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/css/style.css" afterPath="$PROJECT_DIR$/core/static/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/student_profile.html" afterPath="$PROJECT_DIR$/core/templates/student_profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/sections/student_section_header.html" afterPath="$PROJECT_DIR$/core/templates/sections/student_section_header.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/button/style.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/button/style.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/linkbutton/style.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/linkbutton/style.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tabs/style.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tabs/style.html" />
@@ -698,12 +715,15 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tabs/tabstools.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tabs/tabstools.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/tax_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/tax_search_results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/taxmanager.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/taxmanager.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/sections/teacher_section_header.html" afterPath="$PROJECT_DIR$/core/templates/sections/teacher_section_header.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/temp_redir.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/temp_redir.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Etherpad/etherpad-lite/doc/template.html" afterPath="$PROJECT_DIR$/Etherpad/etherpad-lite/doc/template.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/terms_conditions.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/terms_conditions.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/termscon.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/termscon.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/test-coupon-code.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/test-coupon-code.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/test-tax-code.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/test-tax-code.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/text_editor - Copy.html" afterPath="$PROJECT_DIR$/core/templates/ajax/text_editor - Copy.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/text_editor.html" afterPath="$PROJECT_DIR$/core/templates/ajax/text_editor.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/input/textbox.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/input/textbox.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/tickets.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/tickets.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/titles_content.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/titles_content.htm" />
@@ -718,8 +738,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-referrers.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-referrers.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-visits.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/reports/traffic-visits.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/transform.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/transform.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/sections/tutor_body_full.html" afterPath="$PROJECT_DIR$/core/templates/sections/tutor_body_full.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/sections/tutor_body_public.html" afterPath="$PROJECT_DIR$/core/templates/sections/tutor_body_public.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/tutor_profile.html" afterPath="$PROJECT_DIR$/core/templates/tutor_profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/tutor_profile1.html" afterPath="$PROJECT_DIR$/core/templates/tutor_profile1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/tutor_profile1_1.html" afterPath="$PROJECT_DIR$/core/templates/tutor_profile1_1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/tutor_profile_public.html" afterPath="$PROJECT_DIR$/core/templates/tutor_profile_public.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/under_construction.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/under_construction.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/championtutoronline/urls.py" afterPath="$PROJECT_DIR$/championtutoronline/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit-log.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit-log.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit-permissions.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit-permissions.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/users-view-edit.htm" />
@@ -728,6 +753,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/form/validateonsubmit.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/form/validateonsubmit.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/vertical-tabs.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/vertical-tabs.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/slider/vertical.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/slider/vertical.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/videoframe.html" afterPath="$PROJECT_DIR$/core/templates/ajax/videoframe.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/videos.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/videos.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/videoso.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/videoso.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/view-general-review.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/view-general-review.html" />
@@ -739,19 +765,21 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/vieworders.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/vieworders.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/vieworders_not_completed.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/vieworders_not_completed.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/user/viewrequest.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/user/viewrequest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/viewsajax.py" afterPath="$PROJECT_DIR$/core/viewsajax.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/virtual-terminal.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/virtual-terminal.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/waitinglist_popup.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/waitinglist_popup.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/search/waitinglist_search_results.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/search/waitinglist_search_results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/waitlistmodal.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/waitlistmodal.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/webrtctest.html" afterPath="$PROJECT_DIR$/core/templates (copy)/webrtctest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/webrtctest/webrtctest.html" afterPath="$PROJECT_DIR$/core/templates (copy)/webrtctest/webrtctest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/webrtctest.html" afterPath="$PROJECT_DIR$/core/templates/webrtctest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/webrtctest/webrtctest.html" afterPath="$PROJECT_DIR$/core/templates/webrtctest/webrtctest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/white_board.html" afterPath="$PROJECT_DIR$/core/templates (copy)/white_board.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/white_board_old.html" afterPath="$PROJECT_DIR$/core/templates (copy)/white_board_old.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/white_board_old.html" afterPath="$PROJECT_DIR$/core/templates/white_board_old.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/whiteboard.html" afterPath="$PROJECT_DIR$/core/templates/whiteboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/window/windowlayout.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/window/windowlayout.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/wishlist.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/wishlist.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/wishlistitems.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/wishlistitems.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/writereview_modal.html" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/writereview_modal.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../saltwaterfish/templates/writereview_popup.htm" afterPath="$PROJECT_DIR$/../saltwaterfish/templates/writereview_popup.htm" />
     </list>
@@ -804,7 +832,7 @@
       <file leaf-file-name="drawingboard.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/templates/ajax/drawingboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="394" column="30" selection-start="34201" selection-end="34201" vertical-scroll-proportion="-9.192307">
+            <state line="414" column="0" selection-start="34926" selection-end="34926" vertical-scroll-proportion="-9.192307">
               <folding />
             </state>
           </provider>
@@ -1128,8 +1156,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1040" height="744" extended-state="1" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1040" height="744" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1260,7 +1288,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/templates/ajax/drawingboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="394" column="30" selection-start="34201" selection-end="34201" vertical-scroll-proportion="-9.192307">
+        <state line="414" column="0" selection-start="34926" selection-end="34926" vertical-scroll-proportion="-9.192307">
           <folding />
         </state>
       </provider>
