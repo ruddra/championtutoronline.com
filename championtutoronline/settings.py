@@ -175,7 +175,7 @@ INSTALLED_APPS = (
     'core',
     'authentication',
     'common',
-    'pyetherpad'
+    'pyetherpad',
 )
 
 LOGIN_URL = '/'
