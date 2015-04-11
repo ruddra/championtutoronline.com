@@ -7,7 +7,7 @@ from core.emails import EmailClient
 from core.models import ResetPasswordToken, ProfilePicture, Profile, Education
 from django.http.response import HttpResponse
 from forms import LoginForm,SignUpForm, PasswordResetRequestForm, SetPasswordForm, ProfilePictureForm, SubjectMajorUpdateForm, \
-    EducationForm, AboutMeUpdateForm
+    EducationForm, AboutMeUpdateForm, TeachingExpForm, ExtInterestForm
 from models import ChampUser
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
@@ -166,6 +166,16 @@ class UpdateProfileView(View):
                 form = SubjectMajorUpdateForm(request.POST)
                 data['update_data_class'] = '.change_major_text'
                 data['update_btn_class'] = '.change_major'
+
+            if params == 'change_texp_form':
+                form = TeachingExpForm(request.POST)
+                data['update_data_class'] = '.change_texp_text'
+                data['update_btn_class'] = '.change_texp'
+                
+            if params == 'change_einterest_form':
+                form = ExtInterestForm(request.POST)
+                data['update_data_class'] = '.change_einterest_text'
+                data['update_btn_class'] = '.change_einterest'
             if form.is_valid():
                 profile = form.save(request)
                 data['success'] = 'True'

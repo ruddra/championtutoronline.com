@@ -10,6 +10,18 @@ function changeMajor() {
    $('.change_major_form').show();
 };
 
+function changeTExp() {
+   $('.change_texp').hide();
+   $('.change_texp_text').hide();
+   $('.change_texp_form').show();
+};
+
+function changeEInterest() {
+   $('.change_einterest').hide();
+   $('.change_einterest_text').hide();
+   $('.change_einterest_form').show();
+};
+
 $(document).ready(function() {
     $('form').submit(function() {
     $(this).hide();

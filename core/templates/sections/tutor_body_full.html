@@ -70,35 +70,29 @@
                         </div>
 
                         <div class="padding20">
-                            <h3><img src="{% static " images/teaching_icon.png" %}" width="16" height="28" alt="img">
-                                Teaching Experience</h3>
+                            <h3>Teaching Experience   {% if content_editable %}<button onclick="changeTExp()" class='btn btn-primary btn-xs change_texp'>Update</button>{% endif %} </h3>
 
-                            <p class="txt">It has been quite varied. Starting in high school, and the summer before
-                                college, I taught to groups of 4-7 students GCE 'A' level Economics (both macro and
-                                micro). At college, I taught Math from the 4th to 8th grade level to recent immigrant
-                                students as a mentor in a community service group. Beyond that, I have acted as a peer
-                                tutor in many courses to friends and mentees, from Multivariable Calculus and Partial
-                                Differential Equations, to teaching Intro Molecular Biology/ Genetics/ Evolutionary
-                                Biology concepts. I took Accounting, Maths (Applied and Pure), Physics, Chemistry,
-                                Biology (General and Human) and Economics in my GCE 'O' levels, and continued with Math,
-                                Chemistry, Biology, Physics and Economics in my GCE 'A' levels. Note to students and
-                                parents: I really enjoy teaching so that my students really understand the material and
-                                can eventually solve questions on their own. I find it really rewarding to see them
-                                discover their new found independence and confidence in their own abilities. Often it's
-                                a simple change from a slight bit of confusion in an earlier, more basic section of the
-                                material that leads to struggling in later parts in the course. On the flip side, I do
-                                find it disappointing when a student only wants answers without really caring to learn
-                                how to solve questions independently. For those of you who want the latter, do submit an
-                                open written lesson request.
-                                https://www.facebook.com/IFeakingLoveScience/photos/a.456449604376056.98921.367116489976035/797118940309119/?type=1&relevant_count=1</p>
+                            <p class="txt change_texp_text">{{ profile.teaching_exp}}</p>
+                            <div>
+                                <form action="/update_profile/change_texp_form/" method="post" class='change_texp_form' style="display: none;">{% csrf_token %}
+                                    <textarea rows="10" name="data" id="id_data" cols="60"> {{ profile.teaching_exp }}</textarea>
+                                    <input type="submit" class='btn btn-xs btn-primary' value="Submit" />
+                                </form>
+                            </div>
                         </div>
 
                         <div class="padding20">
                             <h3><img src="{% static " images/extra_curricular_icon.png" %}" width="34" height="34"
-                                alt="img"> Extracurricular Interests</h3>
+                                alt=" "> Extracurricular Interests    {% if content_editable %}<button onclick="changeEInterest()" class='btn btn-primary btn-xs change_einterest'>Update</button>{% endif %} </h3>
+                            <p class="txt change_einterest_text"> {{ profile.ext_interest }} </p>
 
-                            <p class="txt">I am from Bangladesh. I listen to different kinds of music, and take
-                                photographs. </p>
+                             <div>
+                                <form action="/update_profile/change_einterest_form/" method="post" class='change_einterest_form' style="display: none;">{% csrf_token %}
+                                    <textarea rows="10" name="data" id="id_data" cols="60"> {{ profile.ext_interest }}</textarea>
+                                    <input type="submit" class='btn btn-xs btn-primary' value="Submit" />
+                                </form>
+                            </div>
+
                         </div>
 
                         <div class="padding20">

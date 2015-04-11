@@ -106,21 +106,21 @@ class AboutMeUpdateForm(forms.Form):
         return profile.description
 
 class TeachingExpForm(forms.Form):
-    _exp = forms.CharField(widget=forms.Textarea())
+    data = forms.CharField(widget=forms.Textarea())
 
     def save(self, request):
         profile = Profile.objects.get(user=ChampUser.objects.get(user=request.user))
-        profile.teaching_exp = self.cleaned_data['_exp']
+        profile.teaching_exp = self.cleaned_data['data']
         profile.save()
         return profile.teaching_exp
 
 
 class ExtInterestForm(forms.Form):
-    _exp = forms.CharField(widget=forms.Textarea())
+    data = forms.CharField(widget=forms.Textarea())
 
     def save(self, request):
         profile = Profile.objects.get(user=ChampUser.objects.get(user=request.user))
-        profile.ext_interest = self.cleaned_data['_exp']
+        profile.ext_interest = self.cleaned_data['data']
         profile.save()
         return profile.ext_interest
 
