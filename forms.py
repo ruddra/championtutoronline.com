@@ -3,8 +3,9 @@ __author__ = 'Codengine'
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 import hashlib
-from core.models import ChampUser, ProfilePicture
+from core.models import ChampUser, ProfilePicture, Profile, Education
 from image_cropping import ImageCropWidget
+from core.tools.form import DateSelectorWidget
 
 from django import forms
 
@@ -84,3 +85,24 @@ class LoginForm(LoginBase):
 class ProfilePictureForm(forms.ModelForm):
         class Meta:
             model = ProfilePicture
+
+
+class SubjectMajorUpdateForm(forms.Form):
+    major_subjects = forms.CharField(widget=forms.TextInput)
+
+    def save(self, request):
+        profile = Profile.objects.get(user=ChampUser.objects.get(user=request.user))
+        profile.major_subject = self.cleaned_data['major_subjects']
+        profile.save()
+
+class AboutMeUpdateForm(forms.Form):
+    about_me = forms.CharField(widget=forms.TextInput)
+
+    def save(self, request):
+        profile = Profile.objects.get(user=ChampUser.objects.get(user=request.user))
+        profile.description = self.cleaned_data['about_me']
+        profile.save()
+
+class EducationForm(forms.ModelForm):
+    class Meta:
+        model = Education
