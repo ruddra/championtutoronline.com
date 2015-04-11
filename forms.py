@@ -3,7 +3,7 @@ __author__ = 'Codengine'
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 import hashlib
-from core.models import ChampUser, ProfilePicture, Profile, Education
+from core.models import ChampUser, ProfilePicture, Profile, Education, TopSubject
 from image_cropping import ImageCropWidget
 from core.tools.form import DateSelectorWidget
 
@@ -94,6 +94,7 @@ class SubjectMajorUpdateForm(forms.Form):
         profile = Profile.objects.get(user=ChampUser.objects.get(user=request.user))
         profile.major_subject = self.cleaned_data['major_subjects']
         profile.save()
+        return profile.major_subject
 
 class AboutMeUpdateForm(forms.Form):
     about_me = forms.CharField(widget=forms.Textarea())
@@ -102,8 +103,31 @@ class AboutMeUpdateForm(forms.Form):
         profile = Profile.objects.get(user=ChampUser.objects.get(user=request.user))
         profile.description = self.cleaned_data['about_me']
         profile.save()
-        return profile
+        return profile.description
+
+class TeachingExpForm(forms.Form):
+    _exp = forms.CharField(widget=forms.Textarea())
+
+    def save(self, request):
+        profile = Profile.objects.get(user=ChampUser.objects.get(user=request.user))
+        profile.teaching_exp = self.cleaned_data['_exp']
+        profile.save()
+        return profile.teaching_exp
+
+
+class ExtInterestForm(forms.Form):
+    _exp = forms.CharField(widget=forms.Textarea())
+
+    def save(self, request):
+        profile = Profile.objects.get(user=ChampUser.objects.get(user=request.user))
+        profile.ext_interest = self.cleaned_data['_exp']
+        profile.save()
+        return profile.ext_interest
 
 class EducationForm(forms.ModelForm):
     class Meta:
         model = Education
+
+class TSubjectForm(forms.ModelForm):
+    class Meta:
+        model = TopSubject

@@ -56,12 +56,15 @@
                                     </a>
                                 </div>
                             </div>
-                            <p class="txt"><span>Major :</span> {{ profile.major_subject }}</p>
+                            <p class="txt"><span>Major:</span>{% if content_editable %}         <button onclick="changeMajor()" class='btn btn-primary btn-xs change_major'>Update</button>{% endif %}</p>
+                            <p class="change_major_text">{{ profile.major_subject }}</p>
+
 
                             <div>
-                                {% if content_editable %}
-                                <a class="radius3" href="{% url 'change_major' %}">(Edit)</a>
-                                {% endif %}
+                                <form action="/update_profile/change_major_form/" method="post" class='change_major_form' style="display: none;">{% csrf_token %}
+                                    <textarea rows="10" name="major_subjects" id="id_major_subjects" cols="40"> {{ profile.major_subjects }}</textarea>
+                                    <input type="submit" class='btn btn-xs btn-primary' value="Submit" />
+                                </form>
                             </div>
 
                         </div>

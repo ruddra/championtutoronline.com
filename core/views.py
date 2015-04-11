@@ -157,17 +157,19 @@ class UpdateProfileView(View):
     def post(self, request, params, *args, **kwargs):
         # params = request.POST.get('params', None)
         if params is not None:
+            data = dict()
             if params == 'abt_me_form':
                 form = AboutMeUpdateForm(request.POST)
-            if params == 'update_major':
-                form = SubjectMajorUpdateForm(request.POST)
-            if form.is_valid():
-                profile = form.save(request)
-                data = dict()
-                data['success'] = 'True'
                 data['update_data_class'] = '.abt_me_text'
                 data['update_btn_class'] = '.update_abt_me'
-                data['value'] = profile.description
+            if params == 'change_major_form':
+                form = SubjectMajorUpdateForm(request.POST)
+                data['update_data_class'] = '.change_major_text'
+                data['update_btn_class'] = '.change_major'
+            if form.is_valid():
+                profile = form.save(request)
+                data['success'] = 'True'
+                data['value'] = profile
                 return HttpResponse(json.dumps(data), content_type="application/json")
             else:
                 data = dict()

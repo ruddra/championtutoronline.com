@@ -37,9 +37,11 @@ class Education(models.Model):
     institution = models.CharField(max_length=255)
     session = models.CharField(max_length=255, null=True, verbose_name='class')
     cgpa = models.CharField(max_length=255, verbose_name='GPA/CGPA', default='0.0')
-    # from_month = models.DateField()
-    # to_time = models.DateField(null=True)
     is_current = models.BooleanField(default=False)
+
+class TopSubject(models.Model):
+    name = models.CharField(max_length=255)
+    description = models.CharField(max_length=255,null=True,default=None)
 
 class Profile(models.Model):
     user = models.ForeignKey(ChampUser)
@@ -51,6 +53,9 @@ class Profile(models.Model):
     nric_verification_status = models.BooleanField(default=False)
     major_subject = models.CharField(max_length=255, null=True)
     education = models.ManyToManyField(Education)
+    top_subjects = models.ManyToManyField(TopSubject)
+    teaching_exp = models.CharField(max_length=5000, null=True,default=None)
+    ext_interest = models.CharField(max_length=5000, null=True,default=None)
 
     class Meta:
         db_table=u'champ_profile'

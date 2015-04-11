@@ -20,7 +20,6 @@ $(document).ready(function() {
             success: function(response) {
                 var c = $(response.update_data_class);
                 var b = $(response.update_btn_class);
-//                c.replaceWith('<p> '+ response.value +' </p>')
                 c.text(response.value);
                 c.show();
                 b.show();
