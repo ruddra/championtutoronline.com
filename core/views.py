@@ -5,8 +5,9 @@ from easy_thumbnails.files import get_thumbnailer
 from championtutoronline.settings import DEFAULT_FROM_EMAIL
 from core.emails import EmailClient
 from core.models import ResetPasswordToken, ProfilePicture, Profile, Education
+from django.http.response import HttpResponse
 from forms import LoginForm,SignUpForm, PasswordResetRequestForm, SetPasswordForm, ProfilePictureForm, SubjectMajorUpdateForm, \
-    EducationForm
+    EducationForm, AboutMeUpdateForm
 from models import ChampUser
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
@@ -20,7 +21,7 @@ from django.views.generic import *
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-
+import json
 
 class ProtectedView(object):
 
@@ -148,7 +149,31 @@ class ProfileView(DetailView):
              context['profile'] = Profile.objects.create(user=self.object)
 
         context['content_editable'] = True if self.object.user.id == self.request.user.id else False
+        context['profile_form'] = AboutMeUpdateForm()
         return context
+
+
+class UpdateProfileView(View):
+    def post(self, request, params, *args, **kwargs):
+        # params = request.POST.get('params', None)
+        if params is not None:
+            if params == 'abt_me_form':
+                form = AboutMeUpdateForm(request.POST)
+            if params == 'update_major':
+                form = SubjectMajorUpdateForm(request.POST)
+            if form.is_valid():
+                profile = form.save(request)
+                data = dict()
+                data['success'] = 'True'
+                data['update_data_class'] = '.abt_me_text'
+                data['update_btn_class'] = '.update_abt_me'
+                data['value'] = profile.description
+                return HttpResponse(json.dumps(data), content_type="application/json")
+            else:
+                data = dict()
+                data['success'] = 'False'
+                data['value'] = 'Change Unsuccessful'
+                return HttpResponse(json.dumps(data), content_type="application/json")
 
 
 

@@ -96,12 +96,13 @@ class SubjectMajorUpdateForm(forms.Form):
         profile.save()
 
 class AboutMeUpdateForm(forms.Form):
-    about_me = forms.CharField(widget=forms.TextInput)
+    about_me = forms.CharField(widget=forms.Textarea())
 
     def save(self, request):
         profile = Profile.objects.get(user=ChampUser.objects.get(user=request.user))
         profile.description = self.cleaned_data['about_me']
         profile.save()
+        return profile
 
 class EducationForm(forms.ModelForm):
     class Meta:
