@@ -146,7 +146,7 @@ class WhiteboardView(View):
         ###Create a whiteboard for this user.
 
         whiteboard_objs = Whiteboard.objects.filter(user=request.user)
-        if whiteboard_objs:
+        if not whiteboard_objs:
             whiteboard_obj = Whiteboard()
             whiteboard_obj.user = request.user
             whiteboard_obj.name = str(request.user.id) + str(uuid.uuid4())
