@@ -3,7 +3,7 @@ from core.models import *
 
 # Create your models here.
 class PadAuthor(models.Model):
-    user = models.ForeignKey(ChampUser)
+    user = models.ForeignKey(User)
     author_id = models.CharField(max_length=255,blank=False)
     created_on = models.DateTimeField(auto_now_add=True)
 
@@ -11,7 +11,7 @@ class PadAuthor(models.Model):
         db_table=u'pad_author'
 
 class PadGroup(models.Model):
-    user = models.ForeignKey(ChampUser)
+    user = models.ForeignKey(User)
     group_id = models.CharField(max_length=255,blank=False)
     group_created_on = models.DateTimeField(auto_now_add=True)
 
@@ -28,6 +28,14 @@ class Pad(models.Model):
 
     class Meta:
         db_table=u'pad'
+
+class PublicPad(models.Model):
+    pad_nid = models.IntegerField()
+    pad_created_by = models.ForeignKey(User)
+    pad_create_date = models.DateTimeField(auto_now_add=True,blank=False)
+
+    class Meta:
+        db_table=u'public_pad'
 
 class PadSession(models.Model):
     author_id = models.CharField(max_length=255)

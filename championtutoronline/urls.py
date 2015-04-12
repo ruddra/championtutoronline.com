@@ -9,6 +9,8 @@ import pyetherpad
 from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
+from payment.viewsajax import *
+
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'championtutoronline.views.home', name='home'),
@@ -19,15 +21,17 @@ urlpatterns = patterns('',
     url(r'^login$',LoginView.as_view(),name='user_login'),
     url(r'^logout$',LogoutView.as_view(),name='user_logout'),
     url(r'^signup$',SignUpView.as_view(),name='sign_up'),
+    url(r'^myaccount$',MyAccountView.as_view(),name='my_account'),
     ##All whiteboard related urls here.
     url(r'^whiteboard$', user_login_required(WhiteboardView.as_view()), name='whiteboard'),
-    url(r'^ajax/add_whiteboard_tab$', WhiteboardView.as_view(), name='ajax_add_whiteboard_tab'),
-    url(r'^ajax/whiteboard_tabs$', WhiteboardView.as_view(), name='ajax_whiteboard_tabs'),
+    url(r'^ajax/action_whiteboard_tab$', WhiteboardAjaxView.as_view(), name='ajax_action_whiteboard_tab'),
 
     #url(r'^profile', ProfileView.as_view(), name='user_profile'),
     url(r'^profile/(?P<pk>[0-9]+)/', ProfileView.as_view(), name='user_profile'),
     url(r'^ajax/login$', LoginAjaxView.as_view(), name='ajax_login'),
     url(r'^ajax/signup$', SignUpAjaxView.as_view(), name='ajax_signup'),
+    url(r'^ajax/myaccount$', MyAccountAjaxView.as_view(), name='ajax_myaccount'),
+    url(r'^ajax/payment_method$', PaymentMethodAjaxView.as_view(), name='ajax_payment_method'),
     url(r'^ajax/initsession$',VideoSessionTokens.as_view(), name='ajax_video_session_init'),
     url(r'^ajax/startsession$',VideoSessionStart.as_view(), name='ajax_video_session_start'),
     url(r'^ajax/drawing_board$', DrawingBoardAjaxView.as_view(), name='ajax_drawing_board'),

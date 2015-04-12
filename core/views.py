@@ -6,7 +6,7 @@ from championtutoronline.settings import DEFAULT_FROM_EMAIL
 from core.emails import EmailClient
 from core.models import ResetPasswordToken, ProfilePicture, Profile, Education
 from forms import LoginForm,SignUpForm, PasswordResetRequestForm, SetPasswordForm, ProfilePictureForm, SubjectMajorUpdateForm, \
-    EducationForm
+    EducationForm,MyAccountForm,PaymentMethodForm
 from models import ChampUser
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
@@ -20,6 +20,12 @@ from django.views.generic import *
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+from core.models import *
+from pyetherpad.padutil import *
+from pyetherpad.models import *
+from common.views import *
+import uuid
+from payment.models import *
 
 
 class ProtectedView(object):
@@ -82,6 +88,22 @@ class SignUpView(View):
         signup_form = SignUpForm()
         return render(request,"registration.html",{'form':signup_form})
 
+class MyAccountView(BaseView):
+
+    @method_decorator(user_login_required)
+    def dispatch(self, request, *args, **kwargs):
+        return super(self.__class__, self).dispatch(request, *args, **kwargs)
+
+    def get(self,request,*args,**kwargs):
+        data = {"email":request.user.email}
+        ma_form = MyAccountForm(data)
+        pm_form = PaymentMethodForm()
+
+        payments_methods = PaymentMethod.objects.filter(user=request.user)
+
+        context_data = { "ma_form": ma_form, "pm_form": pm_form, "payments_methods":payments_methods, "champ_user": ChampUser.objects.get(user_id=request.user.id) }
+        return render(request,"my_account.html",context_data)
+
 class HomePage(View):
     def get(self, request):
         if request.session.get('is_login'):
@@ -120,7 +142,60 @@ class WhiteboardView(View):
     def get(self,request,*args,**kwargs):
         #c = RequestContext(request)
         #teachers = User.objects.raw("select * from champ_user where id != '%s'" % request.session.get("user_id"))
+        ###Create a whiteboard for this user.
+
+        whiteboard_objs = Whiteboard.objects.filter(user=request.user)
+        if whiteboard_objs:
+            whiteboard_obj = Whiteboard()
+            whiteboard_obj.user = request.user
+            whiteboard_obj.name = str(request.user.id) + str(uuid.uuid4())
+            whiteboard_obj.created_date = datetime.now()
+            whiteboard_obj.active = 1
+            whiteboard_obj.save()
+
+            drawing_board = DrawingBoard()
+            drawing_board.whiteboard = whiteboard_obj
+            drawing_board.numeric_id = 1
+            drawing_board.name = "Default Board"
+            drawing_board.create_date = datetime.now()
+            drawing_board.save()
+
+            ###Create Pad Author and group.
+            # pad_util = PadUtil()
+            # champ_user_obj = ChampUser.objects.get(user_id=request.user.id)
+            # pad_author_id = pad_util.create_or_get_padauthor(request.user.id,champ_user_obj.fullname)
+            # print "Pad Author Created. Author ID: "+pad_author_id
+            #
+            # pad_group_id = pad_util.create_or_get_padgroup(request.user.id)
+            # print "Pad Group Created. Pad Group ID: "+pad_group_id
+            #
+            # pad_id = pad_util.create_group_pad(pad_group_id,str(request.user.id)+""+str(uuid.uuid4()))
+
+            ###This is for testing purpose. All pads are made public now.
+            ##pad_util.make_pad_public(pad_id)
+            ppads = PublicPad.objects.filter(pad_nid=1)
+            if not ppads:
+
+                pad_util = PadUtil()
+                pad_id = pad_util.create_public_pad(1)
+
+                public_pad = PublicPad()
+                public_pad.pad_nid = 1
+                public_pad.pad_created_by = request.user
+                public_pad.pad_create_date = datetime.now()
+                public_pad.save()
+
         context_data = self.get_context_data(request)
+
+        # pad_group = PadGroup.objects.get(user=request.user)
+        # pads = Pad.objects.filter(pad_group=pad_group)
+
+        pads = PublicPad.objects.all()
+
+        context_data["text_pads"] = pads
+
+        context_data["champ_user"] = ChampUser.objects.get(user_id=request.user.id)
+
         context_data["champ_userid"] = request.user.id
         return render(request, 'whiteboard.html', context_data)
 
@@ -146,6 +221,8 @@ class ProfileView(DetailView):
             context['profile'] = Profile.objects.filter(user=self.object).first()
         else:
              context['profile'] = Profile.objects.create(user=self.object)
+
+        context["champ_user"] = ChampUser.objects.get(user_id=self.object.user.pk)
 
         context['content_editable'] = True if self.object.user.id == self.request.user.id else False
         return context

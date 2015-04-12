@@ -3,7 +3,7 @@ __author__ = 'Codengine'
 from django.views.generic.base import View
 from django.shortcuts import render
 from django.http import HttpResponse
-from forms import SignUpForm,LoginForm
+from forms import SignUpForm,LoginForm,MyAccountForm
 from models import *
 import json
 import hashlib
@@ -12,11 +12,27 @@ import otlib
 import json
 from django.conf import settings
 from django.contrib.auth.models import User
+import uuid
+from datetime import datetime
+from pyetherpad.padutil import *
+from core.models import *
+from django.contrib.auth import authenticate
 
 class DrawingBoardAjaxView(View):
     def get(self,request,*args,**kwargs):
         if request.is_ajax():
-            return render(request,"ajax/drawingboard.html",{})
+
+            context_data = {}
+            drawingboards = []
+
+            user_whiteboards = Whiteboard.objects.filter(user=request.user)
+            if user_whiteboards:
+                user_whiteboard = user_whiteboards[0]
+                drawingboards = DrawingBoard.objects.filter(whiteboard=user_whiteboard)
+
+            context_data["drawingboards"] = drawingboards
+
+            return render(request,"ajax/drawingboard.html",context_data)
         else:
             return HttpResponse("Invalid Request")
 
@@ -98,6 +114,7 @@ class SignUpAjaxView(View):
             user_obj.save()
             response['status'] = 'successful'
             response['message'] = 'Successful.'
+
             email_sender_obj = EmailClient()
             email_sender_obj.send_email(email,"Registration Verification","Thank you for registering championtutoronline.com","Thank you for registering championtutoronline.com","codenginebd@gmail.com")
             return HttpResponse(json.dumps(response))
@@ -131,4 +148,172 @@ class VideoSessionStart(View):
 
 class WhiteboardAjaxView(View):
     def get(self,request,*args,**kwargs):
-        board_id = request.GET.get("board_id")
+        response = {
+            "STATUS": "",
+            "MESSAGE": ""
+        }
+        if request.is_ajax():
+            ###Get current user's whiteboard instance.
+            whiteboard_objs = Whiteboard.objects.filter(user=request.user)
+            if whiteboard_objs:
+                whiteboard_obj = whiteboard_objs[0]
+                action = request.GET.get("action")
+                if action == "ADD_DRAWING_BOARD":
+                    ###Get the last numeric id.
+                    drawingboard_obj = DrawingBoard.objects.filter(whiteboard=whiteboard_obj).order_by('-numeric_id')[0]
+                    max_nid = drawingboard_obj.numeric_id
+                    nid_new = max_nid + 1
+
+                    name = request.GET.get("name")
+
+                    if not name:
+                        name = "New Board"
+
+                    drawing_board = DrawingBoard()
+                    drawing_board.whiteboard = whiteboard_obj
+                    drawing_board.numeric_id = nid_new
+                    drawing_board.name = name
+                    drawing_board.create_date = datetime.now()
+                    drawing_board.save()
+
+                    response["STATUS"] = "SUCCESS"
+                    response["MESSAGE"] = "Successful."
+                    response["data"] = {"tab_count": nid_new}
+                    return HttpResponse(json.dumps(response))
+                elif action == "UPDATE_DRAWING_BOARD":
+                    ###Get the last numeric id.
+                    dboard_id = request.GET.get("dbid")
+                    if not dboard_id:
+                        response["STATUS"] = "FAILURE"
+                        response["MESSAGE"] = "id must be given."
+                        return HttpResponse(json.dumps(response))
+
+                    try:
+                        dboard_id = int(dboard_id)
+                    except Exception,msg:
+                        print "Exception occured while parsing id."
+                        response["STATUS"] = "FAILURE"
+                        response["MESSAGE"] = "id must be numeric."
+                        return HttpResponse(json.dumps(response))
+
+                    name = request.GET.get("name")
+                    if not name:
+                        response["STATUS"] = "FAILURE"
+                        response["MESSAGE"] = "Name must be given."
+                        return HttpResponse(json.dumps(response))
+
+                    drawingboard_obj = DrawingBoard.objects.get(id=dboard_id)
+                    drawingboard_obj.name = name
+                    drawingboard_obj.save()
+
+                    response["STATUS"] = "SUCCESS"
+                    response["MESSAGE"] = "Successful."
+                    return HttpResponse(json.dumps(response))
+                elif action == "ADD_NEW_TEXT_PAD":
+                    # pad_name = request.GET.get("name")
+                    # if not pad_name:
+                    #     pad_name = "New Pad"
+                    # pad_util = PadUtil()
+                    # pad_group_id = pad_util.create_or_get_padgroup(request.user.id)
+                    # pad_id = pad_util.create_group_pad(pad_group_id,pad_name)
+                    # response["STATUS"] = "SUCCESS"
+                    # response["MESSAGE"] = "Successful."
+                    # response["data"] = {"PAD_ID": pad_id}
+                    # return HttpResponse(json.dumps(response))
+
+                    ppad_obj = PublicPad.objects.all().order_by('-pad_nid')[0]
+                    max_nid = ppad_obj.pad_nid
+                    nid_new = max_nid + 1
+
+                    pad_util = PadUtil()
+                    pad_id = pad_util.create_public_pad(nid_new)
+
+                    public_pad = PublicPad()
+                    public_pad.pad_nid = nid_new
+                    public_pad.pad_created_by = request.user
+                    public_pad.pad_create_date = datetime.now()
+                    public_pad.save()
+
+                    response["STATUS"] = "SUCCESS"
+                    response["MESSAGE"] = "Successful."
+                    response["data"] = {"pad_count": nid_new,"id": public_pad.id}
+                    return HttpResponse(json.dumps(response))
+
+                elif action == "EDIT_TEXT_PAD":
+                    pad_name = request.GET.get("name")
+                    if not pad_name:
+                        pad_name = "New Pad"
+                    pad_id = request.GET.get("pad_id")
+                    if not pad_id:
+                        response["STATUS"] = "FAILURE"
+                        response["MESSAGE"] = "Pad ID required."
+                        return HttpResponse(json.dumps(response))
+                    pad_util = PadUtil()
+                    op_mode = pad_util.rename_group_pad(pad_id,pad_name)
+                    if op_mode is True:
+                        response["STATUS"] = "SUCCESS"
+                        response["MESSAGE"] = "Successful."
+                        return HttpResponse(json.dumps(response))
+                    else:
+                        response["STATUS"] = "FAILURE"
+                        response["MESSAGE"] = "Pad ID doesn't exists."
+                        return HttpResponse(json.dumps(response))
+                else:
+                    response["STATUS"] = "FAILURE"
+                    response["MESSAGE"] = "Invalid operation specified."
+                    return HttpResponse(json.dumps(response))
+            else:
+                response["STATUS"] = "FAILURE"
+                response["MESSAGE"] = "No whiteboard instances found!"
+                return HttpResponse(json.dumps(response))
+
+        else:
+            response["STATUS"] = "FAILURE"
+            response["MESSAGE"] = "Invalid Operation."
+            return HttpResponse(json.dumps(response))
+
+class MyAccountAjaxView(View):
+    def get(self,request,*args,**kwargs):
+        return HttpResponse("Invalid")
+    def post(self,request,*args,**kwargs):
+        response = {
+            "STATUS": "",
+            "MESSAGE": ""
+        }
+        if request.is_ajax():
+            form = MyAccountForm(request.POST)
+            if form.is_valid():
+                email = form.cleaned_data["email"]
+                old_password = form.cleaned_data["old_password"]
+                new_password = form.cleaned_data["new_password"]
+                new_password_again = form.cleaned_data["new_password_again"]
+                user = authenticate(username=email, password=old_password)
+                if user:
+                    user = User.objects.get(username=email)
+                    if new_password == new_password_again:
+                        print "Match"
+                        user.set_password(new_password)
+                        user.save()
+                        print "Lol"
+                        response["STATUS"] = "SUCCESS"
+                        response["MESSAGE"] = "Account updated successfully."
+                        return HttpResponse(json.dumps(response))
+                    else:
+                        response["STATUS"] = "FAILURE"
+                        response["MESSAGE"] = "New password mismatch. Please type your new password carefully."
+                        return HttpResponse(json.dumps(response))
+                else:
+                    response["STATUS"] = "FAILURE"
+                    response["MESSAGE"] = "User authentication failed. Please specify your old password correctly."
+                    return HttpResponse(json.dumps(response))
+            else:
+                response["STATUS"] = "FAILURE"
+                response["MESSAGE"] = "Please fill up the form correctly."
+                return HttpResponse(json.dumps(response))
+        else:
+            response["STATUS"] = "FAILURE"
+            response["MESSAGE"] = "Invalid operation"
+            return HttpResponse(json.dumps(response))
+
+
+

@@ -108,16 +108,17 @@ class ResetPasswordToken(models.Model):
     token = models.CharField(max_length=255)
 
 class Whiteboard(models.Model):
-    user = models.ForeignKey(ChampUser)
+    user = models.ForeignKey(User)
     name = models.CharField(max_length=255)
     created_date = models.DateTimeField(auto_now_add=True,blank=False)
-    active = models.IntegerField()
+    active = models.IntegerField() #1 means active and 0 means inactive.
 
     class Meta:
         db_table=u'whiteboard'
 
 class DrawingBoard(models.Model):
     whiteboard = models.ForeignKey(Whiteboard)
+    numeric_id = models.IntegerField()
     name = models.CharField(max_length=255)
     create_date = models.DateTimeField(auto_now_add=True,blank=False)
 
