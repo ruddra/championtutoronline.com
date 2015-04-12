@@ -1,64 +1,371 @@
 {% load staticfiles %}
 <div class="contnt">
 
-      <div class="wrapper">
-          <div class="profile radius3 bg_white">
+    <div class="wrapper">
+        <div class="profile radius3 bg_white">
             <div id="w" class="clearfix">
-        <ul id="sidemenu">
-          <li><a href="#feed-content" class="open">News Feed</a></li>
-        <li><a href="#about-content">About Me</a></li>
-        <li><a href="#video-content">My Video Intro</a></li>
-        <li><a href="#review-content">My Reviews</a></li>
-        <li><a href="#report-content">Write Progress Report</a></li>
-        <li><a href="#participation-content">My Participation</a></li>
-        <li><a href="#certificates-content">Academic Certificates</a></li>
-        <li><a href="#jobs-invitation-content">Jobs Invitation <span class="highlight">1</span> </a></li>
-        <li><a href="#jobs-recommendation-content">Jobs Recommendation <span class="highlight">3</span></a></li>
-        <li><a href="#calendar-content">My Calendar</a></li>
-        <li><a href="#recorded-sessions-content">My Recorded Sessions</a></li>
+            <ul id="sidemenu">
+                    <li><a href="#feed-content" class="open">News Feed</a></li>
+                    <li><a href="#about-content">About Me</a></li>
+                    <li><a href="#video-content">My Video Intro</a></li>
+                    <li><a href="#review-content">My Reviews</a></li>
+                    <li><a href="#report-content">Write Progress Report</a></li>
+                    <li><a href="#participation-content">My Participation</a></li>
+                    <li><a href="#certificates-content">Academic Certificates</a></li>
+                    <li><a href="#jobs-invitation-content">Jobs Invitation <span class="highlight">1</span> </a></li>
+                    <li><a href="#jobs-recommendation-content">Jobs Recommendation <span class="highlight">3</span></a>
+                    </li>
+                    <li><a href="#calendar-content">My Calendar</a></li>
+                    <li><a href="#recorded-sessions-content">My Recorded Sessions</a></li>
 
-        </ul>
+                </ul>
 
-        <div id="content">
-            <div id="feed-content" class="contentblock">
-                <div class="padding20">
-                <div class="top_img_section">
-                  <div class="img_box radius3"> <img src="{{ thumbnail_url|safe }}" /> </div>
-                    <div class="img_detail">
-                                <a href="#"> {{ object.fullname }} <span>({{ object.pk }})</span> </a>
-                        <span class="british"><img src="{% static "images/british.png" %}" width="23" height="16" alt="img"> British | £25 -30</span>
-                        <span class="university">Harvard University, Class of 2013 </span>
-                        <span class="major"><em>Major :</em> Biomedical Engineering </span>
-                        <ul class="grade">
-                          <li><img src="{% static "images/grade_active.png" %}" width="17" height="18" alt="img"></li>
-                            <li><img src="{% static "images/grade_active.png" %}" width="17" height="18" alt="img"></li>
-                            <li><img src="{% static "images/grade_active.png" %}" width="17" height="18" alt="img"></li>
-                            <li><img src="{% static "images/grade_non_active.png" %}" width="17" height="18" alt="img"></li>
-                            <li><img src="{% static "images/grade_non_active.png" %}" width="17" height="18" alt="img"></li>
-                        </ul>
-                        <a href="#" class="verified radius3" onClick="return false"><img src="{% static "images/varified_btn.png" %}" width="16" height="14" alt="img"> NRIC Verified <span>Tutor's national registration identity card has been verified</span> </a>
-                    </div>
-                    <div style="width: 100%; float: left;">
-                        {% if content_editable %}
-                            <a class="button btn" st href="{% url 'change_pp' %}">Change Profile Picture</a>
-                        {% endif %}
-                    </div>
-                </div>
-                <div>
-                    <p class="txt"><span>Major :</span> {{ profile.major_subject }}</p>
-                    <div>
-                        {% if content_editable %}
-                            <a class="radius3" href="{% url 'change_major' %}">(Edit)</a>
-                        {% endif %}
-                    </div>
-                </div>
+                <div id="content">
+                    <div id="feed-content" class="contentblock">
+                        <div class="padding20">
+                            <div class="top_img_section">
+                                <div class="img_box radius3"><img src="{{ thumbnail_url|safe }}"/></div>
+                                {% if content_editable %}
+                                <a class="button btn" href="{% url 'change_pp' %}">Change Profile Picture</a>
+                                {% endif %}
+                                <div class="img_detail">
+                                    <a href="#"> {{ object.fullname }} <span>({{ object.pk }})</span> </a>
+                                    <span class="british"><img src="{% static " images/british.png" %}" width="23" height="16" alt="img"> British | £25 -30</span>
+                                    <span class="university">Harvard University, Class of 2013 </span>
+                                    <span class="major"><em>Major :</em> Biomedical Engineering </span>
+                                    <ul class="grade">
+                                        <li><img src="{% static " images/grade_active.png" %}" width="17" height="18"
+                                            alt="img">
+                                        </li>
+                                        <li><img src="{% static " images/grade_active.png" %}" width="17" height="18"
+                                            alt="img">
+                                        </li>
+                                        <li><img src="{% static " images/grade_active.png" %}" width="17" height="18"
+                                            alt="img">
+                                        </li>
+                                        <li><img src="{% static " images/grade_non_active.png" %}" width="17"
+                                            height="18" alt="img">
+                                        </li>
+                                        <li><img src="{% static " images/grade_non_active.png" %}" width="17"
+                                            height="18" alt="img">
+                                        </li>
+                                    </ul>
+                                    <a href="#" class="verified radius3" onClick="return false"><img src="{% static "
+                                                                                                     images/varified_btn.png"
+                                        %}" width="16" height="14" alt="img"> NRIC Verified <span>Tutor's national registration identity card has been verified</span>
+                                    </a>
+                                </div>
+                                <div style="width: 100%; float: left;">
+                                    {% if content_editable %}
+                                        <a class="button btn" st href="{% url 'change_pp' %}">Change Profile Picture</a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <p class="txt"><span>Major:</span>{% if content_editable %}         <button onclick="changeMajor()" class='btn btn-primary btn-xs change_major'>Update</button>{% endif %}</p>
+                            <p class="change_major_text">{{ profile.major_subject }}</p>
 
-          </div>
-                
-                <div class="padding20">
-                  <h3> <img src="{% static "images/teaching_icon.png" %}" width="16" height="28" alt="img"> Teaching Experience</h3>
-                    <p class="txt">It has been quite varied. Starting in high school, and the summer before college, I taught to groups of 4-7 students GCE 'A' level Economics (both macro and micro). At college, I taught Math from the 4th to 8th grade level to recent immigrant students as a mentor in a community service group. Beyond that, I have acted as a peer tutor in many courses to friends and mentees, from Multivariable Calculus and Partial Differential Equations, to teaching Intro Molecular Biology/ Genetics/ Evolutionary Biology concepts. I took Accounting, Maths (Applied and Pure), Physics, Chemistry, Biology (General and Human) and Economics in my GCE 'O' levels, and continued with Math, Chemistry, Biology, Physics and Economics in my GCE 'A' levels. Note to students and parents: I really enjoy teaching so that my students really understand the material and can eventually solve questions on their own. I find it really rewarding to see them discover their new found independence and confidence in their own abilities. Often it's a simple change from a slight bit of confusion in an earlier, more basic section of the material that leads to struggling in later parts in the course. On the flip side, I do find it disappointing when a student only wants answers without really caring to learn how to solve questions independently. For those of you who want the latter, do submit an open written lesson request. https://www.facebook.com/IFeakingLoveScience/photos/a.456449604376056.98921.367116489976035/797118940309119/?type=1&relevant_count=1</p>
+
+                            <div>
+                                <form action="/update_profile/change_major_form/" method="post" class='change_major_form' style="display: none;">{% csrf_token %}
+                                    <textarea rows="10" name="major_subjects" id="id_major_subjects" cols="40"> {{ profile.major_subjects }}</textarea>
+                                    <br/>
+                                    <input type="submit" class='btn btn-xs btn-primary' value="Save" />
+                                </form>
+                            </div>
+
+                        </div>
+
+                        <div class="padding20">
+                            <h3>Teaching Experience   {% if content_editable %}<button onclick="changeTExp()" class='btn btn-primary btn-xs change_texp'>Update</button>{% endif %} </h3>
+
+                            <p class="txt change_texp_text">{{ profile.teaching_exp}}</p>
+                            <div>
+                                <form action="/update_profile/change_texp_form/" method="post" class='change_texp_form' style="display: none;">{% csrf_token %}
+                                    <textarea rows="10" name="data" id="id_data" cols="60"> {{ profile.teaching_exp }}</textarea>
+                                    <br/>
+                                    <input type="submit" class='btn btn-xs btn-primary' value="Save" />
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="padding20">
+                            <h3><img src="{% static " images/extra_curricular_icon.png" %}" width="34" height="34"
+                                alt=" "> Extracurricular Interests    {% if content_editable %}<button onclick="changeEInterest()" class='btn btn-primary btn-xs change_einterest'>Update</button>{% endif %} </h3>
+                            <p class="txt change_einterest_text"> {{ profile.ext_interest }} </p>
+
+                             <div>
+                                <form action="/update_profile/change_einterest_form/" method="post" class='change_einterest_form' style="display: none;">{% csrf_token %}
+                                    <textarea rows="10" name="data" id="id_data" cols="60"> {{ profile.ext_interest }}</textarea>
+                                    <br/>
+                                    <input type="submit" class='btn btn-xs btn-primary' value="Save" />
+                                </form>
+                            </div>
+
+                        </div>
+
+                        <div class="padding20">
+                            <h3><img src="{% static " images/skul_attended_icon.png" %}" width="20" height="21"
+                                alt="img"> School attended     {% if content_editable %}<button onclick="addNewEdu()" class='btn btn-primary btn-xs add_new_edu'>Add</button>{% endif %}</h3>
+
+                            <a href="#" class="skul_atnd_btn radius3" onClick="return false"> <img src="{% static "
+                                                                                                   images/crtfcte_icon.png"
+                                %}" width="18" height="16" alt="img"> Certificates Verified <span>Academic certificates of the tutor has been verified</span></a>
+                            <br/>
+                            <div class="span3 align-left">
+                                <form action="{% url 'add_education' %}" method="post" class='add_edu_form' style="display: none;">
+                                    {% csrf_token %}<br/>
+                                        <label>Certification</label>            <input id="id_degree" maxlength="255" class="pull-right" name="degree" type="text"><br/><br/>
+                                        <label>School</label>                   <input id="id_institution" maxlength="255" class="pull-right" name="institution" type="text"><br/><br/>
+                                        <label>Class</label>                    <input id="id_session" maxlength="255" class="pull-right" name="session" type="text"><br/><br/>
+                                        <label>CGPA/GPA</label>                 <input id="id_cgpa" maxlength="255" class="pull-right" name="cgpa" type="text" value="0.0"><br/><br/>
+                                        <label>Is Current?</label>              <input id="id_is_current" name="is_current" class="pull-right" type="checkbox"><br/><br/>
+                                        <input type="submit" class='btn btn-xs btn-primary' value="Save" />
+                                </form>
+                            </div>
+                            <div class="eductation_list">
+                            {% for item in profile.education.all %}
+                            <h3 class="hdng_inr"> {{ item.session }} {{ item.degree }} (<span class="chicago"> {{ item.institution }} </span>)
+                            </h3>
+
+                            <p class="txt"> {{ item.topics }} - {{ item.cgpa }} </p>
+                            {% if item.is_current %}
+                            <p class="txt"> Currently studying here. </p>
+                            {% endif %}
+                            {% if content_editable %}
+                            <p><a class="btn" href="{% url 'update_education' pk=item.pk %}"> update </a> <a class="btn"
+                                                                                                             href="{% url 'delete_education' pk=item.pk %}">
+                                remove </a></p>
+
+                            {% endif %}
+
+                            {% endfor %}
+
+                        </div>
+                            </div>
+
+                        <div class="padding20">
+                            <h3><img src="{% static " images/top_subject2_icon.png" %}" width="19" height="21"
+                                alt="img"> Top Subjects</h3>
+
+                            <h3 class="hdng_inr"> ACT (English) </h3>
+
+                            <p class="txt"> I took the ACT 5 Times and achived a score of 34 in the English section </p>
+
+                            <h3 class="hdng_inr"> ACT (Math) </h3>
+
+                            <p class="txt"> I took the ACT 5 Times and achived a score of 34 in the Math section </p>
+
+                            <h3 class="hdng_inr"> ACT (Science) </h3>
+
+                            <p class="txt"> I took the ACT 5 Times and achived a score of 36 in the Math section </p>
+
+                            <h3 class="hdng_inr"> Algebra </h3>
+
+                            <p class="txt"> I learned Alegebra in ukrain, and then took algebra I / II in a US high
+                                school </p>
+
+                            <h3 class="hdng_inr"> Biology </h3>
+
+                            <p class="txt"> It was one of my favorite classes in high school. I got a 4 on the AP test
+                                and a750 on the SAT Biology M test. </p>
+
+                            <h3 class="hdng_inr"> Calculus </h3>
+
+                            <p class="txt"> I got a 5 on the AB/BC Calculus Tests. </p>
+
+                            <h3 class="hdng_inr"> College admissions </h3>
+
+                            <p class="txt"> i applied to 21 collages and got accepted into an Ivy league school
+                                (University of pennsylvania) </p>
+
+                            <h3 class="hdng_inr"> English </h3>
+
+                            <p class="txt"> I got a 5 on the English Literature and Composition AP test. </p>
+
+                            <h3 class="hdng_inr"> Philosophy </h3>
+
+                            <p class="txt"> I am Currently taking my second collage- level philosophy course. </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div id="about-content" class="contentblock">
+                        <div class="data_msng">
+                            <div><h1>About Me    {% if content_editable %}<button onclick="updateAbtMe()" class='btn btn-primary btn-xs update_abt_me'>Update</button>{% endif %}</h1></div>
+
+
+                            <p class='abt_me_text'>{{ profile.description }}</p>
+
+
+
+
+                            <div>
+                                <form action="/update_profile/abt_me_form/" method="post" class='abt_me_form' style="display: none;">{% csrf_token %}
+                                    <label> About me </label> <br/>
+                                    <textarea rows="10" name="about_me" id="id_about_me" cols="60"> {{ profile.description }}</textarea>
+                                    <br/>
+                                    <input type="submit" class='btn btn-xs btn-primary' value="Save" />
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- @end #about-content -->
+
+                    <div id="video-content" class="contentblock hidden">
+                        <div class="data_msng">
+                            <h1>Boilerplate Ideas</h1>
+
+                            <p>Well, yeah you've gotta lock that down. No, I was ashamed to be SEEN with you. I like
+                                being with you.</p>
+
+                            <p>Yes, he's like the steel man from The Wizard From Oz.</p>
+
+                            <p>You can always tell a Milford man.</p>
+
+                            <p>Perhaps an attic shall I seek.</p>
+
+                            <p>After all, why should you go to jail for a crime somebody else noticed?</p>
+                        </div>
+                    </div>
+                    <!-- @end #video-content -->
+
+                    <div id="review-content" class="contentblock hidden">
+                        <div class="data_msng">
+                            <h1>Contact Info</h1>
+
+                            <p>We're super easy to get in touch with. Just send us a quick message and we will try our
+                                best to respond hastily.</p>
+                            <br><br>
+
+                            <form id="contactform">
+                                <input type="text" name="name" id="name" class="bigtxtfield" placeholder="Your name">
+
+                                <textarea id="msg" name="msg" class="bigtxtarea" placeholder="Message..."></textarea>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- @end #review-content -->
+
+                    <div id="report-content" class="contentblock hidden">
+                        <div class="data_msng">
+                            <h1>About This Site</h1>
+
+                            <p>She keeps saying that God is going to show me a sign. The... something of my ways.
+                                Wisdom? It's probably wisdom.</p>
+
+                            <p>
+                            <center><img src="{% static " images/annveal.png" %}" alt="Ann Veal"></center>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- @end #report-content -->
+
+                    <div id="participation-content" class="contentblock hidden">
+                        <div class="data_msng">
+                            <h1>Boilerplate Ideas</h1>
+
+                            <p>Well, yeah you've gotta lock that down. No, I was ashamed to be SEEN with you. I like
+                                being with you.</p>
+
+                            <p>Yes, he's like the steel man from The Wizard From Oz.</p>
+
+                            <p>You can always tell a Milford man.</p>
+
+                            <p>Perhaps an attic shall I seek.</p>
+
+                            <p>After all, why should you go to jail for a crime somebody else noticed?</p>
+                        </div>
+                    </div>
+                    <!-- @end #participation-content -->
+
+                    <div id="certificates-content" class="contentblock hidden">
+                        <div class="data_msng">
+                            <h1>Contact Info</h1>
+
+                            <p>We're super easy to get in touch with. Just send us a quick message and we will try our
+                                best to respond hastily.</p>
+                            <br><br>
+
+                            <form id="contactform">
+                                <input type="text" name="name" id="name" class="bigtxtfield" placeholder="Your name">
+
+                                <textarea id="msg" name="msg" class="bigtxtarea" placeholder="Message..."></textarea>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- @end #certificates-content -->
+
+                    <div id="jobs-invitation-content" class="contentblock hidden">
+                        <div class="data_msng">
+                            <h1>About This Site</h1>
+
+                            <p>She keeps saying that God is going to show me a sign. The... something of my ways.
+                                Wisdom? It's probably wisdom.</p>
+
+                            <p>
+                            <center><img src="{% static " images/annveal.png" %}" alt="Ann Veal"></center>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- @end #jobs-invitation-content -->
+
+                    <div id="jobs-recommendation-content" class="contentblock hidden">
+                        <div class="data_msng">
+                            <h1>Boilerplate Ideas</h1>
+
+                            <p>Well, yeah you've gotta lock that down. No, I was ashamed to be SEEN with you. I like
+                                being with you.</p>
+
+                            <p>Yes, he's like the steel man from The Wizard From Oz.</p>
+
+                            <p>You can always tell a Milford man.</p>
+
+                            <p>Perhaps an attic shall I seek.</p>
+
+                            <p>After all, why should you go to jail for a crime somebody else noticed?</p>
+                        </div>
+                    </div>
+                    <!-- @end #jobs-recommendation-content -->
+
+                    <div id="calendar-content" class="contentblock hidden">
+                        <div class="data_msng">
+                            <h1>Contact Info</h1>
+
+                            <p>We're super easy to get in touch with. Just send us a quick message and we will try our
+                                best to respond hastily.</p>
+                            <br><br>
+
+                            <form id="contactform">
+                                <input type="text" name="name" id="name" class="bigtxtfield" placeholder="Your name">
+
+                                <textarea id="msg" name="msg" class="bigtxtarea" placeholder="Message..."></textarea>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- @end #calendar-content -->
+
+                    <div id="recorded-sessions-content" class="contentblock hidden">
+                        <div class="data_msng">
+                            <h1>Contact Info</h1>
+
+                            <p>We're super easy to get in touch with. Just send us a quick message and we will try our
+                                best to respond hastily.</p>
+                            <br><br>
+
+                            <form id="contactform">
+                                <input type="text" name="name" id="name" class="bigtxtfield" placeholder="Your name">
+
+                                <textarea id="msg" name="msg" class="bigtxtarea" placeholder="Message..."></textarea>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- @end #recorded-sessions-content -->
                 </div>
+<<<<<<< HEAD
                 
                 <div class="padding20">
                   <h3> <img src="{% static "images/extra_curricular_icon.png" %}" width="34" height="34" alt="img"> Extracurricular Interests</h3>
@@ -87,216 +394,51 @@
                     
               </div>
               
+=======
+                <!-- @end #content -->
+            </div>
+
+            <aside class="aside_right bg_white">
+>>>>>>> 3582d100713b22928331799242837956391e21c4
                 <div class="padding20">
-                  <h3> <img src="{% static "images/top_subject2_icon.png" %}" width="19" height="21" alt="img"> Top Subjects</h3>
-
-                <h3 class="hdng_inr"> ACT (English) </h3>
-                    <p class="txt"> I took the ACT 5 Times and achived a score of 34 in the English section </p>
-                    
-                <h3 class="hdng_inr"> ACT (Math) </h3>
-                    <p class="txt"> I took the ACT 5 Times and achived a score of 34 in the Math section </p>
-                    
-                <h3 class="hdng_inr"> ACT (Science) </h3>
-                    <p class="txt"> I took the ACT 5 Times and achived a score of 36 in the Math section </p>
-                    
-                <h3 class="hdng_inr"> Algebra </h3>
-                    <p class="txt"> I learned Alegebra in ukrain, and then took algebra I / II in a US high school </p>
-                    
-                <h3 class="hdng_inr"> Biology </h3>
-                    <p class="txt"> It was one of my favorite classes in high school. I got a 4 on the AP test and a750 on the SAT Biology M test. </p>
-                    
-                <h3 class="hdng_inr"> Calculus </h3>
-                    <p class="txt"> I got a 5 on the AB/BC Calculus Tests. </p>
-                    
-                <h3 class="hdng_inr"> College admissions </h3>
-                    <p class="txt"> i applied to 21 collages and got accepted into an Ivy league school (University of pennsylvania) </p>
-                    
-                <h3 class="hdng_inr"> English </h3>
-                    <p class="txt"> I got a 5 on the English Literature and Composition AP test. </p>
-                    
-                <h3 class="hdng_inr"> Philosophy </h3>
-                    <p class="txt"> I am Currently taking my second collage- level philosophy course. </p>
-
-              </div>
-              
-                
-            </div><!-- @end #feed-content -->
-            
-            
-            <div id="about-content" class="contentblock">
-              <div class="data_msng">
-                      <h1>About Me</h1>
-                      <p>{{ profile.description }}</p>
-                      
-                      <p><center><img src="{% static "images/annveal.png" %}" alt="Ann Veal"></center></p>
+                    <ul class="total_requests">
+                        <h3>Your Total Requests</h3>
+                        <li>This month (Jul) :</li>
+                        <li><span> 17 </span></li>
+                        <li>This year (2014) :</li>
+                        <li><span> 40 </span></li>
+                        <li>All Time:</li>
+                        <li><span> 105 </span></li>
+                        <li>Accepted :</li>
+                        <li><span> 87 </span></li>
+                        <li>Rejected :</li>
+                        <li><span> 75 </span></li>
+                    </ul>
                 </div>
-              
-            </div><!-- @end #about-content -->
-            
-            <div id="video-content" class="contentblock hidden">
-              <div class="data_msng">
-                      <h1>Boilerplate Ideas</h1>
-                      
-                      <p>Well, yeah you've gotta lock that down. No, I was ashamed to be SEEN with you. I like being with you.</p>
-                      
-                      <p>Yes, he's like the steel man from The Wizard From Oz.</p>
-                      
-                      <p>You can always tell a Milford man.</p>
-                      
-                      <p>Perhaps an attic shall I seek.</p>
-                      
-                      <p>After all, why should you go to jail for a crime somebody else noticed?</p>
-              </div>
-            </div><!-- @end #video-content -->
-            
-            <div id="review-content" class="contentblock hidden">
-              <div class="data_msng">
-                  <h1>Contact Info</h1>
-                  
-                  <p>We're super easy to get in touch with. Just send us a quick message and we will try our best to respond hastily.</p>
-                  <br><br>
-                  <form id="contactform">
-                    <input type="text" name="name" id="name" class="bigtxtfield" placeholder="Your name">
-                    
-                    <textarea id="msg" name="msg" class="bigtxtarea" placeholder="Message..."></textarea>
-                  </form>
-              </div>
-            </div><!-- @end #review-content -->
-            
-            <div id="report-content" class="contentblock hidden">
-                <div class="data_msng">
-                      <h1>About This Site</h1>
-                      <p>She keeps saying that God is going to show me a sign. The... something of my ways. Wisdom? It's probably wisdom.</p>
-                      
-                      <p><center><img src="{% static "images/annveal.png" %}" alt="Ann Veal"></center></p>
+                <div class="padding20">
+                    <ul class="total_requests">
+                        <li> Hours Tutored</li>
+                        <li> Earned</li>
+                    </ul>
                 </div>
-            </div><!-- @end #report-content -->
-            
-            <div id="participation-content" class="contentblock hidden">
-                <div class="data_msng">
-                  <h1>Boilerplate Ideas</h1>
-                  
-                  <p>Well, yeah you've gotta lock that down. No, I was ashamed to be SEEN with you. I like being with you.</p>
-                  
-                  <p>Yes, he's like the steel man from The Wizard From Oz.</p>
-                  
-                  <p>You can always tell a Milford man.</p>
-                  
-                  <p>Perhaps an attic shall I seek.</p>
-                  
-                  <p>After all, why should you go to jail for a crime somebody else noticed?</p>
+                <div class="padding20">
+                    <ul class="total_requests">
+                        <li> 12</li>
+                        <li> USD $1,740</li>
+                        <li> 45</li>
+                        <li> THB $11,500</li>
+                        <li> 32</li>
+                        <li> SGD $1,000</li>
+                    </ul>
                 </div>
-            </div><!-- @end #participation-content -->
-            
-            <div id="certificates-content" class="contentblock hidden">
-                <div class="data_msng">
-                  <h1>Contact Info</h1>
-                  
-                  <p>We're super easy to get in touch with. Just send us a quick message and we will try our best to respond hastily.</p>
-                  <br><br>
-                  <form id="contactform">
-                    <input type="text" name="name" id="name" class="bigtxtfield" placeholder="Your name">
-                    
-                    <textarea id="msg" name="msg" class="bigtxtarea" placeholder="Message..."></textarea>
-                  </form>
-                </div>
-            </div><!-- @end #certificates-content -->
-            
-            <div id="jobs-invitation-content" class="contentblock hidden">
-                <div class="data_msng">
-                  <h1>About This Site</h1>
-                  <p>She keeps saying that God is going to show me a sign. The... something of my ways. Wisdom? It's probably wisdom.</p>
-                  
-                  <p><center><img src="{% static "images/annveal.png" %}" alt="Ann Veal"></center></p>
-                </div>
-            </div><!-- @end #jobs-invitation-content -->
-            
-            <div id="jobs-recommendation-content" class="contentblock hidden">
-                <div class="data_msng">
-                  <h1>Boilerplate Ideas</h1>
-                  
-                  <p>Well, yeah you've gotta lock that down. No, I was ashamed to be SEEN with you. I like being with you.</p>
-                  
-                  <p>Yes, he's like the steel man from The Wizard From Oz.</p>
-                  
-                  <p>You can always tell a Milford man.</p>
-                  
-                  <p>Perhaps an attic shall I seek.</p>
-                  
-                  <p>After all, why should you go to jail for a crime somebody else noticed?</p>
-                </div>
-            </div><!-- @end #jobs-recommendation-content -->
-            
-            <div id="calendar-content" class="contentblock hidden">
-                <div class="data_msng">
-                  <h1>Contact Info</h1>
-                  
-                  <p>We're super easy to get in touch with. Just send us a quick message and we will try our best to respond hastily.</p>
-                  <br><br>
-                  <form id="contactform">
-                    <input type="text" name="name" id="name" class="bigtxtfield" placeholder="Your name">
-                    
-                    <textarea id="msg" name="msg" class="bigtxtarea" placeholder="Message..."></textarea>
-                  </form>
-                </div>
-            </div><!-- @end #calendar-content -->
-            
-            <div id="recorded-sessions-content" class="contentblock hidden">
-                <div class="data_msng">
-                  <h1>Contact Info</h1>
-                  
-                  <p>We're super easy to get in touch with. Just send us a quick message and we will try our best to respond hastily.</p>
-                  <br><br>
-                  <form id="contactform">
-                    <input type="text" name="name" id="name" class="bigtxtfield" placeholder="Your name">
-                    
-                    <textarea id="msg" name="msg" class="bigtxtarea" placeholder="Message..."></textarea>
-                  </form>
-                </div>
-            </div><!-- @end #recorded-sessions-content -->
-        </div><!-- @end #content -->
-      </div>
-            
-              <aside class="aside_right bg_white">
-                  <div class="padding20">
-                      <ul class="total_requests">
-                          <h3>Your Total Requests</h3>
-                            <li>This month (Jul) :</li>
-                            <li><span> 17 </span> </li>
-                            <li>This year (2014) :</li>
-                            <li><span> 40 </span></li>
-                            <li>All Time:</li>
-                            <li><span> 105 </span></li>
-                            <li>Accepted :</li>
-                            <li><span> 87 </span></li>
-                            <li>Rejected :</li>
-                            <li><span> 75 </span></li>
-                        </ul>
-                    </div>
-                    <div class="padding20">
-                      <ul class="total_requests">
-                          <li> Hours Tutored </li>
-                            <li> Earned </li>
-                        </ul>
-                    </div>
-                    <div class="padding20">
-                      <ul class="total_requests">
-                            <li> 12 </li>
-                            <li> USD $1,740 </li>
-                            <li> 45 </li>
-                            <li> THB $11,500 </li>
-                            <li> 32 </li>
-                            <li> SGD $1,000 </li>
-                        </ul>
-                    </div>
-            <div class="padding20">
-                      <span class="location">Location</span>
+                <div class="padding20">
+                    <span class="location">Location</span>
                         <span class="spkn_lnge1">
                           Ohio, United States<br>10:00 PM (UTC-04:00)
                         </span>
-                    </div>
-                    <div class="padding20">
-                      <span class="location">Spoken Language(s)</span>
+                </div>
+                <div class="padding20">
+                    <span class="location">Spoken Language(s)</span>
                         <span class="spkn_lnge">
                           English
                             <small>Fluent</small>
@@ -305,38 +447,44 @@
                             Mandarin
                             <small>Below Average</small>
                         </span>
-                    </div>
-                    <div class="padding20">
-                      <ul class="total_requests">
-                          <li> Last Tutored  </li>
-                            <li> July 18, 2014 </li>
-                        </ul>
-                    </div>
-                    <div class="padding20">
-                      <ul class="total_requests">
-                          <li> Tutor Since </li>
-                            <li> April 27, 2009 </li>
-                        </ul>
-                    </div>
-                    <div class="padding20">
-                      <form class="url_adrs">
-                          <h4>Your URL Address</h4>
-                            <input type="text" class="radius3" value="https://www.championtutoronline">
-                        </form>
-                        
-                        <script>
+                </div>
+                <div class="padding20">
+                    <ul class="total_requests">
+                        <li> Last Tutored</li>
+                        <li> July 18, 2014</li>
+                    </ul>
+                </div>
+                <div class="padding20">
+                    <ul class="total_requests">
+                        <li> Tutor Since</li>
+                        <li> April 27, 2009</li>
+                    </ul>
+                </div>
+                <div class="padding20">
+                    <form class="url_adrs">
+                        <h4>Your URL Address</h4>
+                        <input type="text" class="radius3" value="https://www.championtutoronline">
+                    </form>
+                    {% block script_extra %}
+                     <script type="text/javascript" src="{%  static "js/overrides/profile.js" %}"></script>
+                     {% endblock %}
+
+                    <script>
                 //$("input[type=text]").focus(function() {
     //               $(this).select();
     //            });
                 $("input[type='text']").click(function () {
                    $(this).select();
                 });
-              </script>
-                        
-                        
-                    </div>
 
-                </aside>
-          </div>
+
+
+                    </script>
+
+
+                </div>
+
+            </aside>
         </div>
     </div>
+</div>
