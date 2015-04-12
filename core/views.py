@@ -5,8 +5,9 @@ from easy_thumbnails.files import get_thumbnailer
 from championtutoronline.settings import DEFAULT_FROM_EMAIL
 from core.emails import EmailClient
 from core.models import ResetPasswordToken, ProfilePicture, Profile, Education
+from django.http.response import HttpResponse
 from forms import LoginForm,SignUpForm, PasswordResetRequestForm, SetPasswordForm, ProfilePictureForm, SubjectMajorUpdateForm, \
-    EducationForm,MyAccountForm,PaymentMethodForm
+    EducationForm, AboutMeUpdateForm, TeachingExpForm, ExtInterestForm,MyAccountForm,PaymentMethodForm
 from models import ChampUser
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
@@ -26,7 +27,7 @@ from pyetherpad.models import *
 from common.views import *
 import uuid
 from payment.models import *
-
+import json
 
 class ProtectedView(object):
 
@@ -225,7 +226,42 @@ class ProfileView(DetailView):
         context["champ_user"] = ChampUser.objects.get(user_id=self.object.user.pk)
 
         context['content_editable'] = True if self.object.user.id == self.request.user.id else False
+        context['profile_form'] = AboutMeUpdateForm()
         return context
+
+
+class UpdateProfileView(ProtectedView, View):
+    def post(self, request, params, *args, **kwargs):
+        if params is not None:
+            data = dict()
+            if params == 'abt_me_form':
+                form = AboutMeUpdateForm(request.POST)
+                data['update_data_class'] = '.abt_me_text'
+                data['update_btn_class'] = '.update_abt_me'
+            if params == 'change_major_form':
+                form = SubjectMajorUpdateForm(request.POST)
+                data['update_data_class'] = '.change_major_text'
+                data['update_btn_class'] = '.change_major'
+
+            if params == 'change_texp_form':
+                form = TeachingExpForm(request.POST)
+                data['update_data_class'] = '.change_texp_text'
+                data['update_btn_class'] = '.change_texp'
+                
+            if params == 'change_einterest_form':
+                form = ExtInterestForm(request.POST)
+                data['update_data_class'] = '.change_einterest_text'
+                data['update_btn_class'] = '.change_einterest'
+            if form.is_valid():
+                profile = form.save(request)
+                data['success'] = 'True'
+                data['value'] = profile
+                return HttpResponse(json.dumps(data), content_type="application/json")
+            else:
+                data = dict()
+                data['success'] = 'False'
+                data['value'] = 'Change Unsuccessful'
+                return HttpResponse(json.dumps(data), content_type="application/json")
 
 
 
@@ -367,7 +403,16 @@ class EducationAddView(ProtectedView,FormView):
             instance = form.save()
             profile = Profile.objects.get(user__user=request.user)
             profile.education.add(instance)
-            return self.form_valid(form)
+            data = dict()
+            data['added_edu'] = 'True'
+            # <h3 class="hdng_inr"> {{ item.session }} {{ item.degree }} (<span class="chicago"> {{ item.institution }} </span>)
+
+            data['session'] = instance.session
+            data['degree'] = instance.degree
+            data['institution'] = instance.institution
+            data['update_data_class'] = '.add_new_edu'
+            # data['update_btn_class'] = '.update_abt_me'
+            return HttpResponse(json.dumps(data), content_type="application/json")
         else:
             messages.error(request, 'Error occurred')
             return self.form_invalid(form)

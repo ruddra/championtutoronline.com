@@ -3,7 +3,7 @@ __author__ = 'Codengine'
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 import hashlib
-from core.models import ChampUser, ProfilePicture, Profile, Education
+from core.models import ChampUser, ProfilePicture, Profile, Education, TopSubject
 from image_cropping import ImageCropWidget
 from core.tools.form import DateSelectorWidget
 
@@ -94,14 +94,35 @@ class SubjectMajorUpdateForm(forms.Form):
         profile = Profile.objects.get(user=ChampUser.objects.get(user=request.user))
         profile.major_subject = self.cleaned_data['major_subjects']
         profile.save()
+        return profile.major_subject
 
 class AboutMeUpdateForm(forms.Form):
-    about_me = forms.CharField(widget=forms.TextInput)
+    about_me = forms.CharField(widget=forms.Textarea())
 
     def save(self, request):
         profile = Profile.objects.get(user=ChampUser.objects.get(user=request.user))
         profile.description = self.cleaned_data['about_me']
         profile.save()
+        return profile.description
+
+class TeachingExpForm(forms.Form):
+    data = forms.CharField(widget=forms.Textarea())
+
+    def save(self, request):
+        profile = Profile.objects.get(user=ChampUser.objects.get(user=request.user))
+        profile.teaching_exp = self.cleaned_data['data']
+        profile.save()
+        return profile.teaching_exp
+
+
+class ExtInterestForm(forms.Form):
+    data = forms.CharField(widget=forms.Textarea())
+
+    def save(self, request):
+        profile = Profile.objects.get(user=ChampUser.objects.get(user=request.user))
+        profile.ext_interest = self.cleaned_data['data']
+        profile.save()
+        return profile.ext_interest
 
 class EducationForm(forms.ModelForm):
     class Meta:
@@ -122,3 +143,7 @@ class PaymentMethodForm(forms.Form):
     cvn = forms.CharField(label='',required=True,widget=forms.TextInput(attrs={'name':'cvn','placeholder':'CVN','autocomplete':'off','class':'form-control input-lg','title':'','data-placement':'top','data-toggle':'tooltip','data-original-title':''}))
     # primary = forms.ChoiceField(choices=[("primary","Primary Card"),("not_primary","Not Primary")],widget=forms.Select(attrs={'name':'card_type','placeholder':'Card Type','autocomplete':'off','class':'form-control input-lg','title':'','data-placement':'top','data-toggle':'tooltip','data-original-title':''}))
     # active = forms.BooleanField(required=False,widget=forms.CheckboxInput(attrs={'class':'checkbox' }))
+
+class TSubjectForm(forms.ModelForm):
+    class Meta:
+        model = TopSubject
