@@ -90,9 +90,9 @@ class ProfilePictureForm(forms.ModelForm):
 class SubjectMajorUpdateForm(forms.Form):
     major_subjects = forms.CharField(widget=forms.TextInput)
 
-    def save(self, request):
+    def save(self, request, data=None):
         profile = Profile.objects.get(user=ChampUser.objects.get(user=request.user))
-        profile.major_subject = self.cleaned_data['major_subjects']
+        profile.major_subject = ', '.join(self.data['major_subjects'])
         profile.save()
         return profile.major_subject
 
@@ -147,3 +147,9 @@ class PaymentMethodForm(forms.Form):
 class TSubjectForm(forms.ModelForm):
     class Meta:
         model = TopSubject
+
+class MajorForm(forms.Form):
+    major = forms.CharField(max_length=5000, required=False)
+
+    def __init__(self, *args, **kwargs):
+        super(MajorForm,self).__init__(*args, **kwargs)

@@ -1,4 +1,5 @@
 {% load staticfiles %}
+<link href=''{%  static "css/jquery.tagit.css"%}' rel="stylesheet" type="text/css">
 <div class="contnt">
 
     <div class="wrapper">
@@ -60,11 +61,20 @@
 
 
                             <div>
-                                <form action="/update_profile/change_major_form/" method="post" class='change_major_form' style="display: none;">{% csrf_token %}
-                                    <textarea class="form-control" rows="10" name="major_subjects" id="id_major_subjects" cols="40" style="resize:none;"> {{ profile.major_subjects }}</textarea>
-                                    <br/>
-                                    <input type="submit" class='btn btn-mini btn-primary' value="Save" />
-                                </form>
+                                 <form action="/update_profile/change_major_form/" method="post" class='change_major_form' style="display: none;">{% csrf_token %}
+                                <ul id="MajorTags">
+    <!-- Existing list items will be pre-added to the tags -->
+                                    {% for i in profile.major_list %}
+                                    <li>{{ i }}</li>
+                                    {% endfor %}
+                                </ul>
+                                     <input type="submit" class='btn btn-mini btn-primary' value="Save" />
+                                 </form>
+
+                                    <!--&lt;!&ndash;<textarea class="form-control" rows="10" name="major_subjects" id="id_major_subjects" cols="40" style="resize:none;"> {{ profile.major_subjects }}</textarea>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<br/>&ndash;&gt;-->
+
+
                             </div>
 
                         </div>
@@ -460,6 +470,7 @@
                     </form>
                     {% block script_extra %}
                      <script type="text/javascript" src="{%  static "js/overrides/profile.js" %}"></script>
+                     <script type="text/javascript" src="{%  static "js/tag-it.js" %}"></script>
                      {% endblock %}
 
                     <script>

@@ -315,5 +315,11 @@ class MyAccountAjaxView(View):
             response["MESSAGE"] = "Invalid operation"
             return HttpResponse(json.dumps(response))
 
+class MajorListAjaxView(View):
+    def get(self, request, *args, **kwargs):
+        data = dict()
+        data['majors'] = ['Science']
+        return HttpResponse(json.dumps(data), content_type="application/json")
+
 
 

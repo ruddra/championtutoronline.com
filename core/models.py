@@ -39,9 +39,19 @@ class Education(models.Model):
     cgpa = models.CharField(max_length=255, verbose_name='GPA/CGPA', default='0.0')
     is_current = models.BooleanField(default=False)
 
-class TopSubject(models.Model):
+
+class Course(models.Model):
     name = models.CharField(max_length=255)
-    description = models.CharField(max_length=255,null=True,default=None)
+    description = models.CharField(max_length=255,null=True, default=None)
+
+
+class TopSubject(Course):
+    class Meta:
+        proxy = True
+
+class Major(Course):
+    class Meta:
+        proxy = True
 
 class Profile(models.Model):
     user = models.ForeignKey(ChampUser)
@@ -54,8 +64,12 @@ class Profile(models.Model):
     major_subject = models.CharField(max_length=255, null=True)
     education = models.ManyToManyField(Education)
     top_subjects = models.ManyToManyField(TopSubject)
-    teaching_exp = models.CharField(max_length=5000, null=True,default=None)
-    ext_interest = models.CharField(max_length=5000, null=True,default=None)
+    teaching_exp = models.CharField(max_length=5000, null=True,default='')
+    ext_interest = models.CharField(max_length=5000, null=True,default='')
+
+    @property
+    def major_list(self):
+        return self.major_subject.split(',')
 
     class Meta:
         db_table=u'champ_profile'

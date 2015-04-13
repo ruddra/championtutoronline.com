@@ -46,6 +46,7 @@ urlpatterns = patterns('',
     url(r'^change_major_subject/', ProtectedFormView.as_view(form_class=SubjectMajorUpdateForm), name="change_major"),
     url(r'^change_about_me/', ProtectedFormView.as_view(form_class=AboutMeUpdateForm), name="change_about_me"),
     url(r'^add_education/', EducationAddView.as_view(), name="add_education"),
+    url(r'^major_list/', MajorListAjaxView.as_view(), name="major_list"),
     url(r'^update_education/(?P<pk>[0-9]+)/', EducationUpdateView.as_view(), name='update_education'),
     url(r'^delete_education/(?P<pk>[0-9]+)/', EducationDeleteView.as_view(), name='delete_education'),
     url(r'^update_profile/(?P<params>\w+)/', UpdateProfileView.as_view(), name='profile_update'),
@@ -55,6 +56,3 @@ urlpatterns = patterns('',
 
 
 )+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-js_info_dict = {
-    'packages': ('django.conf',),
-}

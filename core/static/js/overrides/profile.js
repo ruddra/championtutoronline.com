@@ -22,24 +22,6 @@ function changeEInterest() {
    $('.change_einterest_form').show();
 };
 
-//function addEducation() {
-//$('.add_edu_form').submit(function() {
-//   $.ajax({
-//            data: $(this).serialize(),
-//            type: "post",
-//            url:  $(this).attr('action'),
-//            success: function(response) {
-//                var c = $(response.update_data_class);
-//                var b = $(response.update_btn_class);
-//                c.text(response.value);
-//                c.show();
-//                b.show();
-//
-//
-//            }
-//};
-//};
-//addNewEdu
 
 function addNewEdu() {
    $('.add_new_edu').hide();
@@ -47,6 +29,16 @@ function addNewEdu() {
 };
 
 $(document).ready(function() {
+$.ajax({type: "get",
+            url:  '/major_list/',
+            success: function(response) {
+            window.major_list = response.majors
+            }});
+        $("#MajorTags").tagit({
+            fieldName: "major_subjects",
+            autocomplete: {delay: 0, minLength: 2},
+            availableTags: window.major_list
+        });
     $('form').submit(function() {
     $(this).hide();
         $.ajax({
