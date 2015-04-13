@@ -220,84 +220,84 @@ var generateChatUUID = function(){
 
          //console.log(_this_obj.chat_contnt.parent().find(".add_grp_buddy_txt").tagit());
 
-//        _this_obj.chat_contnt.parent().find(".add_grp_buddy_txt").tagit({
-//            autocomplete: {
-//                autoSelectFirst: true,
-//                delay: 0,
-//                minLength: 2,
-//                source: function(request, response) {
-//                      var buddy_ids = [];
-//                      $(".tagit-hidden-ids").each(function(i){
-//                          buddy_ids.push(parseInt($(this).val()));
-//                      });
-//
-//                      for(var i = 0 ; i < _this_obj.remote_peers.length ; i++){
-//                          buddy_ids.push(parseInt(_this_obj.remote_peers[i]));
-//                      }
-//
-//                      var buddy_ids_str = "";
-//
-//                      for(var i = 0 ; i < buddy_ids.length ; i++){
-//                          if(i < buddy_ids.length - 1){
-//                              buddy_ids_str += buddy_ids[i]+",";
-//                          }
-//                          else{
-//                              buddy_ids_str += buddy_ids[i];
-//                          }
-//                      }
-//
-//                      $.ajax({
-//                          url: "ajax/search_user",
-//                          dataType: "json",
-//                          data: {
-//                              term: request.term,
-//                              exclude: buddy_ids_str
-//                          },
-//                          success: function(data) {
-//                              response(data);
-//                          }
-//                      });
-//                  },
-//                fieldName : "user_id",
-//                focus: function (event, ui) {
-//                    _this_obj.chat_contnt.parent().find(".hidden-selected-val").val(ui.item.value);
-//                    //console.log(_this_obj.chat_contnt.parent().find(".hidden-selected-val").val());
-//                    ui.item.value = ui.item.label;
-//                },
-//                select: function( event, ui ) {
-//
-//                  },
-//                create: function() {
-//                    $(this).data('ui-autocomplete')._renderItem = function (ul, item) {
-//                              return $("<li></li>")
-//                                 .data("item.autocomplete", item)
-//                                 .append("<a><div class='ui-menu-item-div' style='background:white;margin-top:1px;padding:4px;'><img src='"+ item.pimage +"' width='20' height='20' style='margin-right:10px;'/>" + item.label + "</div></a>")
-//                                 .appendTo(ul);
-//                               };
-//                }
-//              },
-//              showAutocompleteOnFocus : true,
-//              allowDuplicates : true,
-//              animate: true,
-//              allowSpaces: true,
-//              tagLimit : 10,
-//              placeholderText : "Type Name Here",
-//              // Event callbacks.
-//              beforeTagAdded : function(event,ui){
-//                  console.log("Before Tag Added");
-//                  console.log(ui);
-//                  console.log("Before Tag Added done.");
-//              },
-//              afterTagAdded   : function(event,ui){
-//                _this_obj.chat_contnt.parent().find(".hidden-selected-val").val("");
-//              },
-//              afterTagRemoved : function(event,ui){
-//
-//              },
-//              onTagClicked: function(event,ui){
-//                //alert("Clicked!");
-//              }
-//        });
+        _this_obj.chat_contnt.parent().find(".add_grp_buddy_txt").tagit({
+            autocomplete: {
+                autoSelectFirst: true,
+                delay: 0,
+                minLength: 2,
+                source: function(request, response) {
+                      var buddy_ids = [];
+                      $(".tagit-hidden-ids").each(function(i){
+                          buddy_ids.push(parseInt($(this).val()));
+                      });
+
+                      for(var i = 0 ; i < _this_obj.remote_peers.length ; i++){
+                          buddy_ids.push(parseInt(_this_obj.remote_peers[i]));
+                      }
+
+                      var buddy_ids_str = "";
+
+                      for(var i = 0 ; i < buddy_ids.length ; i++){
+                          if(i < buddy_ids.length - 1){
+                              buddy_ids_str += buddy_ids[i]+",";
+                          }
+                          else{
+                              buddy_ids_str += buddy_ids[i];
+                          }
+                      }
+
+                      $.ajax({
+                          url: "ajax/search_user",
+                          dataType: "json",
+                          data: {
+                              term: request.term,
+                              exclude: buddy_ids_str
+                          },
+                          success: function(data) {
+                              response(data);
+                          }
+                      });
+                  },
+                fieldName : "user_id",
+                focus: function (event, ui) {
+                    _this_obj.chat_contnt.parent().find(".hidden-selected-val").val(ui.item.value);
+                    //console.log(_this_obj.chat_contnt.parent().find(".hidden-selected-val").val());
+                    ui.item.value = ui.item.label;
+                },
+                select: function( event, ui ) {
+
+                  },
+                create: function() {
+                    $(this).data('ui-autocomplete')._renderItem = function (ul, item) {
+                              return $("<li></li>")
+                                 .data("item.autocomplete", item)
+                                 .append("<a><div class='ui-menu-item-div' style='background:white;margin-top:1px;padding:4px;'><img src='"+ item.pimage +"' width='20' height='20' style='margin-right:10px;'/>" + item.label + "</div></a>")
+                                 .appendTo(ul);
+                               };
+                }
+              },
+              showAutocompleteOnFocus : true,
+              allowDuplicates : true,
+              animate: true,
+              allowSpaces: true,
+              tagLimit : 10,
+              placeholderText : "Type Name Here",
+              // Event callbacks.
+              beforeTagAdded : function(event,ui){
+                  console.log("Before Tag Added");
+                  console.log(ui);
+                  console.log("Before Tag Added done.");
+              },
+              afterTagAdded   : function(event,ui){
+                _this_obj.chat_contnt.parent().find(".hidden-selected-val").val("");
+              },
+              afterTagRemoved : function(event,ui){
+
+              },
+              onTagClicked: function(event,ui){
+                //alert("Clicked!");
+              }
+        });
 
         this.chat_contnt.parent().find(".add_grp_buddy_btn").click(function(e){
               var buddy_ids = [];

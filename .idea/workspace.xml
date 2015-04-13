@@ -100,7 +100,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/searchbox/category.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/searchbox/category.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/cellediting.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/cellediting.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/cellstyle.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/cellstyle.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/change_profile_picture.html" afterPath="$PROJECT_DIR$/core/templates/change_profile_picture.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/js/chat/chat.js" afterPath="$PROJECT_DIR$/core/static/js/chat/chat.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/sections/chat_box.html" afterPath="$PROJECT_DIR$/core/templates/sections/chat_box.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/checkbox.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/checkbox.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datalist/checkbox.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datalist/checkbox.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tree/checkbox.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tree/checkbox.html" />
@@ -109,6 +111,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/clientpagination.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/clientpagination.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/treegrid/clientpagination.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/treegrid/clientpagination.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datebox/clone.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datebox/clone.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/code_editor.html" afterPath="$PROJECT_DIR$/core/templates/ajax/code_editor.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/columngroup.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/columngroup.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/layout/complex.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/layout/complex.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/complextoolbar.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/complextoolbar.html" />
@@ -118,6 +121,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/contextmenu.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/contextmenu.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tree/contextmenu.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tree/contextmenu.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/treegrid/contextmenu.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/treegrid/contextmenu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/create.html" afterPath="$PROJECT_DIR$/core/templates/create.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/calendar/custom.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/calendar/custom.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/textbox/custom.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/textbox/custom.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/pagination/custombuttons.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/pagination/custombuttons.html" />
@@ -134,6 +138,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/calendar/disabledate.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/calendar/disabledate.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/tree/dnd.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/tree/dnd.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tree/dnd.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tree/dnd.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/drawingboard.html" afterPath="$PROJECT_DIR$/core/templates/ajax/drawingboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tabs/dropdown.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tabs/dropdown.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/combobox/dynamicdata.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/combobox/dynamicdata.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tree/editable.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tree/editable.html" />
@@ -197,9 +202,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tree/icons.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tree/icons.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/simplelist/image.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/simplelist/image.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/numberspinner/increment.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/numberspinner/increment.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/index - Copy.html" afterPath="$PROJECT_DIR$/core/templates/index - Copy.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery-ui-1.11.3.custom/index.html" afterPath="$PROJECT_DIR$/core/static/jquery-ui-1.11.3.custom/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/js/mathdox/org/mathdox/javascript/index.html" afterPath="$PROJECT_DIR$/core/static/js/mathdox/org/mathdox/javascript/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/index.html" afterPath="$PROJECT_DIR$/core/templates (copy)/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/index.html" afterPath="$PROJECT_DIR$/core/templates/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/combogrid/initvalue.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/combogrid/initvalue.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/combotree/initvalue.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/combotree/initvalue.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datetimebox/initvalue.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datetimebox/initvalue.html" />
@@ -215,6 +222,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/badge/list.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/badge/list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/form/load.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/form/load.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/panel/loadcontent.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/panel/loadcontent.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/registration/logged_out.html" afterPath="$PROJECT_DIR$/core/templates/registration/logged_out.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/login.html" afterPath="$PROJECT_DIR$/core/templates/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/login.html" afterPath="$PROJECT_DIR$/core/templates/ajax/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/djangoetherpadlite/django-etherpad-lite-master/etherpadlite/templates/etherpad-lite/login.html" afterPath="$PROJECT_DIR$/djangoetherpadlite/django-etherpad-lite-master/etherpadlite/templates/etherpad-lite/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/djangoetherpadlite/django-etherpad-lite-master/etherpadlite/templates/etherpad-lite/logout.html" afterPath="$PROJECT_DIR$/djangoetherpadlite/django-etherpad-lite-master/etherpadlite/templates/etherpad-lite/logout.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/toolbar/menu.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/toolbar/menu.html" />
@@ -222,7 +232,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/mergecells.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/mergecells.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/dialog/message.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/dialog/message.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/window/modalwindow.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/window/modalwindow.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/models.py" afterPath="$PROJECT_DIR$/core/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/combobox/multiline.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/combobox/multiline.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/textbox/multiline.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/textbox/multiline.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/accordion/multiple.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/accordion/multiple.html" />
@@ -231,6 +240,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/combotree/multiple.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/combotree/multiple.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datalist/multiselect.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datalist/multiselect.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/multisorting.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/multisorting.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/my_account - Copy.html" afterPath="$PROJECT_DIR$/core/templates/my_account - Copy.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/my_account.html" afterPath="$PROJECT_DIR$/core/templates/my_account.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/panel/nav.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/panel/nav.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/tabs/nav.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/tabs/nav.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/combobox/navigation.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/combobox/navigation.html" />
@@ -242,9 +253,17 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/layout/nocollapsible.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/layout/nocollapsible.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/slider/nonlinear.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/slider/nonlinear.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/input/numberspinner.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/input/numberspinner.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/online_tutors.html" afterPath="$PROJECT_DIR$/core/templates/online_tutors.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/djangoetherpadlite/django-etherpad-lite-master/etherpadlite/templates/etherpad-lite/pad.html" afterPath="$PROJECT_DIR$/djangoetherpadlite/django-etherpad-lite-master/etherpadlite/templates/etherpad-lite/pad.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/djangoetherpadlite/django-etherpad-lite-master/etherpadlite/templates/etherpad-lite/padCreate.html" afterPath="$PROJECT_DIR$/djangoetherpadlite/django-etherpad-lite-master/etherpadlite/templates/etherpad-lite/padCreate.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/panel/paneltools.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/panel/paneltools.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/registration/password_change_done.html" afterPath="$PROJECT_DIR$/core/templates/registration/password_change_done.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/registration/password_change_form.html" afterPath="$PROJECT_DIR$/core/templates/registration/password_change_form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/registration/password_reset_complete.html" afterPath="$PROJECT_DIR$/core/templates/registration/password_reset_complete.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/registration/password_reset_confirm.html" afterPath="$PROJECT_DIR$/core/templates/registration/password_reset_confirm.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/registration/password_reset_done.html" afterPath="$PROJECT_DIR$/core/templates/registration/password_reset_done.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/registration/password_reset_email.html" afterPath="$PROJECT_DIR$/core/templates/registration/password_reset_email.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/registration/password_reset_form.html" afterPath="$PROJECT_DIR$/core/templates/registration/password_reset_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/tabs/pill.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/tabs/pill.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/linkbutton/plain.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/linkbutton/plain.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/animation/pop.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/animation/pop.html" />
@@ -253,14 +272,18 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/djangoetherpadlite/django-etherpad-lite-master/etherpadlite/templates/etherpad-lite/profile.html" afterPath="$PROJECT_DIR$/djangoetherpadlite/django-etherpad-lite-master/etherpadlite/templates/etherpad-lite/profile.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/profile1.html" afterPath="$PROJECT_DIR$/core/templates (copy)/profile1.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/profile2.html" afterPath="$PROJECT_DIR$/core/templates (copy)/profile2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/profile2.html" afterPath="$PROJECT_DIR$/core/templates/profile2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/numberbox/range.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/numberbox/range.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/numberspinner/range.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/numberspinner/range.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/slider/range.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/slider/range.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/timespinner/range.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/timespinner/range.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/registration.html" afterPath="$PROJECT_DIR$/core/templates/ajax/registration.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/registration_1.html" afterPath="$PROJECT_DIR$/core/templates/registration_1.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/combobox/remotedata.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/combobox/remotedata.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datalist/remotedata.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datalist/remotedata.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/combobox/remotejsonp.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/combobox/remotejsonp.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/treegrid/reports.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/treegrid/reports.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/reset_password.html" afterPath="$PROJECT_DIR$/core/templates/reset_password.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datebox/restrict.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datebox/restrict.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/rowborder.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/rowborder.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/datagrid/rowediting.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/datagrid/rowediting.html" />
@@ -271,6 +294,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/selection.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/selection.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datebox/sharedcalendar.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datebox/sharedcalendar.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datetimebox/showseconds.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datetimebox/showseconds.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/signup_form.html" afterPath="$PROJECT_DIR$/core/templates/ajax/signup_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/pagination/simple.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/pagination/simple.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/simpletoolbar.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/simpletoolbar.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/linkbutton/size.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/linkbutton/size.html" />
@@ -280,6 +304,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/droppable/sort.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/droppable/sort.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tabs/striptools.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tabs/striptools.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/student-profile.html" afterPath="$PROJECT_DIR$/core/templates (copy)/student-profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/student_profile.html" afterPath="$PROJECT_DIR$/core/templates/student_profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/sections/student_section_header.html" afterPath="$PROJECT_DIR$/core/templates/sections/student_section_header.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/button/style.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/button/style.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/linkbutton/style.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/linkbutton/style.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tabs/style.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tabs/style.html" />
@@ -287,7 +313,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tabs/tabposition.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tabs/tabposition.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/badge/tabs.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/badge/tabs.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tabs/tabstools.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tabs/tabstools.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/sections/teacher_section_header.html" afterPath="$PROJECT_DIR$/core/templates/sections/teacher_section_header.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Etherpad/etherpad-lite/doc/template.html" afterPath="$PROJECT_DIR$/Etherpad/etherpad-lite/doc/template.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/text_editor - Copy.html" afterPath="$PROJECT_DIR$/core/templates/ajax/text_editor - Copy.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/text_editor.html" afterPath="$PROJECT_DIR$/core/templates/ajax/text_editor.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/input/textbox.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo-mobile/input/textbox.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/linkbutton/toggle.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/linkbutton/toggle.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tooltip/toolbar.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tooltip/toolbar.html" />
@@ -295,15 +324,24 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tooltip/tooltipdialog.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/tooltip/tooltipdialog.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/transform.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datagrid/transform.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/sections/tutor_body_full.html" afterPath="$PROJECT_DIR$/core/templates/sections/tutor_body_full.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/sections/tutor_body_public.html" afterPath="$PROJECT_DIR$/core/templates/sections/tutor_body_public.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/tutor_profile.html" afterPath="$PROJECT_DIR$/core/templates/tutor_profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/tutor_profile1.html" afterPath="$PROJECT_DIR$/core/templates/tutor_profile1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/tutor_profile1_1.html" afterPath="$PROJECT_DIR$/core/templates/tutor_profile1_1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/tutor_profile_public.html" afterPath="$PROJECT_DIR$/core/templates/tutor_profile_public.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datebox/validate.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/datebox/validate.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/validatebox/validateonblur.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/validatebox/validateonblur.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/form/validateonsubmit.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/form/validateonsubmit.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/slider/vertical.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/slider/vertical.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/views.py" afterPath="$PROJECT_DIR$/core/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/ajax/videoframe.html" afterPath="$PROJECT_DIR$/core/templates/ajax/videoframe.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/webrtctest.html" afterPath="$PROJECT_DIR$/core/templates (copy)/webrtctest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/webrtctest/webrtctest.html" afterPath="$PROJECT_DIR$/core/templates (copy)/webrtctest/webrtctest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/webrtctest.html" afterPath="$PROJECT_DIR$/core/templates/webrtctest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/webrtctest/webrtctest.html" afterPath="$PROJECT_DIR$/core/templates/webrtctest/webrtctest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/white_board.html" afterPath="$PROJECT_DIR$/core/templates (copy)/white_board.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates (copy)/white_board_old.html" afterPath="$PROJECT_DIR$/core/templates (copy)/white_board_old.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/white_board_old.html" afterPath="$PROJECT_DIR$/core/templates/white_board_old.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/whiteboard.html" afterPath="$PROJECT_DIR$/core/templates/whiteboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/window/windowlayout.html" afterPath="$PROJECT_DIR$/core/static/jquery.easyui-1.4.2/demo/window/windowlayout.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -363,16 +401,32 @@
       <file leaf-file-name="viewsajax.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/payment/viewsajax.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="52" selection-start="1877" selection-end="1965" vertical-scroll-proportion="0.0">
+            <state line="55" column="36" selection-start="2299" selection-end="2305" vertical-scroll-proportion="-9.2">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chat.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="my_account.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/templates/my_account.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="435" column="25" selection-start="17779" selection-end="17779" vertical-scroll-proportion="0.9321357">
+              <folding>
+                <element signature="e#1470#1490#0" expanded="true" />
+                <element signature="e#1572#1607#0" expanded="true" />
+                <element signature="e#1814#1833#0" expanded="true" />
+                <element signature="e#6542#6600#0" expanded="true" />
+                <element signature="e#10386#10434#0" expanded="true" />
+                <element signature="e#12492#12513#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chat.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/static/js/chat/chat.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="223" column="10" selection-start="8114" selection-end="8114" vertical-scroll-proportion="0.2543021">
+            <state line="222" column="73" selection-start="8101" selection-end="8101" vertical-scroll-proportion="-6.68">
               <folding />
             </state>
           </provider>
@@ -381,22 +435,22 @@
       <file leaf-file-name="whiteboard.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/templates/whiteboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="4" selection-start="581" selection-end="581" vertical-scroll-proportion="-4.576923">
+            <state line="37" column="4" selection-start="1931" selection-end="1931" vertical-scroll-proportion="-4.576923">
               <folding>
-                <element signature="e#11037#11058#0" expanded="true" />
-                <element signature="e#11518#11551#0" expanded="true" />
-                <element signature="e#11694#11731#0" expanded="true" />
-                <element signature="e#13701#13720#0" expanded="true" />
-                <element signature="e#13802#13856#0" expanded="true" />
-                <element signature="e#18589#18639#0" expanded="true" />
-                <element signature="e#19801#19822#0" expanded="true" />
-                <element signature="e#19968#19989#0" expanded="true" />
-                <element signature="e#20121#20140#0" expanded="true" />
-                <element signature="e#20303#20326#0" expanded="true" />
-                <element signature="e#20439#20462#0" expanded="true" />
-                <element signature="e#20551#20574#0" expanded="true" />
-                <element signature="e#32635#32682#0" expanded="true" />
-                <element signature="e#32695#32737#0" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#ul#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#1;n#div#1;n#div#0;n#ul#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#ul#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#ul#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#3;n#div#0;n#ul#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#3;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#3;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#2;n#div#3;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#7;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#7;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -405,7 +459,7 @@
       <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="4" selection-start="1267" selection-end="1267" vertical-scroll-proportion="-13.076923">
+            <state line="37" column="4" selection-start="1904" selection-end="1904" vertical-scroll-proportion="-13.076923">
               <folding />
             </state>
           </provider>
@@ -444,7 +498,6 @@
         <option value="$PROJECT_DIR$/payment/models.py" />
         <option value="$PROJECT_DIR$/championtutoronline/urls.py" />
         <option value="$PROJECT_DIR$/payment/viewsajax.py" />
-        <option value="$PROJECT_DIR$/core/templates/my_account.html" />
         <option value="$PROJECT_DIR$/core/templates/sections/student_section_header.html" />
         <option value="$PROJECT_DIR$/forms.py" />
         <option value="$PROJECT_DIR$/championtutoronline/settings.py" />
@@ -456,6 +509,7 @@
         <option value="$PROJECT_DIR$/core/templates/base.html" />
         <option value="$PROJECT_DIR$/core/templates/whiteboard.html" />
         <option value="$PROJECT_DIR$/core/static/js/chat/chat.js" />
+        <option value="$PROJECT_DIR$/core/templates/my_account.html" />
       </list>
     </option>
   </component>
@@ -532,7 +586,7 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="Etherpad/etherpad-lite">
+            <PATH_ELEMENT USER_OBJECT="payment">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -565,72 +619,6 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="templates">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="core">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="static">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="core">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="static">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="js">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="championtutoronline.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="core">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="static">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="js">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="chat">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -877,22 +865,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/templates/sections/tutor_body_full.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="33" selection-start="7634" selection-end="7634" vertical-scroll-proportion="0.8319328">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/championtutoronline/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="43" selection-start="1596" selection-end="1596" vertical-scroll-proportion="0.5756972">
-          <folding>
-            <element signature="e#0#51#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/static/js/overrides/profile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="24" selection-start="215" selection-end="232" vertical-scroll-proportion="0.28333333" />
@@ -931,15 +903,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="57" selection-start="4066" selection-end="4066" vertical-scroll-proportion="-12.24">
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/templates/ajax/drawingboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="429" column="8" selection-start="35566" selection-end="35566" vertical-scroll-proportion="0.31092438">
@@ -960,7 +923,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.38709676">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -969,44 +932,74 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="22" selection-start="465" selection-end="470" vertical-scroll-proportion="0.22580644">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="4" selection-start="1267" selection-end="1267" vertical-scroll-proportion="-13.076923">
+        <state line="37" column="4" selection-start="1904" selection-end="1904" vertical-scroll-proportion="-13.076923">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/templates/whiteboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="4" selection-start="581" selection-end="581" vertical-scroll-proportion="-4.576923">
+        <state line="37" column="4" selection-start="1931" selection-end="1931" vertical-scroll-proportion="-4.576923">
           <folding>
-            <element signature="e#11037#11058#0" expanded="true" />
-            <element signature="e#11518#11551#0" expanded="true" />
-            <element signature="e#11694#11731#0" expanded="true" />
-            <element signature="e#13701#13720#0" expanded="true" />
-            <element signature="e#13802#13856#0" expanded="true" />
-            <element signature="e#18589#18639#0" expanded="true" />
-            <element signature="e#19801#19822#0" expanded="true" />
-            <element signature="e#19968#19989#0" expanded="true" />
-            <element signature="e#20121#20140#0" expanded="true" />
-            <element signature="e#20303#20326#0" expanded="true" />
-            <element signature="e#20439#20462#0" expanded="true" />
-            <element signature="e#20551#20574#0" expanded="true" />
-            <element signature="e#32635#32682#0" expanded="true" />
-            <element signature="e#32695#32737#0" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#ul#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#div#1;n#div#0;n#ul#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#ul#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#ul#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#3;n#div#0;n#ul#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#3;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#3;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#div#3;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#7;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.8064516">
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/static/js/chat/chat.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="223" column="10" selection-start="8114" selection-end="8114" vertical-scroll-proportion="0.2543021">
+        <state line="222" column="73" selection-start="8101" selection-end="8101" vertical-scroll-proportion="-6.68">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/payment/viewsajax.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="36" selection-start="2299" selection-end="2305" vertical-scroll-proportion="-9.2">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/my_account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="435" column="25" selection-start="17779" selection-end="17779" vertical-scroll-proportion="0.9321357">
+          <folding>
+            <element signature="e#1470#1490#0" expanded="true" />
+            <element signature="e#1572#1607#0" expanded="true" />
+            <element signature="e#1814#1833#0" expanded="true" />
+            <element signature="e#6542#6600#0" expanded="true" />
+            <element signature="e#10386#10434#0" expanded="true" />
+            <element signature="e#12492#12513#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
