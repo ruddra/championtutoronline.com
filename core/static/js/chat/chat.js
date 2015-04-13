@@ -218,10 +218,12 @@ var generateChatUUID = function(){
             $(this).parent().find(".add_chat_buddy_area").hide();
         });
 
+         //console.log(_this_obj.chat_contnt.parent().find(".add_grp_buddy_txt").tagit());
+
         _this_obj.chat_contnt.parent().find(".add_grp_buddy_txt").tagit({
             autocomplete: {
                 autoSelectFirst: true,
-                delay: 0, 
+                delay: 0,
                 minLength: 2,
                 source: function(request, response) {
                       var buddy_ids = [];
@@ -263,7 +265,7 @@ var generateChatUUID = function(){
                     ui.item.value = ui.item.label;
                 },
                 select: function( event, ui ) {
-                    
+
                   },
                 create: function() {
                     $(this).data('ui-autocomplete')._renderItem = function (ul, item) {
@@ -271,7 +273,7 @@ var generateChatUUID = function(){
                                  .data("item.autocomplete", item)
                                  .append("<a><div class='ui-menu-item-div' style='background:white;margin-top:1px;padding:4px;'><img src='"+ item.pimage +"' width='20' height='20' style='margin-right:10px;'/>" + item.label + "</div></a>")
                                  .appendTo(ul);
-                               };                    
+                               };
                 }
               },
               showAutocompleteOnFocus : true,
@@ -290,7 +292,7 @@ var generateChatUUID = function(){
                 _this_obj.chat_contnt.parent().find(".hidden-selected-val").val("");
               },
               afterTagRemoved : function(event,ui){
-                
+
               },
               onTagClicked: function(event,ui){
                 //alert("Clicked!");

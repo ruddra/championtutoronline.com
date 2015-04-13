@@ -54,13 +54,13 @@
         })();
     </script>
     <div class="profile_detail">
-    	<span class="profile_img"><img src="{% static "images/profile_img_inner.png" %}" width="28" height="28" alt="img"></span>
-        Wilson Tan
+    	<span class="profile_img" title="{{ champ_user.fullname }}"><img src="{% static "images/profile_img_inner.png" %}" width="28" height="28" alt="img"></span>
+        {{ champ_user.fullname|truncatechars:11 }}
         <span class="down_arrow"><img src="{% static "images/dwn_arw.png" %}" width="8" height="7" alt="img"></span>
         
         <ul class="submenu1 radius3">
-            <li><a href="#">Billing</a></li>
-			      <li><a href="#">My Account</a></li>
+            <li><a href="{% url "my_account" %}#myAccount3">Billing</a></li>
+            <li><a href="{% url "my_account" %}">My Account</a></li>
             <li><a  href="{% url "whiteboard" %}">Try the lesson space</a></li>
 			<li><a href="{% url "user_logout" %}" id="id_user_signout">Sign Out</a></li>
         </ul>

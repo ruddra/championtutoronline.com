@@ -26,23 +26,23 @@ MANAGERS = ADMINS
 # }
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'champ_db',
-#         'USER': 'root',
-#         'PASSWORD': '123456',
-#         'HOST': '127.0.0.1',
-#         'PORT': '',
-#         }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'champ_db',
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'HOST': '127.0.0.1',
+        'PORT': '',
+        }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -176,6 +176,7 @@ INSTALLED_APPS = (
     'authentication',
     'common',
     'pyetherpad',
+    'payment'
 )
 
 LOGIN_URL = '/'
@@ -192,7 +193,7 @@ SENDGRID_USERNAME = "codengine"
 SENDGRID_PASSWORD = "lapsso065CommlinkCommlink"
 
 ETHERPAD_API_KEY = 'f5560d6d5f946a6b72c7d4708965a0fca2258f7c1df1948db763ef7852019004'
-ETHERPAD_API_URL = 'http://127.0.0.1:9001/api/'
+ETHERPAD_API_URL = 'http://127.0.0.1:9001/api'
 
 ###Opentok Account: tokboxtest2
 

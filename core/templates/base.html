@@ -101,6 +101,7 @@
             window.champ_user_id = {% if champ_userid %} {{ champ_userid }} {% else %} -1 {% endif %};
             console.log(window.champ_user_id);
         {% endif %}
+
     </script>
 
     {% block script_extra %}{% endblock script_extra %}
@@ -278,7 +279,7 @@
               }
         };
         $("#id_dialog_notification").html(html).dialog(dialog_options);
-        redesign_dialogui();
+            redesign_dialogui();
         }
             
 </script>

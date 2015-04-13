@@ -128,6 +128,22 @@ class EducationForm(forms.ModelForm):
     class Meta:
         model = Education
 
+class MyAccountForm(forms.Form):
+    email = forms.CharField(label='',required=True,widget=forms.TextInput(attrs={'name':'email','placeholder':'Email Address','autocomplete':'off','class':'form-control input-lg','title':'','data-placement':'top','data-toggle':'tooltip','data-original-title':'','readonly':''}))
+    old_password = forms.CharField(label='', required=True , widget=forms.PasswordInput(attrs={'name':'password','placeholder':'Old Password','class':'form-control input-lg','title':'','data-placement':'top','data-toggle':'tooltip','data-original-title':''}))
+    new_password = forms.CharField(label='', required=True , widget=forms.PasswordInput(attrs={'name':'password','placeholder':'New Password','class':'form-control input-lg','title':'','data-placement':'top','data-toggle':'tooltip','data-original-title':''}))
+    new_password_again = forms.CharField(label='', required=True , widget=forms.PasswordInput(attrs={'name':'password','placeholder':'New Password Again','class':'form-control input-lg','title':'','data-placement':'top','data-toggle':'tooltip','data-original-title':''}))
+
+class PaymentMethodForm(forms.Form):
+    first_name = forms.CharField(label='',required=True,widget=forms.TextInput(attrs={'name':'first_name','placeholder':'First Name','autocomplete':'off','class':'form-control input-lg','title':'','data-placement':'top','data-toggle':'tooltip','data-original-title':''}))
+    last_name = forms.CharField(label='',required=True,widget=forms.TextInput(attrs={'name':'last_name','placeholder':'Last Name','autocomplete':'off','class':'form-control input-lg','title':'','data-placement':'top','data-toggle':'tooltip','data-original-title':''}))
+    card_type = forms.ChoiceField(choices=[("V","Visa"),("M","Master")],widget=forms.Select(attrs={'name':'card_type','placeholder':'Card Type','autocomplete':'off','class':'form-control input-lg','title':'','data-placement':'top','data-toggle':'tooltip','data-original-title':''}))
+    card_number = forms.CharField(label='',required=True,widget=forms.TextInput(attrs={'name':'card_number','placeholder':'Card Number','autocomplete':'off','class':'form-control input-lg','title':'','data-placement':'top','data-toggle':'tooltip','data-original-title':''}))
+    exp_date = forms.CharField(label='',required=True,widget=forms.TextInput(attrs={'name':'exp_date','placeholder':'Expired Date','autocomplete':'off','id':'datetimepicker','class':'form-control input-lg','title':'','data-placement':'top','data-toggle':'tooltip','data-original-title':''}))
+    cvn = forms.CharField(label='',required=True,widget=forms.TextInput(attrs={'name':'cvn','placeholder':'CVN','autocomplete':'off','class':'form-control input-lg','title':'','data-placement':'top','data-toggle':'tooltip','data-original-title':''}))
+    # primary = forms.ChoiceField(choices=[("primary","Primary Card"),("not_primary","Not Primary")],widget=forms.Select(attrs={'name':'card_type','placeholder':'Card Type','autocomplete':'off','class':'form-control input-lg','title':'','data-placement':'top','data-toggle':'tooltip','data-original-title':''}))
+    # active = forms.BooleanField(required=False,widget=forms.CheckboxInput(attrs={'class':'checkbox' }))
+
 class TSubjectForm(forms.ModelForm):
     class Meta:
         model = TopSubject

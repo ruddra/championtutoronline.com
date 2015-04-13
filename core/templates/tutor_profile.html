@@ -17,7 +17,7 @@
     {% endblock header %}
     {% block bodycontent %}
         {% if request.session.is_login %}
-            {% include "sections/tutor_body_full.html" %}
+            {% include "sections/tutor_body_full.html" with item=item %}
         {% else %}
             {% include "sections/tutor_body_public.html" %}
         {% endif %}
